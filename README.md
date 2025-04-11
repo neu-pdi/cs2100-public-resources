@@ -1,4 +1,4 @@
-# NEU CS 2100 Instructor Resources
+# NEU CS 2100 Public Resources
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 

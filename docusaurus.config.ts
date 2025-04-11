@@ -7,19 +7,19 @@ import rehypeKatex from 'rehype-katex';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'NEU CS 2100 Instructor Resources',
-  tagline: 'Resources for CS 2100 instructors',
+  title: 'NEU CS 2100 Public Resources',
+  tagline: 'Resources for CS 2100 (Public)',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://neu-pdi.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/cs2100-instructor-resources/',
+  baseUrl: '/cs2100-public-resources/',
 
   // GitHub pages deployment config.
   organizationName: 'neu-pdi', // Usually your GitHub org/user name.
-  projectName: 'cs2100-instructor-resources', // Usually your repo name.
+  projectName: 'cs2100-public-resources', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -45,7 +45,7 @@ const config: Config = {
           path: 'lecture-notes',
           routeBasePath: 'lecture-notes',
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/neu-pdi/cs2100-instructor-resources/edit/main/lecture-notes/',
+          editUrl: 'https://github.com/neu-pdi/cs2100-public-resources/edit/main/lecture-notes/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
@@ -70,7 +70,7 @@ const config: Config = {
     // Replace with your project's social card
     // image: 'img/qwan-social-card.png',
     navbar: {
-      title: 'CS 2100 Instructor Resources',
+      title: 'CS 2100 Public Resources',
       logo: {
         alt: 'Pawtograder Logo',
         src: 'img/logo.svg',
