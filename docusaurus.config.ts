@@ -83,15 +83,21 @@ const config: Config = {
         //   label: 'Lecture Notes',
         // },
         {
+          to: 'syllabus',
+          activeBasePath: 'src/pages',
+          label: 'Syllabus',
+          position: 'left',
+        },
+        {
           to: ' ',
           activeBasePath: ' ',
           label: 'Lectures',
           position: 'left',
         },
         {
-          to: 'syllabus',
+          to: 'assignments',
           activeBasePath: 'src/pages',
-          label: 'Syllabus',
+          label: 'Assignments',
           position: 'left',
         },
       
