@@ -76,11 +76,23 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'lectureNotesSidebar',
+        //   position: 'left',
+        //   label: 'Lecture Notes',
+        // },
         {
-          type: 'docSidebar',
-          sidebarId: 'lectureNotesSidebar',
+          to: ' ',
+          activeBasePath: ' ',
+          label: 'Lectures',
           position: 'left',
-          label: 'Lecture Notes',
+        },
+        {
+          to: 'syllabus',
+          activeBasePath: 'src/pages',
+          label: 'Syllabus',
+          position: 'left',
         },
       
       ],
