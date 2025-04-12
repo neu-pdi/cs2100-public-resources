@@ -30,7 +30,7 @@ export default function Hello() {
                         </Alert.Description>
                     </Alert.Content>
                 </Alert.Root>
-                <Heading size='lg'>Lecture Overview</Heading>
+                <Heading size='lg'>Lectures</Heading>
                 <LectureSummary version={pluginData.versions[0].name} />
             </Box>
         </Layout>

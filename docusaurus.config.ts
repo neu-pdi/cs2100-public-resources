@@ -45,7 +45,7 @@ const config: Config = {
           path: 'lecture-notes',
           routeBasePath: 'lecture-notes',
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/neu-pdi/cs2100-public-resources/edit/main/lecture-notes/',
+          editUrl: 'https://github.com/neu-pdi/cs2100-public-resources/edit/main/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
