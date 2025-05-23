@@ -24,4 +24,6 @@ Modeled after this lecture: https://neu-se.github.io/CS4530-Spring-2024/Slides/M
 
 ## Strategy pattern
 
-Search algorithms (BFS, DFS, A*)
+Search algorithms: DFS -> BFS -> A* -> Strategy Pattern
+
+(They have already seen DFS)
