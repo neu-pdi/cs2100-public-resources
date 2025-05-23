@@ -1,7 +1,7 @@
 ---
 sidebar_position: 31
 lecture_number: 31
-title: "Design patterns: Decorator, Observer, \"Data Pull\"", and Strategy
+title: "Design patterns: Decorator, Observer, \"Data Pull\", and Strategy"
 ---
 
 # Design patterns: Decorator, Observer, and "Data Pull"
