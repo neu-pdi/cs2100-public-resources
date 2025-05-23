@@ -6,9 +6,26 @@ title: Ethics
 
 # Ethics
 
-## Identify pros and cons of using given data to solve the desired problem
-## Identify and defend privacy issues
-## Identify stakeholders, and values and interests at stake for each stakeholder
+## Learning outcomes
+
+These are the three learning outcomes for this lecture:
+
+- Identify pros and cons of using given data to solve the desired problem
+- Identify and defend privacy issues
+- Identify stakeholders, and values and interests at stake for each stakeholder
+
+Those lecture outcomes correspond to these learning outcomes for the course:
+
+- Students can identify pros and cons of using given data to solve the desired problem, and identify and defend privacy issues in problems presented to them without being told there is a privacy issue to identify.
+- Given a technical problem, students can (a) identify the stakeholders, (b) identify values and interests at stake for each stakeholder, (c) discuss conflicts of values, and (d) identify modifications that would mitigate conflicts of values.
+
+Computer science is a group activity. In this course, we are teaching the vocabulary for moral language to be able to talk with your teammates and advocate for what you think is right.
+
+We are also choosing to focus specifically on "Identifying and defending privacy issues" to debunk the common excuse of "I have nothing to hide" [^1] using Value-Sensitive Design.
+
+[^1]: https://www.danielsolove.com/nothing-to-hide/ and https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1827982 are recommended further reading for those interested by the "I have nothing to hide" argument.
+
+## Steps for Value-Sensitive Design
 
 These are the steps you will take to demonstrate Value-Sensitive Design in the homework assignments for this course:
 
@@ -33,9 +50,9 @@ If Finder’s financial model includes advertising, then the **advertisers** are
 
 **Anyone who dates** is a stakeholder, since dating apps have fundamentally changed the way we date. And in that vein, relationships formed with Finder will impact many more stakeholders, including friends and family.
 
-There are undoubtedly stakeholders who are not listed, and more [stakeholders who will get created](https://www.cheaterbuster.com/)[^1] over time.
+There are undoubtedly stakeholders who are not listed, and more [stakeholders who will get created](https://www.cheaterbuster.com/)[^2] over time.
 
-[^1]: This is not an endorsement of CheaterBuster.
+[^2]: This is not an endorsement of CheaterBuster.
 
 ### Step 2: Identify the values
 
@@ -100,12 +117,12 @@ Bias and unfairness can enter our technology in a variety of ways. Here are some
 
 Bias and unfairness can be created or amplified once the technology is implemented in a particular societal context.
 
-- Technology reflects historical injustices as they unfold and compound. For example, word representations (the numbers used by computers to represent words in a natural language such as English) reflect the bias of text on which they are trained.[^2]
+- Technology reflects historical injustices as they unfold and compound. For example, word representations (the numbers used by computers to represent words in a natural language such as English) reflect the bias of text on which they are trained.[^3]
 - People using the technology have their own implicit biases, and technology can exacerbate the impact of those biases. Technology can also reinforce those stereotypes to those users.
 - Technology can have disparate impact given the social context and features outside the model. For example, a tool that is very useful to one population may be harmful or inaccessible to another population.
 - This unfairness is also compounded through feedback loops. For example, social media platforms often highlight posts which have already received a lot of positive attention, which in turn gives those posts even more positive attention, reinforcing society’s standards for which types of posts should receive positive attention.
 
-[^2]: [Garg et. al](https://www.pnas.org/doi/pdf/10.1073/pnas.1720347115)
+[^3]: [Garg et. al](https://www.pnas.org/doi/pdf/10.1073/pnas.1720347115)
 
 ### Case Study: Algorithmic hiring
 
