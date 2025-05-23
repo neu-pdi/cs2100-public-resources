@@ -9,3 +9,91 @@ title: Ethics
 ## Identify pros and cons of using given data to solve the desired problem
 ## Identify and defend privacy issues
 ## Identify stakeholders, and values and interests at stake for each stakeholder
+
+These are the steps you will take to demonstrate Value-Sensitive Design in the homework assignments for this course:
+
+1. Identify the stakeholders
+2. Identify the values
+3. Fill out a stakeholder-value matrix
+4. Identify and analyze conflicts in the matrix
+
+As we go through these steps in detail, let’s consider the example of “Finder,” a fictitious dating app (such as [Hinge](https://hinge.co/) or [Grindr](https://www.grindr.com/)).
+
+### Step 1: Identify the stakeholders
+
+**Users** are only a few of many people who will be affected by a proposed technology.
+
+Finder’s users include nonbinary people, transgender people, people who date people of all genders, people whose sexual orientation is criminalized in their geographic location, people who are not legally allowed to be in their geographic location altogether, sex workers, survivors of intimate partner violence, people who are blind, people who don’t speak English, people whose [names](https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/) have apostrophes in them, and so many more.
+
+There are many more stakeholders. Often, if a platform enforces rules for its users, then the **content moderators** who check for disallowed content are subject to viewing harmful content. They are stakeholders, along with the **software engineers** and all the other **employees** of the company which is building Finder.
+
+If Finder’s financial model includes advertising, then the **advertisers** are key stakeholders, along with the **other customers** of the advertising companies. And let’s not forget the **actors and influencers** doing the advertising.
+
+**Governments** and **regulators** have stakes involving following laws and regulations, and protecting the public.
+
+**Anyone who dates** is a stakeholder, since dating apps have fundamentally changed the way we date. And in that vein, relationships formed with Finder will impact many more stakeholders, including friends and family.
+
+There are undoubtedly stakeholders who are not listed, and more [stakeholders who will get created](https://www.cheaterbuster.com/)[^1] over time.
+
+[^1]: This is not an endorsement of CheaterBuster.
+
+### Step 2: Identify the values
+
+Values inform the design, development, and deployment of technology, whether or not the technologists acknowledge it. And, once implemented, technology has the ability to change our practices and values.
+
+**Privacy** is a key value highlighted throughout this course. Many of the stakeholders listed as users will value privacy, whether it is to hide their identity from the government or hide their location from an abusive person. **Safety** can also be listed as a separate value, or as a subset of privacy. 
+
+**Accessibility** as a value will entail different things to different users. Nonbinary people may not have access to Finder if we don’t include them as a gender option. People who are blind or who don’t speak English may need us to design Finder so that screen readers and translation apps can work. Sex workers are [often unfairly banned](https://drive.google.com/file/d/1JV_0ALmFSrrhISKcWs3LivvcG_ADiYnR/view) from dating apps, even if they are not doing sex work or soliciting clients through the dating app. And of course, we need to support a large variety of users’ names so that they can create profiles and access Finder.
+
+**Fairness** will be valued if we prioritize it. We only want to take into account users’ personal preferences, and nothing else, when recommending people as potential dating partners.
+
+**Financial cost** will be pertinent to advertisers and users, depending on Finder’s financial model. **Reputation** is heavily valued, too. And of course, many people value **laws and regulations**.
+
+### Step 3: Fill out a stakeholder-value matrix
+
+Here, we set up a matrix where the columns represent the values, and the rows represent the stakeholders. The cells describe how each stakeholder interacts with each value.
+
+### Step 4: Identify and analyze conflicts in the matrix
+
+Some stakeholders’ values conflict.
+
+For example, advertisers want to keep financial costs low, but that may push the financial cost onto the users or the company building Finder. Choosing the financial model will require choosing one over the other.
+
+Of course, many users want to keep their identities or locations private from the government, but the government may want access to that information to enforce laws and protect the public. There may be mitigation strategies such as keeping all information private until regulators provide a subpoena, or only providing specific information to the government (not location or sexual orientation).
+
+Fairness or accessibility can sometimes unfortunately require risking Finder’s reputation, depending on the audience giving reputation-related opinions, and how strongly they feel that others don’t belong. Also, ensuring fairness for Finder’s users can require collecting personal information, which can then compromise privacy, especially in case of a subpoena.
+
+There is also often a conflict when criminalized populations simply want to exist legally and peacefully despite being targeted by governments.
+
+### Throughout the VSD Process: Bias and Unfairness
+
+Bias and unfairness are baked into our society in a way that counteracting them is a challenging, continuous task which does not end with a VSD matrix. However, there are some concrete places we can keep in mind to mitigate bias and unfairness in our technology.
+
+Bias and unfairness can enter our technology in a variety of ways. Here are some examples:
+
+- The technology might rely on a dataset that doesn’t accurately reflect the statistics of the population it represents. For example, a dataset of “the general population” can forget to include women.
+- The tools used to collect the data might be biased. For example, a survey might include multiple-choice questions that are impossible to answer correctly.
+- The technologists building the tool may misunderstand the data. For example, they might not understand the context in which the data was collected, leading to dismissing important data points or selecting the wrong variables for use.
+- The technologists building the tool may make mistakes, such as using a correlation between variables to imply causation. For example, if there are many reports of fraud in September, they may assume that the start of a new academic year causes students to commit fraud.
+- The technology can be used for a different purpose than the one for which it was built. For example, a platform built for vital communication in vulnerable communities can also be used to spam and harass those vulnerable people.
+
+Bias and unfairness can be created or amplified once the technology is implemented in a particular societal context.
+
+- Technology reflects historical injustices as they unfold and compound. For example, word representations (the numbers used by computers to represent words in a natural language such as English) reflect the bias of text on which they are trained.[^2]
+- People using the technology have their own implicit biases, and technology can exacerbate the impact of those biases. Technology can also reinforce those stereotypes to those users.
+- Technology can have disparate impact given the social context and features outside the model. For example, a tool that is very useful to one population may be harmful or inaccessible to another population.
+- This unfairness is also compounded through feedback loops. For example, social media platforms often highlight posts which have already received a lot of positive attention, which in turn gives those posts even more positive attention, reinforcing society’s standards for which types of posts should receive positive attention.
+
+[^2]: [Garg et. al](https://www.pnas.org/doi/pdf/10.1073/pnas.1720347115)
+
+### Case Study: Algorithmic hiring
+
+Now for some practice. Consider this scenario: “Shamazon” (a fictitious company) is looking to hire software engineers, and you have been tasked with designing a tool to filter the submitted resumes and select the ideal candidates for hire.
+
+- Who are the stakeholders?
+- What are the values?
+- What is in the stakeholder-value matrix?
+- What are the conflicts in the matrix? And how can we mitigate them?
+- Where are bias and unfairness entering the product? And how can we mitigate them?
+
+As you can see, we are relying on you to design our future. Good luck.
