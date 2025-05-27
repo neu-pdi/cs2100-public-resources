@@ -28,3 +28,25 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Ensure markdown bullet points are displayed */
+.markdown ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.markdown ul ul {
+  list-style-type: circle;
+  margin-bottom: 0;
+}
+
+.markdown ul ul ul {
+  list-style-type: square;
+}
+
+.markdown li > p {
+  --ifm-list-paragraph-margin: 0.5em;
+  --ifm-paragraph-margin-bottom: 0.5em;
+}
