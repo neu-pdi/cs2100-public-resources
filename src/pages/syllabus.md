@@ -61,10 +61,10 @@ Assessment will be based on homework, participation, labs, and quizzes. You may 
 
 | Topic | Percentage |
 | ----- | ---------- |
-| Homework | 45% |
-| Quizzes + Final Exam | 40% |
+| Homework | 30% |
+| Quizzes + Final Exam | 50% |
 | Labs | 10% |
-| Lecture In-class Exercises | 5% |
+| Lecture In-class Exercises | 10% |
 
 The in-class exercises during lecture will be graded based on whether questions were attempted, not on correctness. Because students may need a small number of absences, students can submit the lecture absence form to miss up to six lectures. If the lecture absence form is submitted before the lecture or less than 24 hours after the lecture, the student will not lose the lecture participation points for the day. Students who need to submit the form more than six times should reach out to their instructor. In-class exercises can only be done from the lecture classroom (or attending synchronously online with explicit permission). Completing an in-class activity while not present is a serious academic integrity violation, which will result in a zero for the participation grade for the semester and an OSCCR report.
 
