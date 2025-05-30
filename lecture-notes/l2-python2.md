@@ -22,6 +22,13 @@ Iteration, conditionals
 
 ## Understand what it means to import code
 
+And why we do:
+
+```
+if __name__ == '__main__':
+    main()
+```
+
 ## Choose variable names that fit naming conventions
 
 ## Understand the importance of a linter
