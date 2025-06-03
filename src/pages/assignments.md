@@ -17,7 +17,7 @@ sidebar_position: 3
 | 8 | Inheritance | [HW5: Processing data](https://github.com/neu-cs2100/fa25-hw5-biometrics-handout) |
 | 9 | Iterator/Iterable, Comparable | [HW6: Interfaces and abstract classes](https://github.com/neu-cs2100/fa25-hw6-bias-bars-handout) |
 | 10 |  | [HW7: Inheritance](https://github.com/neu-cs2100/fa25-hw7-minecraft-handout) |
-| 11 | Recursion, MSTs | HW8: Iterator/Iterable, Comparable |
+| 11 | Recursion, MSTs | [HW8: Trees](https://github.com/neu-cs2100/fa25-hw8-trees-handout) |
 | 12 | Decorator pattern, @decorator |  |
 | 13 |  |  |
 | 14 |  | [HW9: Recursion, MSTs, MVC](https://github.com/neu-cs2100/fa25-hw9-mst-handout) |
