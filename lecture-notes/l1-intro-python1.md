@@ -36,6 +36,16 @@ print(f'Area of a {width} by {height} rectangle: {result}')
 Its output is `Area of a 3 by 4 rectangle: 3333`, which is false.
 Wouldn't it be nice if the IDE could save us a bit of time finding the bug?
 
+Unconvinced? How about this code:
+
+```python
+num1 = input('Please enter a number: ')
+num2 = input('Please enter another number: ')
+print(num1 + num2)
+```
+
+It says that 3 + 5 is 35. We'll revisit that in a bit.
+
 Python is a strongly typed language, which means that variables have types.
 Python is also a dynamically typed language, which means that it checks the types for consistency at run time, not compile time.
 We love Python, but being a strongly typed and dynamically typed language can make it hard for introductory learners -- and make it hard to catch bugs in code that we haven't seen before.
@@ -86,6 +96,66 @@ result: str = add(3, 'hi')
 
 should result in three errors: `num2`'s missing type, `add()`'s returning something other than the promised `int`, and `result`'s value being an `int` when the variable type is `str`.
 
+Back to example where 3 + 5 is 35:
+
+```python
+num1: int = input('Please enter a number: ')
+num2: int = input('Please enter another number: ')
+print(num1 + num2)
+```
+
+Adding the types for `num1` and `num2` prompted MyPy to remind us that the `input()` function returns a `str`, not an `int`.
+
 ## Given a problem that has a function-sized solution, write a solution including documentation and tests
+
+In this course, we consider testing to be part of the function design process. We like to write tests to ensure our code works, but also to convince *others* that our code works.
+
+We also require all functions to have appropriate documentation. Make sure to include:
+- All parameters
+- Any returns
+- Any errors or exceptions that might be raised
+
+Here is an example of a function with documentation and two tests:
+
+```python
+import unittest
+
+def get_area_of_rectangle(width: int, height: int) -> int:
+    if (width < 0 or height < 0):
+        """Returns the area of a rectangle.
+
+        Parameters
+        ----------
+        width : int
+            The width of the rectangle
+        height : int
+            The height of the rectangle
+        
+        Returns
+        -------
+        int
+            The area of the rectangle
+
+        Raises
+        ------
+        ValueError
+            If width or height is negative
+        """
+        raise ValueError("Rectangle dimensions cannot be negative")
+    return width * height
+
+class TestArea(unittest.TestCase):
+    def test_3_by_4(self) -> None:
+        self.assertEqual(12, get_area_of_rectangle(3, 4))
+
+    def test_negative_area(self) -> None:
+        with self.assertRaises(ValueError) as context:
+            get_area_of_rectangle(-1, 4)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+Formatting the documentation in this way makes it so that it shows up in official places like `str.__doc__` and `help(str)`.
 
 ## Describe the reasons why Python is popular, and what it mean to "run" Python code
