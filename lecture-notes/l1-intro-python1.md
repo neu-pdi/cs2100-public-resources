@@ -21,7 +21,7 @@ title: Course Overview and Python
 
 Your classmate wants help finding a bug in their code:
 
-```
+```python
 def get_area_of_rectangle(width, height):
     return width * height
 
@@ -42,7 +42,7 @@ We love Python, but being a strongly typed and dynamically typed language can ma
 
 Python supports putting types in the code:
 
-```
+```python
 def get_area_of_rectangle(width: int, height: int) -> int:
     return width * height
 
@@ -77,7 +77,7 @@ Now, any missing or mismatched types will be reported in the "Problems" tab (nex
 
 If MyPy is set up properly, then this code:
 
-```
+```python
 def add(num1: int, num2) -> int:
     return num1 + num2
 
