@@ -34,6 +34,16 @@ print(type(4 / 2))
 my_decision: bool = True
 ```
 
+#### Some boolean operators
+- Opposite
+  - `not my_decision​`
+- Comparisons: <, <=, >, >=, ==, !=
+  - `4 < 6`
+- And (both must be true to result in true)​
+  - `my_decision and your_decision`
+- Or (true if either/both are true)​
+  - `my_decision or your_decision`
+
 ### None
 
 
@@ -50,18 +60,40 @@ words: Set[str] = {'hi', 'hello', 'howdy'}
 
 ## Select and implement appropriate control structures to reflect a problem
 
-Iteration, conditionals
+### Conditionals
+
+#### If / else
+
+Can put a conditional expression in one line: `print('yes' if my_decision else 'no'`
+
+#### Match case statements
+
+- Easier when there are many cases
+- Finds the first case that matches​
+- Only executes one case (or zero cases if none match and there is no `_` catch-all at the end)​
+
+### Iteration
+
+#### Iterating over numbers
+
+#### Iterating over the elements of a collection
+
+### Iterating over a collection, keeping track of indices
 
 ## Read and write data from files (text and image) and user input
 
-## Understand what it means to import code
+## Import code
 
-And why we do:
+Note: When a Python file is imported, all the code inside it is run. That's why we put all of our code inside functions.
+
+And we add this at the end of the file to run it:
 
 ```
 if __name__ == '__main__':
     main()
 ```
+
+A function called `main` should call all of the other functions used in the program.
 
 ## Choose variable names that fit naming conventions
 
