@@ -83,6 +83,8 @@ How to set up the VSCode extension:
    - --strict
    - --disallow-untyped-defs
 
+<img width="957" alt="Screenshot 2025-06-03 at 4 58 03 PM" src="https://github.com/user-attachments/assets/c1883746-d22f-49e8-b79c-b9a10272845b" />
+
 Now, any missing or mismatched types will be reported in the "Problems" tab (next to "Output" and "Debug Console").
 
 If MyPy is set up properly, then this code:
