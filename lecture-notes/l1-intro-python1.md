@@ -12,11 +12,51 @@ title: Course Overview and Python
 
 ## Describe the purpose of our practices for code-level design (style guidlines)
 
+### Why enfore a Style Guide?
 - Helps other people to more easily understand / contribute to existing software
 - Companies have conventions that dictate the style of how code is written ​
 - "Official" Python style guide: [https://peps.python.org/pep-0008](https://peps.python.org/pep-0008/)
 
 ## Trace Python code which includes types, and understand why it's important to keep track of the types
+
+Your classmate wants help finding a bug in their code:
+
+```
+def get_area_of_rectangle(width, height):
+    return width * height
+
+width = '3'
+height = 4
+
+result = get_area_of_rectangle(width, height)
+
+print(f'Area of a {width} by {height} rectangle: {result}')
+```
+
+Its output is `Area of a 3 by 4 rectangle: 3333`, which is false.
+Wouldn't it be nice if the IDE could save us a bit of time finding the bug?
+
+Python is a strongly typed language, which means that variables have types.
+Python is also a dynamically typed language, which means that it checks the types for consistency at run time, not compile time.
+We love Python, but being a strongly typed and dynamically typed language can make it hard for introductory learners -- and make it hard to catch bugs in code that we haven't seen before.
+
+Python supports putting types in the code:
+
+```
+def get_area_of_rectangle(width: int, height: int) -> int:
+    return width * height
+
+width: int = '3'
+height: int = 4
+
+result: int = get_area_of_rectangle(width, height)
+
+print(f'Area of a {width} by {height} rectangle: {result}')
+```
+
+By default, Python does not enforce the types. The above code runs exactly as before, even after adding the types.
+
+So, in this course, we will use MyPy to enforce the type checking.
 
 ### MyPy Setup
 
