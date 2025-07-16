@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ## Course Description
 
-Building on intro programming experience (from CS 2000 or a different institution), examines the fundamentals of program design and implementation. Studies design of data and object-oriented programs, including common patterns, use of data structures, and underlying principles such as abstraction, encapsulation, inheritance, and interfaces. Introduces common software engineering practices such as test-driven development, version control, development environments, and good programming habits. Practices using these design principles by writing medium-sized applications and using data science code libraries. Continues to interweave ethical challenges and skills in program design.
+Building on intro programming experience (from CS 2000 or a different institution), examines the fundamentals of program design and implementation. Studies design of data and object-oriented programs, including common patterns, use of data structures, and underlying principles such as abstraction, encapsulation, inheritance, and interfaces. Introduces common software engineering practices such as version control, writing tests, development environments, and good programming habits. Practices using these design principles by writing medium-sized applications and using data science code libraries. Continues to interweave ethical challenges and skills in program design.
 
 Recordings, lecture notes, and supplementary material are available on Canvas.
 
