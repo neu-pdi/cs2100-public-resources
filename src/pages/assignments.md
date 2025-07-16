@@ -9,7 +9,7 @@ sidebar_position: 3
 | ---- | ---------------------------------- | -------- |
 | 1 | Setup environment, small Python problems |  |
 | 2 | Classes, test classes, File I/O |  |
-| 3 | TDD, git, debugger | [HW1: Algorithms as Decision-Makers](https://github.com/neu-cs2100/fa25-hw1-algodecisionmakers-handout) |
+| 3 | Testing, git, debugger | [HW1: Algorithms as Decision-Makers](https://github.com/neu-cs2100/fa25-hw1-algodecisionmakers-handout) |
 | 4 | Visibility, generics, using lists |  |
 | 5 | JSON, dictionaries, Pandas, exceptions, covariance, plot | [HW2: Testing](https://github.com/neu-cs2100/fa25-hw2-testing-handout) |
 | 6 | More Pandas | [HW3: Using lists](https://github.com/neu-cs2100/fa25-hw3-lists-handout) |
