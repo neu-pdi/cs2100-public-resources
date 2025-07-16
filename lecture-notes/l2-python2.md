@@ -37,7 +37,7 @@ my_decision: bool = True
 #### Some boolean operators
 - Opposite
   - `not my_decision​`
-- Comparisons: <, <=, >, >=, ==, !=
+- Comparisons: `<`, `<=`, `>`, `>=`, `==`, `!=`
   - `4 < 6`
 - And (both must be true to result in true)​
   - `my_decision and your_decision`
