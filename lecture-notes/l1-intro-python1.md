@@ -15,7 +15,19 @@ title: Course Overview and Python
 ### Why enfore a Style Guide?
 - Helps other people to more easily understand / contribute to existing software
 - Companies have conventions that dictate the style of how code is written ​
-- "Official" Python style guide: [https://peps.python.org/pep-0008](https://peps.python.org/pep-0008/)
+
+In this course, we will use the "official" Python style guide, PEP8: [https://peps.python.org/pep-0008](https://peps.python.org/pep-0008/)
+
+We will use Pylint [(documentation here)](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) to check that our code follows the style guidelines.
+
+How to set up the VSCode extension:
+
+1. In VSCode, go to the "Extensions" tab on the left. Search for and install "Pylint"
+2. Then, go to VSCode's Settings menu
+   - Mac: `Code` > `Settings...` > `Settings`  (or `Cmd` + `,`)
+   - Windows: `File` > `Preferences` > `Settings`  (or `Ctrl` + `,`)
+4. Navigate to Extensions > Pylint
+5. In the Args section, add `--disable-error-code=empty-body`:
 
 ## Trace Python code which includes types, and understand why it's important to keep track of the types
 
@@ -64,7 +76,7 @@ result: int = get_area_of_rectangle(width, height)
 print(f'Area of a {width} by {height} rectangle: {result}')
 ```
 
-By default, Python does not enforce the types. The above code runs exactly as before, even after adding the types.
+Python does not enforce the types. The above code runs exactly the same as before, even after adding the types.
 
 So, in this course, we will use MyPy to enforce the type checking.
 
@@ -80,10 +92,10 @@ How to set up the VSCode extension:
    - Windows: `File` > `Preferences` > `Settings`  (or `Ctrl` + `,`)
 4. Navigate to Extensions > Mypy Type Checker
 5. In the Args section, add two args:
-   - --strict
-   - --disallow-untyped-defs
+   - `--strict`
+   - `--disallow-untyped-defs`
 
-<img width="957" alt="Screenshot 2025-06-03 at 4 58 03 PM" src="https://github.com/user-attachments/assets/c1883746-d22f-49e8-b79c-b9a10272845b" />
+<img width="957" alt="Screenshot of entering Args" src="https://github.com/user-attachments/assets/c1883746-d22f-49e8-b79c-b9a10272845b" />
 
 Now, any missing or mismatched types will be reported in the "Problems" tab (next to "Output" and "Debug Console").
 
