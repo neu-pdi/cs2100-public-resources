@@ -22,12 +22,9 @@ We will use Pylint [(documentation here)](https://marketplace.visualstudio.com/i
 
 How to set up the VSCode extension:
 
-1. In VSCode, go to the "Extensions" tab on the left. Search for and install "Pylint"
-2. Then, go to VSCode's Settings menu
-   - Mac: `Code` > `Settings...` > `Settings`  (or `Cmd` + `,`)
-   - Windows: `File` > `Preferences` > `Settings`  (or `Ctrl` + `,`)
-4. Navigate to Extensions > Pylint
-5. In the Args section, add `--disable-error-code=empty-body`:
+1. In VSCode, go to the "Extensions" tab on the left. It looks like this: <img width="36" height="38" alt="Four squares, one of which is slanted" src="https://github.com/user-attachments/assets/883c178f-f0c0-4cd3-ba41-3e8b6948b20f" />
+2. Search for and install "Pylint"
+
 
 ## Trace Python code which includes types, and understand why it's important to keep track of the types
 
@@ -90,14 +87,17 @@ How to set up the VSCode extension:
 2. Then, go to VSCode's Settings menu
    - Mac: `Code` > `Settings...` > `Settings`  (or `Cmd` + `,`)
    - Windows: `File` > `Preferences` > `Settings`  (or `Ctrl` + `,`)
-4. Navigate to Extensions > Mypy Type Checker
-5. In the Args section, add two args:
+4. Navigate to `Extensions` > `Mypy Type Checker`
+5. In the `Args` section, add three args:
    - `--strict`
    - `--disallow-untyped-defs`
+   - `--disable-error-code=empty-body`
 
-<img width="957" alt="Screenshot of entering Args" src="https://github.com/user-attachments/assets/c1883746-d22f-49e8-b79c-b9a10272845b" />
+<img width="911" height="278" alt="Screenshot showing specified args" src="https://github.com/user-attachments/assets/e6ce79ed-f56a-446c-afc3-c4f6205c35d7" />
 
-Now, any missing or mismatched types will be reported in the "Problems" tab (next to "Output" and "Debug Console").
+Now, any missing or mismatched types will be reported in the "Problems" tab every time you save or open a file:
+   - Mac: `Cmd` + `Shift` + `M`
+   - Windows: `Ctrl` + `Shift` + `M`
 
 If MyPy is set up properly, then this code:
 
@@ -106,9 +106,14 @@ def add(num1: int, num2) -> int:
     return num1 + num2
 
 result: str = add(3, 'hi')
+
+def func() -> int:
+    pass
 ```
 
 should result in three errors: `num2`'s missing type, `add()`'s returning something other than the promised `int`, and `result`'s value being an `int` when the variable type is `str`.
+
+If there is an error about `func()` missing a return, then the arg `--disable-error-code=empty-body` was not specified correctly in the settings.
 
 Back to example where 3 + 5 is 35:
 
@@ -132,42 +137,50 @@ We also require all functions to have appropriate documentation. Make sure to in
 Here is an example of a function with documentation and two tests:
 
 ```python
+"""Module for unit testing"""
 import unittest
 
+
 def get_area_of_rectangle(width: int, height: int) -> int:
+    """Returns the area of a rectangle.
+
+    Parameters
+    ----------
+    width : int
+        The width of the rectangle
+    height : int
+        The height of the rectangle
+    
+    Returns
+    -------
+    int
+        The area of the rectangle
+
+    Raises
+    ------
+    ValueError
+        If width or height is negative
+    """
     if (width < 0 or height < 0):
-        """Returns the area of a rectangle.
-
-        Parameters
-        ----------
-        width : int
-            The width of the rectangle
-        height : int
-            The height of the rectangle
-        
-        Returns
-        -------
-        int
-            The area of the rectangle
-
-        Raises
-        ------
-        ValueError
-            If width or height is negative
-        """
         raise ValueError("Rectangle dimensions cannot be negative")
     return width * height
 
 class TestArea(unittest.TestCase):
+    """Tests for the function get_area_of_rectangle(width: int, height: int) -> int"""
+
     def test_3_by_4(self) -> None:
+        """3 by 4 rectangle"""
         self.assertEqual(12, get_area_of_rectangle(3, 4))
 
     def test_negative_area(self) -> None:
-        with self.assertRaises(ValueError) as context:
+        """Make sure it raises a ValueError for a negative width"""
+        with self.assertRaises(ValueError):
             get_area_of_rectangle(-1, 4)
+
 
 if __name__ == '__main__':
     unittest.main()
+
 ```
 
 Formatting the documentation in this way makes it so that it shows up in official places like `str.__doc__` and `help(str)`.
