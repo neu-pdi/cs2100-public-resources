@@ -8,13 +8,45 @@ title: Course Overview and Python
 
 ## Understand the structure of this course and its learning outcomes, and expectations for students
 
+Participating in class helps students to connect with each other, learn the material more deeply, and let the instructor know about their understanding. It is also worth a portion of the grade.
+
+Poll: What motivates you? (Choose your top 3)
+- Grades
+- Learning
+- Getting a job
+- Making friends
+- Letter of recommendation from instructor
+- Addressing societal issues
+- I just enjoy coding
+
+These in-class exercises will be graded on completion, not correctness. (And there was no "correct answer" for that poll.)
+
+Course structure:
+- 3 lectures and 1 lab per week​
+- ~ weekly homework assignments​
+- Four quizzes and a final exam
+- Go to office hours
+
 ## See the locations of relevant resources
+
+- [Pawtograder](https://app.pawtograder.com):
+  - Office hours
+  - Discussion board
+  - Starting assignments (homework and labs)
+  - Checking grades
+- Git / GitHub: Submitting assignments
+- [Lecture notes](https://neu-pdi.github.io/cs2100-public-resources)
+- Textbook: "Python 3 Object Oriented Programming: Harness the Power of Python 3 Objects" by Dusty Phillips covers most of the object-oriented concepts relevant to this course, though we will not follow it exactly.
 
 ## Describe the purpose of our practices for code-level design (style guidlines)
 
 ### Why enfore a Style Guide?
-- Helps other people to more easily understand / contribute to existing software
-- Companies have conventions that dictate the style of how code is written ​
+
+Any code that we write will be read by at least one other person, and probably more. Many employers require all submitted code to be verified by at least two other people before it is accepted into the code base. And, at the very least, the TA grading your homework will read your code -- and we want them to be in a good mood when they do it, right?
+
+So, we follow a standard set of rules, called a "Style Guide," to make our code easier to read.
+
+It also helps other people to easily contribute to our codebase if they know where to look for things, or they know the format of the thing for which they are searching. Sometimes that "other person" is actually ourselves, years in the future, attempting to use our old code.
 
 In this course, we will use the "official" Python style guide, PEP8: [https://peps.python.org/pep-0008](https://peps.python.org/pep-0008/)
 
@@ -134,7 +166,9 @@ We also require all functions to have appropriate documentation. Make sure to in
 - Any returns
 - Any errors or exceptions that might be raised
 
-Here is an example of a function with documentation and two tests:
+We assume that if we asked you to write a function to calculate the area of a rectangle (given the width and height), you would know how to implement it.
+
+Here we show you how to format it with documentation and tests:
 
 ```python
 """Module for unit testing"""
@@ -165,6 +199,7 @@ def get_area_of_rectangle(width: int, height: int) -> int:
         raise ValueError("Rectangle dimensions cannot be negative")
     return width * height
 
+
 class TestArea(unittest.TestCase):
     """Tests for the function get_area_of_rectangle(width: int, height: int) -> int"""
 
@@ -184,5 +219,7 @@ if __name__ == '__main__':
 ```
 
 Formatting the documentation in this way makes it so that it shows up in official places like `str.__doc__` and `help(str)`.
+
+Notice that one of the tests makes sure that the function raises a ValueError if it's given an invalid argument.
 
 ## Describe the reasons why Python is popular, and what it mean to "run" Python code
