@@ -93,14 +93,14 @@ To progress, students are required to meet the grade point average (GPA) require
 
 ## Collaboration and Academic Honesty
 
-Computer science, both academically and professionally, is a collaborative discipline. In any collaboration, however, all parties are expected to make their own contributions and to generously credit the contributions of others. In our class, therefore, collaboration on homework and programming assignments is encouraged, but you as an individual are responsible for understanding all the material in the assignment and doing your own work. Always strive to do your best, give generous credit to others, start early, and seek help early from both your professors and classmates.
+Computer science, both academically and professionally, is a collaborative discipline. In any collaboration, however, all parties are expected to make their own contributions and to generously credit the contributions of others. In our class, therefore, collaboration on assignments is encouraged, but you as an individual are responsible for understanding all the material in the assignment and doing your own work. Always strive to do your best, give generous credit to others, start early, and seek help early from both your professors and classmates.
 
 The following rules are intended to help you get the most out of your education and to clarify the line between honest and dishonest work. The professor reserves the right to ask you to verbally explain the reasoning behind any answer or code that you turn in and to modify your project grade based on your answers. It is vitally important that you turn in work that is your own and follow the guidelines for academic honesty. The minimum penalty for an academic integrity violation is a zero on the assignment and a report to the [Office of Student Conduct and Conflict Resolution (OSCCR)](https://osccr.sites.northeastern.edu/). Penalties are increased if there are aggravating factors, such as stealing another student's work or lying about cheating.
 
-If you have had a substantive discussion of any homework or programming solution with a classmate (or anyone else), then **be sure to cite them in your assignment**. Here are some example citations:
+If you have had a substantive discussion of any assignment with a classmate (or anyone else), then **be sure to cite them in your assignment**. Here are some example citations:
 - "I had no idea how to approach Question 3 until classmate Husky Huskington explained how I could break it down into separate functions."
 - "Joseph Aoun and I bounced ideas off each other for Question 4, although we both did our own coding."
-- "I didn't remember how to convert a string to an int, so I asked Claude. It also showed me how to handle an exception if the string couldn't be converted."
+- "I didn't remember how to convert a string to an int, so I asked East Northern. They also showed me how to handle an exception if the string couldn't be converted."
 
 If you are unsure of what constitutes "substantive", then ask us or err on the side of caution. **You must not copy code or answers by hand, electronically, or in any other manner. Another way to think about it is that you should be talking in English (or another natural language) with one another, not Python.**
 
@@ -110,11 +110,18 @@ The following rules apply to anything you hand in for a grade.
 - You may not permit yourself to see any part of another student's program.
 - You may not publicly post your homework project code or answers in a chat or discussion where another student can see or copy it.
 - You may not describe a solution (or receive a description) in such detail that your work is virtually identical to another student's.
-- You may consult online resources as part of your course work, but you may not copy code or answers from online sources, books, etc. **If you get an idea of how to solve a problem from an online source or another person, include a short citation.** You are not required to cite course materials (including Piazza) or help from a TA (although we are always happy to hear when a TA was helpful).
-- AI tools such as ChatGPT should be treated like another person. Asking it to generate code or text for you is equivalent to asking another person to generate code or text for you. The same policies that apply to collaborating with people will also apply to collaborating with AI. You may consult it about Python syntax, our provided code, or general approaches. You may not ask it to generate assignment solutions. Cite it if it is helpful.
+- You may consult online resources as part of your course work, but you may not copy code or answers from online sources, books, etc. **If you get an idea of how to solve a problem from an online source or another person, include a citation.** You are not required to cite course materials or help from a TA (although we are always happy to hear when a TA was helpful).
 
 The university's [academic integrity policy](https://osccr.sites.northeastern.edu/academic-integrity-policy/) discusses actions regarded as violations and consequences for students, which are severe.
 
 If you have a question about what is considered a violation of this policy, please ask an instructor.
 
 If you feel that cheating is your only option, please ask for help.
+
+### The AI Policy
+
+AI coding assistants like Cursor and Windsurf are not allowed for this course. We believe that using an AI assistant is an important skill that should be covered _after_ the basics (which is why there is a different policy in CS 3100). Using AI assistants before covering the basics would be like using a calculator before a course on arithmetic -- it would undermine your ability to review and understand code.
+
+AI large language models like ChatGPT and Claude are not allowed for assignment-related use. For example, you may not copy and paste (or otherwise enter) any part of the assignment instructions into the AI, and you may not take assignment solutions from it. You also may not paraphrase the assignment instructions to an AI, "only look" at an AI-generated solution before writing your own, or otherwise undermine your learning using AI. Things that violate the spirit of the policy (loopholes that are not explicitly mentioned) are also not allowed. If you have a question about whether something is allowed, we encourage you to ask an instructor, and you will not be penalized for asking. You may use AI language models for non-assignment-related things.
+
+The exception is the AI overview that appears when using a search engine like Google. You may use a search engine to look up documentation, errors, concepts, etc. when doing assignments. You may read that AI overview.
