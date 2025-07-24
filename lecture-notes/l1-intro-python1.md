@@ -6,7 +6,7 @@ title: Course Overview and Python
 
 # Course Overview and Python
 
-## Understand the structure of this course and its learning outcomes, and expectations for students
+## Structure of this course and expectations for students
 
 Participating in class helps students to connect with each other, learn the material more deeply, and let the instructor know about their understanding. It is also worth a portion of the grade.
 
@@ -25,9 +25,19 @@ Course structure:
 - 3 lectures and 1 lab per week​
 - ~ weekly homework assignments​
 - Four quizzes and a final exam
-- Go to office hours
+- Office hours and the discussion board
 
-## See the locations of relevant resources
+### The AI Policy
+
+AI coding assistants like Cursor and Windsurf are not allowed for this course. We believe that using an AI assistant is an important skill that should be covered _after_ the basics (which is why there is a different policy in CS 3100). Using AI assistants before covering the basics would be like using a calculator before a course on arithmetic -- it would undermine your ability to review and understand code.
+
+AI large language models like ChatGPT and Claude are not allowed for assignment-related use. For example, you may not copy and paste (or otherwise enter) any part of the assignment instructions into the AI, and you may not take assignment solutions from it. You also may not paraphrase the assignment instructions to an AI, "only look" at an AI-generated solution before writing your own, or otherwise undermine your learning using AI. Things that violate the spirit of the policy (loopholes that are not explicitly mentioned) are also not allowed. If you have a question about whether something is allowed, we encourage you to ask an instructor, and you will not be penalized for asking. You may use AI language models for non-assignment-related things.
+
+The exception is the AI overview that appears when using a search engine like Google. You may use a search engine to look up documentation, errors, concepts, etc. when doing assignments. You may read that AI overview.
+
+Open ended poll: How do you feel about the AI policy?
+
+## Locations of relevant resources
 
 - [Pawtograder](https://app.pawtograder.com):
   - Office hours
@@ -38,7 +48,7 @@ Course structure:
 - [Lecture notes](https://neu-pdi.github.io/cs2100-public-resources)
 - Textbook: "Python 3 Object Oriented Programming: Harness the Power of Python 3 Objects" by Dusty Phillips covers most of the object-oriented concepts relevant to this course, though we will not follow it exactly.
 
-## Describe the purpose of our practices for code-level design (style guidlines)
+## Practices for code-level design (style guidlines)
 
 ### Why enfore a Style Guide?
 
@@ -58,7 +68,7 @@ How to set up the VSCode extension:
 2. Search for and install "Pylint"
 
 
-## Trace Python code which includes types, and understand why it's important to keep track of the types
+## Tracing Python code which includes types, and why it's important to keep track of the types
 
 Your classmate wants help finding a bug in their code:
 
@@ -222,4 +232,8 @@ Formatting the documentation in this way makes it so that it shows up in officia
 
 Notice that one of the tests makes sure that the function raises a ValueError if it's given an invalid argument.
 
-## Describe the reasons why Python is popular, and what it mean to "run" Python code
+## Why Python?
+
+Many employers use Python extensively, and it is common to use Python in technical interviews. Its popularity has led to hundreds of thousands of Python packages available for public use. It's popular among data scientists, web developers, game developers, machine learning engineers, and many others. There are also many online resources for learning Python.
+
+The next course in this sequence (CS 3100: PDI2) will use Java, another widely popular language. While our current course (CS 2100: PDI1) covers object-oriented programming, and most object-oriented concepts can be achieved in Python, we know that some object-oriented concepts are better taught in Java, and they will be covered next semester instead. We will learn Python in a way that sets students up for success next semester by, for example, requiring types in the code.
