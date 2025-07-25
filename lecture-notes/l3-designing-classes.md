@@ -8,7 +8,7 @@ title: Designing Classes
 
 ## List the three main parts of a class (attributes, methods, constructor)
 ## Organize tests using unittest.TestCase
-## Identify test cases and implement them as unit tests (without knowing the implementation of the function being tested)
+## Identify test cases and implement them as unit tests
 ## Write well-named and organized tests which help the reader understand the purpose of a function
 ## Use setup and cleanup
 ## Handle mutable state in tests
