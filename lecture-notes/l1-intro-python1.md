@@ -60,6 +60,12 @@ It also helps other people to easily contribute to our codebase if they know whe
 
 In this course, we will use the "official" Python style guide, PEP8: [https://peps.python.org/pep-0008](https://peps.python.org/pep-0008/)
 
+#### Variable naming conventions
+
+Part of the style guide is naming conventions. The names of variables, functions, and modules in Python use snake_case: the words are in lowercase, separated by underscores (`_`).
+
+#### Pylint
+
 We will use Pylint [(documentation here)](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) to check that our code follows the style guidelines.
 
 How to set up the VSCode extension:
@@ -119,7 +125,7 @@ Python does not enforce the types. The above code runs exactly the same as befor
 
 So, in this course, we will use MyPy to enforce the type checking.
 
-### MyPy Setup
+#### MyPy
 
 MyPy's documentation can be found at [https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker](https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker)
 
