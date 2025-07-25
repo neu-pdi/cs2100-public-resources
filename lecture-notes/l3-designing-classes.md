@@ -101,7 +101,24 @@ print(mini.make_sound() + Cat('mega').make_sound())
 3. mini mini mini mega
 4. mini mega
 
-## Organize tests using unittest.TestCase
+## Organizing tests using unittest.TestCase
+
+We saw an example of this in Lecture 1. We can organize our tests -- each class gets its own corresponding test class, where we test all of its methods.
+
+To create a test class for a class named `Class`:
+1. Create a class called `TestClass(unittest.TestCase)`
+2. Put all the tests for `Class` inside `TestClass`
+  - `unittest.TestCase` contains a bunch of helpful methods that we inherit
+    - `self.assertEqual()` takes two arguments. If they are equal, it does nothing. If they are not equal, it raises an error.
+    - `self.assertAlmostEqual()` works like `assertEqual()`, but it allows a small difference if used for `float`s.
+    - `self.assertRaises()` takes an error as an argument, and does nothing if the block of code raises that error. If the block of code does not raise that error, then `assertRaises()` raises an `AssertionError`. Recall this example: `with self.assertRaises(ValueError): get_area_of_rectangle(-1, 4)`
+    - The name of each method that has tests in it should start with `test_`
+3. Then outside of `TestClass`, call `unittest.main()`
+  - Optional verbosity parameter can be 1, 2, or 3
+4. Don't forget to `import unittest` at the top of the file
+
+Exercise: Let's write tests for `Cat`.
+
 ## Identify test cases and implement them as unit tests
 ## Write well-named and organized tests which help the reader understand the purpose of a function
 ## Use setup and cleanup
