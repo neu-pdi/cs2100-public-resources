@@ -388,7 +388,3 @@ if __name__ == '__main__':
 ```
 
 Try this out using today's lecture code -- what happens if you keep all those `print()` statements outside of functions, and then import the file? Does it get fixed when you move that code into functions which are only called in `main()`? (Don't forget the `if __name__ == '__main__'` conditional at the end!)
-
-## Variable naming conventions
-
-Part of the style guide is naming conventions. The names of variables, functions, and modules in Python use snake_case: the words are in lowercase, separated by underscores (`_`).
