@@ -93,13 +93,13 @@ Poll: What does this output?
 mini: Cat = Cat('Mini')
 for year in range(3):
     mini.birthday()
-print(mini.make_sound() + Cat('mega').make_sound())
+print(mini.make_sound() + Cat('Mega').make_sound())
 ```
 
 1. meow meow meow
 2. (blank line)
-3. mini mini mini mega
-4. mini mega
+3. Mini Mini Mini Mega
+4. Mini Mega
 
 ## Organizing tests using unittest.TestCase
 
@@ -120,8 +120,71 @@ To create a test class for a class named `Class`:
 Exercise: Let's write tests for `Cat`.
 
 ## Identify test cases and implement them as unit tests
+
+For this course, you must write tests for every function or method that you write.
+
+When testing a function, we consider all the ways the function might behave:
+- The normal / happy case to check that the method works for expected inputs
+  - `assertEqual(5, add(2, 3))`
+  - `assertNotEqual(1, add(2, 3))`
+  - `assertEqual('A', calculateGrade(96))`
+- Invalid inputs
+  - `with self.assertRaises(ValueError): calculateGrade(-600)`
+  - `with self.assertRaises(ValueError): add('two', 3)`
+  - `with self.assertRaises(ValueError): get_area_of_rectangle(-1, 4)`
+- Edge cases at the boundaries of the normal case (almost invalid, but not quite)
+  - `assertEqual(0, get_area_of_rectangle(0, 4))`
+  - `assertEqual(0, divide(0, 1))`
+
+If the function has conditionals, make sure you have test cases for each branch.
+
+Poll: We're testing a function `calculateGrade(score: int) -> str` that returns a letter grade given a percentage. Which test case is MOST important to include?
+
+1. `assertEqual('B+', calculateGrade(87))`
+2. `assertEqual('F', calculateGrade(0))`
+3. `with self.assertRaises(ValueError): calculateGrade(-600)`
+4. All of these are equally important
+
+Open ended poll: What other test cases can you come up with?
+
 ## Write well-named and organized tests which help the reader understand the purpose of a function
-## Use setup and cleanup
+
+Poll: What's wrong with this test?
+```python
+def test_make_sound_works_after_four_years(self) -> None:
+    self.assertEqual("", Cat('giga').make_sound())
+```
+1. The test runs, but it fails (that's not how the implementation is supposed to work)
+2. Not all of the tests in this function always get executed
+3. The function's name doesn't reflect what it tests
+4. It's using the wrong type of test
+
+Poll: What's wrong with this test?
+```python
+def test_make_sound_works_during_first_four_years(self) -> None:
+    large: Cat = Cat('large')
+    meows: str = ""
+    for _ in range(4):
+        self.assertEqual(meows, large.make_sound())
+        large.birthday()
+        meows = (meows + " meow").strip()
+```
+1. The test runs, but it fails (that's not how the implementation is supposed to work)
+2. Not all of the tests in this function always get executed
+3. The function's name doesn't reflect what it tests
+4. It's using the wrong type of test
+
+Poll: What's wrong with this test?
+```python
+def test_negative_area(self) -> None:
+    with self.assertRaises(ValueError):
+        self.assertEqual(-400, get_area_of_rectangle(-4, 100))
+```
+1. The test runs, but it fails (that's not how the implementation is supposed to work)
+2. Not all of the tests in this function always get executed
+3. The function's name doesn't reflect what it tests
+4. It's using the wrong type of test
+
 ## Handle mutable state in tests
 
 ### Aside #1 about mutability: alias vs. copy
@@ -157,6 +220,8 @@ my_list: List[int] = [1, 2, 3, 4]
 print(f'Sum: {sum_with_bad_manners(my_list)}') # Sum: 10
 print(my_list) # []
 ```
+
+## Use setup and cleanup
 
 Good manners: Functions should always leave their args unchanged
 
