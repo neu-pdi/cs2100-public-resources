@@ -6,9 +6,8 @@ title: Using Objects
 
 # Using Objects
 
-## Understand and implement procedural abstraction
-## Single responsbility principle
+## Procedural abstraction
+## The single responsbility principle
 ## State and aliasing
 (https://courses.dbp.io/2000/web/lectures/30/index.html)
-## Practice reading and writing text files
-## At a high level, identify the pieces of the design process flowchart
+## The Program Design and Implementation Process
