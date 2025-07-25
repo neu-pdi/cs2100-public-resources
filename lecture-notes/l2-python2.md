@@ -350,7 +350,7 @@ for index, word in enumerate(['American Shorthair', 'Balinese', 'Cheetah']):
    2: Cheetah
 ```
 
-## Read and write data from files and user input
+## Read and write data from user input and text files
 
 We've been using the `input('prompt')` function which returns the user's response to the provided `'prompt'`.
 
