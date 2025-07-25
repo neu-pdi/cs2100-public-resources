@@ -6,5 +6,10 @@ title: Review for Quiz 1
 
 # Review for Quiz 1
 
-## List the topics and resources to review for Quiz 1
-(Buffer day for remaining topics)
+In addition to the topics listed below, this quiz will also implicitly test your knowledge of variable types, conditional statements, and iteration.
+
+## Using Objects
+
+## Classes: constructors, methods, and attributes
+
+## Testing
