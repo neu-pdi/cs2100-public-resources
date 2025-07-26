@@ -248,4 +248,4 @@ Many employers use Python extensively, and it is common to use Python in technic
 The next course in this sequence (CS 3100: PDI2) will use Java, another widely popular language. While our current course (CS 2100: PDI1) covers object-oriented programming, and most object-oriented concepts can be achieved in Python, we know that some object-oriented concepts are better taught in Java, and they will be covered next semester instead. We will learn Python in a way that sets students up for success next semester by, for example, requiring types in the code.
 
 <img width="1080" height="903" alt="Hello world meme" src="https://github.com/user-attachments/assets/e9978dc9-168e-4589-ac4b-266af17227c1" />
-(Source: [https://www.reddit.com/r/ProgrammerHumor/comments/64s93u/hello_world_oc](https://www.reddit.com/r/ProgrammerHumor/comments/64s93u/hello_world_oc))
+(Source: https://www.reddit.com/r/ProgrammerHumor/comments/64s93u/hello_world_oc)
