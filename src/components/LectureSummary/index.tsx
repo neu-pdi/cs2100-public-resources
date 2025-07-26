@@ -32,7 +32,7 @@ export default function LectureSummary({ version }: { version: string }) {
                         <Card.Header>
                             <HStack justifyContent='space-between'>
                                 <Link to={doc.path}><Heading as="h3" m={0}>{docContent.frontMatter?.lecture_number}. {docContent.metadata?.title}</Heading></Link>
-                                <Text fontSize='sm' color='text.muted'>Est {totalMinutes} minutes</Text>
+{/*                                 <Text fontSize='sm' color='text.muted'>Est {totalMinutes} minutes</Text> */}
                             </HStack>
                         </Card.Header>
                         <Card.Body spaceY={0}>
