@@ -95,6 +95,4 @@ A core principle for writing code is that every component of our code must have 
 | Function | def read_file_compute_average_print_score(filename: str) -> None: |
 | Class | class FileManagerAndOutputFormatter |
 
-## State and aliasing
-(https://courses.dbp.io/2000/web/lectures/30/index.html)
 ## The Program Design and Implementation Process
