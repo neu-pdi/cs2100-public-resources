@@ -189,46 +189,6 @@ def test_negative_area(self) -> None:
 3. The function's name doesn't reflect what it tests
 4. It's using the wrong type of test
 
-## Handle mutable state in tests
-
-### Aside #1 about mutability: alias vs. copy
-
-Given an object, an alias is simply another reference to the same object (same place in the computer's memory).
-A copy is another object (different place in the computer's memory) that has the same elements and looks exactly the same.
-
-```python
-original: List[int] = [1, 2, 3]
-
-alias: List[int] = original
-copy: List[int] = original.copy()
-
-original[2] = 90
-
-print(alias) # [1, 2, 90]
-print(copy) # [1, 2, 3]
-```
-
-### Aside #2 about mutability: passing mutable objects as arguments
-
-If we pass an object as an argument to a function, an _alias_ is created, not a copy.
-
-```python
-def sum_with_bad_manners(in_list: List[int]) -> int:
-    sum: int = 0
-    while (len(in_list) > 0):
-        sum += in_list.pop()
-    return sum
-
-
-my_list: List[int] = [1, 2, 3, 4]
-print(f'Sum: {sum_with_bad_manners(my_list)}') # Sum: 10
-print(my_list) # []
-```
-
-Good manners: Functions should always leave their args unchanged.
-
-Unless we're in a test class.
-
 ## Using setUp and tearDown
 
 `unittest` comes with four methods that we can write help us to reduce redundancy and write cleaner tests:
