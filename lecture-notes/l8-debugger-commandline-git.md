@@ -48,6 +48,97 @@ The six dots on the left can be used to drag the menu elsewhere on your screen. 
 
 We sometimes use the debugger during class to show the current state of the program and data structures. We also often use the debugger during office hours to step through students' assignment code. (If you come to us with a bug in your code, we will probably start by asking if you have tried using the debugger!)
 
-## Use the command line to navigate the file system: pwd, cd, ls -al
-## Use git through the command line: clone, add, commit, push, pull, status
-## use tests to debug a function
+Tip: Use tests to debug buggy functions. If there is a function with a bug, write a test that calls that function in a way that is likely to make the bug happen. (The test will fail at first, which is good because if the test passes, then you know you have fixed the bug.) Then, place a breaking point in the buggy function, and start the debugger on the test.
+
+## The command line
+
+<img width="564" height="500" alt="Meme: using the command line" src="https://github.com/user-attachments/assets/da179ae8-52ac-437f-8057-77d12e784817" />
+
+The command line is a powerful way to navigate a computer. In this course, we will be using the command line to navigate assignment files.
+
+- Mac or Linux: Terminal app
+- Windows: [Git Bash](https://gitforwindows.org) (After installing it, pin Git Bash to the Taskbar and configure it to open to your home directory.)
+
+Most popular commands:
+| Command | Description | Example |
+| - | - | - |
+| `ls` | short for “list”; prints the contents of the current working directory | `ls` |
+| `cd` | short for “change directory”; moves you to the given directory | `cd ~/Desktop` |
+| `pwd` | short for "print working directory" | `pwd` |
+| `mkdir` | short for “make directory”; creates a new subdirectory at the current location with the given name | `mkdir nuresources` |
+| `touch` | creates an empty file in the current directory with the given filename | `touch lecture8.py` |
+
+Changing the directory using `cd`:
+- Using the absolute directory, the complete path from the root to a given directory or file: `cd ~/Desktop/Lectures/2100`
+- Using the relative directory, the path from our current working directory to a given directory or file: `cd Lectures/2100` (from the Desktop)
+
+Poll: The command `cd fa25-hw3-lists-rasikabh/src/data` results in an error. What is NOT likely to be the cause of this error?
+1. The current location is not the directory where I store my homework assignments
+2. There is no directory called `src` in the directory `fa25-hw3-lists-rasikabh`
+3. `data` is a single file, not a directory
+4. The assignment submission for Homework 3 is closed
+
+## git through the command line
+
+Have you ever wished you could...
+- go back to an earlier working version of a project?
+- see what changed between versions of your code?
+- tell who made a certain change, when and why?
+- switch between using your laptop and desktop to work on a project?
+- work with a friend without worrying about overwriting each other's changes?
+- have someone review your changes before adding them to a project?
+- make some experimental changes with the option of undoing them?
+- create your own version of an existing project, change it, and incorporate updates to the original project?
+(List source: Ellen Spertus)
+
+Git is the leading distributed version control software, created by Linus Torvalds in 2005.
+GitHub is a website owned by Microsoft that hosts git repositories and has a web interface (plus other tools like automated testing and issue tracking)
+
+<img width="887" height="455" alt="Two users using GitHub" src="https://github.com/user-attachments/assets/fb0db5d1-d596-4fb9-8cc2-bcfb48c155e3" />
+
+When you "accept" an assignment using Pawtograder, it creates a code repository on GitHub containing the "starter code" for that assignment. You will then use `git clone` to copy that code repository to your laptop, and open / edit the code using VSCode on your laptop.
+
+Key concepts:
+- Repository (repo): a set of code and its history
+  - local: on your computer
+  - remote: on another computer (like GitHub)
+- Commit
+  - the codebase at a given point in time (noun)
+  - to add a set of changes to the repository (verb)
+  - Push: to move code from a local to remote repository
+
+Tip: git repositories have a directory in them called `.git` which is invisible by default. To get it to show up when you use the `ls` command, you must modify it slightly, so it looks like this: `ls -al`
+
+Locations of versions of code:
+| Location | Definition | git command to put code there | Postal analogy |
+| - | - | - | - |
+| working area | code that you are currently writing / saving in VSCode |  | Writing on a paper |
+| staging area | code that is ready to be commited | `git add .` | Add a stamp and put it in your backpack |
+|​ local repository | code that has been committed | `git commit -m "descriptive message"` | Drop off all stamped postcards at the post office |
+| remote repository | code that is on GitHub | `git push` | Postal workers moving postcards to destinations |
+
+Most assignments will go like this:
+- Accept the assignment on Pawtograder
+- Pawtograder creates a GitHub repo and sends you an email invitation to join the repo. You accept the invitation.
+- Using your command line, navigate to this course's directory and do `git clone <GitHub repo URL (ssh version, not html)>`
+- You open the resulting files using VSCode and work on the assignment, saving as you go.
+- After each significant chunk of progress on the assignment:
+  - `git add .` to stage changes in all files in this directory
+  - `git commit -m "descriptive message"` to commit the changes
+  - `git push` to push the changes to the online repo in GitHub
+    - Pawtograder will automatically take that as your submission (if the submission is still open)
+  - `git status` to make sure it worked
+
+Other commands:
+- `git pull` takes changes any that others pushed to the repo on GitHub, and copies them to your local repo
+- `git status` reports which files have been changed and staged
+- `git diff` shows every changed line
+- `git diff --staged` shows the difference between staged and committed changes
+- `history` shows the history of commands you typed into the command line
+
+Poll: Why is this not an ideal commit message? `"Complete Homework 3"`
+1. It doesn't describe the code changes
+2. It implies that all changes to the entire assignment were submitted in a single commit
+3. We can't change Homework 3 again, since we said we completed it
+4. All of the above
+5. (1) and (2) only
