@@ -13,11 +13,14 @@ Participating in class helps students to connect with each other, learn the mate
 Poll: What motivates you? (Choose your top 3)
 - Grades
 - Learning
-- Getting a job
+- Preparing for job / co-op interviews
+- Doing well in the job / co-op
+- Doing well in later courses
 - Making friends
 - Letter of recommendation from instructor
+- Enjoying college life
 - Addressing societal issues
-- I just enjoy coding
+- My health and well-being
 
 These in-class exercises will be graded on completion, not correctness. (And there was no "correct answer" for that poll.)
 
