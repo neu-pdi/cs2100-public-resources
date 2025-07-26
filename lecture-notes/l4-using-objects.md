@@ -90,6 +90,7 @@ Benefits of abstraction:
 A core principle for writing code is that every component of our code must have a single purpose. This makes our code easier to read, test, and maintain.
 
 | Component | Does not Follow Single Responsibility Principle |
+| - | - |
 | Variable | age_or_nonexistent: int = -1 # negative if nonexistent |
 | Function | def read_file_compute_average_print_score(filename: str) -> None: |
 | Class | class FileManagerAndOutputFormatter |
