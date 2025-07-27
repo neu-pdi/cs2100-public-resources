@@ -157,6 +157,17 @@ Cannot add `None` to a number or string
 - `None + "hi"` does not work
 - `len(None)` does not work​
 
+To specify that a type might be `None`, we use `Optional`. For example:
+```python
+from typing import Optional
+
+def get_number_or_None(hopefully_a_number: str) -> Optional[int]:
+    try:
+        return int(hopefully_a_number)
+    except ValueError:
+        return None
+```
+
 ## Use types in Python code
 
 We started using types in our Python code since day one (last lecture). Here are two new types, which need to be imported:
