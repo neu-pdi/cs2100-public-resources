@@ -20,7 +20,7 @@ Poll: What motivates you? (Choose your top 3)
 - Letter of recommendation from instructor
 - Enjoying college life
 - Addressing societal issues
-- My health and well-being
+- Health and well-being
 
 These in-class exercises will be graded on completion, not correctness. (And there was no "correct answer" for that poll.)
 
