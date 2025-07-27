@@ -6,7 +6,7 @@ sidebar_position: 3
 # Schedule
 
 | Week | Lectures | Lab (Friday and following Tuesday) | Homework (due Thursday 6pm Pacific / 9pm Eastern) |
-| ---- | ---------------------------------- | -------- |
+| ---- | -------- | ---------------------------------- | -------- |
 | 1 | L1, L2 | Setup environment, small Python problems |  |
 | 2 | L3, L4, L5 | Classes, test classes, File I/O |  |
 | 3 | L6 (Quiz 1), L7, L8 | Testing, git, debugger | [HW1: Algorithms as Decision-Makers](https://github.com/neu-cs2100/fa25-hw1-algodecisionmakers-handout) (due Tuesday) |
