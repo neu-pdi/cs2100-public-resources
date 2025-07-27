@@ -206,8 +206,8 @@ A core principle for writing code is that every component of our code must have 
 
 | Component | Does not Follow Single Responsibility Principle |
 | - | - |
-| Variable | age_or_nonexistent: int = -1 # negative if nonexistent |
-| Function | def read_file_compute_average_print_score(filename: str) -> None: |
-| Class | class FileManagerAndOutputFormatter |
+| Variable | `age_or_nonexistent: int = -1 # negative if nonexistent` |
+| Function | `def read_file_compute_average_print_score(filename: str) -> None:` |
+| Class | `class FileManagerAndOutputFormatter` |
 
 ## The Program Design and Implementation Process
