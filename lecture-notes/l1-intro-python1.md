@@ -53,7 +53,7 @@ Open ended poll: How do you feel about the AI policy?
 
 ## Practices for code-level design (style guidlines)
 
-### Why enfore a Style Guide?
+### Why enforce a Style Guide?
 
 Any code that we write will be read by at least one other person, and probably more. Many employers require all submitted code to be verified by at least two other people before it is accepted into the code base. And, at the very least, the TA grading your homework will read your code -- and we want them to be in a good mood when they do it, right?
 
@@ -166,7 +166,7 @@ should result in three errors: `num2`'s missing type, `add()`'s returning someth
 
 If there is an error about `func()` missing a return, then the arg `--disable-error-code=empty-body` was not specified correctly in the settings.
 
-Back to example where 3 + 5 is 35:
+Back to the example where 3 + 5 is 35:
 
 ```python
 num1: int = input('Please enter a number: ')
