@@ -95,9 +95,9 @@ const config: Config = {
           position: 'left',
         },
         {
-          to: 'assignments',
+          to: 'schedule',
           activeBasePath: 'src/pages',
-          label: 'Assignments',
+          label: 'Schedule',
           position: 'left',
         },
       
