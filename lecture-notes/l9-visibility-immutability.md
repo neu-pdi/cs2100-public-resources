@@ -6,13 +6,13 @@ title: Visibility and Immutability
 
 # Visibility and Immutability
 
-The textbook "Python 3 Object Oriented Programming: Harness the Power of Python 3 Objects" by Dusty Phillips is recommended for this course, and though we are not following it exactly, it has good explanations for today's lecture. The relevant sections are "Who can access my data?" on pages 50 - 52 and "Using properties to add behavior to class data" on pages 129 - 137.
+"Unenforced guidelines and best practices" is a recurring theme in this course.
 
 ## Python's built-in visibility restrictions
 
-For security, and to hide implementation details, most programming languages have a way to mark attributes and methods as "private" -- they can only be accessed from within their class.
+For security, and to hide implementation details, most programming languages have a way to mark attributes and methods as "private" -- they can only be accessed from within their class. For example, they can block access to `my_diary.password` or prevent calling the method `car.spray_gas_from_tank_into_cylinders()`. This is useful because most people would cause damage if they could access that part of the car startup sequence.
 
-As Dusty Philips put it, "Python doesn't do that. Python doesn't really believe in enforcing laws that might someday get in your way. Instead, it provides unenforced guidelines and best practices. Technically, all methods and attributes on a class are publicly available."
+As Dusty Philips (the author of our suggested textbook) put it, "Python doesn't do that. Python doesn't really believe in enforcing laws that might someday get in your way. Instead, it provides unenforced guidelines and best practices. Technically, all methods and attributes on a class are publicly available."
 
 We cannot prevent external code from viewing or changing an object's attributes (or using its methods).
 
@@ -122,6 +122,38 @@ Notice that that is the object variable (`my_diary`), followed by a dot and one 
 
 Dusty Philips: "name mangling does not guarantee privacy, it only strongly recommends it. Most Python programmers will not touch a double-underscore variable on another object unless they have an extremely compelling reason to do so. However, most Python programmers will not touch a single-underscore variable without a compelling reason either."
 
+Poll: Which ONE does NOT make it print `EVIL`?
+```python
+class Grades:
+    def __init__(self, student_id: str):
+        self._student_id = student_id
+        self.__grades: List[int] = [72, 46]
+
+my_grades: Grades = Grades('S999999')
+```
+1. 
+```python
+my_grades._student_id = 'EVIL'
+print(my_grades._student_id)
+```
+
+2.
+```python
+my_grades.__grades.append(-1)
+if -1 in my_grades.__grades: print('EVIL')
+```
+
+3.
+```python
+my_grades._Grades__grades.append(-1)
+if -1 in my_grades._Grades__grades: print('EVIL')
+```
+
+4.
+```python
+print(Grades('EVIL')._student_id)
+```
+
 ## Encapsulation via Properties
 
 What if we want to allow external code to modify or access our attributes, but only in a controlled way? For example, a `Person` class might have an attribute `age: int`, which can be changed to reflect someone's age, but we want to prevent negative numbers. And when we access the `Person`'s `name`, it automatically returns the concatenation of the person's `_first_name` and `_last_name`, which (for some reason) is the required format for our application.
@@ -167,10 +199,60 @@ mini.age = 11
 print(mini.age) # 11
 ```
 
-## Immutability
-Determine when to design a class to be immutable, and implement the immutability
+Poll: Why do we have the decorators `@property` and `@*.setter`?
+1. `@property` controls the way outsiders view an attribute
+2. `@property` prevents hackers from accessing an attribute
+3. `@*.setter` controls the way outsiders can modify an attribute
+4. `@*.setter` prevents hackers from modifying an attribute
 
 <img width="555" height="772" alt="XKCD: Workflow" src="https://github.com/user-attachments/assets/f5ce62de-2dca-4fcc-bf25-d4d4c75b26b2" />
 (Source: https://xkcd.com/1172)
 
 Hyrum's Law: "All observable behaviors of your system will be depended on by somebody." ([https://www.hyrumslaw.com](https://www.hyrumslaw.com))
+
+## Immutability
+
+When designing a class, we get to decide whether its objects will be mutable or immutable.
+An object is "immutable" if it cannot be modified after creation.
+
+For example, lists are not immutable, because they can be modified after creation. Lists are mutable.
+```python
+my_list: List[int] = [1, 2, 3]
+my_list.append(-400)
+print(my_list) # [1, 2, 3, -400]
+```
+
+By contrast, tuples are immutable.
+```python
+my_tuple: Tuple[int, int, int] = (1, 2, 3)
+my_tuple.append(4) # impossible
+```
+
+- Notice how the tuple looks a lot like the list, but it is initialized using parentheses instead of square brackets.
+- Its type also specifies the number of elements in it, which is fine since it can't be modified.
+  - (If you need to create a huge tuple with, say, 60 elements, and you don't want to write `int` 60 times in the type of the variable, you can use this instead: `my_long_tuple: Tuple[int, ...] = tuple([i for i in range(60)])`)
+ 
+We can sort a list in-place, but not a tuple.
+```python
+my_list.sort()
+print(my_list) # [-400, 1, 2, 3]
+
+my_tuple.sort() # impossible
+```
+
+However, here's the tricky part. While the tuple is immutable, the variable `my_tuple` (the pointer to the location in the computer's memory) is still a mutable variable. So, while we can't mutate the tuple itself, we can re-assign the variable `my_tuple` to a sorted version of the same tuple.
+
+```python
+my_long_tuple: Tuple[int, ...] = tuple([-i for i in range(5)])
+my_long_tuple = tuple(sorted(my_long_tuple))
+print(my_long_tuple)      # (-4, -3, -2, -1, 0)
+```
+
+Poll: Which ONE is not allowed? (Hint: `str`s are immutable)
+```python
+my_str: str = 'mini'
+```
+1. `print(my_str.upper())`
+2. `my_str = my_str.upper()`
+3. `my_str = 'MINI'`
+4. `my_str[0] = 'B'`
