@@ -168,7 +168,7 @@ def get_number_or_None(hopefully_a_number: str) -> Optional[int]:
         return None
 ```
 
-## Use types in Python code
+## Types
 
 We started using types in our Python code since day one (last lecture). Here are two new types, which need to be imported:
 
@@ -189,7 +189,7 @@ Differences between a set and a list:
 
 There will be more about sets in [Lecture 12](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l12-data-structures).
 
-## Select and implement appropriate control structures to reflect a problem
+## Control structures
 
 We're assuming you've seen conditionals and iteration before, though possibly in a different programming langauge. Here it is in Python:
 
