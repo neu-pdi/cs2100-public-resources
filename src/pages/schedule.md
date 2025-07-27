@@ -7,17 +7,17 @@ sidebar_position: 3
 
 | Week | Lectures | Lab (Friday and following Tuesday) | Homework (due Thursday 6pm Pacific / 9pm Eastern) |
 | ---- | -------- | ---------------------------------- | -------- |
-| 1 | L1, L2 | Setup environment, small Python problems |  |
-| 2 | L3, L4, L5 | Classes, test classes, File I/O |  |
-| 3 | L6 (Quiz 1), L7, L8 | Testing, git, debugger | [HW1: Algorithms as Decision-Makers](https://github.com/neu-cs2100/fa25-hw1-algodecisionmakers-handout) (due Tuesday) |
-| 4 | L9, L10, L11 | Visibility, generics, using lists |  |
-| 5 | L12, L13, L14 | JSON, dictionaries, Pandas, exceptions, covariance, plot | [HW2: Testing](https://github.com/neu-cs2100/fa25-hw2-testing-handout) |
-| 6 | L15, L16, L17 | More Pandas | [HW3: Using lists](https://github.com/neu-cs2100/fa25-hw3-lists-handout) |
-| 7 | L18 (Quiz 2), L19 | Interfaces | [HW4: Visibility, privacy](https://github.com/neu-cs2100/fa25-hw4-reddit-privacy-handout) |
-| 8 | L20, L21, L22 | Inheritance | [HW5: Processing data](https://github.com/neu-cs2100/fa25-hw5-biometrics-handout) |
-| 9 | L23, L24 (Quiz 3), L25 | Iterator/Iterable, Comparable | [HW6: Interfaces and abstract classes](https://github.com/neu-cs2100/fa25-hw6-bias-bars-handout) |
-| 10 | L26, L27, L28 |  | [HW7: Inheritance](https://github.com/neu-cs2100/fa25-hw7-minecraft-handout) |
-| 11 | L29, L30, L31 | Recursion, MSTs | [HW8: Trees](https://github.com/neu-cs2100/fa25-hw8-trees-handout) |
-| 12 | L32, L33, L34 | Decorator pattern, @decorator |  |
-| 13 | L35 (Quiz 4) |  |  |
-| 14 | L36, L37 |  | [HW9: Recursion, MSTs, MVC](https://github.com/neu-cs2100/fa25-hw9-mst-handout) |
+| 1 | [L1](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l1-intro-python1), [L2](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l2-python2) | Setup environment, small Python problems |  |
+| 2 | [L3](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l3-designing-classes), [L4](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l4-using-objects), [L5](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l5-review1) | Classes, test classes, File I/O |  |
+| 3 | [L6 (Quiz 1)](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l6-quiz1), [L7](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l7-ethics), [L8](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l8-debugger-commandline-git) | Testing, git, debugger | [HW1: Algorithms as Decision-Makers](https://github.com/neu-cs2100/fa25-hw1-algodecisionmakers-handout) (due Tuesday) |
+| 4 | [L9](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l9-visibility-immutability), [L10](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l10-generics), [L11](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l11-lists) | Visibility, generics, using lists |  |
+| 5 | [L12](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l12-data-structures), [L13](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l13-pandas-numpy), [L14](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l14-statistics) | JSON, dictionaries, Pandas, exceptions, covariance, plot | [HW2: Testing](https://github.com/neu-cs2100/fa25-hw2-testing-handout) |
+| 6 | [L15](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l15-design-data1), [L16](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l16-design-data2), [L17](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l17-review2) | More Pandas | [HW3: Using lists](https://github.com/neu-cs2100/fa25-hw3-lists-handout) |
+| 7 | [L18 (Quiz 2)](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l18-quiz2), [L19](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l19-interfaces-abstract-classes) | Interfaces | [HW4: Visibility, privacy](https://github.com/neu-cs2100/fa25-hw4-reddit-privacy-handout) |
+| 8 | [L20](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l20-inheritance1), [L21](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l21-inheritance2), [L22](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l22-inheritance3) | Inheritance | [HW5: Processing data](https://github.com/neu-cs2100/fa25-hw5-biometrics-handout) |
+| 9 | [L23](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l23-review3-technical-interviews), [L24 (Quiz 3)](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l24-quiz3), [L25](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l25-interfaces1) | Iterator/Iterable, Comparable | [HW6: Interfaces and abstract classes](https://github.com/neu-cs2100/fa25-hw6-bias-bars-handout) |
+| 10 | [L26](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l26-interfaces2), [L27](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l27-recursion), [L28](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l28-trees) |  | [HW7: Inheritance](https://github.com/neu-cs2100/fa25-hw7-minecraft-handout) |
+| 11 | [L29](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l29-graphs), [L30](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l30-mst), [L31](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l31-decorator-observer-datapull) | Recursion, MSTs | [HW8: Trees](https://github.com/neu-cs2100/fa25-hw8-trees-handout) |
+| 12 | [L32](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l32-decorator), [L33](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l33-mvc1), [L34](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l34-review4-duck-typing) | Decorator pattern, @decorator |  |
+| 13 | [L35 (Quiz 4)](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l35-quiz4) |  |  |
+| 14 | [L36](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l36-mvc2), [L37](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l37-review5) |  | [HW9: Recursion, MSTs, MVC](https://github.com/neu-cs2100/fa25-hw9-mst-handout) |
