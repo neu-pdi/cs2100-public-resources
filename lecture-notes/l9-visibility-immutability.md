@@ -210,7 +210,7 @@ Poll: Why do we have the decorators `@property` and `@*.setter`?
 
 Hyrum's Law: "All observable behaviors of your system will be depended on by somebody." ([https://www.hyrumslaw.com](https://www.hyrumslaw.com))
 
-## Immutability
+## Immutability and Tuples
 
 When designing a class, we get to decide whether its objects will be mutable or immutable.
 An object is "immutable" if it cannot be modified after creation.
