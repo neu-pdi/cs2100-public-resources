@@ -6,7 +6,10 @@ title: Design Patterns for Handling Data 1
 
 # Design Patterns for Handling Data 1
 
-## Use functions as objects
-## Use the type typing.Callable
-## Sort and filter Pandas dataframes
-## Know how and why we scale or normalize columns in a Pandas dataframe
+## Functions are objects
+
+### typing.Callable
+
+## Sorting and filtering data with Pandas
+
+## Scaling and normalizing data
