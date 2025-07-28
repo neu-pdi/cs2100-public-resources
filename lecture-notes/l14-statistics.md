@@ -6,5 +6,9 @@ title: Statistics
 
 # Statistics
 
-## Understand covariance and use Numpy to calculate it
-## Visualize data using a scatterplot and bar graph using matplotlib
+## Covariance
+
+## Visualization with matplotlib
+
+### Scatterplots
+### Bar graphs
