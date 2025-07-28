@@ -6,4 +6,8 @@ title: Quiz 2
 
 # Quiz 2
 
-## Stats, using data structures
+## Topics
+- Properties (attributes with getters and setters)
+- Lists
+- Sets and dictionaries
+- Calculating statistics using Pandas and Numpy
