@@ -6,6 +6,10 @@ title: Pandas and Numpy
 
 # Pandas and Numpy
 
-## Use Pandas to parse files of tabular data
-## Use Pandas and Numpy to calculate basic statistics for tabular data
-## Raise an exception (introduced in the context of files)
+## Processing tabular data using Pandas
+## Calculating statistics using Numpy
+## Creating and raising our own Errors
+### os module
+- os.path.exists checks if a file exists
+- os.path.join
+- os.listdir
