@@ -122,11 +122,136 @@ print(type({}))         # <class 'dict'>
 ```
 Curly brackets, when empty (or non-empty, but formatted a specific way), denote a dictionary.
 
-Exercise: Scrabble helper
+A dictionary is also known as an "associative array".
+It's like a list, but the indices are not required to be contiguous ints -- the indices can be of any type
+
+A dictionary maps key --> value
+Each key can appear at most once (the keys are a set)​
+
+Here are two examples which map each animal (`str`) to their age (`int`):
+```python
+ages: Dict[str, int] = {'elephant': 12, 'cat': 10}
+print(ages)  # {'elephant': 12, 'cat': 10}
+
+also_ages: Dict[str, int] = dict([('elephant', 12), ('cat', 10)])
+print(also_ages)  # {'elephant': 12, 'cat': 10}  (same as before)
+```
+
+### Some dictionary syntax
+
+We can access a value given its key in two different ways: brackets (`[key]`) or using the `get(key)` method. The `get(key)` has the added benefit that it handles the case if the `key` is not in the `dict`.
+```python
+ages: Dict[str, int] = {'elephant': 12, 'cat': 10}
+
+print(ages['cat'])  # 10
+print(ages.get('cat'))  # 10
+print(ages.get('dog'))  # None
+print(ages.get('dog'), 3)  # 3
+print(ages['dog'])  # raises KeyError
+```
+
+We can add or update a `key` -> `value` pair. If we add the same `key` twice, it overwrites the original `value` with the second `value`.
+```python
+ages: Dict[str, int] = {'cat': 10}
+
+ages['elephant'] = 12
+print(ages)  # {'cat': 10, 'elephant': 12}
+
+ages.update([('elephant', 13)])
+print(ages)  # {'cat': 10, 'elephant': 13}
+
+ages['elephant'] = 14
+print(ages)  # {'cat': 10, 'elephant': 14}
+
+ages.update([('dog', 3)])
+print(ages)  # {'cat': 10, 'elephant': 14, 'dog': 3}
+```
+
+We can iterate over a `dict` in two ways: over its `key`s, or over its `key-value` pairs:
+```python
+ages: Dict[str, int] = {'cat': 10, 'elephant': 14, 'dog': 3}
+
+for key in ages:
+    print(f"{key}'s age is {ages.get(key)}")
+
+for key, value in ages.items():
+    print(f"{key}'s age is {value}")
+```
+
+Exercise: Let's write a function that takes a `str` and returns a dictionary that maps from each unique word in the `str` to the number of times it appears.
+
+```python
+def word_counter(text: str) -> Dict[str, int]:
+    word_counts: Dict[str, int] = dict()
+    for word in text.split():
+        word_counts[word] = word_counts.get(word, 0) + 1
+    return word_counts
+
+print(word_counter('hello hi hi hello howdy hi'))  # {'hello': 2, 'hi': 3, 'howdy': 1}
+```
+
+Exercise: Let's write a function that helps us with [Scrabble](https://playscrabble.com/).
+- A very common situation: We are playing Scrabble. We see we have 3 'O's. What can we do?
+- The plan: get a map that gives us options based on a letter
+- Let's write a function that takes a letter as a parameter and returns a dictionary where:
+  - The keys are all possible frequencies of that letter (except zero)
+  - The values are the sets of words in the dictionary with that many of that letter
+- [Here's a list of english words](https://github.com/dwyl/english-words/blob/master/words_alpha.txt) if you need one (the official Scrabble list is harder to get as a text file)
+
+```python
+def scrabble_helper(letter: str) -> Dict[int, Set[str]]:
+    result: Dict[int, Set[str]] = dict()
+    with open('/path/to/dictionary.txt', 'r', encoding='utf-8') as english_dict:
+        for word in english_dict.readlines():
+            if letter in word:
+                word = word.strip()
+                letter_count = word.count(letter)
+                if letter_count in result:
+                    result[letter_count].add(word)
+                else:
+                    result[letter_count] = {word}
+    return result
+
+result: Dict[int, Set[str]] = scrabble_helper('r')
+
+for key, value in result.items():
+    if key > 2:
+        print(f'{key}: {value}')
+```
 
 ### JSON
 
-Poll: Which data structure is best suited for this task:
+JSON (JavaScript Object Notation) is a popular format for storing data. It's very common for APIs to send us data in JSON format. Here is an example of one: [https://openweathermap.org/api/one-call-3](https://openweathermap.org/api/one-call-3)
+
+JSON data is read as a dictionary. In this example below, we took the [example API response from the Weather API](https://openweathermap.org/api/one-call-3) and stored it in a file called `example_json_data.json`. (We removed the lines with ellipses (`...`), and the commas on the lines before them. We also added an ending bracket (`}`).)
+`pprint` ([https://docs.python.org/3/library/pprint.html](https://docs.python.org/3/library/pprint.html)) is a library for printing data in a readable format.
+```python
+import json, pprint
+
+with open('/Users/rasikabhalerao/2025Summer/2100/example_json_data.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+    pprint.pp(data)
+```
+
+Poll: Which data structure is best suited for this task: we're creating a product that works differently on different operating systems, and we want to know which operating systems we need to support
+1. List
+2. Tuple
+3. Set
+4. Dictionary
+
+Poll: Which data structure is best suited for this task: storing the order in which young children should stand in line
+1. List
+2. Tuple
+3. Set
+4. Dictionary
+
+Poll: Which data structure is best suited for this task: storing the 7 days of the week (Sunday, Monday, Tuesday, ..., Saturday)
+1. List
+2. Tuple
+3. Set
+4. Dictionary
+
+Poll: Which data structure is best suited for this task: keeping track of each student's favorite color
 1. List
 2. Tuple
 3. Set
