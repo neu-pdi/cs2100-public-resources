@@ -293,7 +293,7 @@ Poll: Which of these describes the Accumulator Pattern?
 3. Initialize the accumulator variable before a loop over the sequence, and update it inside the loop
 4. Initialize the accumulator variable to `0` before a loop over the sequence, and update it inside the loop
 
-## functools.reduce(), itertools.accumulate()
+## `functools.reduce()` and `itertools.accumulate()`
 
 `functools.reduce()` and `itertools.accumulate()` are two functions that perform the Accumulator Pattern.
 
