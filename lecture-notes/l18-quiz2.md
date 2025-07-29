@@ -8,6 +8,6 @@ title: Quiz 2
 
 ## Topics
 - Properties (attributes with getters and setters)
-- Lists
 - Sets and dictionaries
-- Calculating statistics using Pandas and Numpy
+- Lists: sorting, mapping, filtering
+- Correlation
