@@ -1,10 +1,11 @@
 ---
 sidebar_position: 22
 lecture_number: 22
-title: Inheritance 3
+title: Static and Class Methods
 ---
 
-# Inheritance 3
+# Static and Class Methods
 
-## Understand what it means for something to operate on a class rather than an instance
-## Understand when to use @classmethod and @staticmethod, and the differences between the two
+## Operating on a class rather than an instance
+
+## @classmethod and @staticmethod
