@@ -55,8 +55,9 @@ class Pet:
         return self.sound
 ```
 
-Now that we have created this new type called `Pet`, we can use it for a variable called `mini`:
-
+Now that we have created this new type called `Pet`, we can use it for a variable called `mini`.
+We instantiate an object (an instance) of a class by putting parentheses after its name, and specifying the constructor's arguments inside (`Pet('Mini', 'Rasika', 'cat')`).
+We call its methods using its variabla name and the "dot operator" (`.`).
 ```python
 mini: Pet = Pet('Mini', 'Rasika', 'cat')
 print(mini.make_sound()) # meow
