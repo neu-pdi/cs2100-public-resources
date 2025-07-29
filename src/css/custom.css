@@ -50,3 +50,17 @@
   --ifm-list-paragraph-margin: 0.5em;
   --ifm-paragraph-margin-bottom: 0.5em;
 }
+
+/* Ensure markdown ordered lists are displayed */
+.markdown ol {
+  padding-left: 0.5em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.markdown ol ol {
+  margin-bottom: 0;
+}
+
+.markdown ol ol ol {
+}
