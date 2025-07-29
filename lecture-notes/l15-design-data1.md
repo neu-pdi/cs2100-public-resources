@@ -71,23 +71,6 @@ Poll: Which of these lists is sorted by the number of vowels?
 3. `sorted(harry_styles_words, key=lambda word: len([i for i in word if word in 'aeiou']))`
 4. `sorted(harry_styles_words, key=lambda word, i: len([i for i in word if word in 'aeiou']))`
 
-
-<!--
-It is useful to know that Numpy has a function called `argsort()` which takes a list of elements and returns a list of its indices, moved to the locations they would be in if the list was sorted.
-```python
-harry_styles_words: List[str] = 'tastes like strawberries on a summer evening'.split()
-
-sorted_alphabetically: List[str] = sorted(harry_styles_words)
-
-print(sorted_alphabetically)  # ['a', 'evening', 'like', 'on', 'strawberries', 'summer', 'tastes']
-
-indices_of_sorted_words = np.argsort(harry_styles_words)
-
-print(indices_of_sorted_words)  # [4 6 1 3 2 5 0]
-```
-This is saying that, if the list of words was sorted alphabetically, the word at index 4 would be first, then the word at index 6, then the word at index 1, etc. until the last word, which would ironically be the word at index 0.
--->
-
 The function for sorting elements of a Pandas dataframe also has a `key` argument, but the function passed to that argument should accept the entire column as an argument, and return the entire transformed column.
 
 ```python
@@ -189,3 +172,18 @@ Poll: Let's say that this is our dataset of values for the variable `x`: [6, 8, 
 3. [0, 0.5, 0.75, 0.5, 0.25]
 4. [0, 4, 1, 3, 2]
 
+## Argmax
+
+It is useful to know that Numpy has a function called `argsort()` which takes a list of elements and returns a list of its indices, moved to the locations they would be in if the list was sorted.
+```python
+harry_styles_words: List[str] = 'tastes like strawberries on a summer evening'.split()
+
+sorted_alphabetically: List[str] = sorted(harry_styles_words)
+
+print(sorted_alphabetically)  # ['a', 'evening', 'like', 'on', 'strawberries', 'summer', 'tastes']
+
+indices_of_sorted_words = np.argsort(harry_styles_words)
+
+print(indices_of_sorted_words)  # [4 6 1 3 2 5 0]
+```
+This is saying that, if the list of words was sorted alphabetically, the word at index 4 would be first, then the word at index 6, then the word at index 1, etc. until the last word, which would ironically be the word at index 0.
