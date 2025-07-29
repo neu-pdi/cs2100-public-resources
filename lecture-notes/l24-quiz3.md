@@ -6,4 +6,7 @@ title: Quiz 3
 
 # Quiz 3
 
-## Inheritance (choose the better design based on coupling/cohesion)
+## Abstract methods
+## Inheritance: choosing the better design based on coupling / cohesion / encapsulation
+## Interpreting UML diagrams
+## Class methods
