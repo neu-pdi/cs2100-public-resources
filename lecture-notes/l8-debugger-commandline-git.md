@@ -119,7 +119,7 @@ Locations of versions of code:
 
 Most assignments will go like this:
 - Accept the assignment on Pawtograder
-- Pawtograder creates a GitHub repo and sends you an email invitation to join the repo. You accept the invitation.
+- Pawtograder creates your GitHub repo.
 - Using your command line, navigate to this course's directory and do `git clone <GitHub repo URL (ssh version, not html)>`
 - You open the resulting files using VSCode and work on the assignment, saving as you go.
 - After each significant chunk of progress on the assignment:
