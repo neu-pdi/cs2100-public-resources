@@ -6,4 +6,10 @@ title: Quiz 4
 
 # Quiz 4
 
-## Recursion, BSTs, design patterns
+## Topics
+- Iterator
+- Comparable
+- Recursion
+- BSTs
+- MSTs
+- Function decorators
