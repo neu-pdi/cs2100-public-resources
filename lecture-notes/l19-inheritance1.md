@@ -301,9 +301,10 @@ In other words, a member of the subclass can be used wherever a member of the su
 
 For example, if you wanted coffee, and you received an espresso, you would be satisfied because the coffee hierarchy follows the Liskov Substitution Principle. Espresso is an appropriate subclass of coffee.
 
+Breaking the Liskov Substitution Principle using Python code could look like a subclass overriding a method in such a way that it doesn't accomplish the original goal anymore.
+
 <img width="689" height="672" alt="Real ID requirements" src="https://github.com/user-attachments/assets/94ee1149-56cb-4dd6-b4d4-7b99ca790a2e" />
 https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/real-id/what-is-real-id/
-
 You may have heard about the Real ID requirements that went into effect in the United States on May 7, 2025. In order to pass through TSA at the airport (even for travel entirely within the United States), people need to carry a Real ID. (This policy was planned far in advance, and most IDs in the United States fit this requirement by the time it came into effect.)
 
 Poll: Which are true?
