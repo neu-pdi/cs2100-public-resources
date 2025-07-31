@@ -148,11 +148,10 @@ Poll: In a `for` loop using the built-in `range()`, what happens if a client pas
 3. There is no output because it raises a `StopIteration`, which is caught by the `for` loop's internal workings
 4. It will work as expected, and the loop will count down from the `min` to the `max`
 
-
 |  | Iterable | Iterator |
 | - | - | - |
-| Protocol's required methods | `__iter__(self) -> Iterator[T]`: returns an iterator | `__next__(self) -> T`: returns the next element or raises `StopIteration` <br> `__iter__(self) -> Iterator[T]` : returns itself |
-| `abc` interface's required methods | `__iter__(self) -> Iterator[T]` (same as protocol) | `__next__(self) -> T` (same as protocol) <br> not `__iter__(self) -> Iterator[T]` because it's aleady there |
+| Protocol's required methods | `__iter__(self) -> Iterator[T]`: returns an iterator | `__next__(self) -> T`: returns the next element or raises `StopIteration` <br /> `__iter__(self) -> Iterator[T]` : returns itself |
+| `abc` interface's required methods | `__iter__(self) -> Iterator[T]` (same as protocol) | `__next__(self) -> T` (same as protocol) <br /> not `__iter__(self) -> Iterator[T]` because it's aleady there |
 
 ### Modifying things while iterating over them
 
