@@ -1,10 +1,10 @@
 ---
 sidebar_position: 25
 lecture_number: 25
-title: "Interfaces: Iterator, Iterable, and Comparable"
+title: "Iteration and Comparison"
 ---
 
-# Interfaces: Iterable, Iterator, and Comparable
+# Iterating and Comparing
 
 ## Iterable
 
@@ -240,8 +240,65 @@ print(iterator.__next__())
 
 ## Comparable
 
-<!--
-Benefits of using the interface Comparable
-Implement a class which uses the Comparable interface
-Sort a list of Comparable objects
--->
+There is a protocol in Python for comparing objects using `<`, `>`, `==`, `!=`, `<=`, and `>=`. In order to use these comparison operators, we can implement these six methods:
+- `__eq__(self, other: object) -> bool`: equals `==`
+- `__ne__(self, other: object) -> bool`: not equals `!=`
+- `__lt__(self, other: object) -> bool`: less than `<`
+- `__le__(self, other: object) -> bool`: less than or equal to `<=`
+- `__gt__(self, other: object) -> bool`: greater than `>`
+- `__ge__(self, other: object) -> bool`: greater than or equal to `>=`
+Not all six methods need to be implemented, since Python can derive some from others. Usually, it suffices to only implement `__eq__(self, other: object) -> bool` and one ordering method like `__lt__(self, other: object) -> bool`.
+
+There is not a corresponding interface in the `abc` module for Comparable, likely because we rarely implement all six methods.
+
+Exercise: Let's write a class for a Plant. Plant are bigger if they get more sunlight.
+```python
+class Plant:
+    def __init__(self) -> None:
+        self.sunlight_hours = 0
+
+    def get_sunlight(self) -> None:
+        self.sunlight_hours += 1
+    
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Plant):
+            raise NotImplementedError
+        return self.sunlight_hours == other.sunlight_hours
+    
+    def __lt__(self, other: object) -> bool:
+        if not isinstance(other, Plant):
+            raise NotImplementedError
+        return self.sunlight_hours < other.sunlight_hours
+
+plant1 = Plant()
+plant2 = Plant()
+
+plant1.get_sunlight()
+```
+```
+True
+```
+
+Poll: What goes in the ??? ?
+```python
+class Bouquet:
+    """Bouquets are compared by the number of flowers in them"""
+    def __init__(self, flowers: List[Flower]):
+        self.flowers = flowers
+    
+    def __eq__(self, other: object) -> bool:
+        if isinstance(other, Bouquet):
+            return ???
+        else:
+            raise NotImplementedError
+    
+    def __gt__(self, other: object) -> bool:
+        if isinstance(other, Bouquet):
+            return ???
+        else:
+            raise NotImplementedError
+```
+1. `len(self.flowers) == len(other.flowers)` and `len(self.flowers) < len(other.flowers)`
+2. `len(self.flowers) == len(other.flowers)` and `len(self.flowers) > len(other.flowers)`
+3. `len(self.flowers) != len(other.flowers)` and `len(self.flowers) < len(other.flowers)`
+4. `len(self.flowers) != len(other.flowers)` and `len(self.flowers) > len(other.flowers)`
