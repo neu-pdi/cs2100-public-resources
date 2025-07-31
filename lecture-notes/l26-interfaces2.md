@@ -128,10 +128,10 @@ See any issues?
 Source: https://m.vayagif.com/busqueda/0/el%20perro%20no%20nace%20agresivo/p/893
 
 <video width="320" height="240" controls>
-  <source src="https://github.com/neu-pdi/cs2100-public-resources/raw/refs/heads/main/src/pages/collision.mp4" type="video/mp4">
+  <source src="https://github.com/neu-pdi/cs2100-public-resources/raw/refs/heads/main/src/pages/collision.mp4" type="video/mp4"/>
 </video>
 <video width="320" height="240" controls>
-  <source src="https://github.com/neu-pdi/cs2100-public-resources/raw/refs/heads/main/src/pages/no_collision.mp4" type="video/mp4">
+  <source src="https://github.com/neu-pdi/cs2100-public-resources/raw/refs/heads/main/src/pages/no_collision.mp4" type="video/mp4"/>
 </video>
 
 
