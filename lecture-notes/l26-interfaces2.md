@@ -1,11 +1,11 @@
 ---
 sidebar_position: 26
 lecture_number: 26
-title: "Interfaces: Equality, Hashable, and Slicing"
+title: "Hashing and Equality"
 ---
 
-# Interfaces: Equality, Hashable, and Slicing
+# Hashing and Equality
 
-## eq, ne, and hash methods
-## getitem method in a class whose instances are sliced
+## Review comparison and equality
+## hash method
 ## Hash collision competition
