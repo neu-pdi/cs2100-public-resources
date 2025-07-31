@@ -205,3 +205,40 @@ Poll: Strings, numbers, and tuples are hashable by default in Python. Lists, set
 2. Because lists, sets, and dictionaries are mutable, which could result in a changing hash code
 3. Because lists, sets, and dictionaries are rarely equal to each other, so they don't need a hash code
 4. Because lists, sets, and dictionaries can hold `None` in them, which shouldn't get a hash code
+
+Let's add a good hash function to the `Course` class:
+```python
+from collections.abc import Hashable
+
+class Course(Hashable):
+    def __init__(self, department: str, course: int):
+        self.department = department
+        self.course = course
+    
+    def __str__(self) -> str:
+        return f'{self.department}{self.course}'
+    
+    def __repr__(self) -> str:
+        return self.__str__()
+    
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Course):
+            raise NotImplementedError
+        else:
+            return self.department == other.department and self.course == other.course
+
+    def __hash__(self) -> int:
+        return hash(str(self))
+        
+
+course_oakland = Course('CS', 2100)
+course_boston = Course('CS', 2100)
+
+courses: Set[Course] = {course_oakland}
+courses.add(course_boston)
+
+print(courses)
+```
+```
+{CS2100}
+```
