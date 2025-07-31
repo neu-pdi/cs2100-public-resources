@@ -127,6 +127,9 @@ See any issues?
 [dog hash collision gif](https://statics.memondo.com/p/99/gifs/2014/07/GIF_197384_a892292d75d74cc6b6e9143fd1091f80_ni_hablar_yo_quiero_lo_que_el_tiene.webm)
 Source: https://m.vayagif.com/busqueda/0/el%20perro%20no%20nace%20agresivo/p/893
 
+[cat collision gif](https://github.com/neu-pdi/cs2100-public-resources/raw/refs/heads/main/src/pages/collision.mp4)
+[no collision](https://github.com/neu-pdi/cs2100-public-resources/raw/refs/heads/main/src/pages/no_collision.mp4)
+
 <video width="320" height="240" controls>
   <source src="https://github.com/neu-pdi/cs2100-public-resources/raw/refs/heads/main/src/pages/collision.mp4" type="video/mp4"/>
 </video>
