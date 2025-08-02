@@ -8,6 +8,5 @@ title: Quiz 3
 
 ## Topics
 - Abstract methods
-- Inheritance: choosing the better design based on coupling / cohesion / encapsulation
+- Inheritance
 - Interpreting UML diagrams
-- Class methods
