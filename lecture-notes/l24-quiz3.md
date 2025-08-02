@@ -24,5 +24,4 @@ title: Quiz 3
 | Iterator                                         |        |        |        | ✓      |  ✓         |
 | Comparable                                       |        |        |        | ✓      |  ✓         |
 | Recursion                                        |        |        |        | ✓      |  ✓         |
-| Binary Search Trees                              |        |        |        | ✓      |  ✓         |
 | Minimum Spanning Trees                           |        |        |        | ✓      |  ✓         |
