@@ -7,9 +7,9 @@ title: Quiz 4
 # Quiz 4
 
 ## Topics
+- Coupling / cohesion / encapsulation
 - Iterator
 - Comparable
 - Recursion
 - BSTs
 - MSTs
-- Function decorators
