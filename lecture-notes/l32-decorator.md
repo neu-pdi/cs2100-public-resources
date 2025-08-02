@@ -1,11 +1,16 @@
 ---
 sidebar_position: 32
 lecture_number: 32
-title: Function Decorators
+title: The Decorator Pattern
 ---
 
-# Function Decorators
+# The Decorator Pattern
 
-## See functions as objects that can be mutated
-## Determine when a function decorator might be useful
-## Define and use function decorators
+## Function Decorators
+### Functions are objects that can be mutated
+### When to use function decorators
+And how
+
+## Class decorators
+### When to use class decorators
+And how
