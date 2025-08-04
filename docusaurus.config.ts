@@ -100,6 +100,12 @@ const config: Config = {
           label: 'Schedule',
           position: 'left',
         },
+        {
+          to: 'setup',
+          activeBasePath: 'src/pages',
+          label: 'Setup',
+          position: 'left',
+        },
       
       ],
     },
