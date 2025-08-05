@@ -19,6 +19,13 @@ Those lecture outcomes correspond to these learning outcomes for the course:
 - Students can identify pros and cons of using given data to solve the desired problem, and identify and defend privacy issues in problems presented to them without being told there is a privacy issue to identify.
 - Given a technical problem, students can (a) identify the stakeholders, (b) identify values and interests at stake for each stakeholder, (c) discuss conflicts of values, and (d) identify modifications that would mitigate conflicts of values.
 
+Here is our systematic software program design and implementation diagram:
+<img width="792" height="360" alt="Systematic Software Design Process" src="https://github.com/user-attachments/assets/cbf24fe1-86a0-46b7-944c-37bc88dc9041" />
+
+[(PDF here)](https://github.com/neu-pdi/cs2100-public-resources/blob/main/src/pages/Systematic%20Software%20Design%20Process.pdf)
+
+Today, we will focus on the first phase, Requirements, specifically the stakeholder-value matrix.
+
 ## Why Value-Sensitive Design?
 
 Computer science is a group activity. In this course, we are teaching the vocabulary for moral language to be able to talk with your teammates and advocate for what you think is right.
