@@ -71,10 +71,7 @@ Part of the style guide is naming conventions. The names of variables, functions
 
 We will use Pylint [(documentation here)](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint) to check that our code follows the style guidelines.
 
-How to set up the VSCode extension:
-
-1. In VSCode, go to the "Extensions" tab on the left. It looks like this: <img width="36" height="38" alt="Four squares, one of which is slanted" src="https://github.com/user-attachments/assets/883c178f-f0c0-4cd3-ba41-3e8b6948b20f" />
-2. Search for and install "Pylint"
+Please set up the Pylint VSCode extension using the steps in the [Setup Guide](https://neu-pdi.github.io/cs2100-public-resources/setup).
 
 
 ## Tracing Python code which includes types, and why it's important to keep track of the types
@@ -132,19 +129,7 @@ So, in this course, we will use MyPy to enforce the type checking.
 
 MyPy's documentation can be found at [https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker](https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker)
 
-How to set up the VSCode extension:
-
-1. In VSCode, go to the "Extensions" tab on the left. Search for and install "Mypy Type Checker"
-2. Then, go to VSCode's Settings menu
-   - Mac: `Code` > `Settings...` > `Settings`  (or `Cmd` + `,`)
-   - Windows: `File` > `Preferences` > `Settings`  (or `Ctrl` + `,`)
-4. Navigate to `Extensions` > `Mypy Type Checker`
-5. In the `Args` section, add three args:
-   - `--strict`
-   - `--disallow-untyped-defs`
-   - `--disable-error-code=empty-body`
-
-<img width="911" height="278" alt="Screenshot showing specified args" src="https://github.com/user-attachments/assets/e6ce79ed-f56a-446c-afc3-c4f6205c35d7" />
+Please set up the MyPy VSCode extension using the steps in the [Setup Guide](https://neu-pdi.github.io/cs2100-public-resources/setup).
 
 Now, any missing or mismatched types will be reported in the "Problems" tab every time you save or open a file:
    - Mac: `Cmd` + `Shift` + `M`
