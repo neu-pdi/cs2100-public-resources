@@ -211,3 +211,20 @@ A core principle for writing code is that every component of our code must have 
 | Class | `class FileManagerAndOutputFormatter` |
 
 ## The Program Design and Implementation Process
+
+<img width="792" height="360" alt="Systematic Software Design Process" src="https://github.com/user-attachments/assets/cbf24fe1-86a0-46b7-944c-37bc88dc9041" />
+
+[(PDF here)](https://github.com/neu-pdi/cs2100-public-resources/blob/main/src/pages/Systematic%20Software%20Design%20Process.pdf)
+
+This diagram depicts the systematic software Program Design and Implementation process. We will revisit it multiple times this semester, and dive deeper into it in CS 3100.
+There are five phases:
+1. Requirements
+2. Design
+3. Implementation
+4. Validation
+5. Operations
+These five phases are generally done in that order, though it is possible to revisit an earlier phase.
+Each phase also has an optional pathway to "Abandon Project" for various reasons.
+
+Open-ended poll: What would happen if we directly jumped to the Implementation phase, skipping the Requirements and Design phases? I.e., what would happen if we started by writing code without first designing the project and planning out its pieces?
+
