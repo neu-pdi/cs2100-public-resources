@@ -6,7 +6,8 @@ title: Models, Controllers, and Views
 
 # Models, Controllers, and Views
 
-## Determine when to use a mock model to improve testability
-## Create a simple GUI and text-based controller, which can be swapped out for each other
-## How to write code to be testable
-(Jon's textbooks) just an intro to be continued in 3100
+## Synchronous versus Asynchronous Controllers
+
+## Using a Mock Model to test a Controller
+
+Create a simple GUI and text-based controller, which can be swapped out for each other
