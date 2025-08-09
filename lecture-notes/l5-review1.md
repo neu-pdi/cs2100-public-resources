@@ -27,3 +27,6 @@ It is recommended to review these topics:
 - Identifying test cases
 
 ## Practice Quiz 1
+Practice quiz: https://github.com/neu-pdi/cs2100-public-resources/blob/main/src/pages/quizzes/Practice%20Quiz%201.pdf
+Answer sheet: https://github.com/neu-pdi/cs2100-public-resources/blob/main/src/pages/quizzes/Practice%20Quiz%201%20Answer%20Sheet.pdf
+Solution: https://github.com/neu-pdi/cs2100-public-resources/blob/main/src/pages/quizzes/Practice%20Quiz%201%20Solution.pdf
