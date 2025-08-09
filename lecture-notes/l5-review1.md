@@ -11,12 +11,14 @@ In addition to the topics listed below, this quiz will also implicitly test your
 ## Using Objects
 
 It is recommended to review these topics:
-- `__str__()`
-- String manipulation
 - `None`
 - State and aliasing
 
 ## Classes: constructors, methods, and attributes
+
+It is recommended to review these topics:
+- `__str__()`
+- Constructors, methods, and attributes
 
 ## Testing
 
