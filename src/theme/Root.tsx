@@ -7,6 +7,7 @@ import { ColorModeProvider } from '../components/ui/color-mode';
 const system = createSystem(defaultConfig, {
   cssVarsPrefix: 'embedded-chakra',
   cssVarsRoot: '#chakra-root',
+  preflight: false, // disable Chakra's CSS reset which was blocking text selection
 })
 
 export default function Root({ children }) {
