@@ -14,12 +14,14 @@ title: Quiz 2
 | Classes: constructors, methods, and attributes   |  ✓     |  ✓     |        |        |            |
 | Unit testing                                     |  ✓     |        | ✓      |        |            |
 | Properties (attributes with getters and setters) |        |  ✓     |        |        |  ✓         |
+| Stakeholder-value matrices                       |        |  ✓     |        | ✓      |            |
 | Sets and dictionaries                            |        |  ✓     | ✓      |        |            |
 | Lists: sorting, mapping, filtering               |        |  ✓     |        |        |  ✓         |
 | Correlation                                      |        |  ✓     |        | ✓      |            |
 | Abstract methods                                 |        |        | ✓      |        |  ✓         |
 | Inheritance                                      |        |        | ✓      |        |  ✓         |
 | Interpreting UML diagrams                        |        |        | ✓      |        |  ✓         |
+| Identifying privacy issues                       |        |        | ✓      |        |  ✓         |
 | Coupling / cohesion / encapsulation              |        |        |        | ✓      |  ✓         |
 | Iterator                                         |        |        |        | ✓      |  ✓         |
 | Comparable                                       |        |        |        | ✓      |  ✓         |
