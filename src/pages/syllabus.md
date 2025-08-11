@@ -45,7 +45,7 @@ Students who have not taken CS 2000 will need to demonstrate a passing knowledge
 The textbook "Python 3 Object Oriented Programming: Harness the Power of Python 3 Objects" by Dusty Phillips covers most of the object-oriented concepts relevant to this course, though we will not follow it exactly.
 
 ## Course Structure
-There will be three in-person **lectures** and one **recitation** (also known as *lab*) per week. During the lectures (CS 2100) we will go over new content using lecture, live coding, discussion, and individual exercises. The recitation (CS 2101) will include individual exercises and an opportunity to begin homework with guidance and feedback from instructional staff. Recitations will be led by Lab Leader TAs.
+There will be three in-person **lectures** and one **lab** (also known as *lab*) per week. During the lectures (CS 2100) we will go over new content using lecture, live coding, discussion, and individual exercises. The lab (CS 2101) will include individual exercises and an opportunity to begin homework with guidance and feedback from instructional staff. Lab will be led by Lab Leader TAs.
 
 Students can register for any CS 2101 lab section on their campus.
 
