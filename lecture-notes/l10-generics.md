@@ -193,8 +193,6 @@ Source: [Tyler Yeats](https://aeromancer.dev/)
 
 ## Variable argument lists
 
-You will not be required to write code using *args or **kwargs in this course, but you will need to be able to read documentation that uses it.
-
 Python allows us to have a function with an arbitrary number of arguments:
 ```python
 def print_args(*args: T) -> None:
