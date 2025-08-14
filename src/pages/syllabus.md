@@ -83,13 +83,16 @@ To progress, students are required to meet the grade point average (GPA) require
 
 Computer science, both academically and professionally, is a collaborative discipline. In any collaboration, however, all parties are expected to make their own contributions and to generously credit the contributions of others. In our class, therefore, collaboration on assignments is encouraged, but you as an individual are responsible for understanding all submitted material in the assignment. Always strive to do your best, give generous credit to others, start early, and seek help early from both your professors and classmates.
 
-The following rules are intended to help you get the most out of your education and to clarify the line between honest and dishonest work. The professor reserves the right to ask you to verbally explain the reasoning behind any answer or code that you turn in and to modify your project grade based on your answers. It is vitally important that you turn in work that is your own and follow the guidelines for academic honesty. The minimum penalty for an academic integrity violation is a zero on the assignment and a report to the [Office of Student Conduct and Conflict Resolution (OSCCR)](https://osccr.sites.northeastern.edu/). Penalties are increased if there are aggravating factors, such as stealing another student's work or lying about cheating.
+The following rules are intended to help you get the most out of your education and to clarify the line between honest and dishonest work.
 
 The following rules apply to anything you hand in for a grade.
 - You must understand the material you turn in.
+- The professor reserves the right to ask you to verbally explain the reasoning behind any answer or code that you turn in and to modify your grade based on your answers.
 - Copying material from another person without their knowledge is not allowed.
 - Additionally, sharing solutions in forums (e.g., posting to public questions, posting code online, etc) constitutes an academic integrity violation, as it may make it harder for other students to do work on their own, harming their own learning.
 - Collaboration is not allowed on exams.
+- The minimum penalty for an academic integrity violation is a zero on the assignment and a report to the [Office of Student Conduct and Conflict Resolution (OSCCR)](https://osccr.sites.northeastern.edu/).
+- Penalties are increased if there are aggravating factors, such as stealing another student's work or lying about cheating.
 
 The university's [academic integrity policy](https://osccr.sites.northeastern.edu/academic-integrity-policy/) discusses actions regarded as violations and consequences for students, which are severe.
 
