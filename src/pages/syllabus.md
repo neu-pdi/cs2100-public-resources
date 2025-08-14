@@ -81,30 +81,31 @@ To progress, students are required to meet the grade point average (GPA) require
 
 ## Collaboration and Academic Honesty
 
-Computer science, both academically and professionally, is a collaborative discipline. In any collaboration, however, all parties are expected to make their own contributions and to generously credit the contributions of others. In our class, therefore, collaboration on assignments is encouraged, but you as an individual are responsible for understanding all the material in the assignment and doing your own work. Always strive to do your best, give generous credit to others, start early, and seek help early from both your professors and classmates.
+Computer science, both academically and professionally, is a collaborative discipline. In any collaboration, however, all parties are expected to make their own contributions and to generously credit the contributions of others. In our class, therefore, collaboration on assignments is encouraged, but you as an individual are responsible for understanding all submitted material in the assignment. Always strive to do your best, give generous credit to others, start early, and seek help early from both your professors and classmates.
 
 The following rules are intended to help you get the most out of your education and to clarify the line between honest and dishonest work. The professor reserves the right to ask you to verbally explain the reasoning behind any answer or code that you turn in and to modify your project grade based on your answers. It is vitally important that you turn in work that is your own and follow the guidelines for academic honesty. The minimum penalty for an academic integrity violation is a zero on the assignment and a report to the [Office of Student Conduct and Conflict Resolution (OSCCR)](https://osccr.sites.northeastern.edu/). Penalties are increased if there are aggravating factors, such as stealing another student's work or lying about cheating.
 
-If you have had a substantive discussion of any assignment with a classmate (or anyone else), then **be sure to cite them in your assignment**. Here are some example citations:
-- "I had no idea how to approach Question 3 until classmate Husky Huskington explained how I could break it down into separate functions."
-- "Joseph Aoun and I bounced ideas off each other for Question 4, although we both did our own coding."
-- "I didn't remember how to convert a string to an int, so I asked East Northern. They also showed me how to handle an exception if the string couldn't be converted."
-
-If you are unsure of what constitutes "substantive", then ask us or err on the side of caution. **You must not copy code or answers by hand, electronically, or in any other manner. Another way to think about it is that you should be talking in English (or another natural language) with one another, not Python.**
-
 The following rules apply to anything you hand in for a grade.
-- You may not copy anyone else's code or answers under any circumstances. This includes online sources.
-- You may not post your assignment code or answers in a chat or discussion forum where other students can see or copy it.
-- You may not describe a solution (or receive a description) in such detail that your work is virtually identical to another student's.
-- You may consult online resources as part of your course work, but you may not copy code or answers from online sources, books, etc. **If you get an idea of how to solve a problem from an online source or another person, include a citation.** You are not required to cite course materials or help from a TA (although we are always happy to hear when a TA was helpful).
-
-Collaboration is not allowed on exams.
+- You must understand the material you turn in.
+- Copying material from another person without their knowledge is not allowed.
+- Additionally, sharing solutions in forums (e.g., posting to public questions, posting code online, etc) constitutes an academic integrity violation, as it may make it harder for other students to do work on their own, harming their own learning.
+- Collaboration is not allowed on exams.
 
 The university's [academic integrity policy](https://osccr.sites.northeastern.edu/academic-integrity-policy/) discusses actions regarded as violations and consequences for students, which are severe.
 
 If you have a question about what is considered a violation of this policy, please ask an instructor.
 
 If you feel that cheating is your only option, please ask for help.
+
+### Collaboration Guidelines
+
+However, there are other cases that do not violate policies, but where we still offer strong guidelines:
+
+We strongly recommend that you write all code yourself. Even if you discuss solutions, or approaches, with others, do the actual typing on your own! And avoid playing games or trying to find loopholes -- i.e., do not merely type what someone says, or type what you see on anothers screen.
+
+Because there is lots of gray area in this, we do not consider violating these guidelines to be academic integrity violations, but doing so may result in you not learning the material, and in this class, not learning the material will result in not being able to pass the exams.
+
+Even with perfect homework scores, failing the exams will result in a failing grade in the course (consult the grading table), so take homework for what it is intended: extensive opportunity to practice the skills we are teaching, paired with high quality feedback about the solution you came up with.
 
 ### The AI Policy
 
