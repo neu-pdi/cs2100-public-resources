@@ -63,8 +63,8 @@ The highest row in which a student satisfies all columns will be their grade. If
 
 | Grade | Homework | Exam Topics (Quizzes + Final Exam) | Labs + Lectures |
 | - | - | - | - |
-| A | 80% or higher | 95% or higher | 27 or more |
-| A- | 80% or higher | 95% or higher |  |
+| A | 80% or higher | 93% or higher | 27 or more |
+| A- | 80% or higher | 93% or higher |  |
 | B+ | 70% or higher | 80% or higher | 36 or more |
 | B | 70% or higher | 80% or higher | 27 or more |
 | B- | 70% or higher | 80% or higher |  |
