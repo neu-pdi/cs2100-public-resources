@@ -59,23 +59,25 @@ There will also be a **final exam** at a time to be announced by the university.
 
 Assessment will be based on homework, participation, labs, and quizzes. You may ask for feedback on anything else, but it will not figure into your final grade.
 
-The highest row in which a student satisfies all columns will be their grade. If no rows are completely satisfied, the student will not pass the course.
+The highest row in which a student satisfies all columns will be their grade (plus a bump for lectures -- see below). If no rows are completely satisfied, the student will not pass the course.
 
-| Grade | Homework | Exam Topics (Quizzes + Final Exam) | Labs + Lectures |
+| Grade | Homework | Exam Topics (Quizzes + Final Exam) | Labs (out of 11) |
 | - | - | - | - |
-| A | 80% or higher | 93% or higher | 27 or more |
-| A- | 80% or higher | 93% or higher | 15 or more |
-| B+ | 70% or higher | 80% or higher | 36 or more |
-| B | 70% or higher | 80% or higher | 27 or more |
-| B- | 70% or higher | 80% or higher | 15 or more |
-| C+ | 60% or higher | 65% or higher | 36 or more |
-| C | 60% or higher | 65% or higher | 27 or more |
-| C- | 60% or higher | 65% or higher | 15 or more |
-| D+ | 50% or higher | 50% or higher | 36 or more |
-| D | 50% or higher | 50% or higher | 27 or more |
-| D- | 50% or higher | 50% or higher | 15 or more |
+| A | 80% or higher | 93% or higher | 6 or more |
+| A- | 80% or higher | 93% or higher |  |
+| B+ | 70% or higher | 80% or higher | 8 or more |
+| B | 70% or higher | 80% or higher | 6 or more |
+| B- | 70% or higher | 80% or higher |  |
+| C+ | 60% or higher | 65% or higher | 8 or more |
+| C | 60% or higher | 65% or higher | 6 or more |
+| C- | 60% or higher | 65% or higher |  |
+| D+ | 50% or higher | 50% or higher | 8 or more |
+| D | 50% or higher | 50% or higher | 6 or more |
+| D- | 50% or higher | 50% or higher |  |
 
-There are 11 labs and 33 lectures. The in-class exercises during lecture will be graded based on whether questions were attempted, not on correctness. In-class exercises can only be done from the lecture classroom (or attending synchronously online with explicit permission). Completing an in-class activity while not present in class is an academic integrity violation, which will result in a zero for the participation grade for the semester and an OSCCR report.
+**There are 33 lectures. Participating in 27 or more lectures will bump your score up one row.** For example, if you had a homework score of 72%, an exam topic score of 85%, and attended 7 labs, attending at least 27 lectures will bump your score from B to B+.
+
+The in-class exercises during lecture will be graded based on whether questions were attempted, not on correctness. In-class exercises can only be done from the lecture classroom (or attending synchronously online with explicit permission). Completing an in-class activity while not present in class is an academic integrity violation, which will result in a zero for the participation grade for the semester and an OSCCR report.
 
 To progress, students are required to meet the grade point average (GPA) requirements as determined by Khoury College of Computer Sciences. [(See Khoury's website for more information.)](https://catalog.northeastern.edu/undergraduate/computer-information-science/)
 
