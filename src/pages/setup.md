@@ -74,6 +74,13 @@ should result in three errors: `num2`'s missing type, `add()`'s returning someth
 
 If there is an error about `func()` missing a return, then the arg `--disable-error-code=empty-body` was not specified correctly in the settings.
 
+### Pandas and its MyPy type hints
+
+[Pandas](https://pandas.pydata.org/) is a popular library for data analysis. We will use it to work with spreadsheets and tables in Python.
+
+1. If this is your first time using Pandas, you will need to install it. To do that, in VSCode, go to the Terminal and execute the command `pip install pandas`.
+2. Even if this is not your first time using Pandas, you may need to install the MyPy type hints for Pandas (which is a separate install). To do that, in VSCode, go to the Terminal and execute the command `pip install pandas-stubs`.
+
 ## Git and GitHub
 
 ### GitHub account
