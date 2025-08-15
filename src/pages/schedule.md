@@ -5,6 +5,8 @@ sidebar_position: 3
 
 # Schedule
 
+**Note: The links below are for viewing the assignments only. Do not work on the assignments using the links below -- the actual course assignments will be provided to you via Pawtograder.**
+
 | Week | Lectures | Lab (Friday and following Tuesday) | Homework (due Thursday 6pm Pacific / 9pm Eastern) |
 | ---- | -------- | ---------------------------------- | -------- |
 | 1 | [L1](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l1-intro-python1), [L2](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l2-python2) | [Lab 1: Setup environment, small Python problems](https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab1) |  |
