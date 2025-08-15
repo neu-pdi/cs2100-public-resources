@@ -12,6 +12,8 @@ title: Pandas and Numpy
 
 If this is your first time using Pandas, you will need to install it. To do that, in VSCode, go to the Terminal and execute the command `pip install pandas`.
 
+Even if this is not your first time using Pandas, you may need to install the MyPy type hints for Pandas (which is a separate install). To do that, in VSCode, go to the Terminal and execute the command `pip install pandas-stubs`.
+
 We can use Pandas to create and view a dataframe like this:
 ```python
 import pandas as pd
