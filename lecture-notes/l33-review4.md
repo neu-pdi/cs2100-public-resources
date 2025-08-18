@@ -1,6 +1,6 @@
 ---
-sidebar_position: 34
-lecture_number: 34
+sidebar_position: 33
+lecture_number: 33
 title: Review for Quiz 4
 ---
 
