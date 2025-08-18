@@ -28,9 +28,12 @@ How to set up the Pylint VSCode extension:
    - Mac: `Code` > `Settings...` > `Settings`  (or `Cmd` + `,`)
    - Windows: `File` > `Preferences` > `Settings`  (or `Ctrl` + `,`)
 4. Navigate to `Extensions` > `Pylint`
-5. In the `Args` section, add: `--disable=import-error`
+5. In the `Args` section, add these two args:
+   - `--disable=import-error`
+   - `--disable=assignment-from-no-return`
 
-<img width="808" height="172" alt="Pylint args" src="https://github.com/user-attachments/assets/12e8ea3e-87cf-440b-b3c1-ba7b953dca21" />
+<img width="837" height="210" alt="Pylint args" src="https://github.com/user-attachments/assets/96079c7e-c218-42a6-a521-d7a15672e5ce" />
+
 
 
 ### MyPy
