@@ -1,6 +1,6 @@
 ---
-sidebar_position: 33
-lecture_number: 33
+sidebar_position: 35
+lecture_number: 35
 title: The Model-View-Controller Paradigm
 ---
 
