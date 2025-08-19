@@ -55,21 +55,21 @@ Storing functions as variables is useful when sorting and filtering data.
 
 Here is an example using Python's built-in `sorted()` function:
 ```python
-harry_styles_words: List[str] = 'tastes like strawberries on a summer evening'.split()
+words: List[str] = 'never gonna give you up'.split()
 
-sorted_alphabetically: List[str] = sorted(harry_styles_words)
-print(' '.join(sorted_alphabetically)) # a evening like on strawberries summer tastes
+sorted_alphabetically: List[str] = sorted(words)
+print(' '.join(sorted_alphabetically)) # give gonna never up you
 
-sorted_by_length: List[str] = sorted(harry_styles_words, key = lambda word: len(word))
-print(' '.join(sorted_by_length))  # a on like tastes summer evening strawberries
+sorted_by_length: List[str] = sorted(words, key = lambda word: len(word))
+print(' '.join(sorted_by_length))  # up you give gonna never
 ```
 The `sorted()` function has an optional argument `key`, which is a function that is applied to each element when determining the sorted order.
 
 Poll: Which of these lists is sorted by the number of vowels?
-1. `sorted(harry_styles_words, key=lambda word: 'aeiou' in word))`
-2. `sorted(harry_styles_words, key=lambda word: len([i for i in word if i in 'aeiou']))`
-3. `sorted(harry_styles_words, key=lambda word: len([i for i in word if word in 'aeiou']))`
-4. `sorted(harry_styles_words, key=lambda word, i: len([i for i in word if word in 'aeiou']))`
+1. `sorted(words, key=lambda word: 'aeiou' in word))`
+2. `sorted(words, key=lambda word: len([i for i in word if i in 'aeiou']))`
+3. `sorted(words, key=lambda word: len([i for i in word if word in 'aeiou']))`
+4. `sorted(words, key=lambda word, i: len([i for i in word if word in 'aeiou']))`
 
 The function for sorting elements of a Pandas dataframe also has a `key` argument, but the function passed to that argument should accept the entire column as an argument, and return the entire transformed column.
 
@@ -176,14 +176,14 @@ Poll: Let's say that this is our dataset of values for the variable `x`: [6, 8, 
 
 It is useful to know that Numpy has a function called `argsort()` which takes a list of elements and returns a list of its indices, moved to the locations they would be in if the list was sorted.
 ```python
-harry_styles_words: List[str] = 'tastes like strawberries on a summer evening'.split()
+words: List[str] = 'never gonna give you up'.split()
 
-sorted_alphabetically: List[str] = sorted(harry_styles_words)
+sorted_alphabetically: List[str] = sorted(words)
 
-print(sorted_alphabetically)  # ['a', 'evening', 'like', 'on', 'strawberries', 'summer', 'tastes']
+print(sorted_alphabetically)  # ['give', 'gonna', 'never', 'up', 'you']
 
-indices_of_sorted_words = np.argsort(harry_styles_words)
+indices_of_sorted_words = np.argsort(words)
 
-print(indices_of_sorted_words)  # [4 6 1 3 2 5 0]
+print(indices_of_sorted_words)  # [2 1 0 4 3]
 ```
 This is saying that, if the list of words was sorted alphabetically, the word at index 4 would be first, then the word at index 6, then the word at index 1, etc. until the last word, which would ironically be the word at index 0.
