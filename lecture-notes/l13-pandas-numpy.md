@@ -244,11 +244,8 @@ print(np.linalg.norm(np.array([3, 0, 4])))  # 5.0
 Poll: What is this function doing?
 ```python
 def something(n: int) -> np.ndarray:
-    return np.array(
-        [np.mean(
-            [np.random.randint(n) for _ in range(n)]
-            ) for row in range(n)
-        ])
+    matrix = np.random.randint(n, size=(n, n))
+    return np.mean(matrix, axis=1)
 ```
 1. It creates a vector of length 1 (just one number) which is the average of `n` random numbers between 0 and `n`
 2. It creates a vector of length `n`, and each element in it is the average of `n` random numbers between 0 and `n`
