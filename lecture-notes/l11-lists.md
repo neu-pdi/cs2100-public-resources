@@ -9,45 +9,45 @@ title: Lists
 We've seen how to create lists by listing their elements:
 ```python
 my_nums: List[int] = [6, 7, 8, 9]
-harry_styles_words: List[str] = ['Tastes', 'like', 'strawberries', 'on', 'a', 'summer', 'evening']
+words: List[str] = ['never', 'gonna', 'give', 'you', 'up']
 ```
 
 ## `split()` and `join()`
 
 There's a built-in `str` function in Python that splits a `str` into separate words:
 ```python
-harry_styles_words: List[str] = 'Tastes like strawberries on a summer evening'.split()
+words: List[str] = 'never gonna give you up'.split()
 ```
-results in `['Tastes', 'like', 'strawberries', 'on', 'a', 'summer', 'evening']`
+results in `['never', 'gonna', 'give', 'you', 'up']`
 
 To split a `str` using something other than whitespaces, we can use the optional parameter `sep`:
 ```python
-harry_styles_words: List[str] = 'Tastes like strawberries on a summer evening'.split(sep = 'e')
+words: List[str] = 'never gonna give you up'.split(sep = 'e')
 ```
-results in `['Tast', 's lik', ' strawb', 'rri', 's on a summ', 'r ', 'v', 'ning']`
+results in `['n', 'v', 'r gonna giv', ' you up']`
 
 To do the opposite (combine a list of `str` into a single `str`), we use the `join()` function:
 
 ```python
-harry_styles_phrase: str = ' '.join(['Tastes', 'like', 'strawberries', 'on', 'a', 'summer', 'evening'])
-also_harry_styles_phrase: str = 'e'.join(['Tast', 's lik', ' strawb', 'rri', 's on a summ', 'r ', 'v', 'ning'])
+phrase: str = ' '.join(['never', 'gonna', 'give', 'you', 'up'])
+also_phrase: str = 'e'.join(['n', 'v', 'r gonna giv', ' you up'])
 ```
 
 The `str` to the left of the `.join()` is used as the "glue" or "fenceposts" between the `str`s when combining them.
-Both `harry_styles_phrase` and `also_harry_styles_phrase` are equal to `'Tastes like strawberries on a summer evening'`
+Both `phrase` and `also_phrase` are equal to `'never gonna give you up'`
 
 ## List indices
 
 In Python (and most other programming languages), lists are indexed starting with 0 on the very left, and increasing as it goes to the right.
 
 ```python
-harry_styles_words: List[str] = 'Tastes like strawberries on a summer evening'.split()
-second_word: str = harry_styles_words[1]
-first_word: str = harry_styles_words[0]
+words: List[str] = 'never gonna give you up'.split()
+second_word: str = words[1]
+first_word: str = words[0]
 
 
-first_three_words: List[str] = [first_word, second_word, harry_styles_words[2]]
-print(first_three_words)   # ['Tastes', 'like', 'strawberries']
+first_three_words: List[str] = [first_word, second_word, words[2]]
+print(first_three_words)   # ['never', 'gonna', 'give']
 ```
 
 Remember: this means that the last index in the list is its length minus one.
@@ -60,9 +60,9 @@ IndexError: list index out of range
 Unlike other programming langauges, Python also has a second set of indices starting with -1 on the very right, and counting down (more negative) as it steps leftward.
 
 ```python
-last_word: str = harry_styles_words[-1]
-penultimate_word: str = harry_styles_words[-2]
-print(f'{penultimate_word} {last_word}')      # summer evening
+last_word: str = words[-1]
+penultimate_word: str = words[-2]
+print(f'{penultimate_word} {last_word}')      # you up
 ```
 
 ## List slices
@@ -212,11 +212,11 @@ def positive_copy(nums: List[int]) -> List[int]:
 
 List comprehension can be used for things that aren't lists. Here is an example that iterates over a string and creates a set:
 ```python
-harrys_phrase: str = 'Tastes like strawberries on a summer evening'
+phrase: str = 'never gonna give you up'
 
-harrys_letters: Set[str] = {letter.lower() for letter in harrys_phrase}
+letters: Set[str] = {letter.lower() for letter in phrase}
 
-print(harrys_letters)  # {'i', 'v', 'r', ' ', 'l', 'w', 'e', 'u', 'm', 'g', 'k', 't', 'o', 'n', 's', 'b', 'a'}
+print(letters)  # {'v', 'g', 'i', 'o', 'n', 'a', 'y', 'p', 'u', 'e', 'r', ' '}
 ```
 
 List comprehension is a powerful tool. It can make `for` loops easier to read, though it is always up to you to decide which version is easiest to read for your code. Sometimes, a basic `for` loop is more readable.
@@ -227,9 +227,9 @@ What if we want to perform an action for each element in a collection (like list
 
 `map(function, original_collection)` returns an object that we can iterate over using a `for` loop, where each iteration uses the result of applying the provided `function` to the corresponding element in the `original_collection`.
 ```python
-harrys_phrase: str = 'Tastes like strawberries on a summer evening'
+phrase: str = 'never gonna give you up'
 
-for word in map(str.upper, harrys_phrase.split()):
+for word in map(str.upper, phrase.split()):
     print(word)
 ```
 Prints each word of the phrase on its own line, in uppercase letters.
@@ -239,9 +239,9 @@ Prints each word of the phrase on its own line, in uppercase letters.
 def is_long(word: str) -> bool:
     return len(word) >= 4
 
-harrys_phrase: str = 'Tastes like strawberries on a summer evening'
+phrase: str = 'never gonna give you up'
 
-for word in filter(is_long, harrys_phrase.split()):
+for word in filter(is_long, phrase.split()):
     print(word)
 ```
 Prints each word of the phrase that is at least 4 characters long on its own line.
