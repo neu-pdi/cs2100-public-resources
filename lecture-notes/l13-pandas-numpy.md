@@ -58,7 +58,7 @@ v1 = np.array([
 ])
 
 print(v1)
-print("v1 type Python type:", type(v1))
+print("v1 Python type:", type(v1))
 print("NumPy array type:", v1.dtype)
 print("v1 as python list:", v1.tolist())
 ```
@@ -66,7 +66,7 @@ print("v1 as python list:", v1.tolist())
 [[1 2 3]
  [4 5 6]]
 
-v1 as python list: [[1, 2, 3], [4, 5, 6]]
+v1 Python type: <class 'numpy.ndarray'>
 NumPy array type: int64
 v1 as python list: [[1, 2, 3], [4, 5, 6]]
 ```
