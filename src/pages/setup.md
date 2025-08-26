@@ -52,9 +52,11 @@ How to set up the MyPy VSCode extension:
    - `--strict`
    - `--disallow-untyped-defs`
    - `--disable-error-code=empty-body`
+   - `—-disable-error-code=return`
    - `--explicit-package-bases`
 
-<img width="913" height="210" alt="MyPy args" src="https://github.com/user-attachments/assets/099ff2f4-1ad3-4e25-b0b4-d35091da85a6" />
+<img width="950" height="248" alt="MyPy args" src="https://github.com/user-attachments/assets/58d42d9a-6994-495f-9266-80fbf734c4ac" />
+
 
 
 Now, any missing or mismatched types will be reported in the "Problems" tab every time you save or open a file:
