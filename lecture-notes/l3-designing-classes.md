@@ -196,8 +196,8 @@ def test_negative_area(self) -> None:
 
 - `def setUp(self) -> None:` is a method which, if implemented, runs before each test.
 - `def tearDown(self) -> None:` similarly runs after each test.
-- `def setUpClass(cls) -> None:` runs once at the beginning, before any tests have run. It needs the annotation `@classmethod` right above the method definition, which we will discuss more later on in the semester. Notice also that the argument is `cls`, not `self`.
-- `def tearDownClass(cls) -> None:` runs once at the end, after all of the tests have run. It also needs the annotation `@classmethod` right above the method definition. We will discuss class methods later in the semester, and you don't need to understand the annotation to write tests using `setUpClass(cls)` and `tearDownClass(cls)`.
+- `def setUpClass(cls) -> None:` runs once at the beginning, before any tests have run. It needs the decorator `@classmethod` right above the method definition, which we will discuss more later on in the semester. Notice also that the argument is `cls`, not `self`.
+- `def tearDownClass(cls) -> None:` runs once at the end, after all of the tests have run. It also needs the decorator `@classmethod` right above the method definition. We will discuss class methods later in the semester, and you don't need to understand the decorator to write tests using `setUpClass(cls)` and `tearDownClass(cls)`.
 
 Poll: Why does this break? Why is it better to use `setUp()`?
 ```python
