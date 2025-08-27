@@ -143,7 +143,40 @@ Bias and unfairness can be created or amplified once the technology is implement
 
 [^4]: [Garg et. al](https://www.pnas.org/doi/pdf/10.1073/pnas.1720347115)
 
-### Case Study: Algorithmic hiring
+## Privacy
+
+We have been using the term "privacy" throughout this lecture as one of the values in VSD.
+Privacy is "the ability to determine for ourselves when, how, and to what extent information about us is communicated to others" (Westin, 1967, as summarized in DeCew 2018).
+But, as [Dr. Katie Creel](https://kathleenacreel.com/) puts it, "individual privacy often appears to be in conflict with the interests of society or the state: a balance must be struck between public and private interests. For example, people describe a 'tradeoff' between privacy and national security. If privacy is _only_ understood in this way, privacy often loses."
+So, decisions about privacy are often made using social models and context, to help us determine the right tradeoffs.
+
+Here are the questions that we use throughout this course to help us make those decisions:
+
+| Question | Answer |
+| - | - |
+| What type of information is shared? |  |
+| Who is the subject of the information? |  |
+| Who is the sender of the information? |  |
+| Who are the potential recipients of the information? |  |
+| What principles govern the collection and transmission of this information? |  |
+
+### Example: Gaggle in schools
+
+Gaggle, an online platform designed for use in the classroom that seeks to replace communcation tools such as blogging software and email clients with similar software equipped with content filters, states that "Gaggle will not distribute to third parties any staff data or student data without the consent of either a parent/guardian or a qualified educational institution except in cases of Possible Student Situations (PSS), which may be reported to law enforcement."
+
+Imagine that a student sent a message to another student at 8pm on a Saturday and Gaggle flagged it as a potential indicator that the student is depressed.
+
+| Question | Answer |
+| - | - |
+| What type of information is shared? | Student data (the message, sender, recipient, timestamp, location) |
+| Who is the subject of the information? | The student and their mental health concerns |
+| Who is the sender of the information? | The student |
+| Who are the potential recipients of the information? | The other student and Gaggle. If Gaggle alerts the parents, school administration, or law enforcement, then they will also become recipients. |
+| What principles govern the collection and transmission of this information? | "Gaggle will not distribute to third parties any staff data or student data without the consent of either a parent/guardian or a qualified educational institution except in cases of Possible Student Situations (PSS), which may be reported to law enforcement." |
+
+Often, as with our Homework assignments, the potential recipients of the information could also include unintended recipients, such as people looking over the shoulder of school administrators, or any students or teachers who notice the contacting of law enforcement.
+
+## Case Study: Algorithmic hiring
 
 Now for some practice. Consider this scenario: “Shamazon” (a fictitious company) is looking to hire software engineers, and you have been tasked with designing a tool to filter the submitted resumes and select the ideal candidates for hire.
 
