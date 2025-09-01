@@ -13,7 +13,23 @@ Do not enable the AI autocomplete -- it can harm students' learning at this stag
 
 (You are allowed to use other IDEs if you prefer, but you will need to set up the extensions yourself, and we cannot guarantee support for it during office hours.)
 
+## Python
+
+We will use Python version 3.11 or higher in this course.
+Please follow [VSCode's instructions for installing a Python interpreter that works with VSCode](https://code.visualstudio.com/docs/python/python-tutorial#_install-a-python-interpreter). (Note that the macOS default system install of Python is not supported, and you will need to install another version if you have macOS.)
+
 ## VSCode Extensions
+
+### Python
+
+There is an extension in VSCode that enables Python features such as the debugger: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+How to set up the Python VSCode extension:
+
+1. In VSCode, go to the "Extensions" tab on the left. It looks like this: <img width="36" height="38" alt="Four squares, one of which is slanted" src="https://github.com/user-attachments/assets/883c178f-f0c0-4cd3-ba41-3e8b6948b20f" />
+2. Search for and install "Python"
+   - Make sure that the extension's entire name is "Python" (not "Python Debugger")
+   - The "Python" extension includes the debugger and a few other things.
 
 ### Pylint
 
@@ -22,13 +38,12 @@ The autograder for each assignment will also be running Pylint.
 
 How to set up the Pylint VSCode extension:
 
-1. In VSCode, go to the "Extensions" tab on the left. It looks like this: <img width="36" height="38" alt="Four squares, one of which is slanted" src="https://github.com/user-attachments/assets/883c178f-f0c0-4cd3-ba41-3e8b6948b20f" />
-2. Search for and install "Pylint"
-3. Then, go to VSCode's Settings menu
+1. In VSCode, go to the "Extensions" tab on the left. Search for and install "Pylint"
+2. Then, go to VSCode's Settings menu
    - Mac: `Code` > `Settings...` > `Settings`  (or `Cmd` + `,`)
    - Windows: `File` > `Preferences` > `Settings`  (or `Ctrl` + `,`)
-4. Navigate to `Extensions` > `Pylint`
-5. In the `Args` section, add these two args:
+3. Navigate to `Extensions` > `Pylint`
+4. In the `Args` section, add these two args:
    - `--disable=import-error`
    - `--disable=assignment-from-no-return`
 
