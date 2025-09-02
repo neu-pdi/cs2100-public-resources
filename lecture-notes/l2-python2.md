@@ -51,12 +51,12 @@ We can also represent a literal double quote in the string using an escape seque
 
 Here is a list of string escape sequences:
 
-- "\t"    tab character
-- "\n"    newline character
-- "\r"    carriage return
-- "\""    double quote character
-- "\'"    single quote character
-- "\\"    backslash character
+- `"\t"`    tab character
+- `"\n"`    newline character
+- `"\r"`    carriage return
+- `"\""`    double quote character
+- `"\'"`    single quote character
+- `"\\"`    backslash character
 
 #### String concatenation
 
