@@ -107,7 +107,7 @@ const config: Config = {
           position: 'left',
         },
         {
-          to: 'oh_staff',
+          to: 'staff',
           activeBasePath: 'src/pages',
           label: 'Office Hours and Staff',
           position: 'left',
