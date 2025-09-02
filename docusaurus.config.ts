@@ -48,6 +48,7 @@ const config: Config = {
           editUrl: 'https://github.com/neu-pdi/cs2100-public-resources/edit/main/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
+          exclude: ['src/pages/slides/*'],
         },
         blog: false,
         theme: {
