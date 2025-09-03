@@ -7,11 +7,10 @@ sidebar_position: 5
 
 Online office hours are held using [Pawtograder](https://app.pawtograder.com/).
 
-<!--
 Here is our schedule of office hours:
 
-<iframe src="https://calendar.google.com/calendar/embed?src=c_7cb32f48b792b5e28b81714bf2ba3fcdfac9c25dd2f2f3be150b716bd485b97f%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
--->
+{% include ohcal.html %}
+
 
 # Course Staff
 
