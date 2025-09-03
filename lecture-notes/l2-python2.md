@@ -343,7 +343,7 @@ def sarcasm(phrase: str) -> str:
 3. Sometimes, it doesn't return a string at all
 4. It adds extra characters to the string
 
-Poll: Which of these is a one-line version of the inside of the (correct) `sarcasm()` function?
+(If enough time to explain list comprehension) Poll: Which of these is a one-line version of the inside of the (correct) `sarcasm()` function?
 
 1. `return ''.join([character.upper() for character in phrase if random() < 0.5])`
 2. `return ''.join([character.upper() if random() < 0.5 for character in phrase])`
