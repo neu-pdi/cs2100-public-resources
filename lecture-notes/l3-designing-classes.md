@@ -22,7 +22,7 @@ Here are some classes that are built in to Python (types that we already use):
 ## How to make your own class: attributes, methods, and constructor
 
 - Class header
-  - Define using class​
+  - Define using `class​`
   - Name starts with capital letter
 - Parts of a class
   - Attributes
