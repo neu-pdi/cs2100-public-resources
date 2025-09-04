@@ -67,7 +67,7 @@ How to set up the MyPy VSCode extension:
    - `--strict`
    - `--disallow-untyped-defs`
    - `--disable-error-code=empty-body`
-   - `—-disable-error-code=return`
+   - `--disable-error-code=return`
    - `--explicit-package-bases`
 
 <img width="950" height="248" alt="MyPy args" src="https://github.com/user-attachments/assets/58d42d9a-6994-495f-9266-80fbf734c4ac" />
