@@ -67,7 +67,7 @@ There will also be a **final exam** at a time to be announced by the university.
 | [Prof. Rasika Bhalerao](https://rasikabh.github.io/) | Oakland | Tuesdays 11am - 2pm in CPM 200 |
 | [Prof. Leena Razzaq](https://www.ccs.neu.edu/home/lrazzaq/) | Boston | Mondays 1:30pm - 2pm in Meserve 329 |
 | [Prof. Rose Sloan](https://www.khoury.northeastern.edu/people/rose-sloan/) | Boston | Wednesday 3-4 PM in Meserve 306B |
-| [Prof. John Park](https://www.khoury.northeastern.edu/people/john-park/) | Boston | Mondays 4:30pm - 5:30pm drop-in w/signup |
+| [Prof. John Park](https://www.khoury.northeastern.edu/people/john-park/) | Boston | Mondays 4:30pm - 5:30pm drop-in w/signup in Meserve 318 |
 | [Prof. Jeongkyu Lee](https://www.khoury.northeastern.edu/people/jeongkyu-lee/) | NYC | Friday 12:30pm - 2pm in the Found Faculty Lounge |
 
 Students can also meet with instructors outside of office hours by appointment.
