@@ -24,5 +24,6 @@ sidebar_position: 3
 | 13 | Nov 24 | [L35](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l35-mvc1) |  |  |
 | 14 | Dec 1 | [L36](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l36-mvc2), [L37](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l37-review5), [L38](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l38-career-panel) |  | [HW9: Recursion, MSTs, MVC](https://github.com/neu-cs2100/cs2100-pg-handout-testhw9) |
 
-<img width="1080" height="1080" alt="image" src="https://github.com/user-attachments/assets/547170ff-0748-4b86-b584-0d4033beb3a6" />
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/5241700e-13f6-4483-a827-45120e87d856" />
+
 
