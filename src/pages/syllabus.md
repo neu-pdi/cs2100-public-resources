@@ -63,8 +63,8 @@ There will also be a **final exam** at a time to be announced by the university.
 ## People
 
 | Instructor | Campus | Office Hours |
-| -- | -- | -- | -- |
-| [Prof. Rasika Bhalerao](https://rasikabh.github.io/) | Oakland | TBD |
+| -- | -- | -- |
+| [Prof. Rasika Bhalerao](https://rasikabh.github.io/) | Oakland | Tuesdays 11-2pm in CPM 200 |
 | [Prof. Leena Razzaq](https://www.ccs.neu.edu/home/lrazzaq/) | Boston | TBD |
 | [Prof. Rose Sloan](https://www.khoury.northeastern.edu/people/rose-sloan/) | Boston | TBD |
 | [Prof. John Park](https://www.khoury.northeastern.edu/people/john-park/) | Boston | TBD |
