@@ -23,3 +23,6 @@ sidebar_position: 3
 | 12 | Nov 17 | [L32](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l32-decorator), [L33](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l33-review4), [L34 (Quiz 4)](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l34-quiz4) | [Lab 11: Decorator pattern, @decorator](https://github.com/neu-cs2100/cs2100-pg-handout-lab11) |  |
 | 13 | Nov 24 | [L35](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l35-mvc1) |  |  |
 | 14 | Dec 1 | [L36](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l36-mvc2), [L37](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l37-review5), [L38](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l38-career-panel) |  | [HW9: Recursion, MSTs, MVC](https://github.com/neu-cs2100/cs2100-pg-handout-testhw9) |
+
+<img width="1080" height="1080" alt="image" src="https://github.com/user-attachments/assets/547170ff-0748-4b86-b584-0d4033beb3a6" />
+
