@@ -165,7 +165,7 @@ print(mini)
 
 ## Abstraction
 
-We like to organize our lines of code into functions, and our functions into classes. This prodecure of grouping more granular things into less granular groups is called "abstraction." We saw the benefits of abstraction when we learned how functions allow us to reuse code without redundancy, hide implementation details, and break down a problem into smaller, more manageable pieces. The same applies to the idea of putting methods into classes.
+We like to organize our lines of code into functions, and our functions into classes. This procedure of grouping more granular things into less granular groups is called "abstraction." We saw the benefits of abstraction when we learned how functions allow us to reuse code without redundancy, hide implementation details, and break down a problem into smaller, more manageable pieces. The same applies to the idea of putting methods into classes.
 
 For example, this code is hard to debug or modify:
 
