@@ -17,10 +17,14 @@ These are the three learning outcomes for this lecture:
   - Identify and discuss conflicts of values
   - Identify modifications that would mitigate conflicts of values
 
-Here is our systematic software program design and implementation diagram:
+Here is a diagram of the overall Systematic Software Program Design and Implementation Process that we generally follow when designing and implementing a software product:
+
 <img width="792" height="360" alt="Systematic Software Design Process" src="https://github.com/user-attachments/assets/cbf24fe1-86a0-46b7-944c-37bc88dc9041" />
 
 [(PDF here)](https://github.com/neu-pdi/cs2100-public-resources/blob/main/src/pages/Systematic%20Software%20Design%20Process.pdf)
+
+We will revisit it multiple times this semester, especially the first three sections (Requirements, Design, and Implementation), and dive deeper into all five sections in CS 3100.
+These five phases are generally done in that order, though it is possible to revisit an earlier phase. Each phase also has an optional pathway to "Abandon Project" for various reasons.
 
 Today, we will focus on the first phase, Requirements, specifically the stakeholder-value matrix.
 
