@@ -223,6 +223,7 @@ There are five phases:
 3. Implementation
 4. Validation
 5. Operations
+
 These five phases are generally done in that order, though it is possible to revisit an earlier phase.
 Each phase also has an optional pathway to "Abandon Project" for various reasons.
 
