@@ -34,7 +34,7 @@ Computer science is a group activity. In this course, we are teaching the vocabu
 
 We are also choosing to focus specifically on "Identifying and defending privacy issues" to debunk the common excuse of "I have nothing to hide" [^1] using Value-Sensitive Design. We will be building stakeholder-value matrices, which help us realize which stakeholders might be put at risk because they "have something to hide."
 
-[^1]: [Nothing To Hide:The False Tradeoff Between Privacy and Security](https://www.danielsolove.com/nothing-to-hide/) is recommended further reading for those interested by the "I have nothing to hide" argument.
+[^1]: [Nothing To Hide:The False Tradeoff Between Privacy and Security](https://www.danielsolove.com/nothing-to-hide/) and ['I've Got Nothing to Hide' and Other Misunderstandings of Privacy](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=998565) by Daniel J. Solove are recommended further reading for those interested by the "I have nothing to hide" argument.
 
 Our steps for value-sensitive design happen at the beginning of the overall Systematic Program Design and Implementation Process. They help shape the core functionality of a program before we dive into the code and data.
 
