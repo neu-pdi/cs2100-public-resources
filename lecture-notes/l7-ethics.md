@@ -50,12 +50,16 @@ Here are two examples that may help to illustrate the usefulness of the process:
 
 These are the steps you will take to demonstrate Value-Sensitive Design in the homework assignments for this course:
 
-1. Identify the stakeholders
-2. Identify the values
-3. Fill out a stakeholder-value matrix
-4. Identify and analyze conflicts in the matrix
+1. **Identify the stakeholders**: identify people who are affected by the software in any way
+2. **Identify the values**: identify the values at stake for those stakeholders when considering the software
+3. **Fill out a stakeholder-value matrix**: create a table, where the columns are the values, and the rows are the stakeholders, and write in how each stakeholder's value relates to the software
+4. **Identify and analyze conflicts in the matrix**: for each conflict in the matrix, identify whether and how to address it
 
-As we go through these steps in detail, let’s consider the example of “Finder,” a fictitious dating app (such as [Hinge](https://hinge.co/) or [Grindr](https://www.grindr.com/)).
+In the CS 2000, 2100, and 3100 courses you will demonstrate Value-Sensitive Design in the assignments with each of these steps. The next section will expand and demonstrate on each of these steps using a case study of a dating app.
+
+## Value-Sensitive Design Case study: Finder, a dating app
+
+Let’s consider the example of “Finder,” a fictitious dating app (such as [Hinge](https://hinge.co/) or [Grindr](https://www.grindr.com/)). Let's go through the steps of the Value-Sensitive Design process above.
 
 ### Step 1: Identify the stakeholders
 
@@ -162,7 +166,7 @@ Here are the questions that we use throughout this course to help us make those 
 | Who are the potential recipients of the information? |  |
 | What principles govern the collection and transmission of this information? |  |
 
-### Example: Gaggle in schools
+## Privacy Case study: Gaggle, a messaging app for schools
 
 Gaggle, an online platform designed for use in the classroom that seeks to replace communcation tools such as blogging software and email clients with similar software equipped with content filters, states that "Gaggle will not distribute to third parties any staff data or student data without the consent of either a parent/guardian or a qualified educational institution except in cases of Possible Student Situations (PSS), which may be reported to law enforcement."
 
@@ -178,7 +182,7 @@ Imagine that a student sent a message to another student at 8pm on a Saturday an
 
 Often, as with our Homework assignments, the potential recipients of the information could also include unintended recipients, such as people looking over the shoulder of school administrators, or any students or teachers who notice the contacting of law enforcement.
 
-## Case Study: Algorithmic hiring
+## Your Case Study: Algorithmic hiring
 
 Now for some practice. Consider this scenario: “Shamazon” (a fictitious company) is looking to hire software engineers, and you have been tasked with designing a tool to filter the submitted resumes and select the ideal candidates for hire.
 
