@@ -228,7 +228,7 @@ JSON data is read as a dictionary. In this example below, we took the [example A
 ```python
 import json, pprint
 
-with open('/Users/rasikabhalerao/2025Summer/2100/example_json_data.json', 'r', encoding='utf-8') as f:
+with open('example_json_data.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
     pprint.pp(data)
 ```
