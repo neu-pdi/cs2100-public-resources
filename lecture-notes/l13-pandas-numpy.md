@@ -232,6 +232,7 @@ Pandas has a number of data types for data analysis:
 - *Panels*: three-dimensional container of data
 <br/>
 We can use Pandas to create and view a dataframe like this:
+
 ```python
 import pandas as pd
 
