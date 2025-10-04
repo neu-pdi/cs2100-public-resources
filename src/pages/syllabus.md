@@ -64,7 +64,7 @@ There will also be a **final exam** at a time to be announced by the university.
 
 | Instructor | Campus | Office Hours |
 | -- | -- | -- |
-| [Prof. Rasika Bhalerao](https://rasikabh.github.io/) | Oakland | Tuesdays 10am - 1pm in CPM 200 |
+| [Prof. Rasika Bhalerao](https://rasikabh.github.io/) | Oakland | Tuesdays 3pm - 6pm in CPM 200 |
 | [Prof. Leena Razzaq](https://www.ccs.neu.edu/home/lrazzaq/) | Boston | Mondays 1pm - 2:30pm in Meserve 329 |
 | [Prof. Rose Sloan](https://www.khoury.northeastern.edu/people/rose-sloan/) | Boston | Wednesday 3-4 PM in Meserve 306B |
 | [Prof. John Park](https://www.khoury.northeastern.edu/people/john-park/) | Boston | Mondays 4:30pm - 5:30pm drop-in w/signup in Meserve 318 |
