@@ -186,4 +186,4 @@ indices_of_sorted_words = np.argsort(words)
 
 print(indices_of_sorted_words)  # [2 1 0 4 3]
 ```
-This is saying that, if the list of words was sorted alphabetically, the word at index 4 would be first, then the word at index 6, then the word at index 1, etc. until the last word, which would ironically be the word at index 0.
+This is saying that, if the list of words was sorted alphabetically, the word at index 2 would be first, then the word at index 1, then the word at index 0, etc. until the last word, which would be the word at index 3.
