@@ -148,7 +148,7 @@ We could do the same thing for our `Cat` and `Lion`'s `eat()` methods:
 class Cat:
     def __init__(self, name: str):
         self.name = name
-        self.food: List[str] = ['tuna', 'chicken']
+        self.food: set[str] = {'tuna', 'chicken'}
     
     def knead(self) -> None:
         print('Kneading')
@@ -162,8 +162,8 @@ class Lion(Cat):
         print('Roaring')
     
     def eat(self, food: str) -> None:
-        if food in ['zebra']:
-            super().eat(food)
+        self.food |= {'zebra'}
+        super().eat(food)
 ```
 
 But there is an even more convenient way to handle this one...
