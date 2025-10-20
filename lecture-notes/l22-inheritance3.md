@@ -76,7 +76,7 @@ print(user2.base_url)  # https://api.example.com
 print(user2.timeout)  # 30
 ```
 
-Another common use of static methods is alternate constructors. Python allows us to only specify one constructor using `__init__()`, and this is the standard accepted way to add additional constructors.
+Another common use of class methods is alternate constructors. Python allows us to only specify one constructor using `__init__()`, and this is the standard accepted way to add additional constructors.
 
 Here is an example using class methods for additional constructors to specify a person's birth year in different ways:
 ```python
