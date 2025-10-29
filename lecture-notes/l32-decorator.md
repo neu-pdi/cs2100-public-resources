@@ -203,7 +203,7 @@ Poll: Why do we use `wraps` from the `functools` package?
 
 ## Class decorators
 
-You will only need to use _function_ decorators for CS 2100.
+_Function_ decorators are popular in Python.
 However, _class_ decorators are more popular in other languages including Java.
 
 A _class_ decorator is also a decorator that uses the `@` symbol. The only difference is that it decorates a class instead of a function.
