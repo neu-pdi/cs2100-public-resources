@@ -170,6 +170,12 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  future: {
+    experimental_storage: {
+      type: 'localStorage',
+      namespace: true,
+    },
+  },
 };
 
 export default config;
