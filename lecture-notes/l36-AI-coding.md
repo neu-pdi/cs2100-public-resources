@@ -50,7 +50,7 @@ Some papers:
 
 ## Common uses for Cursor / Windsurf / Github Copilot IDE plugin
 
-- Generative boilerplace code quickly (class with constructor, test class with setup, `if __name__ == '__main__'`, etc)
+- Generate boilerplace code quickly (class with constructor, test class with setup, `if __name__ == '__main__'`, etc)
   - Especially if you already have examples using of how you prefer it in your codebase
 - Figure out bugs that require understanding interaction between multiple files (using the IDE's chat feature)
 - Make modifications that require modifying parts of multiple files
