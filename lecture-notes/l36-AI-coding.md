@@ -38,21 +38,15 @@ Some papers:
 
 ## Common uses for the web interface
 
-### Learning new syntax (for example, when using a new package)
-
-### Explaining error messages to help debug
-
-### Generating code
-
-Generate initial code for a starting point, which you refine there or in an IDE
-
-### Reviewing code
-
-- Find bugs we might have missed
-- Think of test cases we didn't consider
-- Make things more efficient / easier to read
-
-### Translating between languages
+- Learning new syntax (for example, when using a new package)
+- Explaining error messages to help debug
+- Generating code
+  - Generate initial code for a starting point, which you refine there or in an IDE
+- Reviewing code
+  - Find bugs we might have missed
+  - Think of test cases we didn't consider
+  - Make things more efficient / easier to read
+- Translating between programming languages
 
 ## Common uses for Cursor / Windsurf / Github Copilot IDE plugin
 
