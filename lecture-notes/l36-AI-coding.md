@@ -35,6 +35,7 @@ Some papers:
 - Outdated information
 - Access inequality (paid vs. free versions)
 - Reduced deep comprehension for complex tasks
+- Some studies show AI slowa down developers (https://arxiv.org/pdf/2507.09089)
 
 ## Common uses for the web interface
 
