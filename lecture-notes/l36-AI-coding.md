@@ -37,6 +37,35 @@ Some papers:
 - Reduced deep comprehension for complex tasks
 - Some studies show AI slowa down developers (https://arxiv.org/pdf/2507.09089)
 
+
+## Each task in the PDI process can use AI in some way:
+
+<img width="950" height="432" alt="Systematic Software Design Process" src="https://github.com/user-attachments/assets/cbf24fe1-86a0-46b7-944c-37bc88dc9041" />
+
+### AI can help us do these efficiently, but it cannot replace human creativity and understanding of the codebase.
+
+## [Research shows this is the standard workflow with AI that software developers are trending towards:](https://arxiv.org/abs/2506.00202)
+
+1. **Identify** what domain-related information the AI needs
+2. **Engage** with the AI through prompts that state the need as a structured request with specific information, context, the problem statement, and desired outcomes
+3. **Evaluate** the AI output against domain knowledge, expected results, and other success criteria
+   1. Often run and observe in a sandbox
+4. **Calibrate** by providing the AI with feedback and additional context
+5. **Tweak** the AI-generated artifacts to better fit standards
+6. **Finalize** and write documentation including decisions and rationale
+
+This workflow can be used for any of the tasks in the PDI process.
+
+## Why we discourage "vibe coding" in the PDI sequence:
+
+- "Vibe coding" is where you only evaluate the *execution* of the AI-generated code, and not the code itself
+- Vibe coding leads to "productivity collapse"
+- When we write code, we learn about how our codebase works (and about how to write better code)
+- If we don't understand our own code, it's very hard to troubleshoot, give the right feedback to the AI, add to the codebase, etc.
+- So we have the AI write its own brittle fixes
+- This tends to spiral into branching dependencies where nobody understands how it works
+
+
 ## Common uses for the web interface
 
 - Learning new syntax (for example, when using a new package)
