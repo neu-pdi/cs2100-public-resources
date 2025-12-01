@@ -90,7 +90,7 @@ It is recommended to review these topics:
 - Kruskal's Algorithm
 
 
-## Practice Quiz 4
+## Practice Final Exam
 
 Practice final exam: https://github.com/neu-pdi/cs2100-public-resources/blob/main/src/pages/quizzes/Practice%20Final%20Exam.pdf
 
