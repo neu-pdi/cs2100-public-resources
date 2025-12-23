@@ -9,7 +9,7 @@ export default function LectureSummary({ version }: { version: string }) {
     const pluginData = usePluginData('docusaurus-plugin-content-docs') as GlobalPluginData;
     const sidebar = pluginData.versions[0]
     const docs = sidebar.docs.filter(doc => !doc.id.startsWith('l0')).map(doc => {
-        const docContent = require(`@site/lecture-notes/${doc.id}.md`)
+        const docContent = require(`@site/docs/lecture-notes/${doc.id}.md`)
         return {
             doc,
             docContent
@@ -31,7 +31,7 @@ export default function LectureSummary({ version }: { version: string }) {
                     <Card.Root key={doc.id} m={4} size='sm'>
                         <Card.Header>
                             <HStack justifyContent='space-between'>
-                                <Link to={doc.path}><Heading as="h3" m={0}>{docContent.frontMatter?.lecture_number}. {docContent.metadata?.title}</Heading></Link>
+                                <Link to={doc.path}><Heading as="h3" m={0}>{docContent.frontMatter?.lecture_number}. {docContent.frontMatter?.title}</Heading></Link>
 {/*                                 <Text fontSize='sm' color='text.muted'>Est {totalMinutes} minutes</Text> */}
                             </HStack>
                         </Card.Header>

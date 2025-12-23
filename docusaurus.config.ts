@@ -42,13 +42,13 @@ const config: Config = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          path: 'lecture-notes',
+          id: 'default',
+          path: 'docs/lecture-notes',
           routeBasePath: 'lecture-notes',
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/neu-pdi/cs2100-public-resources/edit/main/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
-          exclude: ['docs/slides/*'],
         },
         blog: false,
         theme: {
@@ -91,7 +91,7 @@ const config: Config = {
         },
         {
           to: ' ',
-          activeBasePath: ' ',
+          activeBasePath: 'lecture-notes',
           label: 'Lectures',
           position: 'left',
         },
@@ -112,6 +112,9 @@ const config: Config = {
           activeBasePath: 'src/pages',
           label: 'Office Hours and Staff',
           position: 'left',
+        },
+        {
+          type: 'docsVersionDropdown',
         },
       
       ],

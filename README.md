@@ -2,6 +2,28 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+### Adding a new semester to the website
+
+#### Lecture notes
+
+At the end of a semester, run this, replacing `25fa` with the semester that just finished:
+
+```
+npm run docusaurus docs:version 25fa
+```
+
+This will copy the lecture notes into a subfolder in `versioned_docs`. Now the "working version" is a newer version than that.
+
+#### Things linked in the lecture notes (e.g., slides and practice quizzes)
+
+In the `docs` folder, there are directories for `quizzes`, `slides`, and `pages`. They are for practice quizzes, lecture slides, and other pages as needed, respectively. They have subdirectories for each semester. Add one for the new semester. Link to them as needed.
+
+#### Other pages on the website (e.g., Syllabus and Schedule)
+
+The directory `src/pages` has subdirectories for each year. At the end of a semester, copy everything into a directory named after the semester that just finished. Then, update the versions in the non-semester working directory.
+
+These pages will not update with the drop down. To access an older version of them, add the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/schedule`).
+
 ### Installation
 
 ```
