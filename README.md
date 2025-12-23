@@ -22,9 +22,11 @@ In the `docs` folder, there are directories for `quizzes`, `slides`, and `pages`
 
 ### Other pages on the website (e.g., Syllabus and Schedule)
 
-The directory `src/pages` has subdirectories for each year. At the end of a semester, copy everything into a directory named after the semester that just finished. Then, update the versions in the non-semester working directory.
+The directory `src/pages` has subdirectories for each semester, but also a "working version" of each page that is not in any semester. Make all necessary changes to the "working version" and then copy everything into a new directory with the appropriate semester name.
 
-These pages will not update with the drop down. To access an older version of them, add the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/schedule`).
+On the website, the lecture notes version drop down will not apply to these pages. To access older versions of these non-lecture-note pages, add the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/schedule`).
+
+Any changes to these pages should be made in both the "working version" and the version with the name of the semester.
 
 ## Installation
 
