@@ -2,35 +2,37 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-### Adding a new semester to the website
+## Managing semester versions
 
-#### Lecture notes
+### Lecture notes
 
-At the end of a semester, run this, replacing `25fa` with the semester that just finished:
+Before the start of the semester, make all necessary updates to the lecture note files in `docs/lecture-notes`. Then, run this, replacing `25fa` with the semester that is about to begin:
 
 ```
 npm run docusaurus docs:version 25fa
 ```
 
-This will copy the lecture notes into a subfolder in `versioned_docs`. Now the "working version" is a newer version than that.
+This will copy the lecture notes into a subfolder in `versioned_docs`. Any updates to lecture notes during the semester should happen there.
 
-#### Things linked in the lecture notes (e.g., slides and practice quizzes)
+The "working version" that is still in the `docs` folder is a newer version than the semester you just named, and you can optionally copy mid-semester updates there, to propogate to the following semester. (This is because Docusaurus is meant for software documentation with versions, so named versions are the "published" versions, and `Next` is the unpublished, upcoming version.)
+
+### Things linked in the lecture notes (e.g., slides and practice quizzes)
 
 In the `docs` folder, there are directories for `quizzes`, `slides`, and `pages`. They are for practice quizzes, lecture slides, and other pages as needed, respectively. They have subdirectories for each semester. Add one for the new semester. Link to them as needed.
 
-#### Other pages on the website (e.g., Syllabus and Schedule)
+### Other pages on the website (e.g., Syllabus and Schedule)
 
 The directory `src/pages` has subdirectories for each year. At the end of a semester, copy everything into a directory named after the semester that just finished. Then, update the versions in the non-semester working directory.
 
 These pages will not update with the drop down. To access an older version of them, add the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/schedule`).
 
-### Installation
+## Installation
 
 ```
 $ yarn
 ```
 
-### Local Development
+## Local Development
 
 ```
 $ yarn start
@@ -38,7 +40,7 @@ $ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-### Build
+## Build
 
 ```
 $ yarn build
@@ -46,7 +48,7 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
+## Deployment
 
 Using SSH:
 
