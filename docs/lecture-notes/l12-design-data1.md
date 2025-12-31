@@ -1,6 +1,6 @@
 ---
-sidebar_position: 15
-lecture_number: 15
+sidebar_position: 12
+lecture_number: 12
 title: Design Patterns for Handling Data 1
 ---
 

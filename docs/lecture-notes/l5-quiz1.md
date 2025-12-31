@@ -1,6 +1,6 @@
 ---
-sidebar_position: 6
-lecture_number: 6
+sidebar_position: 5
+lecture_number: 5
 title: Quiz 1
 ---
 

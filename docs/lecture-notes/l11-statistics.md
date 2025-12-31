@@ -1,10 +1,10 @@
 ---
-sidebar_position: 14
-lecture_number: 14
-title: Statistics
+sidebar_position: 11
+lecture_number: 11
+title: Statistics and Data Visualization
 ---
 
-# Statistics
+# Statistics and Data Visualization
 
 <img width="740" height="241" alt="XKCD Cell Phone Use" src="https://github.com/user-attachments/assets/d121049d-687b-45c5-bf2e-36d62bfa1878" />
 Source: https://xkcd.com/925

@@ -1,6 +1,6 @@
 ---
-sidebar_position: 38
-lecture_number: 38
+sidebar_position: 39
+lecture_number: 39
 title: Career Panel
 ---
 

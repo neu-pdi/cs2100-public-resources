@@ -1,10 +1,10 @@
 ---
-sidebar_position: 25
-lecture_number: 25
-title: "Iteration and Comparison"
+sidebar_position: 23
+lecture_number: 23
+title: Iteration and Comparison
 ---
 
-# Iterating and Comparing
+# Iteration and Comparison
 
 ## Iterable
 

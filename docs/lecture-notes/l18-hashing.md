@@ -1,22 +1,10 @@
 ---
-sidebar_position: 26
-lecture_number: 26
-title: "Hashing"
+sidebar_position: 18
+lecture_number: 18
+title: Hashing
 ---
 
 # Hashing
-
-Recall from the previous lecture:
-There is a protocol in Python for comparing objects using `<`, `>`, `==`, `!=`, `<=`, and `>=`. In order to use these comparison operators, we can implement these six methods:
-- `__eq__(self, other: object) -> bool`: equals `==`
-- `__ne__(self, other: object) -> bool`: not equals `!=`
-- `__lt__(self, other: object) -> bool`: less than `<`
-- `__le__(self, other: object) -> bool`: less than or equal to `<=`
-- `__gt__(self, other: object) -> bool`: greater than `>`
-- `__ge__(self, other: object) -> bool`: greater than or equal to `>=`
-
-Not all six methods need to be implemented, since Python can derive some from others. Usually, it suffices to only implement `__eq__(self, other: object) -> bool` and one ordering method like `__lt__(self, other: object) -> bool`.
-Unlike `Iterable` and `Iterator`, there is not a corresponding interface in the `abc` module for Comparable, likely because we rarely implement all six comparison methods.
 
 Poll: What does this print?
 ```python
@@ -247,3 +235,4 @@ print(courses)
 ```
 {CS2100}
 ```
+

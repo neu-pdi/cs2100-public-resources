@@ -1,6 +1,6 @@
 ---
-sidebar_position: 36
-lecture_number: 36
+sidebar_position: 34
+lecture_number: 34
 title: MVC Controllers and Views
 ---
 

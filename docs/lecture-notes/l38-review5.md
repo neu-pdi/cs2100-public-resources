@@ -1,6 +1,6 @@
 ---
-sidebar_position: 37
-lecture_number: 37
+sidebar_position: 38
+lecture_number: 38
 title: Final Exam Review and Interview Prep
 ---
 

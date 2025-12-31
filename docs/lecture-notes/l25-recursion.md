@@ -1,6 +1,6 @@
 ---
-sidebar_position: 27
-lecture_number: 27
+sidebar_position: 25
+lecture_number: 25
 title: Recursion
 ---
 
@@ -187,3 +187,4 @@ The problem: write a function called `greatest_common_denominator()` that takes 
 The problem: write a function called flatten() which takes a list (where the elements may be lists, or they may be individual things) and returns a "flattened" version of the list (where the elements are not lists, and they must just be the individual things).
 
 Example: `flatten([4, 5, [1, 2, [3]], [0, 6]]) = [4, 5, 1, 2, 3, 0, 6]`
+

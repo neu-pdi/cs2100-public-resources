@@ -1,10 +1,10 @@
 ---
-sidebar_position: 9
-lecture_number: 9
-title: Visibility and Immutability
+sidebar_position: 17
+lecture_number: 17
+title: Properties, Visibility, and Immutability
 ---
 
-# Visibility and Immutability
+# Properties, Visibility, and Immutability
 
 "Unenforced guidelines and best practices" is a recurring theme in this course.
 

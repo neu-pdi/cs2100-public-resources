@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-lecture_number: 3
+sidebar_position: 7
+lecture_number: 7
 title: Designing Classes
 ---
 

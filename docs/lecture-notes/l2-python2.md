@@ -36,9 +36,9 @@ y = temp
 x = y
 ```
 
-## Choose how to represent data
+## Data types
 
-### String manipulation
+### Strings
 
 Strings in Python can be represented using single quotes (`'cat'`) or double quotes (`"cat"`).
 
@@ -137,57 +137,6 @@ my_decision: bool = True
 - Comparison happens before boolean operations​
   - `3 < 4 and 5 < 7`
     `True`
-
-### None
-
-None works like a value that represents the absence of a value.
-
-```python
-bodyguard_name: str = None # doesn't have a value -- I don't have a bodyguard
-```
-
-It's different from "" or 0 (see [Null Island](https://en.wikipedia.org/wiki/Null_Island))
-
-Can store `None` in a list​
-```python
-grades: List[int] = [5, None, 0]
-```
-
-Cannot add `None` to a number or string
-- `None + "hi"` does not work
-- `len(None)` does not work​
-
-To specify that a type might be `None`, we use `Optional`. For example:
-```python
-from typing import Optional
-
-def get_number_or_None(hopefully_a_number: str) -> Optional[int]:
-    try:
-        return int(hopefully_a_number)
-    except ValueError:
-        return None
-```
-
-## Types
-
-We started using types in our Python code since day one (last lecture). Here are two new types, which need to be imported:
-
-```python
-from typing import List, Set
-
-nums: List[int] = [1, 2, 3]
-words: Set[str] = {'hi', 'hello', 'howdy'}
-```
-
-We're assuming you have used lists before. Sets may be new to some.
-
-A set is very similar to a list: it is a collection of items.
-
-Differences between a set and a list:
-- A set is unordered
-- A set can only hold each item (at most) once -- no duplicates​
-
-There will be more about sets in [Lecture 12](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l12-data-structures).
 
 ## Control structures
 

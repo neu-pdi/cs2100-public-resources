@@ -1,6 +1,6 @@
 ---
-sidebar_position: 31
-lecture_number: 31
+sidebar_position: 24
+lecture_number: 24
 title: "Design patterns: Strategy, Observer, and \"Data Pull\""
 ---
 
@@ -486,3 +486,6 @@ if __name__ == "__main__":
     sorted_large = sorter.sort(large_list)
     print(f"Sorted large list: {sorted_large[:10]}... (first 10 elements)")
 ```
+
+
+

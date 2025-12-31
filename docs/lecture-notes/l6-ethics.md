@@ -1,6 +1,6 @@
 ---
-sidebar_position: 7
-lecture_number: 7
+sidebar_position: 6
+lecture_number: 6
 title: Ethics
 ---
 
@@ -193,3 +193,4 @@ Now for some practice. Consider this scenario: “Shamazon” (a fictitious comp
 - Where are bias and unfairness entering the product? And how can we mitigate them?
 
 As you can see, we are relying on you to design our future. Good luck.
+

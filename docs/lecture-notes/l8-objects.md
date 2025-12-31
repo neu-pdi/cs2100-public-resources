@@ -1,6 +1,6 @@
 ---
-sidebar_position: 4
-lecture_number: 4
+sidebar_position: 8
+lecture_number: 8
 title: Using Objects
 ---
 
@@ -163,6 +163,128 @@ print(mini)
 3. `<__main__.Cat object at 0x10d380200>`
 4. `MUAHAHAHAHHA` // `<__main__.Cat object at 0x10d380200>`
 
+
+## Generics
+Generics are not covered in our suggested textbook. The [official Python documentation](https://typing.python.org/en/latest/reference/generics.html) will serve as a better reference.
+
+### Generic types
+
+In Python, we are able to put objects of different types into the same list, but it's discouraged because it makes the list harder to process. (We can't process all of its elements the same way.) And in our class, elements of a list must be of the same type since we require types in our Python code. What would be the type of the variable `my_list = [1, 'a']`?
+
+So, even though the elements of a list must all be of the same type (for us), we can have two different lists that have two different types of elements (like a `List[str]` and a `List[int]`).
+
+In our type annotations, we import the `List` type using `from typing import List`. And that same `List` that we imported works for `List`s of different types. That's because `List` is a _generic_ type.
+
+We can define our own generic type. Here's an example:
+
+```python
+from typing import List, TypeVar, Generic
+
+T = TypeVar('T')
+
+class Stack(Generic[T]):
+    def __init__(self) -> None:
+        self.items: List[T] = []
+
+    def push(self, item: T) -> None:
+        self.items.append(item)
+
+    def pop(self) -> T:
+        return self.items.pop()
+
+    def is_empty(self) -> bool:
+        return not self.items
+
+my_stack: Stack[int] = Stack()
+my_stack.push(4)
+print(my_stack.pop())   # 4
+```
+
+We first defined the type variable `T`, and then used it to define the generic type `Stack[T]`. Inside of the class `Stack[T]`, the type `T` can be any type, but all instances of `T` must be the same type as each other.
+
+After defining the generic type `Stack[T]`, we used it to create the parametrized type `Stack[int]`. This means that for the variable `my_stack`, all of the `T`s are replaced with `int`. `Stack[int]` works the same as this:
+
+```python
+class Stack:
+    def __init__(self) -> None:
+        self.items: List[int] = []
+
+    def push(self, item: int) -> None:
+        self.items.append(item)
+
+    def pop(self) -> int:
+        return self.items.pop()
+
+    def is_empty(self) -> bool:
+        return not self.items
+```
+
+We can create a separate variable `my_other_stack: Stack[str]`, for which the generic type is replaced with `str` instead of `int`.
+
+Definitions:
+- Generic type: a class with a type variable, like `List[T]`
+- Parameterized type: a generic type with the type variables filled in, like `List[str]`
+- Raw type: a generic type without the type variable, like `List`. We use this if we don't need to re-use the type variable anywhere else in the code
+
+We can even parametrize the type using another user-defined type: `stack_of_stacks: Stack[Stack[int]] = Stack()`
+
+Poll: Which of these is allowed?
+```python
+class Thing(Generic[T]):
+    def __init__(self, item: Optional[T]):
+        """Item is of type T or None"""
+        self.item = item
+```
+
+1. `item: Thing[str] = Thing('hello')`
+2. `item: Thing[str] = Thing(None)`
+3. `item: Thing[str] = Thing(5)`
+4. `item: Thing[Thing[str]] = Thing(Thing('hello'))`
+
+### (Side note if time) Generic functions
+
+A function can also take a generic type as an argument.
+
+```python
+def get_first(list: List[T]) -> T:
+    if len(list) > 0:
+        return list[0]
+    else:
+        raise ValueError
+```
+
+Note: We didn't have to redefine `T` between any of the previous examples -- we only need to define it once at the top, and we can reuse it. If we need to have two different type variables (to specify that the other type can be different from `T`), then we will need to define a second type variable.
+
+Exercise: Let's write a function `map()` that converts a list of one type into a list of another type. Its arguments should be:
+- a list of generic type T
+- a function that takes T and returns R (another type variable)
+Hint: the type for a function that takes T and returns R is `Callable[[T], R]`
+
+```python
+def map(original: List[T], mapper: Callable[[T], R]) -> List[R]:
+    """Returns a copy of the list containing elements converted using the mapper
+
+    Parameters
+    ----------
+    original : List[T]
+        The original list
+    mapper: Callable[[T], R]
+        The function to convert elements from the original list to the new list
+    
+    Returns
+    -------
+    List[R]
+        A new list with the mapped elements
+    """
+    return [mapper(i) for i in original]
+```
+
+Poll: Which function can we NOT pass to `map()`?
+1. `def to_str(inp: int) -> str:`
+2. `def add_one(inp: int) -> int:`
+3. `def to_int_or_None(inp: str) -> Optional[int]:  # returns int or None`
+4. `def add(inp1: int, inp2: int) -> int`
+
 ## Abstraction
 
 We like to organize our lines of code into functions, and our functions into classes. This procedure of grouping more granular things into less granular groups is called "abstraction." We saw the benefits of abstraction when we learned how functions allow us to reuse code without redundancy, hide implementation details, and break down a problem into smaller, more manageable pieces. The same applies to the idea of putting methods into classes.
@@ -209,23 +331,3 @@ A core principle for writing code is that every component of our code must have 
 | Variable | `age_or_nonexistent: int = -1 # negative if nonexistent` |
 | Function | `def read_file_compute_average_print_score(filename: str) -> None:` |
 | Class | `class FileManagerAndOutputFormatter` |
-
-## The Program Design and Implementation Process
-
-<img width="792" height="360" alt="Systematic Software Design Process" src="https://github.com/user-attachments/assets/cbf24fe1-86a0-46b7-944c-37bc88dc9041" />
-
-[(PDF here)](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/pages/Systematic%20Software%20Design%20Process.pdf)
-
-This diagram depicts the systematic software Program Design and Implementation process. We will revisit it multiple times this semester, and dive deeper into it in CS 3100.
-There are five phases:
-1. Requirements
-2. Design
-3. Implementation
-4. Validation
-5. Operations
-
-These five phases are generally done in that order, though it is possible to revisit an earlier phase.
-Each phase also has an optional pathway to "Abandon Project" for various reasons.
-
-Open-ended poll: What would happen if we directly jumped to the Implementation phase, skipping the Requirements and Design phases? I.e., what would happen if we started by writing code without first designing the project and planning out its pieces?
-

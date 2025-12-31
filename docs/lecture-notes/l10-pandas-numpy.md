@@ -1,6 +1,6 @@
 ---
-sidebar_position: 13
-lecture_number: 13
+sidebar_position: 10
+lecture_number: 10
 title: Pandas and Numpy
 ---
 
