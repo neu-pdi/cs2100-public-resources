@@ -10,7 +10,7 @@ sidebar_position: 2
 
 Building on intro programming experience (from CS 2000 or a different institution), examines the fundamentals of program design and implementation. Studies design of data and object-oriented programs, including common patterns, use of data structures, and underlying principles such as abstraction, encapsulation, inheritance, and interfaces. Introduces common software engineering practices such as version control, writing tests, development environments, and good programming habits. Practices using these design principles by writing medium-sized applications and using data science code libraries. Continues to interweave ethical challenges and skills in program design.
 
-Recordings, lecture notes, and supplementary material are available on Canvas.
+Lecture notes are on this website. Recordings and supplementary material are available on Canvas.
 
 This syllabus is subject to change. Any significant changes will be announced to the class.
 
@@ -57,34 +57,37 @@ There will also be a **final exam** at a time to be announced by the university.
 
 ## Communication
 
-[This website](https://neu-pdi.github.io/cs2100-public-resources/) is your primary source for course policies, homework assignments, lab assignments, and lecture notes.
-2. [Pawtograder](https://app.pawtograder.com/) is our course grading platform. This is where you find homework and lab assignments, and where submitted assignments will appear (after you have pushed them to GitHub) with feedback on them. It will also have all other course-related grades in its gradebook. It is also the place where you will ask questions online about homework, and where you will attend online office hours.
+1. [This website](https://neu-pdi.github.io/cs2100-public-resources/) is your primary source for the [schedule](https://neu-pdi.github.io/cs2100-public-resources/schedule), course policies, assignments, and lecture notes.
+2. [Pawtograder](https://app.pawtograder.com/) is our course grading platform. This is where you find assignments, and where submitted assignments will appear (after you have pushed them to GitHub) with feedback on them. It will also have all other course-related grades in its gradebook. **Course-wide announcements will also be posted here.**
+3. [Canvas](https://canvas.northeastern.edu/) (or Brightspace, in New York) will contain lecture-section-specific things like lecture recordings, lecture participation data, and lecture-specific announcements.
+4. [The Khoury Office Hours App](https://officehours.khoury.northeastern.edu/) is where online office hours will be held. (In-person office hours will be held at locations announced in [the office hours schedule](http://localhost:3000/cs2100-public-resources/staff).)
+5. [Our Discord channel](discord.com) will be for casual discussion (not announcements).
 
 ## People
 
 | Instructor | Campus | Office Hours |
 | -- | -- | -- |
 | [Prof. Rasika Bhalerao](https://rasikabh.github.io/) | Oakland | Tuesdays 3pm - 6pm in CPM 200 |
+| [Prof. Laney Strange](https://www.ccs.neu.edu/home/laney/) | Boston | Mondays 1-2:30pm, Wednesdays 9:30-11am in Meserve 051 |
+| [Prof. Nate Derbinsky](https://derbinsky.info/) | Boston |  |
 | [Prof. Leena Razzaq](https://www.ccs.neu.edu/home/lrazzaq/) | Boston | Mondays 1pm - 2:30pm in Meserve 329 |
-| [Prof. Rose Sloan](https://www.khoury.northeastern.edu/people/rose-sloan/) | Boston | Wednesday 3-4 PM in Meserve 306B |
-| [Prof. John Park](https://www.khoury.northeastern.edu/people/john-park/) | Boston | Mondays 4:30pm - 5:30pm drop-in w/signup in Meserve 318 |
 | [Prof. Jeongkyu Lee](https://www.khoury.northeastern.edu/people/jeongkyu-lee/) | NYC | Friday 12:30pm - 2pm in the Found Faculty Lounge |
 
 Students can also meet with instructors outside of office hours by appointment.
 
 ## Due Dates, Late Tokens, Regrades
 
-Homework assignments will be due on Thursdays[^1], at 6PM Pacific time / 9PM Eastern time.
+Homework assignments will be due on Wednesdays at 6PM Pacific time / 9PM Eastern time.
 
-Any assignment can have a "Late Token" applied (see https://docs.pawtograder.com/students/assignments/late-tokens), which gives you a 24-hour extension on it. You will begin the semester with two late tokens, which you can use one on any assignment, but you _must_ apply it _before_ the assignment is due. No assignments will be accepted after the due date, or, if a late token has been applied, after the late due date. If there is an exceptional situation that makes you unable to do this, please reach out to your instructor.
+Any assignment can have one "Late Token" applied (see https://docs.pawtograder.com/students/assignments/late-tokens), which gives you a 24-hour extension on it. You will begin the semester with nine late tokens, which you can use one on any assignment, but you can only use up to ONE on any assignment. If there is an exceptional situation that makes you unable to do this, please reach out to your instructor *before* the deadline.
 
-If you have an assignment on Pawtograder that you believe was graded incorrectly, you can submit a request request within Pawtograder, explaining the mistake. All regrade requests must be made within one week of receiving the graded assignment.
+Autograder scores will not be changed after the assignment deadline. Students can submit an unlimited number of times before each assignment deadline.
 
-[^1]: except Homework 1, which is due on a Tuesday
+If you have a manually-graded assignment on Pawtograder that you believe was graded incorrectly, you can submit a request request within Pawtograder, explaining the mistake. All regrade requests must be made within one week of receiving the graded assignment.
 
 ## Office Hours
 
-We hold extensive office hours -- both online, via [Pawtograder](https://app.pawtograder.com/) and, depending on campus, in person. These can be used for any questions you have about course content, not limited to: questions about lecture material, related online resources, any questions about assignments, etc. The schedule for these are available on the Office Hours page.
+We hold extensive office hours -- both online, via [the Khoury Office Hours App](https://officehours.khoury.northeastern.edu/) and, depending on campus, in person. We encourage students to use office hours for any questions you have about course content, not limited to: questions about lecture material, related online resources, any questions about assignments, etc. The schedule for these are available on the Office Hours page.
 
 ## Grading
 
@@ -92,23 +95,23 @@ Assessment will be based on homework, participation, labs, and quizzes. You may 
 
 The highest row in which a student satisfies all columns will be their grade (plus a bump for lectures -- see below). If no rows are completely satisfied, the student will not pass the course.
 
-| Grade | Homework | Exam Topics (Quizzes + Final Exam) | Labs (out of 11) |
+| Grade | Homework | Labs | Exam Topics (Quizzes + Final Exam) |
 | - | - | - | - |
-| A | 80% or higher | 93% or higher | 6 or more |
-| A- | 80% or higher | 93% or higher |  |
-| B+ | 70% or higher | 80% or higher | 8 or more |
-| B | 70% or higher | 80% or higher | 6 or more |
-| B- | 70% or higher | 80% or higher |  |
-| C+ | 60% or higher | 65% or higher | 8 or more |
-| C | 60% or higher | 65% or higher | 6 or more |
-| C- | 60% or higher | 65% or higher |  |
-| D+ | 50% or higher | 50% or higher | 8 or more |
-| D | 50% or higher | 50% or higher | 6 or more |
-| D- | 50% or higher | 50% or higher |  |
+| A | 80% or higher | 80% or higher | 93% or higher |
+| A- | 76% or higher | 76% or higher | 90% or higher |
+| B+ | 73% or higher | 73% or higher | 86% or higher |
+| B | 70% or higher | 70% or higher | 83% or higher |
+| B- | 66% or higher | 66% or higher | 80% or higher |
+| C+ | 63% or higher | 63% or higher | 75% or higher |
+| C | 60% or higher | 60% or higher | 70% or higher |
+| C- | 56% or higher | 56% or higher | 65% or higher |
+| D+ | 53% or higher | 53% or higher | 60% or higher |
+| D | 50% or higher | 50% or higher | 55% or higher |
+| D- | 46% or higher | 46% or higher | 50% or higher |
 
-**There are 33 lectures. Participating in 27 or more lectures will bump your score up one row.** For example, if you had a homework score of 72%, an exam topic score of 85%, and attended 7 labs, attending at least 27 lectures will bump your score from B to B+.
+E.g., to get an A, you must score 80% or higher on homework, 80% or higher on labs, AND 93% or higher on exam topics. If you have the 80% homework and lab scores, but your exam topic score is 91%, you will receive an A-.
 
-The in-class exercises during lecture will be graded based on whether questions were attempted, not on correctness. In-class exercises can only be done from the lecture classroom (or attending synchronously online with explicit permission). Completing an in-class activity while not present in class is an academic integrity violation, which will result in a zero for the participation grade for the semester and an OSCCR report.
+**A lecture activity score of 70% or more will bump your score up one row.** For example, if you had homework and lab scores of 72%, and an exam topic score of 85%, a lecture activity score of 75% will bump your score from B to B+.
 
 To progress, students are required to meet the grade point average (GPA) requirements as determined by Khoury College of Computer Sciences. [(See Khoury's website for more information.)](https://catalog.northeastern.edu/undergraduate/computer-information-science/)
 
