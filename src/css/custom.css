@@ -64,3 +64,14 @@
 
 .markdown ol ol ol {
 }
+
+/* Schedule page styles */
+.date-text {
+  font-size: 0.85em;
+  color: #666;
+  display: block;
+}
+
+.holiday {
+  background-color: #cccccc;
+}

@@ -20,13 +20,19 @@ The "working version" that is still in the `docs` folder is a newer version than
 
 In the `docs` folder, there are directories for `quizzes`, `slides`, and `pages`. They are for practice quizzes, lecture slides, and other pages as needed, respectively. They have subdirectories for each semester. Add one for the new semester. Link to them as needed.
 
-### Other pages on the website (e.g., Syllabus and Schedule)
+### Other pages on the website (e.g., Syllabus and Course Staff)
 
 The directory `src/pages` has subdirectories for each semester, but also a "working version" of each page that is not in any semester. Make all necessary changes to the "working version" and then copy everything into a new directory with the appropriate semester name.
 
 On the website, the lecture notes version drop down will not apply to these pages. To access older versions of these non-lecture-note pages, add the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/schedule`).
 
 Any changes to these pages should be made in both the "working version" and the version with the name of the semester.
+
+**Updating the schedule**: Go to `src/components/ScheduleTable/index.tsx` and update these constants:
+
+- `startDate` on line 19
+- `holidays` on line 22
+- `homeworkAssignments` on line 32
 
 ## Installation
 
