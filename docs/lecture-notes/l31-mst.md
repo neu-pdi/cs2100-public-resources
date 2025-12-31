@@ -66,7 +66,7 @@ Poll: A tree is a type of graph. What are the differences between a tree and a g
 
 (See slides)
 
-## Kruskal's Algorithm
+## Kruskals algorithm
 
 (See slides)
 

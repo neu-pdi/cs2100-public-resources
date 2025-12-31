@@ -14,7 +14,7 @@ my_nums: List[int] = [6, 7, 8, 9]
 words: List[str] = ['never', 'gonna', 'give', 'you', 'up']
 ```
 
-## `split()` and `join()`
+## split() and join()
 
 There's a built-in `str` function in Python that splits a `str` into separate words:
 ```python
@@ -541,7 +541,7 @@ Poll: Which of these describes the Accumulator Pattern?
 3. Initialize the accumulator variable before a loop over the sequence, and update it inside the loop
 4. Initialize the accumulator variable to `0` before a loop over the sequence, and update it inside the loop
 
-## `functools.reduce()` and `itertools.accumulate()`
+## functools.reduce() and itertools.accumulate()
 
 `functools.reduce()` and `itertools.accumulate()` are two functions that perform the Accumulator Pattern.
 

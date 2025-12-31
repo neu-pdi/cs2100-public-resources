@@ -8,7 +8,7 @@ title: Properties, Visibility, and Immutability
 
 "Unenforced guidelines and best practices" is a recurring theme in this course.
 
-## Python's built-in visibility restrictions
+## Visibility restrictions in Python
 
 For security, and to hide implementation details, most programming languages have a way to mark attributes and methods as "private" -- they can only be accessed from within their class. For example, they can block access to `my_diary.password` or prevent calling the method `car.spray_gas_from_tank_into_cylinders()`. This is useful because most people would cause damage if they could access that part of the car startup sequence.
 

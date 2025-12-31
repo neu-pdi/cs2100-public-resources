@@ -30,9 +30,10 @@ Any changes to these pages should be made in both the "working version" and the 
 
 **Updating the schedule**: Go to `src/components/ScheduleTable/index.tsx` and update these constants:
 
-- `startDate` on line 19
-- `holidays` on line 22
-- `homeworkAssignments` on line 32
+- `startDate` on line 25
+- `addDrop` on line 28
+- `holidays` on line 31
+- `homeworkAssignments` on line 41
 
 ## Installation
 

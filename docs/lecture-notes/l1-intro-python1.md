@@ -321,7 +321,7 @@ Formatting the documentation in this way makes it so that it shows up in officia
 
 Notice that one of the tests makes sure that the function raises a ValueError if it's given an invalid argument.
 
-## Using VSCode's debugger to trace code
+## Using the VSCode debugger to trace code
 
 Poll: My code keeps printing the wrong thing. What should I do?
 

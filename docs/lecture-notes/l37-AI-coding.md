@@ -56,7 +56,7 @@ Some papers:
 
 This workflow can be used for any of the tasks in the PDI process.
 
-## Why we discourage "vibe coding" in the PDI sequence:
+## Why we discourage vibe coding in the PDI sequence:
 
 - "Vibe coding" is where you only evaluate the *execution* of the AI-generated code, and not the code itself
 - Vibe coding leads to "productivity collapse"

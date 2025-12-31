@@ -116,7 +116,7 @@ def modify_shirt(shirt: Shirt) -> Shirt:
     return Shirt(4)
 ```
 
-## The `__str__()` function
+## The \_\_str\_\_() function
 
 Every class has a `__str__()` method. We can overwrite it with our own `__str__()` method.
 When we print an object, it implicitly calls the `__str__()` method.

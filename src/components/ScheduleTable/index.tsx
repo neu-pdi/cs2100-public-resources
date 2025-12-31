@@ -24,6 +24,9 @@ export default function ScheduleTable({ version }: { version: string }) {
     // Semester start date
     const startDate = new Date("2026-01-05");
 
+    // Last day of add/drop period
+    const addDrop = new Date("2026-01-20");
+
     // Holidays (no class)
     const holidays = new Set([
         "2026-01-05", // Before semester
@@ -48,15 +51,24 @@ export default function ScheduleTable({ version }: { version: string }) {
     ];
 
     const formatDate = (date: Date): string => {
-        const month = date.toLocaleDateString("en-US", { month: "short" });
-        const day = date.getDate();
+        const month = date.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" });
+        const day = date.getUTCDate();
         return `${month} ${day}`;
     };
 
+    const formatLongDate = (date: Date): string => {
+        return date.toLocaleDateString("en-US", { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric',
+            timeZone: 'UTC'
+        });
+    };
+
     const dateToString = (date: Date): string => {
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, "0");
-        const day = String(date.getDate()).padStart(2, "0");
+        const year = date.getUTCFullYear();
+        const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+        const day = String(date.getUTCDate()).padStart(2, "0");
         return `${year}-${month}-${day}`;
     };
 
@@ -67,6 +79,14 @@ export default function ScheduleTable({ version }: { version: string }) {
     const getHomeworkForDate = (date: Date): typeof homeworkAssignments[0] | null => {
         const dateStr = dateToString(date);
         return homeworkAssignments.find(hw => hw.date === dateStr) || null;
+    };
+
+    const shouldShowAddDropBlurb = (date: Date, allDates: Date[]): boolean => {
+        // Show blurb on the last class date before add/drop deadline (including holidays)
+        const beforeAddDrop = allDates.filter(d => d < addDrop);
+        if (beforeAddDrop.length === 0) return false;
+        const closestDate = beforeAddDrop[beforeAddDrop.length - 1];
+        return dateToString(date) === dateToString(closestDate);
     };
 
     const extractTopics = (docContent: any): string[] => {
@@ -111,7 +131,7 @@ export default function ScheduleTable({ version }: { version: string }) {
 
         // Generate enough dates to cover all lectures plus holidays
         while (addedDates < lectureCount + holidays.size) {
-            const dayOfWeek = currentDate.getDay();
+            const dayOfWeek = currentDate.getUTCDay();
             
             // Check if it's Mon (1), Wed (3), or Thu (4)
             if (dayOfWeek === 1 || dayOfWeek === 3 || dayOfWeek === 4) {
@@ -120,7 +140,7 @@ export default function ScheduleTable({ version }: { version: string }) {
             }
             
             // Move to next day
-            currentDate.setDate(currentDate.getDate() + 1);
+            currentDate.setUTCDate(currentDate.getUTCDate() + 1);
         }
         
         return dates;
@@ -144,7 +164,7 @@ export default function ScheduleTable({ version }: { version: string }) {
             weekDays.push({ date, doc });
 
             // Check if we need to start a new week (after Thursday)
-            const dayOfWeek = date.getDay();
+            const dayOfWeek = date.getUTCDay();
             if (dayOfWeek === 4) {
                 weeks.push({ week: currentWeek, days: [...weekDays] });
                 weekDays = [];
@@ -166,13 +186,16 @@ export default function ScheduleTable({ version }: { version: string }) {
     };
 
     const schedule = generateSchedule();
+    const allClassDates = schedule.flatMap(week => week.days.map(day => day.date));
 
     return (
-        <Box>
+        <Box style={{ overflow: 'visible' }}>
             <style>{`
                 .schedule-table {
                     width: 100%;
                     border-collapse: collapse;
+                    margin-top: 100px;
+                    overflow: visible;
                 }
                 .schedule-table th,
                 .schedule-table td {
@@ -180,9 +203,15 @@ export default function ScheduleTable({ version }: { version: string }) {
                     padding: 8px;
                     text-align: left;
                     vertical-align: top;
+                    overflow: visible;
+                    position: relative;
+                }
+                .schedule-table td {
+                    height: 200px;
                 }
                 .schedule-table th {
                     font-weight: bold;
+                    height: auto;
                 }
                 .date-text {
                     font-size: 0.85em;
@@ -203,22 +232,35 @@ export default function ScheduleTable({ version }: { version: string }) {
                     border: 1px solid #4682b4;
                     border-radius: 6px;
                     font-size: 0.9em;
+                    position: relative;
+                    z-index: 1;
+                    min-height: 110px;
                 }
                 [data-theme='dark'] .homework-blurb {
                     background-color: #1a2332;
                     border-color: #5b9bd5;
+                }
+                .adddrop-blurb {
+                    margin-top: 12px;
+                    padding: 8px 10px;
+                    background-color: #ffc0cb;
+                    border: 1px solid #ff69b4;
+                    border-radius: 6px;
+                    font-size: 0.9em;
+                }
+                [data-theme='dark'] .adddrop-blurb {
+                    background-color: #4d1f2e;
+                    border-color: #ff69b4;
                 }
                 .homework-warning {
                     margin-top: 8px;
                     font-size: 0.7em;
                     color: #666;
                     line-height: 1.3;
-                    transition: font-size 0.2s ease, color 0.2s ease, font-weight 0.2s ease;
+                    transition: color 0.2s ease;
                 }
                 .homework-blurb:hover .homework-warning {
-                    font-size: 0.85em;
                     color: #d32f2f;
-                    font-weight: bold;
                 }
                 [data-theme='dark'] .homework-warning {
                     color: #aaa;
@@ -293,6 +335,11 @@ export default function ScheduleTable({ version }: { version: string }) {
                     background-color: #3d3200;
                     border-color: #ffc107;
                 }
+                .schedule-table thead,
+                .schedule-table tbody,
+                .schedule-table tr {
+                    overflow: visible;
+                }
             `}</style>
             
             <table className="schedule-table">
@@ -312,6 +359,7 @@ export default function ScheduleTable({ version }: { version: string }) {
                                 {week.days.map((day, index) => {
                                     const isHol = isHoliday(day.date);
                                     const homework = getHomeworkForDate(day.date);
+                                    const showAddDrop = shouldShowAddDropBlurb(day.date, allClassDates);
                                     return (
                                         <td key={index} className={isHol ? "holiday" : ""}>
                                             <span className="date-text">{formatDate(day.date)}</span>
@@ -366,12 +414,22 @@ export default function ScheduleTable({ version }: { version: string }) {
                                                     </div>
                                                 </div>
                                             )}
+                                            {showAddDrop && (
+                                                <div className="adddrop-blurb">
+                                                    <strong>Last day of add/drop period: </strong>
+                                                    {formatLongDate(addDrop)}
+                                                </div>
+                                            )}
                                         </td>
                                     );
                                 })}
                             </tr>
                         );
                     })}
+                    <tr>
+                        <td>16</td>
+                        <td colSpan={3}>Final Exam (date/time TBD)</td>
+                    </tr>
                 </tbody>
             </table>
         </Box>

@@ -8,9 +8,7 @@ sidebar_position: 2
 
 ## Course Description
 
-Building on intro programming experience (from CS 2000 or a different institution), examines the fundamentals of program design and implementation. Studies design of data and object-oriented programs, including common patterns, use of data structures, and underlying principles such as abstraction, encapsulation, inheritance, and interfaces. Introduces common software engineering practices such as version control, writing tests, development environments, and good programming habits. Practices using these design principles by writing medium-sized applications and using data science code libraries. Continues to interweave ethical challenges and skills in program design.
-
-Lecture notes are on this website. Recordings and supplementary material are available on Canvas.
+Builds on prior introductory programming experience (from inside or outside Northeastern University) to examine the fundamentals of program design and implementation. Studies design of data- and object-oriented programs including common patterns; use of data structures; and underlying principles such as abstraction, encapsulation, inheritance, and interfaces. Introduces common software engineering practices such as unit tests, version control, development environments, and good programming habits. Students practice using these design principles by writing medium-sized applications and using data science libraries. Covers skills needed to identify and respond to ethical challenges that arise in the program design process.
 
 This syllabus is subject to change. Any significant changes will be announced to the class.
 
@@ -30,7 +28,7 @@ These skills will:
 - serve students throughout their careers
 
 ## Prerequisite Skills
-Students who have not taken CS 2000 will need to demonstrate a passing knowledge of the following topics to be placed into this course:
+Students who have not taken CS 2000 will need a passing knowledge of the following topics to succeed in this course:
 - Variables and operations
   - Arithmetic
   - String operations
@@ -42,36 +40,34 @@ Students who have not taken CS 2000 will need to demonstrate a passing knowledge
 - Using lists
 
 ## Textbook
-The textbook "Python 3 Object Oriented Programming: Harness the Power of Python 3 Objects" by Dusty Phillips covers most of the object-oriented concepts relevant to this course, though we will not follow it exactly.
+The textbook "Python 3 Object Oriented Programming: Harness the Power of Python 3 Objects" (third edition) by Dusty Phillips covers most of the object-oriented concepts relevant to this course, though we will not follow it exactly.
 
 ## Course Structure
-There will be three in-person **lectures** (Oakland and Boston) or two in-person lectures (NYC and London) and one **lab** (also known as *lab*) per week. During the lectures (CS 2100) we will go over new content using lecture, live coding, discussion, and individual exercises. The lab (CS 2101) will include individual exercises and an opportunity to begin homework with guidance and feedback from instructional staff. Lab will be led by Lab Leader TAs.
+There will be three in-person **lectures** (Oakland and Boston) or two in-person lectures (NYC and London) and one **lab** per week. During the lectures (CS 2100) we will go over new content using lecture, live coding, discussion, and individual exercises. The lab (CS 2101) will include individual exercises and an opportunity to begin homework with guidance and feedback from instructional staff. Lab will be led by Lab Leader TAs.
 
 Students can register for any CS 2101 lab section on their campus.
 
-There will also be **weekly homework** assignments. The purpose of homework is to give you hands-on experience with the course material you learned in lecture, and to prepare you for the quizzes and projects.
+There will also be nine **homework assignments**. The purpose of homework is to give you hands-on experience with the course material you learned in lecture, and to prepare you for the quizzes and projects.
 
-There will also be **four quizzes** over the semester, tentatively scheduled during lecture.
-
-There will also be a **final exam** at a time to be announced by the university.
+There will also be **five exams** over the semester: four quizzes during lectures, and a final exam at a time to be announced by the university.
 
 ## Communication
 
-1. [This website](https://neu-pdi.github.io/cs2100-public-resources/) is your primary source for the [schedule](https://neu-pdi.github.io/cs2100-public-resources/schedule), course policies, assignments, and lecture notes.
+1. [This website](https://neu-pdi.github.io/cs2100-public-resources/) is your primary source for the [schedule](https://neu-pdi.github.io/cs2100-public-resources/schedule), course policies, and lecture notes.
 2. [Pawtograder](https://app.pawtograder.com/) is our course grading platform. This is where you find assignments, and where submitted assignments will appear (after you have pushed them to GitHub) with feedback on them. It will also have all other course-related grades in its gradebook. **Course-wide announcements will also be posted here.**
-3. [Canvas](https://canvas.northeastern.edu/) (or Brightspace, in New York) will contain lecture-section-specific things like lecture recordings, lecture participation data, and lecture-specific announcements.
-4. The Khoury Office Hours App is where online office hours will be held. (In-person office hours will be held at locations announced in [the office hours schedule](http://localhost:3000/cs2100-public-resources/staff).)
-5. Our Discord channel will be for casual discussion (not announcements).
+3. [Canvas](https://northeastern.instructure.com/) (or Brightspace, in New York) will contain lecture-section-specific things like lecture participation data and lecture-specific announcements.
+4. The Khoury Office Hours App is where online office hours will be held. (In-person office hours will be held at locations announced in [the office hours schedule](https://neu-pdi.github.io/cs2100-public-resources/staff).)
+5. Our Discord channel will be for course-related discussion (not announcements).
 
 ## People
 
 | Instructor | Campus | Office Hours |
 | -- | -- | -- |
-| [Prof. Rasika Bhalerao](https://rasikabh.github.io/) | Oakland | Tuesdays 3pm - 6pm in CPM 200 |
-| [Prof. Laney Strange](https://www.ccs.neu.edu/home/laney/) | Boston | Mondays 1-2:30pm, Wednesdays 9:30-11am in Meserve 051 |
-| [Prof. Nate Derbinsky](https://derbinsky.info/) | Boston |  |
-| [Prof. Leena Razzaq](https://www.ccs.neu.edu/home/lrazzaq/) | Boston | Mondays 1pm - 2:30pm in Meserve 329 |
-| [Prof. Jeongkyu Lee](https://www.khoury.northeastern.edu/people/jeongkyu-lee/) | NYC | Friday 12:30pm - 2pm in the Found Faculty Lounge |
+| [Prof. Rasika Bhalerao](https://rasikabh.github.io/) | Oakland | Tuesdays 3pm-6pm in CPM 200 |
+| [Prof. Laney Strange](https://www.ccs.neu.edu/home/laney/) | Boston | Mondays 2:30-5 on [Zoom](https://northeastern.zoom.us/my/laney), Thursdays 10:30am-12pm in Meserve 051, or [by appointment](https://calendly.com/laneystrange/15-minute-office-hours-with-laney) |
+| [Prof. Nate Derbinsky](https://derbinsky.info/) | Boston | Tuesdays 10am-12pm in WVH 246 |
+| [Prof. Leena Razzaq](https://www.ccs.neu.edu/home/lrazzaq/) | Boston | Thursdays 3-4:30pm in Meserve 329 |
+| [Prof. Jeongkyu Lee](https://www.khoury.northeastern.edu/people/jeongkyu-lee/) | NYC | Friday 12:30pm-2pm in the Found Faculty Lounge |
 
 Students can also meet with instructors outside of office hours by appointment.
 
@@ -83,15 +79,19 @@ Any assignment can have one "Late Token" applied (see https://docs.pawtograder.c
 
 Autograder scores will not be changed after the assignment deadline. Students can submit an unlimited number of times before each assignment deadline.
 
-If you have a manually-graded assignment on Pawtograder that you believe was graded incorrectly, you can submit a request request within Pawtograder, explaining the mistake. All regrade requests must be made within one week of receiving the graded assignment.
+If you have a manually-graded assignment on Pawtograder that you believe was graded incorrectly, you can submit a regrade request within Pawtograder, explaining the mistake. All regrade requests must be made within one week of receiving the graded assignment.
 
 ## Office Hours
 
-We hold extensive office hours -- both online, via [the Khoury Office Hours App](https://officehours.khoury.northeastern.edu/) and, depending on campus, in person. We encourage students to use office hours for any questions you have about course content, not limited to: questions about lecture material, related online resources, any questions about assignments, etc. The schedule for these are available on the Office Hours page.
+We hold extensive office hours -- both online, via [the Khoury Office Hours App](https://officehours.khoury.northeastern.edu/) and in person. We encourage students to use office hours for any questions you have about course content, not limited to: questions about lecture material, related online resources, any questions about assignments, etc. The schedule for these are available on the Office Hours page.
 
 ## Grading
 
-Assessment will be based on homework, participation, labs, and quizzes. You may ask for feedback on anything else, but it will not figure into your final grade.
+Assessment will be based on homework, labs, lecture exercises, and exam topics (from quizzes and the final exam). You may ask for feedback on anything else, but it will not figure into your final grade.
+
+All homework assignments will be weighted equally in the Homework grade, and all labs will be weighted equally in the Labs grade.
+
+All exam topics (from quizzes or the final exam) will be weighted equally in the Exam Topics grade. Each topic will appear on two exams. For each topic, the score for that topic will be the highest of both attempts at that topic.
 
 The highest row in which a student satisfies all columns will be their grade (plus a bump for lectures -- see below). If no rows are completely satisfied, the student will not pass the course.
 
@@ -111,6 +111,8 @@ The highest row in which a student satisfies all columns will be their grade (pl
 
 E.g., to get an A, you must score 80% or higher on homework, 80% or higher on labs, AND 93% or higher on exam topics. If you have the 80% homework and lab scores, but your exam topic score is 91%, you will receive an A-.
 
+Percentage grades will be rounded to the nearest percent. E.g., a grade of 79.2% will be rounded down to 79%.
+
 **A lecture activity score of 70% or more will bump your score up one row.** For example, if you had homework and lab scores of 72%, and an exam topic score of 85%, a lecture activity score of 75% will bump your score from B to B+.
 
 To progress, students are required to meet the grade point average (GPA) requirements as determined by Khoury College of Computer Sciences. [(See Khoury's website for more information.)](https://catalog.northeastern.edu/undergraduate/computer-information-science/)
@@ -122,9 +124,9 @@ Computer science, both academically and professionally, is a collaborative disci
 Specifically:
 
 - You are responsible for any material you turn in. The professor reserves the right to ask you to verbally explain the reasoning behind any answer or code that you turn in and to modify your grade based on your answers. It is vitally important that you turn in work that you understand.
-- Copying material from another person without their knowledge is not allowed.
+- Copying material from another person is not allowed.
 - Additionally, sharing solutions in forums (e.g., posting to public questions, posting code online, etc) constitutes an academic integrity violation, as it may make it harder for other students to do work on their own, harming their own learning.
-- Collaboration is not allowed on exams. Any sharing or receiving information about the content of exams is an academic integrity violation, and may result in failing the class.
+- Collaboration is not allowed on exams (quizzes or the final exam). Any sharing or receiving information about the content of exams is an academic integrity violation, and may result in failing the class.
 
 We _strongly recommend_ that you _write_ all code yourself. Even if you discuss solutions, or approaches, with others, do the actual typing on your own! And avoid playing games or trying to find loopholes -- i.e., do not merely type what someone says, or type what you see on anothers screen. While we do not consider collaboration a violation, we still encourage following these recommendations-- relying on others for your solutions may result in you not learning the material, and in this class, not learning the material will result in not being able to pass the exams. Even with perfect homework scores, failing to pass sufficient exam topics will result in a failing grade in the course, so take homework for what it is intended: extensive opportunity to practice the skills we are teaching, paired with high quality feedback about the solution you came up with.
 
@@ -183,13 +185,13 @@ Please visit https://www.northeastern.edu/titleix for a complete list of reporti
 
 ### International Tutoring Center
 
-The [International Tutoring Center (ITC)](https://international.northeastern.edu/itc/) provides current Northeastern University international and non-native English-speaking students with free, comprehensive English language and academic support. The ITC includes student-centered one-on-one tutoring sessions and workshops on reading, writing, and language and culture. For more on tutoring and workshops, see https://cps.northeastern.edu/academic-resources/global-student-success/international-tutoring.
+The [International Tutoring Center (ITC)](https://international.northeastern.edu/itc/) provides current Northeastern University international and non-native English-speaking students with free, comprehensive English language and academic support. The ITC includes student-centered one-on-one tutoring sessions and workshops on reading, writing, and language and culture.
 
 ### WeCare
 
 WeCare is a program operated through the Office for Student Affairs. The mission is to assist students experiencing unexpected challenges to maintaining their academic progress. WeCare works with students to coordinate among university offices and to offer appropriate on and off campus referrals to support successfully resolving the issue. WeCare also provides information to faculty and staff to identify Northeastern resources and policies to help students succeed.
 
-For more information see https://studentlife.northeastern.edu/we-care/. Call 617.373.4384 or email wecare@northeastern.edu.
+For more information see https://we-care.studentlife.northeastern.edu/, email wecare@northeastern.edu, or call 617.373.7591.
 
 ### Libraries
 

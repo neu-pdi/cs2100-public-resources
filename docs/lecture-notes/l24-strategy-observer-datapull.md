@@ -4,7 +4,7 @@ lecture_number: 24
 title: "Design patterns: Strategy, Observer, and \"Data Pull\""
 ---
 
-# Design patterns: Strategy, Observer, and "Data Pull"
+# Design patterns: Strategy, Observer, and Data Pull
 
 ## Design Patterns
 
@@ -18,7 +18,7 @@ Design patterns:
 - are flexible (the overarching pattern allows modifications)
 - provide us a common vocabulary to communicate "blueprints" for standard patterns
 
-## "Data Pull" pattern
+## Data Pull pattern
 
 (Modeled after this lecture: https://neu-se.github.io/CS4530-Spring-2024/Slides/Module%2005%20Interaction-Level%20Design%20Patterns.pdf)
 

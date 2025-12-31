@@ -105,7 +105,7 @@ s.fold()
 3. It calls `Shirt`'s `fold()` method
 4. It does nothing
 
-## Using `super()`
+## Using super()
 
 There is some redundancy in this code:
 ```python
@@ -222,7 +222,7 @@ lion.knead()
 <img width="1080" height="475" alt="OOP meme" src="https://github.com/user-attachments/assets/0baf8839-85d3-4acf-bbf1-e6a8dda3bf00" />
 Source: https://www.reddit.com/r/ProgrammerHumor/comments/60lm55/oop_what_actually_happens
 
-## Everything is a subclass of `object`
+## Everything is a subclass of object
 
 Every class that we write is by default a subclass of `object`.
 These two class definitions are equivalent:
