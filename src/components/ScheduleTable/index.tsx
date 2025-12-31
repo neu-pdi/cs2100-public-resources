@@ -7,7 +7,13 @@ export default function ScheduleTable({ version }: { version: string }) {
     const pluginData = usePluginData('docusaurus-plugin-content-docs') as GlobalPluginData;
     const sidebar = pluginData.versions[0];
     const docs = sidebar.docs.filter(doc => !doc.id.startsWith('l0')).map(doc => {
-        const docContent = require(`@site/docs/lecture-notes/${doc.id}.md`);
+        let docContent;
+        try {
+            docContent = require(`@site/docs/lecture-notes/${doc.id}.md`);
+        } catch (e) {
+            // Try .mdx if .md doesn't exist
+            docContent = require(`@site/docs/lecture-notes/${doc.id}.mdx`);
+        }
         return {
             doc,
             docContent

@@ -1,0 +1,35 @@
+.topics-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.topics-table th,
+.topics-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.topics-table th {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+[data-theme='dark'] .topics-table th {
+    background-color: #2a2a2a;
+}
+
+.topics-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.checkmark {
+    color: #4caf50;
+    font-size: 1.2em;
+}
+
+[data-theme='dark'] .checkmark {
+    color: #66bb6a;
+}
