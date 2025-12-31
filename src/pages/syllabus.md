@@ -60,8 +60,8 @@ There will also be a **final exam** at a time to be announced by the university.
 1. [This website](https://neu-pdi.github.io/cs2100-public-resources/) is your primary source for the [schedule](https://neu-pdi.github.io/cs2100-public-resources/schedule), course policies, assignments, and lecture notes.
 2. [Pawtograder](https://app.pawtograder.com/) is our course grading platform. This is where you find assignments, and where submitted assignments will appear (after you have pushed them to GitHub) with feedback on them. It will also have all other course-related grades in its gradebook. **Course-wide announcements will also be posted here.**
 3. [Canvas](https://canvas.northeastern.edu/) (or Brightspace, in New York) will contain lecture-section-specific things like lecture recordings, lecture participation data, and lecture-specific announcements.
-4. [The Khoury Office Hours App](https://officehours.khoury.northeastern.edu/) is where online office hours will be held. (In-person office hours will be held at locations announced in [the office hours schedule](http://localhost:3000/cs2100-public-resources/staff).)
-5. [Our Discord channel](discord.com) will be for casual discussion (not announcements).
+4. The Khoury Office Hours App is where online office hours will be held. (In-person office hours will be held at locations announced in [the office hours schedule](http://localhost:3000/cs2100-public-resources/staff).)
+5. Our Discord channel will be for casual discussion (not announcements).
 
 ## People
 
