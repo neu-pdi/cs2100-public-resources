@@ -74,8 +74,7 @@ Students can also meet with instructors outside of office hours by appointment.
 ## Due Dates, Late Tokens, Regrades
 
 Homework assignments will be due on Wednesdays at 6PM Pacific time / 9PM Eastern time.
-
-Any assignment can have a "Late Token" applied (see https://docs.pawtograder.com/students/assignments/late-tokens), which gives you a 24-hour extension on it. You will begin the semester with nine late tokens, which you can use one on any assignment, but you _must_ apply it before the assignment is due. No assignments will be accepted after the due date, or, if a late token has been applied, after the late due date. If there is an exceptional situation that makes you unable to do this, please reach out to your instructor.
+There will be a 24-hour grace period on Pawtograder, so submissions will be accepted until the same time on Thursdays. No submissions will be accepted after that (without officially approved accommodations).
 
 Autograder scores will not be changed after the assignment deadline. Students can submit an unlimited number of times before each assignment deadline.
 
