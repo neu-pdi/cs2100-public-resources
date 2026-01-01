@@ -1,54 +1,74 @@
 import { usePluginData } from '@docusaurus/useGlobalData';
-import { GlobalDoc, GlobalPluginData } from '@docusaurus/plugin-content-docs/client';
+import { GlobalPluginData, useDocsPreferredVersion, useActiveDocContext } from '@docusaurus/plugin-content-docs/client';
 import Link from '@docusaurus/Link';
 import { Box } from '@chakra-ui/react';
+import { useMemo } from 'react';
+import scheduleData from './schedule_data.json';
 
 export default function ScheduleTable({ version }: { version: string }) {
     const pluginData = usePluginData('docusaurus-plugin-content-docs') as GlobalPluginData;
-    const sidebar = pluginData.versions[0];
-    const docs = sidebar.docs.filter(doc => !doc.id.startsWith('l0')).map(doc => {
-        let docContent;
-        try {
-            docContent = require(`@site/docs/lecture-notes/${doc.id}.md`);
-        } catch (e) {
-            // Try .mdx if .md doesn't exist
-            docContent = require(`@site/docs/lecture-notes/${doc.id}.mdx`);
-        }
-        return {
-            doc,
-            docContent
-        };
-    });
-    docs.sort((a, b) => a.doc.id.localeCompare(b.doc.id, undefined, { numeric: true, sensitivity: 'accent' }));
+    
+    // Get the preferred version (selected in dropdown) or active version
+    const { preferredVersion } = useDocsPreferredVersion('default');
+    const activeDocContext = useActiveDocContext('default');
+    
+    // Use preferred version first, then active version, then fallback to first version
+    const currentVersion = preferredVersion || activeDocContext.activeVersion || pluginData.versions[0];
+    
+    // Determine the path based on the version
+    const versionName = currentVersion.name;
+    const isCurrentVersion = versionName === 'current';
+    
+    const sidebar = currentVersion;
+    const docs = useMemo(() => {
+        const filteredDocs = sidebar.docs.filter(doc => !doc.id.startsWith('l0')).map(doc => {
+            let docContent;
+            const docId = doc.id;
+            
+            // Try different paths based on version
+            try {
+                if (isCurrentVersion) {
+                    // Current version is in docs/lecture-notes/
+                    try {
+                        docContent = require(`@site/docs/lecture-notes/${docId}.md`);
+                    } catch {
+                        docContent = require(`@site/docs/lecture-notes/${docId}.mdx`);
+                    }
+                } else {
+                    // Versioned docs are in versioned_docs/version-{version}/
+                    try {
+                        docContent = require(`@site/versioned_docs/version-${versionName}/${docId}.md`);
+                    } catch {
+                        docContent = require(`@site/versioned_docs/version-${versionName}/${docId}.mdx`);
+                    }
+                }
+            } catch (e) {
+                console.warn(`Could not load doc: ${docId} for version ${versionName}`, e);
+                return null;
+            }
+            return {
+                doc,
+                docContent
+            };
+        }).filter(Boolean); // Remove any null entries
+        filteredDocs.sort((a, b) => a.doc.id.localeCompare(b.doc.id, undefined, { numeric: true, sensitivity: 'accent' }));
+        return filteredDocs;
+    }, [sidebar.docs, versionName, isCurrentVersion]);
 
-    // Semester start date
-    const startDate = new Date("2026-01-05");
-
-    // Last day of add/drop period
-    const addDrop = new Date("2026-01-20");
-
-    // Holidays (no class)
-    const holidays = new Set([
-        "2026-01-05", // Before semester
-        "2026-01-19", // MLK Day
-        "2026-02-16", // Presidents Day
-        "2026-03-02", // Spring Break
-        "2026-03-04", // Spring Break
-        "2026-03-05", // Spring Break
-    ]);
-
-    // Homework assignments
-    const homeworkAssignments: { date: string; title: string; link?: string }[] = [
-      { date: "2026-01-21", title: "HW1: Algorithms as Decision Makers", link: "https://github.com/neu-cs2100/sp26-handout-hw1" },
-      { date: "2026-02-04", title: "HW2: 311 Service Request Data Loader", link: "https://github.com/neu-cs2100/sp26-handout-hw2" },
-      { date: "2026-02-18", title: "HW3: 311 Service Request Sorting and Analysis", link: "https://github.com/neu-cs2100/sp26-handout-hw3" },
-      { date: "2026-02-25", title: "HW4: News API", link: "https://github.com/neu-cs2100/sp26-handout-hw4" },
-      { date: "2026-03-11", title: "HW5: Fingerprint login", link: "https://github.com/neu-cs2100/sp26-handout-hw5" },
-      { date: "2026-03-18", title: "HW6: FeedCurator", link: "https://github.com/neu-cs2100/sp26-handout-hw6" },
-      { date: "2026-03-25", title: "HW7: BiasBars", link: "https://github.com/neu-cs2100/sp26-handout-hw7" },
-      { date: "2026-04-01", title: "HW8: Wikipedia Parser", link: "https://github.com/neu-cs2100/sp26-handout-hw8" },
-      { date: "2026-04-15", title: "HW9: Public Transportation Map", link: "https://github.com/neu-cs2100/sp26-handout-hw9" },
-    ];
+    // Load schedule data from JSON based on current version
+    // If version not found, fall back to alphabetically last version
+    const availableVersions = Object.keys(scheduleData).sort();
+    const fallbackVersion = availableVersions[availableVersions.length - 1];
+    const versionScheduleData = (scheduleData as any)[versionName] || (scheduleData as any)[fallbackVersion];
+    
+    console.log('Looking for version:', versionName);
+    console.log('Available versions:', availableVersions);
+    console.log('Found version data:', versionScheduleData ? 'yes' : 'no');
+    
+    const startDate = new Date(versionScheduleData.startDate);
+    const addDrop = new Date(versionScheduleData.addDrop);
+    const holidays = new Set(versionScheduleData.holidays);
+    const homeworkAssignments: { date: string; title: string; link?: string }[] = versionScheduleData.homeworkAssignments;
 
     const formatDate = (date: Date): string => {
         const month = date.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" });
@@ -76,9 +96,48 @@ export default function ScheduleTable({ version }: { version: string }) {
         return holidays.has(dateToString(date));
     };
 
+    // Generate all class dates first (needed for homework mapping)
+    const generateClassDates = () => {
+        const dates: Date[] = [];
+        const lectureCount = docs.length;
+        
+        let currentDate = new Date(startDate);
+        let addedDates = 0;
+
+        // Generate enough dates to cover all lectures plus holidays
+        while (addedDates < lectureCount + holidays.size) {
+            const dayOfWeek = currentDate.getUTCDay();
+            
+            // Check if it's Mon (1), Wed (3), or Thu (4)
+            if (dayOfWeek === 1 || dayOfWeek === 3 || dayOfWeek === 4) {
+                dates.push(new Date(currentDate));
+                addedDates++;
+            }
+            
+            // Move to next day
+            currentDate.setUTCDate(currentDate.getUTCDate() + 1);
+        }
+        
+        return dates;
+    };
+
+    const allClassDates = generateClassDates();
+
+    // Map homework to the closest previous lecture date
+    const homeworkByLectureDate = new Map<string, typeof homeworkAssignments[0]>();
+    homeworkAssignments.forEach(hw => {
+        const dueDate = new Date(hw.date);
+        // Find the closest lecture date that's on or before the due date
+        const lectureDates = allClassDates.filter(d => !isHoliday(d) && d <= dueDate);
+        if (lectureDates.length > 0) {
+            const closestLectureDate = lectureDates[lectureDates.length - 1];
+            homeworkByLectureDate.set(dateToString(closestLectureDate), hw);
+        }
+    });
+
     const getHomeworkForDate = (date: Date): typeof homeworkAssignments[0] | null => {
         const dateStr = dateToString(date);
-        return homeworkAssignments.find(hw => hw.date === dateStr) || null;
+        return homeworkByLectureDate.get(dateStr) || null;
     };
 
     const shouldShowAddDropBlurb = (date: Date, allDates: Date[]): boolean => {
@@ -121,31 +180,6 @@ export default function ScheduleTable({ version }: { version: string }) {
             .replace(/^-+|-+$/g, '');
     };
 
-    // Generate all class dates (Mon, Wed, Thu)
-    const generateClassDates = () => {
-        const dates: Date[] = [];
-        const lectureCount = docs.length;
-        
-        let currentDate = new Date(startDate);
-        let addedDates = 0;
-
-        // Generate enough dates to cover all lectures plus holidays
-        while (addedDates < lectureCount + holidays.size) {
-            const dayOfWeek = currentDate.getUTCDay();
-            
-            // Check if it's Mon (1), Wed (3), or Thu (4)
-            if (dayOfWeek === 1 || dayOfWeek === 3 || dayOfWeek === 4) {
-                dates.push(new Date(currentDate));
-                addedDates++;
-            }
-            
-            // Move to next day
-            currentDate.setUTCDate(currentDate.getUTCDate() + 1);
-        }
-        
-        return dates;
-    };
-
     // Generate schedule by week
     const generateSchedule = () => {
         const classDates = generateClassDates();
@@ -186,7 +220,6 @@ export default function ScheduleTable({ version }: { version: string }) {
     };
 
     const schedule = generateSchedule();
-    const allClassDates = schedule.flatMap(week => week.days.map(day => day.date));
 
     return (
         <Box style={{ overflow: 'visible' }}>
