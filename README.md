@@ -24,7 +24,7 @@ In the `docs` folder, there are directories for `quizzes`, `slides`, and `pages`
 
 The directory `src/pages` has subdirectories for each semester. Copy all the files from the most recent semester into a new semester directory with the appropriate name. Make any changes in the new semester's files.
 
-On the website, the lecture notes version drop down will apply to these pages. You can also access older versions of these non-lecture-note pages, add the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/schedule`).
+On the website, the lecture notes version drop down will apply to these pages. You can also access older versions of the syllabus and setup pages by adding the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/syllabus`).
 
 **Updating the schedule**: In the directory you just made, there is a file named `schedule_data.json`. Update the dates and assignment links in there.
 
