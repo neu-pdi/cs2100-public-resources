@@ -22,18 +22,11 @@ In the `docs` folder, there are directories for `quizzes`, `slides`, and `pages`
 
 ### Other pages on the website (e.g., Syllabus and Course Staff)
 
-The directory `src/pages` has subdirectories for each semester, but also a "working version" of each page that is not in any semester. Make all necessary changes to the "working version" and then copy everything into a new directory with the appropriate semester name.
+The directory `src/pages` has subdirectories for each semester. Copy all the files from the most recent semester into a new semester directory with the appropriate name. Make any changes in the new semester's files.
 
-On the website, the lecture notes version drop down will not apply to these pages. To access older versions of these non-lecture-note pages, add the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/schedule`).
+On the website, the lecture notes version drop down will apply to these pages. You can also access older versions of these non-lecture-note pages, add the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/schedule`).
 
-Any changes to these pages should be made in both the "working version" and the version with the name of the semester.
-
-**Updating the schedule**: Go to `src/components/ScheduleTable/index.tsx` and update these constants:
-
-- `startDate` on line 25
-- `addDrop` on line 28
-- `holidays` on line 31
-- `homeworkAssignments` on line 41
+**Updating the schedule**: In the directory you just made, there is a file named `schedule_data.json`. Update the dates and assignment links in there.
 
 ## Installation
 

@@ -1,0 +1,59 @@
+{
+"startDate": "2026-01-05",
+"addDrop": "2026-01-20",
+"holidays": [
+    "2026-01-05",
+    "2026-01-19",
+    "2026-02-16",
+    "2026-03-02",
+    "2026-03-04",
+    "2026-03-05"
+],
+"homeworkAssignments": [
+    {
+    "date": "2026-01-21",
+    "title": "HW1: Algorithms as Decision Makers",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw1"
+    },
+    {
+    "date": "2026-02-04",
+    "title": "HW2: 311 Service Request Data Loader",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw2"
+    },
+    {
+    "date": "2026-02-18",
+    "title": "HW3: 311 Service Request Sorting and Analysis",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw3"
+    },
+    {
+    "date": "2026-02-25",
+    "title": "HW4: News API",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw4"
+    },
+    {
+    "date": "2026-03-11",
+    "title": "HW5: Fingerprint login",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw5"
+    },
+    {
+    "date": "2026-03-18",
+    "title": "HW6: FeedCurator",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw6"
+    },
+    {
+    "date": "2026-03-25",
+    "title": "HW7: BiasBars",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw7"
+    },
+    {
+    "date": "2026-04-01",
+    "title": "HW8: Wikipedia Parser",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw8"
+    },
+    {
+    "date": "2026-04-15",
+    "title": "HW9: Public Transportation Map",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw9"
+    }
+]
+}
