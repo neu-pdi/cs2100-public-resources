@@ -48,7 +48,8 @@ How to set up the Pylint VSCode extension:
    - `--disable=assignment-from-no-return`
    - `--disable=wrong-import-position`
 
-<img width="837" height="210" alt="Pylint args" src="https://github.com/user-attachments/assets/96079c7e-c218-42a6-a521-d7a15672e5ce" />
+<img width="822" height="284" alt="Pylint args" src="https://github.com/user-attachments/assets/f54d0be8-4c2f-4bb4-94e3-70bd85b72d9b" />
+
 
 
 
