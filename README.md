@@ -20,13 +20,15 @@ The "working version" that is still in the `docs` folder is a newer version than
 
 In the `docs` folder, there are directories for `quizzes`, `slides`, and `pages`. They are for practice quizzes, lecture slides, and other pages as needed, respectively. They have subdirectories for each semester. Add one for the new semester. Link to them as needed.
 
-### Other pages on the website (e.g., Syllabus and Course Staff)
+### Other pages on the website (e.g., Schedule, Syllabus, Setup, and Course Staff)
 
-The directory `src/pages` has subdirectories for each semester. Copy all the files from the most recent semester into a new semester directory with the appropriate name. Make any changes in the new semester's files.
-
-On the website, the lecture notes version drop down will apply to these pages. You can also access older versions of the syllabus and setup pages by adding the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/syllabus`).
+The directory `src/pages` has subdirectories for each semester. Create a new directory for the upcoming semester (e.g., `26sp`) and copy all the files from the most recent semester into it. Make updates to the new semester's files.
 
 **Updating the schedule**: In the directory you just made, there is a file named `schedule_data.json`. Update the dates and assignment links in there.
+
+**Updating the office hours and course staff page**: Update the office hours calendar link in `staff.mdx` (line ~15), and update the course staff info in the `staff_data` subdirectory.
+
+On the website, the lecture notes version drop down will apply to these pages. You can also directly access older versions of them by adding the semester name to the URL before the name of the page (e.g., `cs2100-public-resources/25fa/syllabus`).
 
 ## Installation
 
