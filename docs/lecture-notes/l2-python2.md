@@ -330,6 +330,8 @@ If, instead of reading from the file, we want to write to the file, then we must
 
 We can then write to the file using `file.write("Line to write to file")`.
 
+### Testing functions that take user input
+
 ## Import code
 
 We've been importing modules like `import unittest` and `from typing import List, Set`.
