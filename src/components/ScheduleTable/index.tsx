@@ -55,29 +55,35 @@ export default function ScheduleTable({ version }: { version: string }) {
     }, [sidebar.docs, versionName, isCurrentVersion]);
 
     // Load schedule data from version-specific JSON file
-    // For "current", find the alphabetically latest version folder
+    // Find the alphabetically latest available version folder
     const findLatestVersion = () => {
-        // Get all version names from pluginData and sort alphabetically
-        const allVersionNames = pluginData.versions.map(v => v.name).filter(v => v !== 'current');
-        allVersionNames.sort();
-        return allVersionNames[allVersionNames.length - 1] || '26sp';
+        // Try to dynamically find available version folders in src/pages
+        const knownVersions = ['25fa', '26sp']; // Add known versions here
+        // Sort alphabetically and return the last one
+        knownVersions.sort();
+        return knownVersions[knownVersions.length - 1];
     };
     
-    const scheduleDataPath = versionName === 'current' ? findLatestVersion() : versionName;
+    const findAvailableVersion = (targetVersion: string) => {
+        // First, try the target version
+        try {
+            require.resolve(`@site/src/pages/${targetVersion}/schedule_data.json`);
+            return targetVersion;
+        } catch (e) {
+            // If not found, fall back to the latest available version
+            console.warn(`Version directory ${targetVersion} not found, falling back to latest available version`);
+            return findLatestVersion();
+        }
+    };
+    
+    const scheduleDataPath = versionName === 'current' ? findLatestVersion() : findAvailableVersion(versionName);
     let versionScheduleData;
     try {
-        // Try to load from the version-specific directory
+        // Load from the determined path
         versionScheduleData = require(`@site/src/pages/${scheduleDataPath}/schedule_data.json`);
     } catch (e) {
-        // Fallback to alphabetically latest version
-        const fallbackVersion = findLatestVersion();
-        console.warn(`Could not load schedule data for version ${versionName}, falling back to ${fallbackVersion}`);
-        try {
-            versionScheduleData = require(`@site/src/pages/${fallbackVersion}/schedule_data.json`);
-        } catch (fallbackError) {
-            console.error('Could not load schedule data', fallbackError);
-            versionScheduleData = { startDate: '2026-01-05', addDrop: '2026-01-20', holidays: [], homeworkAssignments: [] };
-        }
+        console.error(`Could not load schedule data for version ${scheduleDataPath}`, e);
+        versionScheduleData = { startDate: '2026-01-05', addDrop: '2026-01-20', holidays: [], homeworkAssignments: [] };
     }
     
     const startDate = new Date(versionScheduleData.startDate);
