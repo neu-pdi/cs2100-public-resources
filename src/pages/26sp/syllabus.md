@@ -71,9 +71,10 @@ There will also be **five exams** over the semester: four quizzes during lecture
 
 Students can also meet with instructors outside of office hours by appointment.
 
-## Due Dates, Late Tokens, Regrades
+## Due Dates and Regrades
 
 Homework assignments will be due on Wednesdays at 6PM Pacific time / 9PM Eastern time.
+
 There will be a 24-hour grace period on Pawtograder, so submissions will be accepted until the same time on Thursdays. No submissions will be accepted after that (without officially approved accommodations).
 
 Autograder scores will not be changed after the assignment deadline. Students can submit an unlimited number of times before each assignment deadline.
