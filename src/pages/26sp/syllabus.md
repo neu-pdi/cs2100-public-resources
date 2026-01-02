@@ -54,10 +54,9 @@ There will also be **five exams** over the semester: four quizzes during lecture
 ## Communication
 
 1. [This website](https://neu-pdi.github.io/cs2100-public-resources/) is your primary source for the [schedule](https://neu-pdi.github.io/cs2100-public-resources/schedule), course policies, and lecture notes.
-2. [Pawtograder](https://app.pawtograder.com/) is our course grading platform. This is where you find assignments, and where submitted assignments will appear (after you have pushed them to GitHub) with feedback on them. It will also have all other course-related grades in its gradebook. **Course-wide announcements will also be posted here.**
+2. [Pawtograder](https://app.pawtograder.com/) is our course grading platform. This is where you find assignments, and where submitted assignments will appear (after you have pushed them to GitHub) with feedback on them. It will also have all other course-related grades in its gradebook. **Our course-wide discussion board will be there, where course-wide announcements will also be posted.**
 3. [Canvas](https://northeastern.instructure.com/) (or Brightspace, in New York) will contain lecture-section-specific things like lecture participation data and lecture-specific announcements.
 4. The Khoury Office Hours App is where online office hours will be held. (In-person office hours will be held at locations announced in [the office hours schedule](https://neu-pdi.github.io/cs2100-public-resources/staff).)
-5. Our Discord channel will be for course-related discussion (not announcements).
 
 ## People
 
@@ -102,12 +101,12 @@ The highest row in which a student satisfies all columns will be their grade (pl
 | B+ | 73% or higher | 73% or higher | 73% or higher | 86% or higher |
 | B | 70% or higher | 70% or higher | 70% or higher | 83% or higher |
 | B- | 66% or higher | 66% or higher | 66% or higher | 80% or higher |
-| C+ | 63% or higher | 63% or higher | 63% or higher | 75% or higher |
-| C | 60% or higher | 60% or higher | 60% or higher | 70% or higher |
-| C- | 56% or higher | 56% or higher | 56% or higher | 65% or higher |
-| D+ | 53% or higher | 53% or higher | 53% or higher | 60% or higher |
-| D | 50% or higher | 50% or higher | 50% or higher | 55% or higher |
-| D- | 46% or higher | 46% or higher | 46% or higher | 50% or higher |
+| C+ | 63% or higher | 63% or higher | 63% or higher | 76% or higher |
+| C | 60% or higher | 60% or higher | 60% or higher | 73% or higher |
+| C- | 56% or higher | 56% or higher | 56% or higher | 70% or higher |
+| D+ | 53% or higher | 53% or higher | 53% or higher | 66% or higher |
+| D | 50% or higher | 50% or higher | 50% or higher | 63% or higher |
+| D- | 46% or higher | 46% or higher | 46% or higher | 60% or higher |
 
 E.g., to get an A, you must score 80% or higher on homework, labs, and codewalks, AND score 93% or higher on exam topics. If you have the 80% homework / lab / codewalk scores, but your exam topic score is 91%, you will receive an A-.
 

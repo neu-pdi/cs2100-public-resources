@@ -43,7 +43,7 @@ How to set up the Pylint VSCode extension:
    - Mac: `Code` > `Settings...` > `Settings`  (or `Cmd` + `,`)
    - Windows: `File` > `Preferences` > `Settings`  (or `Ctrl` + `,`)
 3. Navigate to `Extensions` > `Pylint`
-4. In the `Args` section, add these two args:
+4. In the `Args` section, add these args:
    - `--disable=import-error`
    - `--disable=assignment-from-no-return`
    - `--disable=wrong-import-position`
@@ -65,7 +65,7 @@ How to set up the MyPy VSCode extension:
    - Mac: `Code` > `Settings...` > `Settings`  (or `Cmd` + `,`)
    - Windows: `File` > `Preferences` > `Settings`  (or `Ctrl` + `,`)
 4. Navigate to `Extensions` > `Mypy Type Checker`
-5. In the `Args` section, add these four args:
+5. In the `Args` section, add these args:
    - `--strict`
    - `--disallow-untyped-defs`
    - `--disable-error-code=empty-body`
