@@ -87,33 +87,33 @@ We hold extensive office hours -- both online, via [the Khoury Office Hours App]
 
 ## Grading
 
-Assessment will be based on homework, labs, lecture exercises, and exam topics (from quizzes and the final exam). You may ask for feedback on anything else, but it will not figure into your final grade.
+Assessment will be based on homework, labs, lecture exercises, codewalks, and exam topics (from quizzes and the final exam). You may ask for feedback on anything else, but it will not figure into your final grade.
 
-All homework assignments will be weighted equally in the Homework grade, and all labs will be weighted equally in the Labs grade.
+All homework assignments will be weighted equally in the Homework grade, all labs will be weighted equally in the Labs grade, and all codewalks will be weighted equally in the Codewalks grade.
 
 All exam topics (from quizzes or the final exam) will be weighted equally in the Exam Topics grade. Each topic will appear on two exams. For each topic, the score for that topic will be the highest of both attempts at that topic.
 
 The highest row in which a student satisfies all columns will be their grade (plus a bump for lectures -- see below). If no rows are completely satisfied, the student will not pass the course.
 
-| Grade | Homework | Labs | Exam Topics (Quizzes + Final Exam) |
-| - | - | - | - |
-| A | 80% or higher | 80% or higher | 93% or higher |
-| A- | 76% or higher | 76% or higher | 90% or higher |
-| B+ | 73% or higher | 73% or higher | 86% or higher |
-| B | 70% or higher | 70% or higher | 83% or higher |
-| B- | 66% or higher | 66% or higher | 80% or higher |
-| C+ | 63% or higher | 63% or higher | 75% or higher |
-| C | 60% or higher | 60% or higher | 70% or higher |
-| C- | 56% or higher | 56% or higher | 65% or higher |
-| D+ | 53% or higher | 53% or higher | 60% or higher |
-| D | 50% or higher | 50% or higher | 55% or higher |
-| D- | 46% or higher | 46% or higher | 50% or higher |
+| Grade | Homework | Labs | Codewalks | Exam Topics (Quizzes + Final Exam) |
+| - | - | - | - | - |
+| A | 80% or higher | 80% or higher | 80% or higher| 93% or higher |
+| A- | 76% or higher | 76% or higher | 76% or higher | 90% or higher |
+| B+ | 73% or higher | 73% or higher | 73% or higher | 86% or higher |
+| B | 70% or higher | 70% or higher | 70% or higher | 83% or higher |
+| B- | 66% or higher | 66% or higher | 66% or higher | 80% or higher |
+| C+ | 63% or higher | 63% or higher | 63% or higher | 75% or higher |
+| C | 60% or higher | 60% or higher | 60% or higher | 70% or higher |
+| C- | 56% or higher | 56% or higher | 56% or higher | 65% or higher |
+| D+ | 53% or higher | 53% or higher | 53% or higher | 60% or higher |
+| D | 50% or higher | 50% or higher | 50% or higher | 55% or higher |
+| D- | 46% or higher | 46% or higher | 46% or higher | 50% or higher |
 
-E.g., to get an A, you must score 80% or higher on homework, 80% or higher on labs, AND 93% or higher on exam topics. If you have the 80% homework and lab scores, but your exam topic score is 91%, you will receive an A-.
+E.g., to get an A, you must score 80% or higher on homework, labs, and codewalks, AND score 93% or higher on exam topics. If you have the 80% homework / lab / codewalk scores, but your exam topic score is 91%, you will receive an A-.
 
 Percentage grades will be rounded to the nearest percent. E.g., a grade of 79.2% will be rounded down to 79%.
 
-**A lecture activity score of 70% or more will bump your score up one row.** For example, if you had homework and lab scores of 72%, and an exam topic score of 85%, a lecture activity score of 75% will bump your score from B to B+.
+**A lecture activity score of 70% or more will bump your score up one row.** For example, if you had homework, lab, and codewalk scores of 72%, and an exam topic score of 85%, a lecture activity score of 75% will bump your score from B to B+.
 
 To progress, students are required to meet the grade point average (GPA) requirements as determined by Khoury College of Computer Sciences. [(See Khoury's website for more information.)](https://catalog.northeastern.edu/undergraduate/computer-information-science/)
 
