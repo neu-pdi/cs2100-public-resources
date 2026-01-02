@@ -74,9 +74,9 @@ Changing the directory using `cd`:
 - Using the absolute directory, the complete path from the root to a given directory or file: `cd ~/Desktop/Lectures/2100`
 - Using the relative directory, the path from our current working directory to a given directory or file: `cd Lectures/2100` (from the Desktop)
 
-Poll: The command `cd fa25-hw3-lists-rasikabh/src/data` results in an error. What is NOT likely to be the cause of this error?
+Poll: The command `cd sp26-rasikabh-hw3/src/data` results in an error. What is NOT likely to be the cause of this error?
 1. The current location is not the directory where I store my homework assignments
-2. There is no directory called `src` in the directory `fa25-hw3-lists-rasikabh`
+2. There is no directory called `src` in the directory `sp26-rasikabh-hw3`
 3. `data` is a single file, not a directory
 4. The assignment submission for Homework 3 is closed
 

@@ -120,7 +120,7 @@ To create a test class for a class named `Class`:
 
 Exercise: Let's write tests for `Cat`.
 
-## Identify test cases and implement them as unit tests
+## Identifying test cases
 
 For this course, you must write tests for every function or method that you write.
 
@@ -152,7 +152,7 @@ Open ended poll: What other test cases can you come up with?
 (Source: [https://www.reddit.com/r/QualityAssurance/comments/3na0fq/qa_engineer_walks_into_a_bar](https://www.reddit.com/r/QualityAssurance/comments/3na0fq/qa_engineer_walks_into_a_bar))
 
 
-## Write well-named and organized tests which help the reader understand the purpose of a function
+## Well-named and organized tests which help the reader understand the purpose of a function
 
 Poll: What's wrong with this test?
 ```python
@@ -219,98 +219,3 @@ class TestShirt(unittest.TestCase):
 2. It requires the tests to be run in a certain order, which is not guraranteed
 3. It doesn't test what the name implies it is testing
 4. It is possible for some tests to not be run
-
-## Using try/except safely
-
-There is a control structure that we have not introduced until now: try / except
-
-```python
-a: int = 4
-b: int = 0
-
-try:
-    result = a / b
-    print(result)
-except ZeroDivisionError:
-    print("Cannot divide by zero")
-```
-
-It allows us to try to run risky code, and if an error is raised during that risky code, then it jumps immediately to the corresponding `except` block.
-
-It is acceptable to use try / except blocks while testing something: it is an alternative to using the built-in `self.assertRaises()`.
-
-Otherwise, we try to minimize the use of try / except, and only use it when absolutely necessary. We don't want to simply avoid fixing legitimate bugs by wrapping our code in a try / except.
-
-Places where try / except is commonly used:
-
-- Converting values
-```python
-def get_user_age() -> int:
-    """Get a numerical age from the user"""
-    user_input: str = input("Enter your age: ")
-    try:
-        age: int = int(user_input)
-        return age
-    except ValueError:
-        print("Please enter a valid number")
-        return -1
-    
-def parse_json_safely(json_string: str) -> Any:
-    """Convert data from JSON to a readable format"""
-    try:
-        return json.loads(json_string)
-    except json.JSONDecodeError as e:
-        print(f"Invalid JSON: {e}")
-        return {}
-```
-- Operations that rely on external things like network requests or database operations
-- Reading from files (though using a `with` block, as we have been doing, is recommended instead)
-
-Keywords in a try / except block:
-- Each error that can be raised should get its own `except` block. It is okay to have multiple `except` blocks for the same `try` block.
-- One `except` block can handle multiple errors, if they require the same process: `except (ValueError, TypeError) as e:`
-- Inside an `except` block, we may choose to `raise` a different error.
-- If there is a `finally` block at the end of a try / except block, then it is run in all cases (whether the `try` was fully executed, or it jumped to the `except`.
-- If there is an `else` block at the end of a try / except block, then it is run only if the `try` was fully executed (and it never jumped to an `except` block
-
-Best practices:
-- Only use try / except for the few legitimate reasons, not for control flow of the program
-- Make the errors handled in `except` blocks as specific as possible. It is okay to list multiple specific errors in the same `except` block.
-
-
-Poll: What is output?
-```python
-def noodle(hopefully_a_number: str) -> None:
-    try:
-        num: int = int(hopefully_a_number)
-        print('Cats rule')
-    except AssertionError as e:
-        print(f'{hopefully_a_number} is not a number')
-
-noodle('hello')
-```
-
-1. Cats rule
-2. hello is not a number
-3. Cats rule
-   hello is not a number
-4. No output - it raises the error
-
-
-Poll: What is output?
-```python
-def noodle(hopefully_a_number: str) -> None:
-    try:
-        num: int = int(hopefully_a_number)
-        print('Cats rule')
-    except ValueError as e:
-        print(f'{hopefully_a_number} is not a number')
-
-noodle('hello')
-```
-
-1. Cats rule
-2. hello is not a number
-3. Cats rule
-   hello is not a number
-4. No output - it raises the error

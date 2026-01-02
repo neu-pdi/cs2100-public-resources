@@ -310,31 +310,118 @@ for index, word in enumerate(['American Shorthair', 'Balinese', 'Cheetah']):
    2: Cheetah
 ```
 
-## Read and write data from user input and text files
+## Refactoring and constants
 
-We've been using the `input('prompt')` function which returns the user's response to the provided `'prompt'`.
+Refactoring is moving the code around without changing the functionality. Programmers refactor their code to make it more readable, more testable, and easier to modify.
 
-We can also read data from a file:
+We often refactor...
+- Code used in multiple places into a single function that gets called multiple times
+- Code from a complex function into smaller functions
+- (Magic) numbers or string literals into constants
 
+**Magic numbers** are unnamed numeric literals in code. We don't like magic numbers.
+We name our literals (except for -1, 0, 1, and 2) to make our code self-documenting.
+
+We name our literals by making them into **constants**: variables named in `UPPER_SNAKE_CASE` that aren't meant to be modified while the programming is running.
+
+### Why use named constants?
+
+- Readability
 ```python
-with open('story.txt', 'r', encoding="utf-8") as file:
-    for line in file.readlines():
-        print(line)
+SECONDS_PER_MINUTE = 60
+MINUTES_PER_HOUR = 60
+HOURS_PER_DAY = 24
+SECONDS_PER_DAY = SECONDS_PER_MINUTE * MINUTES_PER_HOUR * HOURS_PER_DAY
 ```
 
-If, instead of reading from the file, we want to write to the file, then we must use a different option than `'r'`.
+- Safety
+```python
+timer(SECONDS_PER_DAY)
+timer(86400)
+```
 
-- `open('story.txt', 'r')`: read the file
-- `open('story.txt', 'w')`: write the file (overwrite it if it already exists)
-- `open('story.txt', 'a')`: append to the end of the file (and create the file if it doesn't exist)
+- Maintainability
+```python
+CREDITS_TO_GRADUATE = 128
+NUMBER_OF_CAMPUSES = 10
+```
 
-We can then write to the file using `file.write("Line to write to file")`.
+## Testing functions that print or take user input
 
-### Testing functions that take user input
+We've been using the `input('prompt')` function which returns the user's response to the provided `'prompt'`. We've also been `print()`ing things.
+
+To make testing practical, we can't rely on the user to type in `input()`, and we don't want to rely on them to check the printed output to verify things that were `print()`ed.
+
+So, instead, we "mock" the user. The `unittest` module is great for this -- it can imitate a user typing things, and it can read the output that would have been printed to the console.
+
+### Tests that mock user input
+
+To make a test function "mock" a user typing in inputs, we use `@patch('builtins.input', side_effect=user_inputs)`, replacing `user_inputs` with an array of things that the mock user should type.
+
+Here is an example testing a function that takes three inputs from the user and returns them, concatenated with commas:
+
+```python
+import unittest
+from unittest.mock import patch, Mock
+
+def concat_three_inputs() -> str:
+    """Reads three inputs from the user and concatenates them into a single string separated by spaces."""
+    inputs = []
+    for _ in range(3):
+        user_input = input("Enter something: ")
+        inputs.append(user_input)
+    return ', '.join(inputs)
+
+class TestConcatThreeInputs(unittest.TestCase):
+    """Unit tests for the concat_three_inputs function."""
+
+    @patch('builtins.input', side_effect=['first thing typed by user', 'second thing', 'third thing'])
+    def test_concat_three_inputs(self, _: Mock) -> None:
+        """Test that concat_three_inputs correctly concatenates three user inputs."""
+        result = concat_three_inputs()
+        self.assertEqual(result, 'first thing typed by user, second thing, third thing')
+```
+
+Notice the `_: Mock` argument to the test function.
+
+Note: If there are not enough inputs specified in the `side_effect` array, the call to `input()` will wait forever (until it times out).
+
+### Tests that mock console output
+
+We use `@patch('builtins.print')` to mock things being printed to the console, and then we make assertions on that printed output inside the test function.
+
+```python
+import unittest
+from unittest.mock import patch, Mock
+
+def repeat_three_inputs() -> str:
+    """Reads three inputs from the user and prints them."""
+    for _ in range(3):
+        user_input = input("Enter something: ")
+        print(user_input)
+
+class TestRepeatThreeInputs(unittest.TestCase):
+    """Unit tests for the concat_three_inputs function."""
+
+    @patch('builtins.input', side_effect=['first thing typed by user', 'second thing', 'third thing'])
+    @patch('builtins.print')
+    def test_repeat_three_inputs(self, mock_print: Mock, _: Mock) -> None:
+        """Test that repeat_three_inputs correctly reads and prints three inputs."""
+        repeat_three_inputs()
+        expected_calls = [
+            unittest.mock.call("first thing typed by user"),
+            unittest.mock.call("second thing"),
+            unittest.mock.call("third thing"),
+        ]
+        mock_print.assert_has_calls(expected_calls)
+```
+
+Notice the order of the two `Mock` arguments to the test function: `@patch` decorators "stack" such that the first decorator is the last argument, and vice versa.
+Since we don't use the mock input's argument inside the test function, we name it using `_`.
 
 ## Import code
 
-We've been importing modules like `import unittest` and `from typing import List, Set`.
+We've been importing modules like `import unittest`.
 
 We can also import code from a file that we wrote ourselves: `import my_file`
 
