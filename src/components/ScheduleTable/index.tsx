@@ -86,10 +86,18 @@ export default function ScheduleTable({ version }: { version: string }) {
         versionScheduleData = { startDate: '2026-01-05', addDrop: '2026-01-20', holidays: [], homeworkAssignments: [] };
     }
     
-    const startDate = new Date(versionScheduleData.startDate);
-    const addDrop = new Date(versionScheduleData.addDrop);
+    // Helper function to parse date strings as UTC
+    const parseUTCDate = (dateString: string): Date => {
+        // Append UTC time indicator to ensure UTC interpretation
+        return new Date(dateString + 'T00:00:00Z');
+    };
+    
+    const startDate = parseUTCDate(versionScheduleData.startDate);
+    const addDrop = parseUTCDate(versionScheduleData.addDrop);
     const holidays = new Set(versionScheduleData.holidays);
     const homeworkAssignments: { date: string; title: string; link?: string }[] = versionScheduleData.homeworkAssignments;
+    const labs: { date: string; title: string; link?: string }[] = versionScheduleData.labs || [];
+    const codewalks: { date: string; title: string }[] = versionScheduleData.codewalks || [];
 
     const formatDate = (date: Date): string => {
         const month = date.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" });
@@ -147,7 +155,7 @@ export default function ScheduleTable({ version }: { version: string }) {
     // Map homework to the closest previous lecture date
     const homeworkByLectureDate = new Map<string, typeof homeworkAssignments[0]>();
     homeworkAssignments.forEach(hw => {
-        const dueDate = new Date(hw.date);
+        const dueDate = parseUTCDate(hw.date);
         // Find the closest lecture date that's on or before the due date
         const lectureDates = allClassDates.filter(d => !isHoliday(d) && d <= dueDate);
         if (lectureDates.length > 0) {
@@ -161,9 +169,52 @@ export default function ScheduleTable({ version }: { version: string }) {
         return homeworkByLectureDate.get(dateStr) || null;
     };
 
+    // Map labs to their exact due dates (labs can be on any weekday including Tuesday)
+    const labsByDate = new Map<string, typeof labs[0]>();
+    labs.forEach(lab => {
+        const dueDate = parseUTCDate(lab.date);
+        labsByDate.set(dateToString(dueDate), lab);
+    });
+
+    const getLabForDate = (date: Date): typeof labs[0] | null => {
+        const dateStr = dateToString(date);
+        return labsByDate.get(dateStr) || null;
+    };
+
+    // Map codewalks to their exact dates
+    const codewalksByDate = new Map<string, typeof codewalks[0]>();
+    codewalks.forEach(codewalk => {
+        const dueDate = parseUTCDate(codewalk.date);
+        codewalksByDate.set(dateToString(dueDate), codewalk);
+    });
+
+    const getCodewalkForDate = (date: Date): typeof codewalks[0] | null => {
+        const dateStr = dateToString(date);
+        return codewalksByDate.get(dateStr) || null;
+    };
+
     const shouldShowAddDropBlurb = (date: Date, allDates: Date[]): boolean => {
-        // Show blurb on the last class date before add/drop deadline (including holidays)
-        const beforeAddDrop = allDates.filter(d => d < addDrop);
+        // Show blurb on the last Mon/Tue/Wed/Thu before add/drop deadline
+        // This now includes Tuesdays as potential candidates
+        const allWeekdayDates: Date[] = [];
+        let tempDate = new Date(startDate);
+        
+        // Find the Monday of the first week
+        while (tempDate.getUTCDay() !== 1) {
+            tempDate.setUTCDate(tempDate.getUTCDate() - 1);
+        }
+        
+        // Generate all Mon-Thu dates for enough weeks
+        for (let week = 0; week < 20; week++) {
+            for (let dayOffset = 0; dayOffset < 4; dayOffset++) {
+                const weekdayDate = new Date(tempDate);
+                weekdayDate.setUTCDate(weekdayDate.getUTCDate() + dayOffset);
+                allWeekdayDates.push(weekdayDate);
+            }
+            tempDate.setUTCDate(tempDate.getUTCDate() + 7);
+        }
+        
+        const beforeAddDrop = allWeekdayDates.filter(d => d <= addDrop);
         if (beforeAddDrop.length === 0) return false;
         const closestDate = beforeAddDrop[beforeAddDrop.length - 1];
         return dateToString(date) === dateToString(closestDate);
@@ -204,38 +255,64 @@ export default function ScheduleTable({ version }: { version: string }) {
     // Generate schedule by week
     const generateSchedule = () => {
         const classDates = generateClassDates();
-        const weeks: { week: number; days: { date: Date; doc: typeof docs[0] | null }[] }[] = [];
+        const weeks: { week: number; days: { date: Date; doc: typeof docs[0] | null; isTuesday: boolean }[] }[] = [];
         
         let currentWeek = 1;
-        let weekDays: { date: Date; doc: typeof docs[0] | null }[] = [];
+        let weekDays: { date: Date; doc: typeof docs[0] | null; isTuesday: boolean }[] = [];
         let docIndex = 0;
+        let currentDate = new Date(startDate);
 
-        classDates.forEach((date, index) => {
-            const doc = isHoliday(date) ? null : docs[docIndex];
-            if (!isHoliday(date)) {
-                docIndex++;
-            }
+        // Find the Monday of the first week
+        while (currentDate.getUTCDay() !== 1) {
+            currentDate.setUTCDate(currentDate.getUTCDate() - 1);
+        }
+        
+        // Find the last lecture date
+        const lastLectureDate = classDates.length > 0 ? classDates[classDates.length - 1] : currentDate;
 
-            weekDays.push({ date, doc });
-
-            // Check if we need to start a new week (after Thursday)
-            const dayOfWeek = date.getUTCDay();
-            if (dayOfWeek === 4) {
-                weeks.push({ week: currentWeek, days: [...weekDays] });
-                weekDays = [];
-                currentWeek++;
+        // Generate weeks until we've covered all lectures
+        while (docIndex < docs.length) {
+            weekDays = [];
+            
+            // For each week, add Mon, Tue, Wed, Thu
+            for (let dayOffset = 0; dayOffset < 4; dayOffset++) {
+                const date = new Date(currentDate);
+                date.setUTCDate(date.getUTCDate() + dayOffset);
+                const dayOfWeek = date.getUTCDay();
+                const isTuesday = dayOfWeek === 2;
+                
+                // Stop adding days if we're past the last lecture date and it's Tuesday or later in the week
+                if (date > lastLectureDate && dayOfWeek >= 2) {
+                    break;
+                }
+                
+                // Find if this date has a lecture
+                let doc = null;
+                let isLectureDay = false;
+                
+                // Check if this date matches any lecture date
+                for (let i = 0; i < classDates.length && i < docs.length + holidays.size; i++) {
+                    if (dateToString(classDates[i]) === dateToString(date)) {
+                        isLectureDay = true;
+                        if (!isHoliday(date) && docIndex < docs.length) {
+                            doc = docs[docIndex];
+                            docIndex++;
+                        }
+                        break;
+                    }
+                }
+                
+                weekDays.push({ date, doc, isTuesday });
             }
             
-            // Handle last week if it doesn't end on Thursday
-            if (index === classDates.length - 1 && weekDays.length > 0) {
+            if (weekDays.length > 0) {
                 weeks.push({ week: currentWeek, days: [...weekDays] });
             }
+            currentWeek++;
             
-            // Stop if we've assigned all lectures
-            if (docIndex >= docs.length) {
-                return;
-            }
-        });
+            // Move to next Monday
+            currentDate.setUTCDate(currentDate.getUTCDate() + 7);
+        }
 
         return weeks;
     };
@@ -294,6 +371,35 @@ export default function ScheduleTable({ version }: { version: string }) {
                     background-color: #1a2332;
                     border-color: #5b9bd5;
                 }
+                .lab-blurb {
+                    margin-top: 12px;
+                    padding: 8px 10px;
+                    background-color: #d4edda;
+                    border: 1px solid #28a745;
+                    border-radius: 6px;
+                    font-size: 0.9em;
+                    position: relative;
+                    z-index: 1;
+                    min-height: 110px;
+                }
+                [data-theme='dark'] .lab-blurb {
+                    background-color: #1a2e1f;
+                    border-color: #5cb85c;
+                }
+                .codewalk-blurb {
+                    margin-top: 12px;
+                    padding: 8px 10px;
+                    background-color: #e8d5f5;
+                    border: 1px solid #9b59b6;
+                    border-radius: 6px;
+                    font-size: 0.9em;
+                    position: relative;
+                    z-index: 1;
+                }
+                [data-theme='dark'] .codewalk-blurb {
+                    background-color: #2d1f3d;
+                    border-color: #9b59b6;
+                }
                 .adddrop-blurb {
                     margin-top: 12px;
                     padding: 8px 10px;
@@ -314,6 +420,9 @@ export default function ScheduleTable({ version }: { version: string }) {
                     transition: color 0.2s ease;
                 }
                 .homework-blurb:hover .homework-warning {
+                    color: #d32f2f;
+                }
+                .lab-blurb:hover .homework-warning {
                     color: #d32f2f;
                 }
                 [data-theme='dark'] .homework-warning {
@@ -401,6 +510,7 @@ export default function ScheduleTable({ version }: { version: string }) {
                     <tr>
                         <th>Week</th>
                         <th>Monday</th>
+                        <th>Tuesday</th>
                         <th>Wednesday</th>
                         <th>Thursday</th>
                     </tr>
@@ -413,12 +523,16 @@ export default function ScheduleTable({ version }: { version: string }) {
                                 {week.days.map((day, index) => {
                                     const isHol = isHoliday(day.date);
                                     const homework = getHomeworkForDate(day.date);
+                                    const lab = getLabForDate(day.date);
+                                    const codewalk = getCodewalkForDate(day.date);
                                     const showAddDrop = shouldShowAddDropBlurb(day.date, allClassDates);
                                     return (
                                         <td key={index} className={isHol ? "holiday" : ""}>
                                             <span className="date-text">{formatDate(day.date)}</span>
                                             {isHol ? (
                                                 "(No class)"
+                                            ) : day.isTuesday ? (
+                                                ""
                                             ) : day.doc ? (
                                                 <div className="lecture-wrapper">
                                                     <Link to={day.doc.doc.path}>
@@ -468,6 +582,25 @@ export default function ScheduleTable({ version }: { version: string }) {
                                                     </div>
                                                 </div>
                                             )}
+                                            {lab && (
+                                                <div className="lab-blurb">
+                                                    <strong>🔬 Due: </strong>
+                                                    {lab.link ? (
+                                                        <Link to={lab.link}>{lab.title}</Link>
+                                                    ) : (
+                                                        lab.title
+                                                    )}
+                                                    <div className="homework-warning">
+                                                        This repository is for viewing only. Do not work on the assignment using this repository -- the actual course assignments will be provided to you via Pawtograder.
+                                                    </div>
+                                                </div>
+                                            )}
+                                            {codewalk && (
+                                                <div className="codewalk-blurb">
+                                                    <strong>👥 Due: </strong>
+                                                    {codewalk.title}
+                                                </div>
+                                            )}
                                             {showAddDrop && (
                                                 <div className="adddrop-blurb">
                                                     <strong>Last day of add/drop period: </strong>
@@ -482,7 +615,7 @@ export default function ScheduleTable({ version }: { version: string }) {
                     })}
                     <tr>
                         <td>16</td>
-                        <td colSpan={3}>Final Exam (date/time TBD)</td>
+                        <td colSpan={4}>Final Exam (date/time TBD)</td>
                     </tr>
                 </tbody>
             </table>

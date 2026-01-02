@@ -53,5 +53,62 @@
     "title": "HW9: Recursion, MSTs, MVC",
     "link": "https://github.com/neu-cs2100/cs2100-pg-handout-testhw9"
     }
+    ],
+    "labs": [
+    {
+        "date": "2025-09-09",
+        "title": "Lab 1",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab1"
+    },
+    {
+        "date": "2025-09-16",
+        "title": "Lab 2",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab2"
+    },
+    {
+        "date": "2025-09-23",
+        "title": "Lab 3",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab3"
+    },
+    {
+        "date": "2025-09-30",
+        "title": "Lab 4",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab4"
+    },
+    {
+        "date": "2025-10-07",
+        "title": "Lab 5",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab5"
+    },
+    {
+        "date": "2025-10-14",
+        "title": "Lab 6",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab6"
+    },
+    {
+        "date": "2025-10-21",
+        "title": "Lab 7",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab7"
+    },
+    {
+        "date": "2025-10-28",
+        "title": "Lab 8",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab8"
+    },
+    {
+        "date": "2025-11-04",
+        "title": "Lab 9",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab9"
+    },
+    {
+        "date": "2025-11-18",
+        "title": "Lab 10",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab10"
+    },
+    {
+        "date": "2025-11-25",
+        "title": "Lab 11",
+        "link": "https://github.com/neu-cs2100/cs2100-pg-handout-fa25-lab11"
+    }
 ]
 }
