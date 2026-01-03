@@ -1,0 +1,443 @@
+---
+sidebar_position: 2
+lecture_number: 2
+title: Programming in Python
+---
+
+# Programming in Python
+
+Poll: How can I swap the values of `x: int` and `y: int`?
+
+a)
+```python
+temp: int = x
+x = y
+y = temp
+```
+
+b)
+```python
+temp: int = x
+temp = y
+y = x
+```
+
+c)
+```python
+temp: int = y
+x = y
+x = temp
+```
+
+d)
+```python
+temp: int = x
+y = temp
+x = y
+```
+
+## Data types
+
+### Strings
+
+Strings in Python can be represented using single quotes (`'cat'`) or double quotes (`"cat"`).
+
+One way to represent a double quote in a string is to represent the string using single quotes, and vice versa:
+
+- `'This is a double quote: "'`
+- `"This is a single quote: '"`
+
+We can also represent a literal double quote in the string using an escape sequence to indicate that it shouldn't end the string: `"This is a double quote: \""`
+
+Here is a list of string escape sequences:
+
+- `"\t"`    tab character
+- `"\n"`    newline character
+- `"\r"`    carriage return
+- `"\""`    double quote character
+- `"\'"`    single quote character
+- `"\\"`    backslash character
+
+#### String concatenation
+
+- "Joseph" + "Aoun"
+- "Joseph" + " " + "Aoun"
+- We can multiply a string by an integer: "!" * 10
+
+Poll: What does this print? `print("I am so excited" + "!" * 3)`
+
+1. I am so excited! I am so excited! I am so excited!
+2. I am so excited!I am so excited!I am so excited!
+3. I am so excited!!!​
+4. Nothing – it breaks
+
+#### F-string​
+
+We can put a variable directly in a string to save time.
+
+```python
+cats: int = 4
+print(f"There are {cats} cats in this room."​)
+
+
+>> There are 4 cats in this room.
+```
+
+It also helps reduce the number of places where a bug can happen in the code.
+
+### Float
+
+We've seen these types in the examples so far: `int`, `str`.
+
+What if we want to represent a number that isn't an integer? Like 2.5? Then we use a `float`.
+
+```python
+num: float = 2.5
+```
+
+Tip: dividing any two numbers in Python results in a float -- even if the operands are `int`s, and the result has an integer value.
+```python
+print(type(4 / 2))
+
+>> <class 'float'>
+```
+
+### Boolean
+
+- Store the result of a yes-no question​
+- Only 2 (legit) values: True and False
+- We're assuming you've seen booleans before
+
+```python
+my_decision: bool = True
+```
+
+#### Some boolean operators
+- Opposite
+  - `not my_decision​`
+- Comparisons: `<`, `<=`, `>`, `>=`, `==`, `!=`
+  - `4 < 6`
+- And (both must be true to result in true)​
+  - `my_decision and your_decision`
+- Or (true if either/both are true)​
+  - `my_decision or your_decision`
+
+### Order of operations
+
+- Math order of operations:
+  2. (Parentheses)
+  3. Exponents
+    - `4**2 * 3`
+      `>> 48`
+  4. Multiplication/Division (left to right)
+  5. Addition/Subtraction (left to right)
+- Math happens before comparison operations
+  - `7 < 2 + 8`
+    `>> True`
+- Comparison happens before boolean operations​
+  - `3 < 4 and 5 < 7`
+    `True`
+
+## Control structures
+
+We're assuming you've seen conditionals and iteration before, though possibly in a different programming langauge. Here it is in Python:
+
+### Conditionals
+
+#### If / else
+
+```python
+secret_num: int = 8
+guess: int = int(input('My guess: '))
+
+if secret_num == guess:
+    print('I guessed it!')
+elif (secret_num + 1 == guess) or (secret_num - 1 == guess):
+    print('So close!')
+else:
+    print('Maybe next time!')
+```
+
+Tip: we can put a conditional expression in one line:
+```python
+print('yes' if my_decision else 'no')
+print(f'{num_cats} cat{'s' if num_cats > 1 else ''}')
+```
+
+#### Match case statements
+
+If there are many cases, a match-case statement might be more practical:
+
+```python
+name: str = input('Please enter your name: ')
+match name:
+    case 'SpongeBob':
+        print('You are a sponge')
+    case 'Patrick':
+        print('You are a starfish')
+    case _:
+        print('I don\'t know you')
+```
+
+A match-case statement finds the first case that matches​, and only executes that one case (or zero cases if none match).
+
+The `case _` is a catch-all that matches anything that didn't fit any other cases. It is not required, but if it is there, it must be the last case.
+
+### Iteration
+
+#### While loops
+
+```python
+animal: str = input('Please enter an animal: ')
+
+while not is_animal(animal):
+    animal = input('That wasn\'t an animal. Please enter an animal: ')
+```
+
+#### For loops over numbers
+
+We use while loops when we don't know in advance how many iterations we will need. If we do know the number of iterations (given the variables we currently have), then a for loop is more appropriate.
+
+For loops in Python can use a helpful function called `range()`:
+
+```python
+for i in range(4):
+    print(i)
+
+>> 0
+   1
+   2
+   3
+```
+
+We can start a range at a number other than 0:
+
+```python
+for i in range(2, 5):
+    print(i)
+
+>> 2
+   3
+   4
+```
+
+We can also ask it to count in "steps" larger than 1:
+
+```python
+for i in range(10, 50, 5):
+    print(i)
+
+>> 10
+   15
+   20
+   25
+   30
+   35
+   40
+   45
+```
+
+#### For loops over the elements of a collection
+
+It turns out that the `range()` function returns a collection, which the for loop iterates over. We can instead tell Python to iterate over the elements of a different collection:
+
+```python
+for character in 'I love cats!':
+    print(character.upper())
+
+>> I
+ 
+   L
+   O
+   V
+   E
+ 
+   C
+   A
+   T
+   S
+   !
+```
+
+Poll: What's wrong with this function? Why doesn't the docstring match the code?
+
+```python
+"""Function to generate a random float"""
+from random import random
+
+def sarcasm(phrase: str) -> str:
+    """Returns the sarcastic version of the provided phrase, where a 
+    randomly selected half of the characters are uppercase, and the 
+    others are lowercase.
+    
+    Parameters
+    ----------
+    phrase : str
+        The phrase to turn sarcastic
+    
+    Returns
+    -------
+    str
+        The sarcastic version of the phrase
+    """
+    sarcastic_phrase = ''
+    for character in phrase:
+        if random() < 0.5:
+            sarcastic_phrase += character.upper()
+    return sarcastic_phrase
+```
+
+1. It's adding the index of the character, not the character itself
+2. It skips adding about half of the letters
+3. Sometimes, it doesn't return a string at all
+4. It adds extra characters to the string
+
+(If enough time to explain list comprehension) Poll: Which of these is a one-line version of the inside of the (correct) `sarcasm()` function?
+
+1. `return ''.join([character.upper() for character in phrase if random() < 0.5])`
+2. `return ''.join([character.upper() if random() < 0.5 for character in phrase])`
+3. `return ''.join([character.upper() if random() else character.lower() for character in phrase])`
+4. `return ''.join([character.upper() if random() < 0.5 else character.lower() for character in phrase])`
+
+#### For loops over a collection, keeping track of indices
+
+```python
+for index, word in enumerate(['American Shorthair', 'Balinese', 'Cheetah']):
+    print(f'{index}: {word}')
+
+>> 0: American Shorthair
+   1: Balinese
+   2: Cheetah
+```
+
+## Refactoring and constants
+
+Refactoring is moving the code around without changing the functionality. Programmers refactor their code to make it more readable, more testable, and easier to modify.
+
+We often refactor...
+- Code used in multiple places into a single function that gets called multiple times
+- Code from a complex function into smaller functions
+- (Magic) numbers or string literals into constants
+
+**Magic numbers** are unnamed numeric literals in code. We don't like magic numbers.
+We name our literals (except for -1, 0, 1, and 2) to make our code self-documenting.
+
+We name our literals by making them into **constants**: variables named in `UPPER_SNAKE_CASE` that aren't meant to be modified while the programming is running.
+
+### Why use named constants?
+
+- Readability
+```python
+SECONDS_PER_MINUTE = 60
+MINUTES_PER_HOUR = 60
+HOURS_PER_DAY = 24
+SECONDS_PER_DAY = SECONDS_PER_MINUTE * MINUTES_PER_HOUR * HOURS_PER_DAY
+```
+
+- Safety
+```python
+timer(SECONDS_PER_DAY)
+timer(86400)
+```
+
+- Maintainability
+```python
+CREDITS_TO_GRADUATE = 128
+NUMBER_OF_CAMPUSES = 10
+```
+
+## Testing functions that print or take user input
+
+We've been using the `input('prompt')` function which returns the user's response to the provided `'prompt'`. We've also been `print()`ing things.
+
+To make testing practical, we can't rely on the user to type in `input()`, and we don't want to rely on them to check the printed output to verify things that were `print()`ed.
+
+So, instead, we "mock" the user. The `unittest` module is great for this -- it can imitate a user typing things, and it can read the output that would have been printed to the console.
+
+<img width="600" height="417" alt="image" src="https://github.com/user-attachments/assets/fb8b3f7a-8e3b-4bd7-8086-1ebf16c8d1df" />
+
+Source: https://en.meming.world/wiki/Mocking_SpongeBob
+
+### Tests that mock user input
+
+To make a test function "mock" a user typing in inputs, we use `@patch('builtins.input', side_effect=user_inputs)`, replacing `user_inputs` with an array of things that the mock user should type.
+
+Here is an example testing a function that takes three inputs from the user and returns them, concatenated with commas:
+
+```python
+import unittest
+from unittest.mock import patch, Mock
+
+def concat_three_inputs() -> str:
+    """Reads three inputs from the user and concatenates them into a single string separated by spaces."""
+    inputs = []
+    for _ in range(3):
+        user_input = input("Enter something: ")
+        inputs.append(user_input)
+    return ', '.join(inputs)
+
+class TestConcatThreeInputs(unittest.TestCase):
+    """Unit tests for the concat_three_inputs function."""
+
+    @patch('builtins.input', side_effect=['first thing typed by user', 'second thing', 'third thing'])
+    def test_concat_three_inputs(self, _: Mock) -> None:
+        """Test that concat_three_inputs correctly concatenates three user inputs."""
+        result = concat_three_inputs()
+        self.assertEqual(result, 'first thing typed by user, second thing, third thing')
+```
+
+Notice the `_: Mock` argument to the test function.
+
+Note: If there are not enough inputs specified in the `side_effect` array, the call to `input()` will wait forever (until it times out).
+
+### Tests that mock console output
+
+We use `@patch('builtins.print')` to mock things being printed to the console, and then we make assertions on that printed output inside the test function.
+
+```python
+import unittest
+from unittest.mock import patch, Mock
+
+def repeat_three_inputs() -> str:
+    """Reads three inputs from the user and prints them."""
+    for _ in range(3):
+        user_input = input("Enter something: ")
+        print(user_input)
+
+class TestRepeatThreeInputs(unittest.TestCase):
+    """Unit tests for the concat_three_inputs function."""
+
+    @patch('builtins.input', side_effect=['first thing typed by user', 'second thing', 'third thing'])
+    @patch('builtins.print')
+    def test_repeat_three_inputs(self, mock_print: Mock, _: Mock) -> None:
+        """Test that repeat_three_inputs correctly reads and prints three inputs."""
+        repeat_three_inputs()
+        expected_calls = [
+            unittest.mock.call("first thing typed by user"),
+            unittest.mock.call("second thing"),
+            unittest.mock.call("third thing"),
+        ]
+        mock_print.assert_has_calls(expected_calls)
+```
+
+Notice the order of the two `Mock` arguments to the test function: `@patch` decorators "stack" such that the first decorator is the last argument, and vice versa.
+Since we don't use the mock input's argument inside the test function, we name it using `_`.
+
+## Import code
+
+We've been importing modules like `import unittest`.
+
+We can also import code from a file that we wrote ourselves: `import my_file`
+
+When a Python file is imported, all of the code inside it is executed. (Try it out -- put `print('hello')` in a new file and import it.) That's why we put our code inside functions -- we don't want the code inside to be executed when it's imported!
+
+In a function named `main()`, we call all the functions that we want to run when the file is run (not imported).
+
+And we add this at the end of the file so that the `main()` function is only called when the file is run, not imported:
+
+```
+if __name__ == '__main__':
+    main()
+```
+
+Try this out using today's lecture code -- what happens if you keep all those `print()` statements outside of functions, and then import the file? Does it get fixed when you move that code into functions which are only called in `main()`? (Don't forget the `if __name__ == '__main__'` conditional at the end!)
