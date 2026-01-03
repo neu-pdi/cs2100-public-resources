@@ -354,6 +354,10 @@ To make testing practical, we can't rely on the user to type in `input()`, and w
 
 So, instead, we "mock" the user. The `unittest` module is great for this -- it can imitate a user typing things, and it can read the output that would have been printed to the console.
 
+<img width="600" height="417" alt="image" src="https://github.com/user-attachments/assets/fb8b3f7a-8e3b-4bd7-8086-1ebf16c8d1df" />
+
+Source: https://en.meming.world/wiki/Mocking_SpongeBob
+
 ### Tests that mock user input
 
 To make a test function "mock" a user typing in inputs, we use `@patch('builtins.input', side_effect=user_inputs)`, replacing `user_inputs` with an array of things that the mock user should type.
