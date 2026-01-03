@@ -34,10 +34,10 @@ Given an object, an alias is simply another reference to the same object (same p
 A copy is another object (different place in the computer's memory) that has the same elements and looks exactly the same.
 
 ```python
-original: List[int] = [1, 2, 3]
+original: list[int] = [1, 2, 3]
 
-alias: List[int] = original
-copy: List[int] = original.copy()
+alias: list[int] = original
+copy: list[int] = original.copy()
 
 original[2] = 90
 
@@ -50,14 +50,14 @@ print(copy) # [1, 2, 3]
 If we pass an object as an argument to a function, an _alias_ is created, not a copy.
 
 ```python
-def sum_with_bad_manners(in_list: List[int]) -> int:
+def sum_with_bad_manners(in_list: list[int]) -> int:
     sum: int = 0
     while (len(in_list) > 0):
         sum += in_list.pop()
     return sum
 
 
-my_list: List[int] = [1, 2, 3, 4]
+my_list: list[int] = [1, 2, 3, 4]
 print(f'Sum: {sum_with_bad_manners(my_list)}') # Sum: 10
 print(my_list) # []
 ```
@@ -171,20 +171,20 @@ Generics are not covered in our suggested textbook. The [official Python documen
 
 In Python, we are able to put objects of different types into the same list, but it's discouraged because it makes the list harder to process. (We can't process all of its elements the same way.) And in our class, elements of a list must be of the same type since we require types in our Python code. What would be the type of the variable `my_list = [1, 'a']`?
 
-So, even though the elements of a list must all be of the same type (for us), we can have two different lists that have two different types of elements (like a `List[str]` and a `List[int]`).
+So, even though the elements of a list must all be of the same type (for us), we can have two different lists that have two different types of elements (like a `list[str]` and a `list[int]`).
 
-In our type annotations, we import the `List` type using `from typing import List`. And that same `List` that we imported works for `List`s of different types. That's because `List` is a _generic_ type.
+In our type annotations, the same `list` type works for `list`s of different types. That's because `list` is a _generic_ type.
 
 We can define our own generic type. Here's an example:
 
 ```python
-from typing import List, TypeVar, Generic
+from typing import TypeVar, Generic
 
 T = TypeVar('T')
 
 class Stack(Generic[T]):
     def __init__(self) -> None:
-        self.items: List[T] = []
+        self.items: list[T] = []
 
     def push(self, item: T) -> None:
         self.items.append(item)
@@ -207,7 +207,7 @@ After defining the generic type `Stack[T]`, we used it to create the parametrize
 ```python
 class Stack:
     def __init__(self) -> None:
-        self.items: List[int] = []
+        self.items: list[int] = []
 
     def push(self, item: int) -> None:
         self.items.append(item)
@@ -222,9 +222,9 @@ class Stack:
 We can create a separate variable `my_other_stack: Stack[str]`, for which the generic type is replaced with `str` instead of `int`.
 
 Definitions:
-- Generic type: a class with a type variable, like `List[T]`
-- Parameterized type: a generic type with the type variables filled in, like `List[str]`
-- Raw type: a generic type without the type variable, like `List`. We use this if we don't need to re-use the type variable anywhere else in the code
+- Generic type: a class with a type variable, like `list[T]`
+- Parameterized type: a generic type with the type variables filled in, like `list[str]`
+- Raw type: a generic type without the type variable, like `list`. We use this if we don't need to re-use the type variable anywhere else in the code
 
 We can even parametrize the type using another user-defined type: `stack_of_stacks: Stack[Stack[int]] = Stack()`
 
@@ -246,7 +246,7 @@ class Thing(Generic[T]):
 A function can also take a generic type as an argument.
 
 ```python
-def get_first(list: List[T]) -> T:
+def get_first(list: list[T]) -> T:
     if len(list) > 0:
         return list[0]
     else:
@@ -261,19 +261,19 @@ Exercise: Let's write a function `map()` that converts a list of one type into a
 Hint: the type for a function that takes T and returns R is `Callable[[T], R]`
 
 ```python
-def map(original: List[T], mapper: Callable[[T], R]) -> List[R]:
+def map(original: list[T], mapper: Callable[[T], R]) -> list[R]:
     """Returns a copy of the list containing elements converted using the mapper
 
     Parameters
     ----------
-    original : List[T]
+    original : list[T]
         The original list
     mapper: Callable[[T], R]
         The function to convert elements from the original list to the new list
     
     Returns
     -------
-    List[R]
+    list[R]
         A new list with the mapped elements
     """
     return [mapper(i) for i in original]

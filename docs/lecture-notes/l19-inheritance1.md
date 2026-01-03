@@ -27,13 +27,13 @@ class Student():
     def __init__(self, student_id: str, major: str):
         self.id = student_id
         self.major = major
-        self.courses: Set[str] = set()
+        self.courses: set[str] = set()
     
     def attend_lab(self, course_id: str) -> None:
         if course_id in self.courses:
             print(f'Attending {course_id}\' lab')
     
-    def register_courses(self, courses: Set[str]) -> None:
+    def register_courses(self, courses: set[str]) -> None:
         self.courses |= courses
 
 class UndergraduateStudent(Student):
@@ -53,7 +53,7 @@ Here, we see that all cats knead and eat tuna or chicken, but lions can also roa
 class Cat:
     def __init__(self, name: str):
         self.name = name
-        self.food: List[str] = ['tuna', 'chicken']
+        self.food: list[str] = ['tuna', 'chicken']
     
     def knead(self) -> None:
         print('Kneading')
@@ -84,7 +84,7 @@ class Button:
 class Shirt:
     def __init__(self, size: int):
         self.size = size
-        self.buttons: List[Button] = []
+        self.buttons: list[Button] = []
     
     def add_button(self, button: Button) -> None:
         self.buttons.append(button)
@@ -112,7 +112,7 @@ There is some redundancy in this code:
 class Shirt:
     def __init__(self, size: int):
         self.size = size
-        self.buttons: List[Button] = []
+        self.buttons: list[Button] = []
     
     def add_button(self, button: Button) -> None:
         self.buttons.append(button)
@@ -131,7 +131,7 @@ We can instead directly call `Shirt`'s `add_button()` from within `FormalShirt` 
 class Shirt:
     def __init__(self, size: int):
         self.size = size
-        self.buttons: List[Button] = []
+        self.buttons: list[Button] = []
     
     def add_button(self, button: Button) -> None:
         self.buttons.append(button)
@@ -176,7 +176,7 @@ The `self.food` attribute is defined in `Cat`'s constructor, so we need to overw
 class Cat:
     def __init__(self, name: str):
         self.name = name
-        self.food: List[str] = ['tuna', 'chicken']
+        self.food: list[str] = ['tuna', 'chicken']
     
     def knead(self) -> None:
         print('Kneading')
@@ -263,7 +263,7 @@ Poll: Why is this bad?
 class Cat:
     def __init__(self, name: str):
         self.name = name
-        self.food: List[str] = ['tuna', 'chicken']
+        self.food: list[str] = ['tuna', 'chicken']
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Cat):

@@ -24,13 +24,11 @@ Good object-oriented design requires knowing when to use inheritance versus comp
 ### When to use composition
 
 `SocialMedia`, a class that holds information about a social media platform, including a set of users:
-- Correct: composition. The `SocialMedia` class should have a `Set[User]` as an attribute
-- Incorrect: inheritance. It would be wrong to make the `SocialMedia` class extend the `Set[User]` class
+- Correct: composition. The `SocialMedia` class should have a `set[User]` as an attribute
+- Incorrect: inheritance. It would be wrong to make the `SocialMedia` class extend the `set[User]` class
 Both of the above options are possible to do using Python, but the inheritance version is silly:
 ```python
-from typing import Set
-
-class SocialMedia(Set[str]):
+class SocialMedia(set[str]):
     pass
 
 fb = SocialMedia()
@@ -113,10 +111,10 @@ class Truck(Vehicle):
     def __init__(self) -> None:
         super().__init__(7)
 
-def get_total_gas(fleet: List[Vehicle]) -> float:
+def get_total_gas(fleet: list[Vehicle]) -> float:
     return sum(veh.get_fuel() for veh in fleet)
 
-fleet: List[Vehicle] = [Car(), Car(), Truck(), Motorcycle(), Motorcycle(), Motorcycle(), Motorcycle()]
+fleet: list[Vehicle] = [Car(), Car(), Truck(), Motorcycle(), Motorcycle(), Motorcycle(), Motorcycle()]
 
 for veh in fleet: veh.move(10)
 

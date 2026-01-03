@@ -61,7 +61,7 @@ class Course:
 
 course_oakland = Course('CS', 2100)
 
-courses: Set[Course] = {course_oakland}  # TypeError: unhashable type: 'Course'
+courses: set[Course] = {course_oakland}  # TypeError: unhashable type: 'Course'
 ```
 And the same thing happens if you try to add it as a key in a `dict`.
 
@@ -77,7 +77,7 @@ When faced with the error `TypeError: unhashable type: 'Course'`, one could be t
 ```python
 T = TypeVar('T')
 
-def list_contains(item: T, list: List[T]) -> bool:
+def list_contains(item: T, list: list[T]) -> bool:
     """Returns True if the item is in the list, and False otherwise"""
     for element in list:
         if element == item:
@@ -227,7 +227,7 @@ class Course(Hashable):
 course_oakland = Course('CS', 2100)
 course_boston = Course('CS', 2100)
 
-courses: Set[Course] = {course_oakland}
+courses: set[Course] = {course_oakland}
 courses.add(course_boston)
 
 print(courses)

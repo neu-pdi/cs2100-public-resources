@@ -21,7 +21,7 @@ class Diary:
     def __init__(self, username: str, password: str):
         self.username = username
         self.password = password
-        self.contents: List[str] = []
+        self.contents: list[str] = []
     
     def write_in_diary(self, password: str, content: str) -> None:
         if password == self.password:
@@ -45,7 +45,7 @@ class Diary:
     def __init__(self, username: str, password: str):
         self.username = username
         self._password = password
-        self.contents: List[str] = []
+        self.contents: list[str] = []
     
     def write_in_diary(self, password: str, content: str) -> None:
         if password == self._password:
@@ -75,7 +75,7 @@ class Diary:
     def __init__(self, username: str, password: str):
         self.username = username
         self.__password = password
-        self.contents: List[str] = []
+        self.contents: list[str] = []
     
     def write_in_diary(self, password: str, content: str) -> None:
         if password == self.__password:
@@ -100,7 +100,7 @@ class Diary:
     def __init__(self, username: str, password: str):
         self.username = username
         self.__password = password
-        self.contents: List[str] = []
+        self.contents: list[str] = []
     
     def write_in_diary(self, password: str, content: str) -> None:
         if password == self.__password:
@@ -127,7 +127,7 @@ Poll: Which ONE does NOT make it print `EVIL`?
 class Grades:
     def __init__(self, student_id: str):
         self._student_id = student_id
-        self.__grades: List[int] = [72, 46]
+        self.__grades: list[int] = [72, 46]
 
 my_grades: Grades = Grades('S999999')
 ```
@@ -217,20 +217,20 @@ An object is "immutable" if it cannot be modified after creation.
 
 For example, lists are not immutable, because they can be modified after creation. Lists are mutable.
 ```python
-my_list: List[int] = [1, 2, 3]
+my_list: list[int] = [1, 2, 3]
 my_list.append(-400)
 print(my_list) # [1, 2, 3, -400]
 ```
 
 By contrast, tuples are immutable.
 ```python
-my_tuple: Tuple[int, int, int] = (1, 2, 3)
+my_tuple: tuple[int, int, int] = (1, 2, 3)
 my_tuple.append(4) # impossible
 ```
 
 - Notice how the tuple looks a lot like the list, but it is initialized using parentheses instead of square brackets.
 - Its type also specifies the number of elements in it, which is fine since it can't be modified.
-  - (If you need to create a huge tuple with, say, 60 elements, and you don't want to write `int` 60 times in the type of the variable, you can use this instead: `my_long_tuple: Tuple[int, ...] = tuple([i for i in range(60)])`)
+  - (If you need to create a huge tuple with, say, 60 elements, and you don't want to write `int` 60 times in the type of the variable, you can use this instead: `my_long_tuple: tuple[int, ...] = tuple([i for i in range(60)])`)
  
 We can sort a list in-place, but not a tuple.
 ```python
@@ -243,7 +243,7 @@ my_tuple.sort() # impossible
 However, here's the tricky part. While the tuple is immutable, the variable `my_tuple` (the pointer to the location in the computer's memory) is still a mutable variable. So, while we can't mutate the tuple itself, we can re-assign the variable `my_tuple` to a sorted version of the same tuple.
 
 ```python
-my_long_tuple: Tuple[int, ...] = tuple([-i for i in range(5)])
+my_long_tuple: tuple[int, ...] = tuple([-i for i in range(5)])
 my_long_tuple = tuple(sorted(my_long_tuple))
 print(my_long_tuple)      # (-4, -3, -2, -1, 0)
 ```

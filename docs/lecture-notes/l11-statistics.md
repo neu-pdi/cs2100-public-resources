@@ -120,7 +120,7 @@ We can also generate a bar graph, if that format better suits our data visualiza
 import matplotlib.pyplot as plt
 
 num_categories: int = 10
-categories: List[int] = [i for i in range(num_categories)]
+categories: list[int] = [i for i in range(num_categories)]
 values = np.random.rand(num_categories)
 
 plt.bar(categories, values)

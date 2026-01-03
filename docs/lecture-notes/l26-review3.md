@@ -44,5 +44,3 @@ It is recommended to review these topics:
   - Who are the potential recipients of the information?
   - What principles govern the collection and transmission of this information?
 - Determining the right balance of tradeoffs for these five questions
-
-## Static

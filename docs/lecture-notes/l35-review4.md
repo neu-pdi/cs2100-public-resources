@@ -30,3 +30,8 @@ It is recommended to review these topics:
 - Rules for using `<`, `>`, etc.
 
 ## Decorator, Strategy, Observer, and Data Pull Design Patterns
+
+It is recommended to review these topics:
+- Why and how to make a function decorator
+- When to use the Strategy pattern (and how)
+- When to use Observer versus Data Pull (and how)

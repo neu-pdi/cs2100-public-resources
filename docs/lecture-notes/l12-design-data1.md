@@ -55,12 +55,12 @@ Storing functions as variables is useful when sorting and filtering data.
 
 Here is an example using Python's built-in `sorted()` function:
 ```python
-words: List[str] = 'never gonna give you up'.split()
+words: list[str] = 'never gonna give you up'.split()
 
-sorted_alphabetically: List[str] = sorted(words)
+sorted_alphabetically: list[str] = sorted(words)
 print(' '.join(sorted_alphabetically)) # give gonna never up you
 
-sorted_by_length: List[str] = sorted(words, key = lambda word: len(word))
+sorted_by_length: list[str] = sorted(words, key = lambda word: len(word))
 print(' '.join(sorted_by_length))  # up you give gonna never
 ```
 The `sorted()` function has an optional argument `key`, which is a function that is applied to each element when determining the sorted order.
@@ -176,9 +176,9 @@ Poll: Let's say that this is our dataset of values for the variable `x`: [6, 8, 
 
 It is useful to know that Numpy has a function called `argsort()` which takes a list of elements and returns a list of its indices, moved to the locations they would be in if the list was sorted.
 ```python
-words: List[str] = 'never gonna give you up'.split()
+words: list[str] = 'never gonna give you up'.split()
 
-sorted_alphabetically: List[str] = sorted(words)
+sorted_alphabetically: list[str] = sorted(words)
 
 print(sorted_alphabetically)  # ['give', 'gonna', 'never', 'up', 'you']
 

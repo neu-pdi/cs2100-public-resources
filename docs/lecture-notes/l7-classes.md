@@ -17,7 +17,7 @@ Here are some classes that are built in to Python (types that we already use):
 | Class (data type) | Object (an instance of a class) |
 | ----------------- | ------------------------------- |
 | str | word: str = "hello" |
-| list | items: List[int] = [1, 2, 3] |
+| list | items: list[int] = [1, 2, 3] |
 
 ## How to make your own class: attributes, methods, and constructor
 

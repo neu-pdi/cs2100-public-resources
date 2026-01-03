@@ -10,21 +10,21 @@ title: Data Structures
 
 We've seen how to create lists by listing their elements:
 ```python
-my_nums: List[int] = [6, 7, 8, 9]
-words: List[str] = ['never', 'gonna', 'give', 'you', 'up']
+my_nums: list[int] = [6, 7, 8, 9]
+words: list[str] = ['never', 'gonna', 'give', 'you', 'up']
 ```
 
 ## split() and join()
 
 There's a built-in `str` function in Python that splits a `str` into separate words:
 ```python
-words: List[str] = 'never gonna give you up'.split()
+words: list[str] = 'never gonna give you up'.split()
 ```
 results in `['never', 'gonna', 'give', 'you', 'up']`
 
 To split a `str` using something other than whitespaces, we can use the optional parameter `sep`:
 ```python
-words: List[str] = 'never gonna give you up'.split(sep = 'e')
+words: list[str] = 'never gonna give you up'.split(sep = 'e')
 ```
 results in `['n', 'v', 'r gonna giv', ' you up']`
 
@@ -43,12 +43,12 @@ Both `phrase` and `also_phrase` are equal to `'never gonna give you up'`
 In Python (and most other programming languages), lists are indexed starting with 0 on the very left, and increasing as it goes to the right.
 
 ```python
-words: List[str] = 'never gonna give you up'.split()
+words: list[str] = 'never gonna give you up'.split()
 second_word: str = words[1]
 first_word: str = words[0]
 
 
-first_three_words: List[str] = [first_word, second_word, words[2]]
+first_three_words: list[str] = [first_word, second_word, words[2]]
 print(first_three_words)   # ['never', 'gonna', 'give']
 ```
 
@@ -72,10 +72,10 @@ print(f'{penultimate_word} {last_word}')      # you up
 Python allows us to use "slicing" to get a sub-list (a contiguous part of the list).
 
 ```python
-letters: List[str] = list('abcdefghijklmnopqrstuvwxyz')
+letters: list[str] = list('abcdefghijklmnopqrstuvwxyz')
 print(letters)  # ['a', 'b', 'c', 'd', ..., 'x', 'y', 'z']
 
-second_third_fourth_letters: List[str] = letters[2:5]
+second_third_fourth_letters: list[str] = letters[2:5]
 print(second_third_fourth_letters)  # ['c', 'd', 'e']
 ```
 
@@ -85,25 +85,25 @@ It returns a new list that is a copy of that part of the original list, without 
 
 If we want to start at the very beginning of the list, we can omit the starting index:
 ```python
-letters: List[str] = list('abcdefghijklmnopqrstuvwxyz')
+letters: list[str] = list('abcdefghijklmnopqrstuvwxyz')
 print(letters[:4])  # ['a', 'b', 'c', 'd']
 ```
 
 And if we want to end at the very end of the list, we can omit the stopping index:
 ```python
-letters: List[str] = list('abcdefghijklmnopqrstuvwxyz')
+letters: list[str] = list('abcdefghijklmnopqrstuvwxyz')
 print(letters[20:])  # ['u', 'v', 'w', 'x', 'y', 'z']
 ```
 
 Omitting both just creates a copy of the entire list:
 ```python
-letters: List[str] = list('abcdefghijklmnopqrstuvwxyz')
+letters: list[str] = list('abcdefghijklmnopqrstuvwxyz')
 print(''.join(letters[:]))  # abcdefghijklmnopqrstuvwxyz
 ```
 
 Poll: What is printed?
 ```python
-letters: List[str] = list('abcdefghijklmnopqrstuvwxyz')
+letters: list[str] = list('abcdefghijklmnopqrstuvwxyz')
 
 print(f'{letters[-len(letters)]} {''.join(letters[23:])} {letters[-1]}')
 ```
@@ -122,7 +122,7 @@ my_nums[-1] = 900
 
 We can also insert or append elements in a list (which makes the list longer):
 ```python
-my_nums: List[int] = [6, 7, 8, 9]
+my_nums: list[int] = [6, 7, 8, 9]
 
 my_nums.insert(0, 5)
 print(my_nums)  # [5, 6, 7, 8, 9]
@@ -143,14 +143,54 @@ my_nums.extend([700, 800, 900])
 print(my_nums)   # [5, 6, 7, 600, 8, 9, 10, 700, 800, 900]
 ```
 
+## 2D lists
+
+The elements in a list can be lists themselves. This is called a 2-dimensional list, or 2D list.
+
+```python
+nums = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+first_row = nums[0]
+print(first_row)  # [1, 2, 3]
+
+last_element_of_first_row = first_row[-1]
+print(last_element_of_first_row)  # 3
+
+last_element_of_last_row = nums[-1][-1]
+print(last_element_of_last_row)  # 9
+```
+
+Indexing and slicing work the same way in lists of any dimension.
+
+Poll: What gets printed?
+
+```python
+more_nums = [
+    [col * row for col in range(row)]
+    for row in range(6)
+]
+
+print(more_nums[4][:2])
+```
+
+1. `[0, 2]`
+1. `[0, 2, 4, 8]`
+2. `[0, 4]`
+3. `[0, 4, 8, 12]`
+
+
 ## List comprehension
 
 Poll: Let's say we want to write a function that takes a list of integers, and returns a copy of it, but without the negative numbers. The way to write this function using the tools we already covered so far would be:
 
 a)
 ```python
-def positive_copy(nums: List[int]) -> List[int]:
-    result: List[int] = list()
+def positive_copy(nums: list[int]) -> list[int]:
+    result: list[int] = list()
     for i in nums:
         if i >= 0:
             result.append(i)
@@ -159,8 +199,8 @@ def positive_copy(nums: List[int]) -> List[int]:
 
 b)
 ```python
-def positive_copy(nums: List[int]) -> List[int]:
-    result: List[int] = list()
+def positive_copy(nums: list[int]) -> list[int]:
+    result: list[int] = list()
     for i in range(len(nums)):
         if i >= 0:
             result.append(i)
@@ -169,8 +209,8 @@ def positive_copy(nums: List[int]) -> List[int]:
 
 c)
 ```python
-def positive_copy(nums: List[int]) -> List[int]:
-    result: List[int] = list()
+def positive_copy(nums: list[int]) -> list[int]:
+    result: list[int] = list()
     for i in range(len(nums)):
         if nums[i] >= 0:
             result.append(nums[i])
@@ -179,8 +219,8 @@ def positive_copy(nums: List[int]) -> List[int]:
 
 d)
 ```python
-def positive_copy(nums: List[int]) -> List[int]:
-    result: List[int] = list()
+def positive_copy(nums: list[int]) -> list[int]:
+    result: list[int] = list()
     for i in range(0, -len(nums), -1):
         if nums[i - 1] >= 0:
             result.insert(0, nums[i - 1])
@@ -196,9 +236,9 @@ Instead, we can use list comprehension to let Python optimize it for efficiency.
 We've seen some list comprehension already before today.
 Here's an example using list comprehension to give a copy of the original list, but with each element increased by one:
 ```python
-my_nums: List[int] = [6, 7, 8, 9]
+my_nums: list[int] = [6, 7, 8, 9]
 
-increased_nums: List[int] = [i + 1 for i in my_nums] # list comprehension
+increased_nums: list[int] = [i + 1 for i in my_nums] # list comprehension
 
 print(increased_nums)  # [7, 8, 9, 10]
 ```
@@ -208,7 +248,7 @@ If we want the resulting list to filter some elements, we add the `if` clause af
 
 Here is `positive_copy()` using list comprehension:
 ```python
-def positive_copy(nums: List[int]) -> List[int]:
+def positive_copy(nums: list[int]) -> list[int]:
     return [i for i in nums if i >= 0]
 ```
 
@@ -228,9 +268,7 @@ List comprehension is a powerful tool. It can make `for` loops easier to read, t
 A set is very similar to a list: it is a collection of items.
 
 ```python
-from typing import Set
-
-words: Set[str] = {'hi', 'hi', 'hello', 'hi', 'howdy', 'hi'}
+words: set[str] = {'hi', 'hi', 'hello', 'hi', 'howdy', 'hi'}
 
 print(words)  # {'hi', 'hello', 'howdy'}
 ```
@@ -243,19 +281,19 @@ Differences between a set and a list:
 
 Creating a set:
 ```python
-words: Set[str] = {'hi', 'hi', 'hello', 'hi', 'howdy', 'hi'}  # explicitly listing them
+words: set[str] = {'hi', 'hi', 'hello', 'hi', 'howdy', 'hi'}  # explicitly listing them
 
-numbers: Set[int] = set(range(5))  # using the set constructor
+numbers: set[int] = set(range(5))  # using the set constructor
 print(numbers)  # {0, 1, 2, 3, 4}
 
-list_of_floats: List[float] = [3.4, 3.2, 2.9, 3.4, 3.0]
-measurements: Set[float] = set(list_of_floats)  # using the set constructor that takes an existing collection
+list_of_floats: list[float] = [3.4, 3.2, 2.9, 3.4, 3.0]
+measurements: set[float] = set(list_of_floats)  # using the set constructor that takes an existing collection
 print(measurements)  # {3.2, 3.0, 2.9, 3.4}
 ```
 
 Adding and removing items, iterating over a set, and getting its size:
 ```python
-nums: Set[float] = set()  # empty set
+nums: set[float] = set()  # empty set
 
 for i in range(100):
     random_float = round(random(), 2) # random float rounded to nearest hundredth
@@ -263,7 +301,7 @@ for i in range(100):
 
 print(len(nums))  # print the size of the set
 
-numbers: Set[int] = set(range(5))
+numbers: set[int] = set(range(5))
 numbers.remove(3)
 print(numbers)  # {0, 1, 2, 4}
 ```
@@ -276,8 +314,8 @@ Binary set operations:
 - Subtraction (`a - b`): a set that has all elements in `a` that are not in `b`
 
 ```python
-nums_a: Set[int] = set(range(1, 5))
-nums_b: Set[int] = set(range(3, 9))
+nums_a: set[int] = set(range(1, 5))
+nums_b: set[int] = set(range(3, 9))
 
 print(nums_a | nums_b)  # {1, 2, 3, 4, 5, 6, 7, 8}
 print(nums_a & nums_b)  # {3, 4}
@@ -311,7 +349,7 @@ After the loop (which it should only reach if no two people have the same birthd
 num_students: int = 80
 
 def any_same_birthdays() -> bool:
-    birthdays: Set[Tuple[int, int]] = set()
+    birthdays: set[Tuple[int, int]] = set()
 
     for _ in range(num_students):
         month: int = int(input('Please enter the month as a number between 1 and 12: '))
@@ -342,10 +380,10 @@ Each key can appear at most once (the keys are a set)​
 
 Here are two examples which map each animal (`str`) to their age (`int`):
 ```python
-ages: Dict[str, int] = {'elephant': 12, 'cat': 10}
+ages: dict[str, int] = {'elephant': 12, 'cat': 10}
 print(ages)  # {'elephant': 12, 'cat': 10}
 
-also_ages: Dict[str, int] = dict([('elephant', 12), ('cat', 10)])
+also_ages: dict[str, int] = dict([('elephant', 12), ('cat', 10)])
 print(also_ages)  # {'elephant': 12, 'cat': 10}  (same as before)
 ```
 
@@ -353,7 +391,7 @@ print(also_ages)  # {'elephant': 12, 'cat': 10}  (same as before)
 
 We can access a value given its key in two different ways: brackets (`[key]`) or using the `get(key)` method. The `get(key)` has the added benefit that it handles the case if the `key` is not in the `dict`.
 ```python
-ages: Dict[str, int] = {'elephant': 12, 'cat': 10}
+ages: dict[str, int] = {'elephant': 12, 'cat': 10}
 
 print(ages['cat'])  # 10
 print(ages.get('cat'))  # 10
@@ -364,7 +402,7 @@ print(ages['dog'])  # raises KeyError
 
 We can add or update a `key` -> `value` pair. If we add the same `key` twice, it overwrites the original `value` with the second `value`.
 ```python
-ages: Dict[str, int] = {'cat': 10}
+ages: dict[str, int] = {'cat': 10}
 
 ages['elephant'] = 12
 print(ages)  # {'cat': 10, 'elephant': 12}
@@ -381,7 +419,7 @@ print(ages)  # {'cat': 10, 'elephant': 14, 'dog': 3}
 
 We can iterate over a `dict` in two ways: over its `key`s, or over its `key-value` pairs:
 ```python
-ages: Dict[str, int] = {'cat': 10, 'elephant': 14, 'dog': 3}
+ages: dict[str, int] = {'cat': 10, 'elephant': 14, 'dog': 3}
 
 for key in ages:
     print(f"{key}'s age is {ages.get(key)}")
@@ -393,8 +431,8 @@ for key, value in ages.items():
 Exercise: Let's write a function that takes a `str` and returns a dictionary that maps from each unique word in the `str` to the number of times it appears.
 
 ```python
-def word_counter(text: str) -> Dict[str, int]:
-    word_counts: Dict[str, int] = dict()
+def word_counter(text: str) -> dict[str, int]:
+    word_counts: dict[str, int] = dict()
     for word in text.split():
         word_counts[word] = word_counts.get(word, 0) + 1
     return word_counts
@@ -411,8 +449,8 @@ Exercise: Let's write a function that helps us with [Scrabble](https://playscrab
 - [Here's a list of english words](https://github.com/dwyl/english-words/blob/master/words_alpha.txt) if you need one (the official Scrabble list is harder to get as a text file)
 
 ```python
-def scrabble_helper(letter: str) -> Dict[int, Set[str]]:
-    result: Dict[int, Set[str]] = dict()
+def scrabble_helper(letter: str) -> dict[int, set[str]]:
+    result: dict[int, set[str]] = dict()
     with open('/path/to/dictionary.txt', 'r', encoding='utf-8') as english_dict:
         for word in english_dict.readlines():
             if letter in word:
@@ -424,7 +462,7 @@ def scrabble_helper(letter: str) -> Dict[int, Set[str]]:
                     result[letter_count] = {word}
     return result
 
-result: Dict[int, Set[str]] = scrabble_helper('r')
+result: dict[int, set[str]] = scrabble_helper('r')
 
 for key, value in result.items():
     if key > 2:
@@ -551,7 +589,7 @@ from functools import reduce
 def add(num1: int, num2: int) -> int:
     return num1 + num2
 
-my_nums: List[int] = [6, 7, 8, 9]
+my_nums: list[int] = [6, 7, 8, 9]
 
 sum: int = reduce(add, my_nums)
 print(sum) # 30
@@ -571,7 +609,7 @@ def max(num1: int, num2: int) -> int:
     else:
         return num2
 
-my_nums: List[int] = [7, 8, 2, 5, 1]
+my_nums: list[int] = [7, 8, 2, 5, 1]
 
 for num in accumulate(my_nums, max):
     print(num)
@@ -638,7 +676,7 @@ print(number)   # 6
 
 Open-ended poll: What does this output? Why? (This is an example of code that could look like it's doing one thing, when it's actually doing something else)
 ```python
-def send_message_and_cc_self(message: str, sender: str, recipients: List[str] = []) -> None:
+def send_message_and_cc_self(message: str, sender: str, recipients: list[str] = []) -> None:
     recipients.append(sender) # add sender to recipients so they get a copy as well
     for r in recipients: # send message to each recipient
         print(f"Sending '{message}' from {sender} to {r}")

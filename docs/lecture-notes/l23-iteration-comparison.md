@@ -17,7 +17,7 @@ for digit in 12345:  # TypeError: 'int' object is not iterable
     print(digit)
 ```
 
-That's because `str` and collections like `List` follow the Iterable protocol, and `int`s don't.
+That's because `str` and collections like `list` follow the Iterable protocol, and `int`s don't.
 
 Any object that follows the Iterable protocol can be iterated over. The Iterable protocol only requires one method: the object must implement the `__iter__()` method, which returns an an object that follows the _Iterator_ protocol. (Emphasis on the "tor" part)
 
@@ -26,7 +26,7 @@ There is a corresponding `Iterable` ("ble") interface in the `ABC` module which 
 from collections.abc import Iterable
 
 class Calendar(Iterable[str]):
-    def __init__(self, days: List[str]):
+    def __init__(self, days: list[str]):
         self.days = days
     
     def __iter__(self) -> Iterator[str]:
@@ -48,7 +48,7 @@ The type that goes inside the brackets in `Iterable[str]` and `Iterator[str]` is
 
 Great! We can now create objects that can be iterated over.
 
-The `for` loop calls the object's `__iter__()` method, which returns `iter(collection)`, which is an iterator ("tor") over a collection. Luckily, Python already has existing iterators ("tor") for `List`, `Set`, `Tuple`, `Dict`, etc.
+The `for` loop calls the object's `__iter__()` method, which returns `iter(collection)`, which is an iterator ("tor") over a collection. Luckily, Python already has existing iterators ("tor") for `list`, `set`, `tuple`, `dict`, etc.
 
 But what if you want to iterate over your collection in a different way, which is different from the built-in iterator ("tor")? Then your iterable's ("ble") `__iter__()` method will have to return your own custom iterator ("tor").
 
@@ -57,7 +57,7 @@ There is an Iterator protocol in Python, which is enforced by the `ABC` module's
 from collections.abc import Iterable, Iterator
 
 class Calendar(Iterable[str]):
-    def __init__(self, days: List[str]):
+    def __init__(self, days: list[str]):
         self.days = days
     
     def __iter__(self) -> Iterator[str]:
@@ -65,7 +65,7 @@ class Calendar(Iterable[str]):
         return AlternatingDayIterator(self.days)
 
 class AlternatingDayIterator(Iterator[str]):
-    def __init__(self, days: List[str]):
+    def __init__(self, days: list[str]):
         self.days = days
         self.index: int = 0
     
@@ -159,7 +159,7 @@ Poll: In a `for` loop using the built-in `range()`, what happens if a client pas
 
 It is possible, though confusing, to modify a list while iterating over it:
 ```python
-nums: List[int] = [1, 2, 3]
+nums: list[int] = [1, 2, 3]
 for i in nums:
     print(f'Element: {i}')
     print(f'Removing {nums.pop(0)}')
@@ -179,13 +179,13 @@ Since we removed 1, the indices of the remaining numbers shifted down by one. Si
 
 For this reason, modifying list while iterating over it is discouraged. Instead, we encourage iterating over a copy of it, or using list comprehension:
 ```python
-nums: List[int] = [1, 2, 3]
+nums: list[int] = [1, 2, 3]
 for i in nums.copy():  # iterating over a copy
     print(f'Element: {i}')
     print(f'Removing {nums.pop(0)}')
     print(f'List: {nums}\n')
 
-more_nums: List[int] = [1, 2, 3, 4, 5, 6]
+more_nums: list[int] = [1, 2, 3, 4, 5, 6]
 even = [i for i in more_nums if i % 2 == 0]  # list comprehension
 print(even)
 ```
@@ -283,7 +283,7 @@ Poll: What goes in the ??? ?
 ```python
 class Bouquet:
     """Bouquets are compared by the number of flowers in them"""
-    def __init__(self, flowers: List[Flower]):
+    def __init__(self, flowers: list[Flower]):
         self.flowers = flowers
     
     def __eq__(self, other: object) -> bool:

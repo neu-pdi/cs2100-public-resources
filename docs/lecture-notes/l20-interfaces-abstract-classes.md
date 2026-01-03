@@ -139,7 +139,7 @@ Poll: (Designing an interface) What should all classes which implement the inter
 
 Poll: Which types can be instantiated and put into the list `cacophony`?
 ```python
-cacophony: List[Roarable] = list()
+cacophony: list[Roarable] = list()
 
 class Cat(ABC):
     pass

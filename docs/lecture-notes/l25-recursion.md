@@ -69,14 +69,14 @@ Let's write a recursive function that returns the sum of the numbers in a list. 
   - First element is a number: add the first element to the sum of the rest of the list
   - First element is a list: sum the elements in that first list and add that to the sum of the rest of the list
 ```python
-def sum_list(inp: List[Any]) -> Any:
-    if inp is None or not isinstance(inp, List):
+def sum_list(inp: list[Any]) -> Any:
+    if inp is None or not isinstance(inp, list):
         return 0
     elif len(inp) == 0:
         return 0
     else:
         element = inp[0]
-        if isinstance(element, List):
+        if isinstance(element, list):
             return sum_list(element) + sum_list(inp[1:])
         else:
             return element + sum_list(inp[1:])
