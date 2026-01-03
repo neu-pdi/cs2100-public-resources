@@ -67,7 +67,7 @@ Fun with Python: `str` times `int`
 # We use quotes to represent strings.
 ## Single quotes `'hi'` or double quotes `"hi"`
 
-# So... How can we put quote in a string?
+# So... How can we put quotes in a string?
 
 ```python
 "Easiest way to put an apostrophe ' is to use double quotes '"
