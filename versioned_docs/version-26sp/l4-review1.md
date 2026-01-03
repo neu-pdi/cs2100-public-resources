@@ -17,7 +17,6 @@ It is recommended to review these topics:
 ## Unit testing
 
 It is recommended to review these topics:
-- `setUp(self)` and `setUpClass(cls)`
 - `self.assertEqual()`, `self.assertTrue()`, and `self.assertRaises()`
 - Identifying test cases
 
