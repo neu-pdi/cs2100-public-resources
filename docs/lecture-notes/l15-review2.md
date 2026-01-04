@@ -15,7 +15,7 @@ It is recommended to review these topics:
 ## Using Objects
 
 It is recommended to review these topics:
-- `None`
+- `None` and `Optional`
 - State and aliasing
 
 ## Stakeholder-value matrices

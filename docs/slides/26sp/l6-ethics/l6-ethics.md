@@ -12,9 +12,6 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 # First: let's go over Quiz 1
 
-### Notes for next topic attempt:
-- Just because something _can_ have the type `Optional[]`, doesn't mean it _should_
-
 ---
 
 # Ethics Lecture learning outcomes:
