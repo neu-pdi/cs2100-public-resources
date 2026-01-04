@@ -8,7 +8,7 @@ title: Design Patterns for Handling Data 1
 
 ## Functions are objects
 
-As we saw in [Lecture 10](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l10-generics#generic-functions), we can pass functions as arguments into other functions. This means that a variable can represent a function.
+As we saw, we can pass functions as arguments into other functions. This means that a variable can represent a function.
 We also saw that the variable type for a function that takes an argument of type `T` and returns type `R` is `Callable[[T], R]`.
 
 Functions have attributes, just like other objects that can be represented using variables. Here we access and print its attribute `__name__`:
