@@ -33,29 +33,24 @@
     "link": "https://github.com/neu-cs2100/sp26-handout-hw4"
     },
     {
-    "date": "2026-03-11",
+    "date": "2026-03-18",
     "title": "HW5: Fingerprint login",
     "link": "https://github.com/neu-cs2100/sp26-handout-hw5"
     },
     {
-    "date": "2026-03-18",
+    "date": "2026-03-25",
     "title": "HW6: FeedCurator",
     "link": "https://github.com/neu-cs2100/sp26-handout-hw6"
     },
     {
-    "date": "2026-03-25",
-    "title": "HW7: BiasBars",
+    "date": "2026-04-01",
+    "title": "HW7: Wikipedia Parser",
     "link": "https://github.com/neu-cs2100/sp26-handout-hw7"
     },
     {
-    "date": "2026-04-01",
-    "title": "HW8: Wikipedia Parser",
-    "link": "https://github.com/neu-cs2100/sp26-handout-hw8"
-    },
-    {
     "date": "2026-04-15",
-    "title": "HW9: Public Transportation Map",
-    "link": "https://github.com/neu-cs2100/sp26-handout-hw9"
+    "title": "HW8: Public Transportation Map",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw8"
     }
 ],
 "labs": [
@@ -85,29 +80,24 @@
         "link": "https://github.com/neu-cs2100/sp26-handout-lab4"
     },
     {
-        "date": "2026-03-10",
+        "date": "2026-03-17",
         "title": "Lab 5: HW5 Prep and Ethics",
         "link": "https://github.com/neu-cs2100/sp26-handout-lab5"
     },
     {
-        "date": "2026-03-17",
+        "date": "2026-03-24",
         "title": "Lab 6: HW6 Prep and Ethics",
         "link": "https://github.com/neu-cs2100/sp26-handout-lab6"
     },
     {
-        "date": "2026-03-24",
+        "date": "2026-03-31",
         "title": "Lab 7: HW7 Prep and Ethics",
         "link": "https://github.com/neu-cs2100/sp26-handout-lab7"
     },
     {
-        "date": "2026-03-31",
+        "date": "2026-04-14",
         "title": "Lab 8: HW8 Prep and Ethics",
         "link": "https://github.com/neu-cs2100/sp26-handout-lab8"
-    },
-    {
-        "date": "2026-04-14",
-        "title": "Lab 9: HW9 Prep and Ethics",
-        "link": "https://github.com/neu-cs2100/sp26-handout-lab9"
     }
 ],
 "codewalks": [
@@ -121,7 +111,7 @@
     },
     {
         "date": "2026-04-07",
-        "title": "Codewalk 3: HW4, HW5, HW6, HW7, or HW8"
+        "title": "Codewalk 3: HW4, HW5, HW6, or HW7"
     }
 ]
 }
