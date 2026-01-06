@@ -63,7 +63,7 @@ There will also be **five exams** over the semester: four quizzes during lecture
 | Instructor | Campus | Office Hours |
 | -- | -- | -- |
 | [Prof. Rasika Bhalerao](https://rasikabh.github.io/) | Oakland | Tuesdays 3pm-6pm in CPM 200 |
-| [Prof. Laney Strange](https://www.ccs.neu.edu/home/laney/) | Boston | Mondays 2:30-5 on [Zoom](https://northeastern.zoom.us/my/laney), Thursdays 10:30am-12pm in Meserve 051, or [by appointment](https://calendly.com/laneystrange/15-minute-office-hours-with-laney) |
+| [Prof. Laney Strange](https://www.ccs.neu.edu/home/laney/) | Boston | Mondays 4-5:30pm on [Zoom](https://northeastern.zoom.us/my/laney), Thursdays 10:30am-12pm in Meserve 051, or [by appointment](https://calendly.com/laneystrange/15-minute-office-hours-with-laney) |
 | [Prof. Nate Derbinsky](https://derbinsky.info/) | Boston | Tuesdays 10am-12pm in WVH 246 |
 | [Prof. Leena Razzaq](https://www.ccs.neu.edu/home/lrazzaq/) | Boston | Thursdays 3-4:30pm in Meserve 329 |
 | [Prof. Jeongkyu Lee](https://www.khoury.northeastern.edu/people/jeongkyu-lee/) | NYC | Friday 12:30pm-2pm in the Found Faculty Lounge |
