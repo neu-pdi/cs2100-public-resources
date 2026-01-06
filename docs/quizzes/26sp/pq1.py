@@ -3,23 +3,21 @@
 
 Git:
 
-You're working on a Python calculator project with a teammate. 
-You've just finished implementing a `divide()` function in `calculator.py`, 
-and your tests pass locally. What commands are necessary to incorporate 
-any changes that your teammate made until now, and then push your 
-changes to the GitHub repo?
+You're working on a Python calculator project. You've just finished implementing 
+a `divide()` function in `calculator.py`, and your tests pass locally. You have 
+other local commits that also need to be pushed. What commands are necessary to 
+push your changes to the GitHub repo?
 
 1. git add calculator.py
 2. git commit -m "Implemented divide function"
-3. git pull
-4. git push
+3. git push
 
 """
 
 from typing import Optional
 import unittest
 
-def find_median(numbers: Optional[list[Optional[float]]]) -> float:
+def find_median(numbers: list[Optional[float]]) -> float:
     """
     Finds the median value in a list of numbers.
     
@@ -30,12 +28,8 @@ def find_median(numbers: Optional[list[Optional[float]]]) -> float:
         The median value (float)
     
     Raises:
-        ValueError: If numbers is None or empty, or if 
-        the list contains None
+        ValueError: If numbers is empty, or if it contains None
     """
-    if numbers is None:
-        raise ValueError("Cannot find median of None")
-
     if len(numbers) == 0:
         raise ValueError("Cannot find median of empty list")
 
@@ -69,11 +63,6 @@ class TestFindMedian(unittest.TestCase):
         """Test median with empty list"""
         with self.assertRaises(ValueError):
             find_median([])
-
-    def test_none_input(self) -> None:
-        """Test median with None input"""
-        with self.assertRaises(ValueError):
-            find_median(None)
 
     def test_list_with_none(self) -> None:
         """Test median with list containing None"""
