@@ -3,6 +3,10 @@ sidebar_label: 'Office Hours and Course Staff'
 sidebar_position: 5
 ---
 
+import StaffTable from '@site/src/components/StaffTable';
+
+export const semester = new URL(import.meta.url).pathname.split('/').slice(-2)[0];
+
 # Office Hours
 
 Online office hours are held using [the Khoury Office Hours App](https://officehours.khoury.northeastern.edu/).
@@ -21,6 +25,4 @@ Here is our schedule of office hours, in Pacific Time:
 />
 
 
-# Course Staff
-
-TBA
+<StaffTable staffDataPath={semester} />
