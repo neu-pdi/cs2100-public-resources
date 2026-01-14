@@ -174,7 +174,7 @@ Two arguments: expected value, result of function call
 self.assertEqual(4, 2 + 2)
 ```
 
-## `self.assertThrows()`
+## `self.assertRaises()`
 Argument: error type, Indented section: function call
 ```python
 with self.assertRaises(ValueError):
