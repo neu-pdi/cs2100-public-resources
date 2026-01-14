@@ -172,6 +172,7 @@ Host github.com
   - In the `Title` field, add a descriptive label for the new key that describes your laptop, such as "2025 MacBook Pro".
   - In the `Key` field, paste your public key, which should be on your clipboard from when you copied it earlier
   - Click `Add SSH key`
+  - Once that is successful, and you are back on the "SSH keys" page, click on `Configure SSO` next to the key that you just added. Authorize `neu-cs2100`.
   - To test that it's working correctly, enter this at the command line: `ssh -T git@github.com`. The response should be a greeting containing your github username.
 
 ## Other recommended accounts to set up
