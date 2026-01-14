@@ -47,7 +47,9 @@ There will be three in-person **lectures** (Oakland and Boston) or two in-person
 
 Students can register for any CS 2101 lab section on their campus.
 
-There will also be nine **homework assignments**. The purpose of homework is to give you hands-on experience with the course material you learned in lecture, and to prepare you for the quizzes and projects.
+There will also be **nine homework assignments**. The purpose of homework is to give you hands-on experience with the course material you learned in lecture, and to prepare you for the quizzes and projects.
+
+There will be **three codewalks**: one for HW1, one for HW2 or HW3, and one for any of the remaining homework assignments (except the assignment due in the last week). Students will sign up for one-on-one codewalks where a TA asks questions about the student's solution code for a homework assignment. Students should sign up for a time slot that happens after they have finished the respective homework assignment. Codewalk questions are available to students in advance through Pawtograder.
 
 There will also be **five exams** over the semester: four quizzes during lectures, and a final exam at a time to be announced by the university.
 
