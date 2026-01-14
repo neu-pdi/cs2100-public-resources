@@ -82,6 +82,113 @@ section {
 
 ---
 
+## Poll: Which command do we use to "download" a repo from GitHub to our laptop?
+
+1. `git clone`
+2. `git add`
+3. `git commit`
+4. `git push`
+5. `git status`
+
+---
+
+## Poll: Which command do we use to "stage" changes to be committed?
+
+1. `git clone`
+2. `git add`
+3. `git commit`
+4. `git push`
+5. `git status`
+
+---
+
+## Poll: If our local repo is ahead of the remote repo by a commit, what should we use to catch up the remote repo?
+
+1. `git clone`
+2. `git add`
+3. `git commit`
+4. `git push`
+5. `git status`
+
+---
+
+# Documentation
+
+1. Overall description of the function
+2. Arguments: type and description of each argument
+3. Return: type and description of what is returned
+   1. Include conditions for it to return `None`
+4. Errors raised: type of error and condition to raise it
+
+---
+
+#### Poll: What is missing from this documentation?
+
+```python
+def sarcasm(phrase: str) -> Optional[str]:
+    """Returns the sarcastic version of the provided phrase, where a random 
+    half of the characters are uppercase, and the others are lowercase.
+
+    Parameters
+    ----------
+    phrase : str
+        The phrase to turn sarcastic
+    
+    Returns
+    -------
+    str
+        The sarcastic version of the phrase
+    
+    Raises
+    ------
+    ValueError: if phrase is empty
+
+    """
+    if phrase == '':
+      raise ValueError()
+
+    sarcastic_phrase = ''
+    for character in phrase:
+      if not character.isalpha():
+        return None
+      if random() < 0.5:
+        sarcastic_phrase += character.upper()
+      else:
+        sarcastic_phrase += character.lower()
+    return sarcastic_phrase
+```
+
+---
+
+<style scoped>
+section {
+    font-size: 21px;
+}
+</style>
+
+# Unit Testing
+
+## `self.assertEqual()`
+Two arguments: expected value, result of function call
+```python
+self.assertEqual(4, 2 + 2)
+```
+
+## `self.assertThrows()`
+Argument: error type, Indented section: function call
+```python
+with self.assertRaises(ValueError):
+  get_area_of_rectangle(-1, 4)
+```
+
+## `self.assertTrue()`
+One argument: condition that you want to be `True`
+```python
+self.assertTrue(1 + 1 < 3)
+```
+
+---
+
 ## Practice Quiz 1
 
 Practice Quiz 1: https://github.com/neu-pdi/cs2100-public-resources/tree/main/docs/quizzes/26sp/Practice%20Quiz%201.pdf
