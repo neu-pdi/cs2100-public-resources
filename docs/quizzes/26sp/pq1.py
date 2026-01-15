@@ -22,10 +22,11 @@ def find_median(numbers: list[Optional[float]]) -> float:
     Finds the median value in a list of numbers.
     
     Args:
-        numbers: A list of numbers (can be None or empty)
+        numbers: list[Optional[float]]
+            A list of numbers (can be None or empty)
     
     Returns:
-        The median value (float)
+        float: The median value (float)
     
     Raises:
         ValueError: If numbers is empty, or if it contains None
