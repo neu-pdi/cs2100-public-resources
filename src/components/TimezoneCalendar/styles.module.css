@@ -1,0 +1,36 @@
+.timezoneCalendarContainer {
+  margin: 20px 0;
+}
+
+.timezoneSelector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.timezoneLabel {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.timezoneDropdown {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  min-width: 250px;
+}
+
+.timezoneDropdown:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+.timezoneDropdown:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+}

@@ -4,6 +4,7 @@ sidebar_position: 5
 ---
 
 import StaffTable from '@site/src/components/StaffTable';
+import TimezoneCalendar from '@site/src/components/TimezoneCalendar';
 
 export const semester = new URL(import.meta.url).pathname.split('/').slice(-2)[0];
 
@@ -13,16 +14,9 @@ Online office hours are held using [the Khoury Office Hours App](https://officeh
 
 In-person office hours are held in the locations specified in the schedule below.
 
-Here is our schedule of office hours, in Pacific Time:
+Here is our schedule of office hours:
 
-<iframe 
-  src="https://calendar.google.com/calendar/embed?src=c_fb77fab2d00f9637c3abb80c3f6d4b8de213dc3bc08ba26f960a4f192c47ad01%40group.calendar.google.com&ctz=America%2FLos_Angeles"
-  style={{border: 0}} 
-  width={800} 
-  height={600} 
-  frameBorder={0} 
-  scrolling="no"
-/>
+<TimezoneCalendar calendarSrc="c_fb77fab2d00f9637c3abb80c3f6d4b8de213dc3bc08ba26f960a4f192c47ad01%40group.calendar.google.com" defaultTimezone="America/Los_Angeles" />
 
 
 <StaffTable staffDataPath={semester} />
