@@ -91,6 +91,8 @@ Assessment will be based on homework, labs, lecture exercises, codewalks, and ex
 
 All homework assignments will be weighted equally in the Homework grade, all labs will be weighted equally in the Labs grade, and all codewalks will be weighted equally in the Codewalks grade.
 
+The lowest lab grade will be dropped from the average.
+
 All exam topics (from quizzes or the final exam) will be weighted equally in the Exam Topics grade. Each topic will appear on two exams. For each topic, the score for that topic will be the highest of both attempts at that topic.
 
 The highest row in which a student satisfies all columns will be their grade (plus a bump for lectures -- see below). If no rows are completely satisfied, the student will not pass the course.
