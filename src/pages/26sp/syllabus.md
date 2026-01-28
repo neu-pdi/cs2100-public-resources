@@ -71,7 +71,7 @@ There will also be **five exams** over the semester: four quizzes during lecture
 
 Students can also meet with instructors outside of office hours by appointment.
 
-## Due Dates and Regrades
+## Due Dates
 
 Homework assignments will be due on Wednesdays at 6PM Pacific time / 9PM Eastern time.
 
@@ -79,7 +79,13 @@ There will be a 24-hour grace period on Pawtograder, so submissions will be acce
 
 Autograder scores will not be changed after the assignment deadline. Students can submit an unlimited number of times before each assignment deadline.
 
+## Regrades and Redoes
+
 If you have a manually-graded assignment on Pawtograder that you believe was graded incorrectly, you can submit a regrade request within Pawtograder, explaining the mistake. All regrade requests must be made within one week of receiving the graded assignment.
+
+The exception to the regrade request policy is codewalks: codewalk grades will not be adjusted retroactively. Instead, students can opt to re-do one codewalk during the semester. For example, a student who is unhappy with their score for the codewalk for Homework 2 can choose to re-do the codewalk again afterwards. Their score will be the higher of the two attempts.
+
+If a student receives a zero on a codewalk because they did not arrive on time to their scheduled codewalk, and they did not attempt to do it before the due date, then the "re-do" will be that student's only attempt at that codewalk.
 
 ## Office Hours
 
