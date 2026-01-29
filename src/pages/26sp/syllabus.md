@@ -83,9 +83,9 @@ Autograder scores will not be changed after the assignment deadline. Students ca
 
 If you have a manually-graded assignment on Pawtograder that you believe was graded incorrectly, you can submit a regrade request within Pawtograder, explaining the mistake. All regrade requests must be made within one week of receiving the graded assignment.
 
-The exception to the regrade request policy is codewalks: codewalk grades will not be adjusted retroactively. Instead, students can opt to re-do one codewalk during the semester. For example, a student who is unhappy with their score for the codewalk for Homework 2 can choose to re-do the codewalk again afterwards. Their score will be the higher of the two attempts.
+The exception to the regrade request policy is codewalks: instead, students can fill out this codewalk regrade form for at most one codewalk over the semester: https://docs.google.com/forms/d/e/1FAIpQLSfz9MC637BODUYPU1TpED12BAvjSRHa6-bPdcer55q-gM9wYg/viewform.
 
-If a student receives a zero on a codewalk because they did not arrive on time to their scheduled codewalk, and they did not attempt to do it before the due date, then the "re-do" will be that student's only attempt at that codewalk.
+If a student receives a zero on a codewalk because they did not do it before the due date, then the "regrade" will be that student's only attempt at that codewalk.
 
 ## Office Hours
 
