@@ -38,3 +38,9 @@ It is recommended to review these topics:
 It is recommended to review these topics:
 - Definition of correlation
 - Pearson's correlation coefficient
+
+## Practice Quiz 2
+
+[Practice Quiz 2](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26sp/Practice%20Quiz%202.pdf)
+
+[Solutions](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26sp/Practice%20Quiz%202%20Solutions.pdf)
