@@ -119,9 +119,11 @@ The highest row in which a student satisfies all columns will be their grade (pl
 
 E.g., to get an A, you must score 80% or higher on homework, labs, and codewalks, AND score 93% or higher on exam topics. If you have the 80% homework / lab / codewalk scores, but your exam topic score is 91%, you will receive an A-.
 
+If a student does not meet any rows in the table, they will receive an F.
+
 Percentage grades will be rounded to the nearest percent. E.g., a grade of 79.2% will be rounded down to 79%.
 
-**A lecture activity score of 70% or more will bump your score up one row.** For example, if you had homework, lab, and codewalk scores of 72%, and an exam topic score of 85%, a lecture activity score of 75% will bump your score from B to B+.
+**A lecture activity score of 70% or more will bump your score up one row.** For example, if you had homework, lab, and codewalk scores of 72%, and an exam topic score of 85%, a lecture activity score of 75% will bump your score from B to B+. If a student's grade is not in the table (i.e., they are getting an F), then their score does not get bumped up according to this rule.
 
 To progress, students are required to meet the grade point average (GPA) requirements as determined by Khoury College of Computer Sciences. [(See Khoury's website for more information.)](https://catalog.northeastern.edu/undergraduate/computer-information-science/)
 
