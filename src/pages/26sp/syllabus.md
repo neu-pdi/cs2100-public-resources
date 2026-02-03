@@ -51,7 +51,7 @@ There will also be **nine homework assignments**. The purpose of homework is to 
 
 There will be **three codewalks**: one for HW1, one for HW2 or HW3, and one for any of the remaining homework assignments (except the assignment due in the last week). Students will sign up for one-on-one codewalks where a TA asks questions about the student's solution code for a homework assignment. Students should sign up for a time slot that happens after they have finished the respective homework assignment. Codewalk questions are available to students in advance through Pawtograder.
 
-There will also be **five exams** over the semester: four quizzes during lectures, and a final exam during the university-scheduled final exam period. Our assigned final exam time is **Saturday, April 25 at 10:30am local time** for all Boston and Oakland sections.
+There will also be **five exams** over the semester: four quizzes during lectures, and a final exam during the university-scheduled final exam period. The assigned final exam time is **Saturday, April 25 at 10:30am Eastern for all Boston** sections, and **Wednesday, April 22 at 10:30am Pacific for all Oakland** sections.
 
 ## Communication
 
