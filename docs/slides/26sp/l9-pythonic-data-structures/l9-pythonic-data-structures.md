@@ -10,6 +10,35 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
+<style scoped>
+section {
+    font-size: 20px;
+}
+</style>
+
+# Exercise: Let's write these classes and corresponding tests
+
+### A class that represents a message in a group chat
+- Constructor takes the contents of the message and the writer's user ID, and stores both in attributes
+- Constructor also stores current time
+  - `from datetime import datetime, UTC` and `now_utc = datetime.now(UTC)`
+- A `display()` method that returns a `str` with the userID, timestamp, and message
+
+### A class that represents a group chat
+- Constructor takes no arguments, but stores a timestamp and starts a log of messages
+- An `add_message()` method that takes a message and user ID and adds a message to the log
+- A `display()` method that returns a `str` with all messages, formatted nicely
+
+---
+
+# Note about `__eq__()` from that exercise:
+
+- `__eq__(other: object)` checks if this object (`self`) is equal to `other`
+- `self.assertEqual()` calls `__eq__()` to check if the two things are equal
+- `==` also uses `__eq__()`
+
+---
+
 <div class="grid grid-cols-2 gap-4">
 <div>
 
