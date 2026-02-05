@@ -42,6 +42,54 @@ section {
 <div class="grid grid-cols-2 gap-4">
 <div>
 
+Before overwriting `__eq__()`:
+
+```python
+class Student():
+    def __init__(self, 
+            student_id: str, major: str
+    ):
+        self.id = student_id
+        self.major = major
+        self.courses: set[str] = set()
+
+s1 = Student('s1', 'CS')
+s2 = Student('s1', 'CS')
+print(s1 == s2)  # False
+```
+
+</div>
+<div>
+
+After overwriting `__eq__()`:
+```python
+class Student():
+    def __init__(self,
+            student_id: str, major: str
+    ):
+        self.id = student_id
+        self._major = major
+    
+    def __eq__(
+            self, other: object
+    ) -> bool:
+        if not isinstance(other, Student):
+            raise TypeError
+        return self.id == other.id
+
+s1 = Student('s1', 'CS')
+s2 = Student('s1', 'CS')
+print(s1 == s2)  # True
+```
+
+</div>
+</div>
+
+---
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
 # Two ways to create lists
 
 ## Create lists by listing their elements
