@@ -184,8 +184,6 @@ print(pd.merge(df_all_students, df_swimming_class_grades, on='ID', how='left'))
 
 ## MapReduce
 
-We covered the `map()`, `filter()`, and `functools.reduce()` functions in [Lecture 11](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l11-lists#map-and-filter). We also covered filtering in more depth in [Lecture 15](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l15-design-data1#filtering-with-pandas).
-
 MapReduce is a framework for processing data using the `map` and `reduce` concepts, independent of programming language:
 1. **Map phase**: In this phase, the data is broken into pieces, and each piece is "mapped" or transformed.
 2. **Reduce phase**: In this phase, the mapped data is then "reduced" or combined into a result.
