@@ -12,6 +12,9 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ## Topics revisited from preious quizzes
 
+<div class="grid grid-cols-2 gap-4">
+<div>
+
 - Classes (from Quiz 2)
   - Constructors, methods, attributes
   - `__str__()` and `__eq__()`
@@ -20,6 +23,23 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
   - `self.assertEqual()`, `self.assertTrue()`, and `self.assertRaises()`
   - Identifying test cases
 
+- Using Objects (from Quiz 2)
+  - State and aliasing
+  - `None` and `Optional`
+
+</div>
+<div>
+
+- Lists, sets, and dictionaries
+  - List comprehension
+  - Iterating through lists, sets, and dictionaries
+  - Rules about contents of lists, sets, and dictionaries
+  - Sorting and filtering
+  - Binary operators (`|`, `-`, etc.)
+
+</div>
+</div>
+
 ---
 
 <div class="grid grid-cols-2 gap-4">
@@ -27,11 +47,10 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ## New review topics
 
-- Abstract methods
+- Inheritance and bstract methods
   - `@abstractmethod`
   - Rules for instantiation
 
-- Inheritance
   - What subclasses inherit
   - Overwriting inherited methods
   - `super().`
@@ -43,17 +62,13 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 </div>
 <div>
 
-- UML diagrams
-  - Name, attributes, methods
-  - Abstract class / method
-  - Public / private
-  - Relationships between classes
+- Iterator and Comparable
 
-- Privacy
-  - What type of info is shared?
-  - Who is the subject? Sender? Potential recipients?
-  - What principles govern the collection and transmission?
-  - Determining tradeoffs
+  - Iterable and Iterator protocols and interfaces
+
+  - Comparable protocol
+  - Checking for inconsistencies
+  - Rules for using `<`, `>`, etc.
 
 </div>
 </div>
@@ -424,85 +439,74 @@ temp._fahrenheit = 32
 
 ---
 
-## UML (Unified Modeling Language) Diagrams
+# Iterable / Iterator
 
-A UML diagram visually shows us the classes and their relationships in a program.
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-
-<img width="440" height="444" alt="Cat UML" src="https://github.com/user-attachments/assets/01616e15-98ac-45f6-b86e-0394028173a7" />
-
-</div>
-<div>
-
-
-This UML diagram says:
-- class name: `Cat`
-- `str` attribute called `name`
-- method called `knead()`
-- method called `eat(food: str)`
-
-`+` : intended to be publicly available
-`-` : not public (two underscores `__`)
-
-
-</div>
-</div>
+|  | Iterable | Iterator |
+| - | - | - |
+| Protocol's required methods | `__iter__(self) -> Iterator[T]`: returns an iterator | `__next__(self) -> T`: returns the next element or raises `StopIteration` <br /> `__iter__(self) -> Iterator[T]` : returns itself |
+| `abc` interface's required methods | `__iter__(self) -> Iterator[T]` (same as protocol) | `__next__(self) -> T` (same as protocol) <br /> not `__iter__(self) -> Iterator[T]` because it's aleady there |
 
 ---
 
-# UML Diagram: Subclass / Superclass Relationship
+## Exercise: let's write a class `Sarcasm`, which is like a `str`, but when we iterate over it, it capitalizes a random half of the letters
 
-Arrow from subclass to superclass:
-<img width="473" height="500" alt="Cat Lion Housecat UML" src="https://github.com/user-attachments/assets/3babba9f-2f03-4deb-88bd-716baa47cb5f" />
+<style scoped>
+section {
+    font-size: 22px;
+}
+</style>
+
+```python
+import random
+from collections.abc import Iterable, Iterator
+
+class Sarcasm(Iterable[str]):
+    def __init__(self, text: str):
+        self.text = text
+    
+    def __iter__(self) -> Iterator[str]:
+        return SarcasmIterator(self.text)
+
+class SarcasmIterator(Iterator[str]):
+    def __init__(self, text: str):
+        self.remaining_text = text
+    
+    def __next__(self) -> str:
+        if len(self.remaining_text) == 0:
+            raise StopIteration
+        next_char = self.remaining_text[0]
+        next_char = next_char.lower() if random.randint(0, 1) == 0 else next_char.upper()
+        self.remaining_text = self.remaining_text[1:]
+        return next_char
+
+print(''.join(letter for letter in Sarcasm('hi rasika')))
+```
 
 ---
 
-## Poll: Which statement is TRUE?
+# Comparable
 
-```
-        Vehicle
-           △
-           |
-      _____|_____
-      |         |
-    Car      Truck
-```
+- `__eq__(self, other: object) -> bool`: equals `==`
+- `__ne__(self, other: object) -> bool`: not equals `!=`
+- `__lt__(self, other: object) -> bool`: less than `<`
+- `__le__(self, other: object) -> bool`: less than or equal to `<=`
+- `__gt__(self, other: object) -> bool`: greater than `>`
+- `__ge__(self, other: object) -> bool`: greater than or equal to `>=`
 
-1. `Vehicle` inherits from both `Car` and `Truck`
-2. `Car` and `Truck` are superclasses of `Vehicle`
-3. `Car` and `Truck` are subclasses of `Vehicle`
-4. `Car` and `Truck` are sibling classes with no relationship
+#### Don't need all six (which is why there's no interface)
+#### Common: Implement `__eq__()` and one ordering method like `__lt__()`
+
+`a < b` calls `a.__lt__(b)` or `not a.__ge__(b)` or `not (a.__gt__(b) or a == b)`
 
 ---
 
-## Poll: If `Account` has a method `deposit()`, what can you infer about `SavingsAccount`?
-```
-    Account
-      △
-      |
-SavingsAccount
-```
+## Poll: How can we check for inconsistencies between comparison methods?
 
-1. SavingsAccount must override the deposit() method
-2. SavingsAccount inherits the deposit() method
-3. SavingsAccount cannot use the deposit() method
-4. SavingsAccount must implement deposit() from scratch
+1. If they use the same attributes for comparison, then they must be consistent.
+2. If `__eq__()` says A is equal to B, and `__gt__()` says A is greater than B, then they are inconsistent.
+3. If `__le__()` says A is less than or equal to B, and `__ge__()` says A is greater than or equal to B, then they are inconsistent.
+4. If all six comparison methods are implemented, then they must be inconsistent.
 
----
-
-## (Privacy) Polls: Algorithmic hiring
-
-“Shamazon” (a fictitious company) is looking to hire software engineers, and you have been tasked with designing a tool to filter the submitted resumes and select the ideal candidates for hire.
-
-| Question | Answer |
-| - | - |
-| What type of information is shared? |  |
-| Who is the subject of the information? |  |
-| Who is the sender of the information? |  |
-| Who are the potential recipients of the information? |  |
-| What principles govern the collection and transmission of this information? |  |
 
 ---
 
