@@ -268,7 +268,7 @@ for key, value in ages.items():
 ## Poll: Which correctly prints each student's name and grade?
 
 ```python
-student_grades = {"Binnie": 85, "Ginnie": 92, "Mini": 78}
+grades = {"Binnie": 85, "Ginnie": 92, "Mini": 78}
 ```
 
 <div class="grid grid-cols-2 gap-4">
