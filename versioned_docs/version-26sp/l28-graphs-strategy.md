@@ -1,6 +1,6 @@
 ---
-sidebar_position: 29
-lecture_number: 29
+sidebar_position: 28
+lecture_number: 28
 title: Graph Search and Strategy Pattern
 ---
 

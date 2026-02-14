@@ -1,6 +1,6 @@
 ---
-sidebar_position: 28
-lecture_number: 28
+sidebar_position: 27
+lecture_number: 27
 title: Trees and Search Algorithms
 ---
 

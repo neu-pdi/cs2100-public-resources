@@ -1,6 +1,6 @@
 ---
-sidebar_position: 21
-lecture_number: 21
+sidebar_position: 20
+lecture_number: 20
 title: Designing Programs with Inheritance
 ---
 

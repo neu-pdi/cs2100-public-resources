@@ -1,6 +1,6 @@
 ---
-sidebar_position: 25
-lecture_number: 25
+sidebar_position: 24
+lecture_number: 24
 title: Recursion
 ---
 

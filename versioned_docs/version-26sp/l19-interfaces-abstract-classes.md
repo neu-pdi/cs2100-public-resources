@@ -1,6 +1,6 @@
 ---
-sidebar_position: 20
-lecture_number: 20
+sidebar_position: 19
+lecture_number: 19
 title: Interfaces and Abstract Classes
 ---
 

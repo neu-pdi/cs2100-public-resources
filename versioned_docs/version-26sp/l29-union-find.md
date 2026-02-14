@@ -1,6 +1,6 @@
 ---
-sidebar_position: 30
-lecture_number: 30
+sidebar_position: 29
+lecture_number: 29
 title: Graphs and Union-Find
 ---
 

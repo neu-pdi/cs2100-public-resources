@@ -1,6 +1,6 @@
 ---
-sidebar_position: 32
-lecture_number: 32
+sidebar_position: 31
+lecture_number: 31
 title: The Decorator Pattern
 ---
 

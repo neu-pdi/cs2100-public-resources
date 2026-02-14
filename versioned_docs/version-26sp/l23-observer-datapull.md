@@ -1,6 +1,6 @@
 ---
-sidebar_position: 24
-lecture_number: 24
+sidebar_position: 23
+lecture_number: 23
 title: "Design patterns: Observer and \"Data Pull\""
 ---
 

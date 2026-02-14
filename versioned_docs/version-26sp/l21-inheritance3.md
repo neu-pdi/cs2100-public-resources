@@ -1,6 +1,6 @@
 ---
-sidebar_position: 22
-lecture_number: 22
+sidebar_position: 21
+lecture_number: 21
 title: Static and Class Methods
 ---
 

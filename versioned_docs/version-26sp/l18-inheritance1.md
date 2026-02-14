@@ -1,6 +1,6 @@
 ---
-sidebar_position: 19
-lecture_number: 19
+sidebar_position: 18
+lecture_number: 18
 title: Inheritance
 ---
 

@@ -1,6 +1,6 @@
 ---
-sidebar_position: 38
-lecture_number: 38
+sidebar_position: 37
+lecture_number: 37
 title: Quiz 5 and Technical Interview Prep
 ---
 

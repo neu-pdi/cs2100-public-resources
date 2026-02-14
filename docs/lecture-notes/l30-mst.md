@@ -1,6 +1,6 @@
 ---
-sidebar_position: 31
-lecture_number: 31
+sidebar_position: 30
+lecture_number: 30
 title: Minimum Spanning Trees
 ---
 

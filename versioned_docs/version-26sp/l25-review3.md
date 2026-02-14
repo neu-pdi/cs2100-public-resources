@@ -1,6 +1,6 @@
 ---
-sidebar_position: 26
-lecture_number: 26
+sidebar_position: 25
+lecture_number: 25
 title: Review for Quiz 3
 ---
 
