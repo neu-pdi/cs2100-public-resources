@@ -250,7 +250,7 @@ class Student():
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Student):
-            raise TypeError
+            return False
         return self.id == other.id
 
 s1 = Student('s1', 'CS')
@@ -267,7 +267,7 @@ class Cat:
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Cat):
-            raise ValueError
+            return False
         return other.name in self.food
 ```
 1. It's possible for `cat_a` to equal `cat_b` today, but for `cat_a` to not be equal to `cat_b` tomorrow (with no code changes)

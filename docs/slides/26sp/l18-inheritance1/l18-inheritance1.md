@@ -365,7 +365,7 @@ class Student():
             self, other: object
     ) -> bool:
         if not isinstance(other, Student):
-            raise TypeError
+            return False
         return self.id == other.id
 
 s1 = Student('s1', 'CS')
@@ -388,7 +388,7 @@ class Cat:
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Cat):
-            raise ValueError
+            return False
         return other.name in self.food
 ```
 
@@ -419,7 +419,7 @@ This UML diagram says:
 - method called `eat(food: str)`
 
 `+` indicates that a method or attribute is intended to be publicly available.
-`-` (minus) indicates that it is not (two underscores `__`).
+`-` (minus) indicates that it is not (one or two underscores `__`).
 
 
 </div>
