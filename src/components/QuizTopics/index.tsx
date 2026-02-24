@@ -24,8 +24,8 @@ export default function TopicsTable() {
         { topic: "Correlation", quiz2: true, quiz4: true, finalExam: true },
         { topic: "Properties", quiz3: true, quiz4: true, finalExam: true },
         { topic: "Inheritance and abstract methods", quiz3: true, quiz4: true, finalExam: true },
-        { topic: "Iterator and Comparable", quiz3: true, quiz4: true, finalExam: true },
-        { topic: "Coupling / cohesion / encapsulation", quiz4: true, quiz5: true, finalExam: true },
+        { topic: "Coupling / cohesion / encapsulation", quiz3: true, quiz4: true, finalExam: true },
+        { topic: "Iterator and Comparable", quiz4: true, quiz5: true, finalExam: true },
         { topic: "Decorator / Strategy / Observer / Data Pull", quiz4: true, quiz5: true, finalExam: true },
     ];
 
