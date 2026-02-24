@@ -1,6 +1,6 @@
 ---
-sidebar_position: 22
-lecture_number: 22
+sidebar_position: 23
+lecture_number: 23
 title: Iteration and Comparison
 ---
 

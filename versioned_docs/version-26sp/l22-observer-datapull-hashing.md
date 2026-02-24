@@ -1,6 +1,6 @@
 ---
-sidebar_position: 23
-lecture_number: 23
+sidebar_position: 22
+lecture_number: 22
 title: "Design patterns: Observer, \"Data Pull\", and Hashing"
 ---
 
