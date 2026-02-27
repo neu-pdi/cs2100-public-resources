@@ -80,10 +80,8 @@ Another common use of class methods is alternate constructors. Python allows us 
 
 Here is an example using class methods for additional constructors to specify a person's birth year in different ways:
 ```python
+from __future__ import annotations
 from datetime import datetime
-from typing import TypeVar
-
-T = TypeVar('T', bound='Person')  # Generic type that must be a subclass of Person
 
 class Person:
     def __init__(self, name: str, birth_year: int):
@@ -91,12 +89,12 @@ class Person:
         self.birth_year = birth_year
     
     @classmethod
-    def from_birth_date(cls: type[T], name: str, birth_date_str: str) -> T:
+    def from_birth_date(cls: type[Person], name: str, birth_date_str: str) -> Person:
         year = datetime.strptime(birth_date_str, "%Y-%m-%d").year
         return cls(name, year)
     
     @classmethod
-    def baby(cls: type[T], name: str) -> T:
+    def baby(cls: type[Person], name: str) -> Person:
         return cls(name, datetime.now().year)
 
 person1 = Person('Mini', 2015)
@@ -106,9 +104,7 @@ person3 = Person.baby('Ginnie')
 
 Poll: Consider this code:
 ```python
-from typing import TypeVar
-
-T = TypeVar('T', bound='Vehicle')
+from __future__ import annotations
 
 class Vehicle:
     total_vehicles = 0
@@ -119,7 +115,7 @@ class Vehicle:
         Vehicle.total_vehicles += 1
     
     @classmethod
-    def from_string(cls: type[T], vehicle_str: str) -> T:
+    def from_string(cls: type[Vehicle], vehicle_str: str) -> Vehicle:
         make, model = vehicle_str.split('-')
         return cls(make, model)
     
@@ -156,15 +152,13 @@ Static methods are functions that don't need access to a class (or an instance o
 
 Poll: Consider this code:
 ```python
-from typing import TypeVar
-
-T = TypeVar('T', bound='Shape')
+from __future__ import annotations
 
 class Shape:
     default_color = 'blue'
     
     @classmethod
-    def create_with_default_color(cls: type[T], size: int) -> T:
+    def create_with_default_color(cls: type[Shape], size: int) -> Shape:
         return cls(size, cls.default_color)
     
     @staticmethod
