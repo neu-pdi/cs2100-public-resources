@@ -28,3 +28,9 @@ It is recommended to review these topics:
 - Identifying and mitigating coupling between two or more classes
 - Identifying and mitigating lack of cohesion in a class
 - How to further enhance encapsulation in an existing class
+
+## Practice Quiz 3
+
+[Practice Quiz 3](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26sp/practice-quiz-3.pdf)
+
+[Practice Quiz 3 Solutions](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26sp/practice-quiz-3-with-solutions.pdf)
