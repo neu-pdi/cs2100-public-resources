@@ -158,25 +158,33 @@ class Shape:
     default_color = 'blue'
     
     @classmethod
-    def create_with_default_color(cls: type[Shape], size: int) -> Shape:
+    def create_with_default_color(
+            cls: type[Shape], size: int) -> Shape:
         return cls(size, cls.default_color)
     
     @staticmethod
-    def calculate_area(length: int, width: int) -> int:
+    def area_of_region(
+            length: int, width: int) -> int:
         return length * width
     
+    def __init__(
+            self, size: int, color: str):
+        self.size = size
+        self.color = color
+
+
+class Square(Shape):
+    default_color = 'red'
+
     def __init__(self, size: int, color: str):
         self.size = size
         self.color = color
 
-class Rectangle(Shape):
-    default_color = 'red'
-
-rect = Rectangle.create_with_default_color(10)
-area = Rectangle.calculate_area(5, 8)
+rect = Square.create_with_default_color(10)
+area = Shape.area_of_region(5, 8)
 ```
-What will be the values of `rect.color` and `area`, using the two variables declared at the end?
-1. `rect.color = 'blue'`, `area = 40`
-2. `rect.color = 'red'`, `area = 40`
-3. `rect.color = 'red'`, `area = 13`
+What will be the values of `square.color` and `area`, using the two variables declared at the end?
+1. `square.color = 'blue'`, `area = 40`
+2. `square.color = 'red'`, `area = 40`
+3. `square.color = 'red'`, `area = 13`
 4. Both will raise an error because they're called on a subclass

@@ -143,7 +143,7 @@ class Document(Container[str]):
 
     def __contains__(self, word: object) -> bool:
         if not isinstance(word, str):
-            raise TypeError
+            return False
         return word in self.words
 
 print('hi' in Document('hi this is mini'))  # True
@@ -469,12 +469,14 @@ class INTerable(Iterable[int]):
     def __repr__(self) -> str:
         return f"{self.number}"
 
-    def __lt__(self, other: "INTerable") -> bool:
+    def __lt__(self, other: INTerable) -> bool:
+        if not isinstance(other, INTerable):
+            return NotImplemented
         return self.number < other.number
 
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, INTerable):
-            return NotImplemented
+            return False
         return self.number == other.number
 ```
 
@@ -524,12 +526,12 @@ class Plant:
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Plant):
-            raise NotImplementedError
+            return False
         return self.sunlight_hours == other.sunlight_hours
     
     def __lt__(self, other: object) -> bool:
         if not isinstance(other, Plant):
-            raise NotImplementedError
+            return NotImplemented
         return self.sunlight_hours < other.sunlight_hours
 
 plant1 = Plant()
@@ -555,12 +557,12 @@ class Bouquet:
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Bouquet):
-            raise NotImplementedError
+            return False
         return ???  
     
     def __gt__(self, other: object) -> bool:
         if not isinstance(other, Bouquet):
-            raise NotImplementedError
+            return NotImplemented
         return ???        
 ```
 1. `len(self.flowers) == len(other.flowers)` and `len(self.flowers) < len(other.flowers)`

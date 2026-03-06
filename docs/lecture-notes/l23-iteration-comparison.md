@@ -262,12 +262,12 @@ class Plant:
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Plant):
-            raise NotImplementedError
+            return False
         return self.sunlight_hours == other.sunlight_hours
     
     def __lt__(self, other: object) -> bool:
         if not isinstance(other, Plant):
-            raise NotImplementedError
+            return NotImplemented
         return self.sunlight_hours < other.sunlight_hours
 
 plant1 = Plant()
@@ -290,13 +290,13 @@ class Bouquet:
         if isinstance(other, Bouquet):
             return ???
         else:
-            raise NotImplementedError
+            return False
     
     def __gt__(self, other: object) -> bool:
         if isinstance(other, Bouquet):
             return ???
         else:
-            raise NotImplementedError
+            return NotImplemented
 ```
 1. `len(self.flowers) == len(other.flowers)` and `len(self.flowers) < len(other.flowers)`
 2. `len(self.flowers) == len(other.flowers)` and `len(self.flowers) > len(other.flowers)`

@@ -12,8 +12,8 @@ This lecture is intentionally shorter to allow catching up on lecture material.
 
 This semester, we have already covered a few _design patterns_: structures or templates that software engineers have agreed solve common software problems.
 
-- In [Lecture 11 (Lists)](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l11-lists#the-accumulator-pattern), we covered the Accumulator Pattern: the pattern that we use to add up, or _accumulate_, a sequence of items.
-- We had a few [lectures on design patterns for handling data](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l15-design-data1), including mapping, filtering, and merging dataframes.
+- We have seen the Accumulator Pattern: the pattern that we use to add up, or _accumulate_, a sequence of items.
+- We had a few lectures on design patterns for handling data, including mapping, filtering, and merging dataframes.
 
 Design patterns:
 - are independent of programming language
@@ -338,9 +338,9 @@ When faced with the error `TypeError: unhashable type: 'Course'`, one could be t
 ```python
 T = TypeVar('T')
 
-def list_contains(item: T, list: list[T]) -> bool:
+def list_contains(item: T, sequence: list[T]) -> bool:
     """Returns True if the item is in the list, and False otherwise"""
-    for element in list:
+    for element in sequence:
         if element == item:
             return True
     return False
@@ -477,12 +477,12 @@ class Course(Hashable):
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Course):
-            raise NotImplementedError
+            return NotImplemented
         else:
             return self.department == other.department and self.course == other.course
 
     def __hash__(self) -> int:
-        return hash(str(self))
+        return hash((self.department, self.course))
         
 
 course_oakland = Course('CS', 2100)

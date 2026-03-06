@@ -393,7 +393,7 @@ class Course:
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Course):
-            raise NotImplementedError
+            return NotImplemented
         else:
             return self.department == other.department and self.course == other.course
         
@@ -420,7 +420,7 @@ class Course:
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Course):
-            raise NotImplementedError
+            return NotImplemented
         else:
             return self.department == other.department and self.course == other.course
         
@@ -450,9 +450,9 @@ And same thing if you try to add it as a key to a `dict`
 ```python
 T = TypeVar('T')
 
-def list_contains(item: T, list: list[T]) -> bool:
+def list_contains(item: T, sequence: list[T]) -> bool:
     """Returns True if the item is in the list, and False otherwise"""
-    for element in list:
+    for element in sequence:
         if element == item:
             return True
     return False
@@ -632,12 +632,12 @@ class Course(Hashable):
     
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Course):
-            raise NotImplementedError
+            return NotImplemented
         else:
             return self.department == other.department and self.course == other.course
 
     def __hash__(self) -> int:
-        return hash(str(self))
+        return hash((self.department, self.course))
         
 
 course_oakland = Course('CS', 2100)
