@@ -12,7 +12,7 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 # Design Patterns
 
-Already covered a few _design patterns_: structures or templates that software engineers have agreed solve common software problems
+_Design patterns_: structures or templates that software engineers have agreed solve common software problems
 
 - Lists: Accumulator Pattern (add up, or _accumulate_, a sequence of items)
 - Design patterns for handling data: mapping, filtering, and merging dataframes
@@ -20,11 +20,24 @@ Already covered a few _design patterns_: structures or templates that software e
 ## Design patterns:
 - are independent of programming language
 - are flexible (the overarching pattern allows modifications)
-- provide us a common vocabulary to communicate "blueprints" for standard patterns
+- provide us a common vocabulary to communicate "blueprints" for standard pattern
 
 ---
 
-# "Data Pull" pattern
+## Poll: What are some real world design patterns?
+
+E.g.:
+- Template for a sandwich
+- General procedure for opening any type of door
+- How to study for any type of exam using a practice exam
+
+---
+
+## What's the difference between the "push an item" design pattern and the "pull an item" design pattern?
+
+###### Let's start with "pull an item"
+
+# The "Data Pull" pattern
 
 Modeled after this lecture: https://neu-se.github.io/CS4530-Spring-2024/Slides/Module%2005%20Interaction-Level%20Design%20Patterns.pdf
 
@@ -91,7 +104,7 @@ class Consumer:
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-# Example: Clock using "Data pull" pattermn
+# Example: Clock using "Data pull" pattern
 
 ```python
 class IPullingClock(ABC):
@@ -336,7 +349,7 @@ class DifferentClockClient(IPushingClockClient):
 | Consumer asks the Producer for the data | Producer notifies the Consumer whenever the data is updated |
 | Better when updates are more frequent than requests | Better when updates are rarer than requests |
 
----
+<!-- ---
 
 ## Details and variants
 
@@ -346,7 +359,7 @@ class DifferentClockClient(IPushingClockClient):
 - What data should be passed with the notification?
 - How does the producer store its registered consumers?
   - If many consumers, this could be an issue
-- "There’s a package for that"
+- "There’s a package for that" -->
 
 ---
 
