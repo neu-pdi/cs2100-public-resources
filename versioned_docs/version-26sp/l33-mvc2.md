@@ -1,10 +1,10 @@
 ---
 sidebar_position: 33
 lecture_number: 33
-title: MVC Controllers and Views
+title: Controllers and Views, and Mocks (how we tested HW that required external resources)
 ---
 
-# MVC Controllers and Views
+# Controllers and Views (and Mocks: how we tested things that required external resources like printing or the internet)
 
 <img width="2277" height="1802" alt="MVC" src="https://github.com/user-attachments/assets/106a8429-855f-4b40-976b-8aa2ab137492" />
 

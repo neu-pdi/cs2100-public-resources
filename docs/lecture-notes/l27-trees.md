@@ -59,7 +59,7 @@ Source: https://www.reddit.com/r/ProgrammerHumor/comments/1pdvb8/and_here_we_can
 
 In computer science, we draw our trees with the root at the top and the leaves at the bottom.
 
-Poll: Is this a tree?
+<!-- Poll: Is this a tree?
 <img width="350" height="263" alt="Donut decisions" src="https://github.com/user-attachments/assets/8969d2dc-63a1-4769-842f-ccc7ddc3cb6c" />
 Source: https://www.canva.com/graphs/decision-trees/
 1. Yes
@@ -141,82 +141,11 @@ If we split that printed output into multiple lines:
                         (Kitchen  *  *))
            *
 )
-```
-
-## Binary Search Trees
-
-**Binary Tree**: A tree in which each node has at most 2 children
-
-The first and second child of a node are called the left and right child, respectively.
-
-**Binary Search Tree**: A binary tree in which each node's data is greater than everything in its left subtree and less than everything in its right subtree
-
-Here is an example of a binary search tree:
-<img width="496" height="334" alt="Binary search tree" src="https://github.com/user-attachments/assets/ab04f612-49de-4feb-8dc3-82560a8b70e1" />
-
-Poll: This is a Binary Search Tree. Where should the 12 go?
-<img width="685" height="396" alt="Where should the 12 go" src="https://github.com/user-attachments/assets/43e13007-072e-4070-8f21-0e587ea7313c" />
-1. A
-2. B
-3. C
-4. D
-
-Poll: Which of these are Binary Search Trees?
-<img width="818" height="285" alt="Which of these are BSTs" src="https://github.com/user-attachments/assets/a649123e-0bed-4234-8dd0-37588b1eeb87" />
-1. A
-2. B
-3. C
-
-Poll: Is this a BST?
-<img width="298" height="282" alt="Is this a BST" src="https://github.com/user-attachments/assets/7f4294ec-d795-4a7b-8e8c-67b9382339a9" />
-1. Yes
-2. No
-
-### SortedSet
-
-What's a Binary Search Tree good for?
-
-Let's say I want to check for whether the tree contains 12. How do we do that?
-<img width="449" height="267" alt="What's a BST good for" src="https://github.com/user-attachments/assets/f92480ac-520d-4cba-aa8a-a63f60c0dc05" />
-What about searching for 11 (with the same BST)?
-
-Hey, this is more efficient than searching a list!
-It's not as efficient as hashing, but it does make a pretty good set. And it's more useful if you care about the order of things.
-
-The Python type `sortedcontainers.SortedSet` stores elements using a Binary Search Tree.
-
-(You may need to `pip install sortedcontainers`)
-
-```python
-ss = SortedSet([3, 1, 4, 1, 5])
-print(ss)  # SortedSet([1, 3, 4, 5])
-ss.add(2)
-print(ss)  # SortedSet([1, 2, 3, 4, 5])
-```
-
-And there is a corresponding `SortedDict`:
-```python
-sm = SortedDict({2: [1, 2, 3], 1: [0, 0, 0]})
-print(sm)  # SortedDict({1: [0, 0, 0], 2: [1, 2, 3]})
-```
-
-| `set` | `sortedcontainers.SortedSet` |
-| - | - |
-| Stored as a hash table (list of lists)​<br />Index of each element is calculated using `__hash__()` | Stored as a Binary Search Tree<br />Elements must implement Comparable protocol |
-| Constant time to look up / add / remove | Logarithmic time to look up / add / remove |
-| Use when care more about speed than order | Use when care more about order than speed |
-
-Poll: Which are true?
-1. For a `SortedDict`, it is constant time to check whether it contains a key
-2. For a `SortedDict`, it is constant time to check whether it contains a value
-3. `set`s can store things which don't implement the Comparable protocol
-4. `set`s can store things which aren't hashable
-5. When we iterate over a `set`, the elements will be increasing in size
-6. When we iterate over a `SortedSet` the elements will be increasing in size
+``` -->
 
 ## Search Algorithms
 
-Let's use recursion to search for an element in the `Tree` we wrote earlier. (See slides at the end for images of the tree)
+Let's use recursion to search for an element in a tree. (See slides at the end for images of the tree)
 ```python
 class Tree(Generic[T]):
     def __init__(self, root_data: Optional[T] = None) -> None:
