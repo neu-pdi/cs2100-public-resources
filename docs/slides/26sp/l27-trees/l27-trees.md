@@ -4,7 +4,7 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
-# Trees
+# Trees, Searching, and Scraping (HW7)
 ## Welcome back to CS 2100!
 ## Prof. Rasika Bhalerao
 
@@ -357,7 +357,50 @@ DFS(node):
 
 ---
 
-# Let's look at Homework 7
+# Scraping
+
+Let's save this webpage to our computer: https://en.wikipedia.org/wiki/Web_scraping
+
+(Webpage, Complete)
+
+And let's look at the downloaded HTML file in VSCode.
+
+It contains links to more pages, which contain links to more pages... it's a tree! (Or a graph because it has cycles)
+
+---
+
+<style scoped>
+section {
+    font-size: 20px;
+}
+</style>
+
+# Scraping webpages with BeautifulSoup
+
+Instead of reading a website yourself, you can write code to download the page and extract the data you care about
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+# 1. Fetch the webpage
+response = requests.get("https://example.com")
+
+# 2. Parse the HTML
+soup = BeautifulSoup(response.text, "html.parser")
+
+# 3. Find what you want
+title = soup.find("h1")
+links = soup.find_all("a")
+
+# 4. Use the data!
+print(title.text)
+  ▶ "Example Domain"
+print(len(links), "links found")
+  ▶ 3 links found
+```
+
+## Let's look at Homework 7 (Wikipedia Scraping)
 
 ---
 

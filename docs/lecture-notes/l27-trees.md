@@ -1,7 +1,7 @@
 ---
 sidebar_position: 27
 lecture_number: 27
-title: Trees and Search Algorithms
+title: Trees, Searching, and Scraping (HW7)
 ---
 
 # Trees
