@@ -4,9 +4,75 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
-# The Decorator Pattern
+# The Strategy and Decorator Patterns
 ## Welcome back to CS 2100!
 ## Prof. Rasika Bhalerao
+
+---
+
+# Strategy Pattern
+
+You are using the Strategy pattern in Homework 8 without knowing it.
+
+---
+
+## Defining distance
+
+Algorithms for "shortest distance" (root to each node, MST) -> must define "distance"
+
+Part of HW8: defining the distance between train stations
+- Basic measure of Euclidean distance (used in code)
+- Number of minutes it takes to travel: "the station is 15 minutes from here"
+- Financial cost of building th track (which is bigger if we have to dig a tunnel underwater or through a mountain)
+- `1/n`, where `n` is the number of passengers who regularly travel between the two stations
+
+---
+
+## Strategy pattern
+
+Many definitions of distance, one algorithm that can use any of them
+
+Strategy (Duration) Pattern: allow user to choose / change distance definition at run time
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+##### Ex: Strategies for Tic Tac Toe
+
+- Place a third piece in a row to win
+- Block the opponent if they're about to win
+- Place in an open corner
+- Place in any open square
+
+Strategy for choosing a place changes based on game state
+
+</div>
+<div>
+
+##### Ex: maps directions
+- Shortest path
+- Shortest time
+- Least emissions
+- Least tolls
+- Maximize sightseeing
+
+User chooses the path-finding algorithm at runtime
+
+</div>
+</div>
+
+---
+
+<img width="780" height="476" alt="Strategy UML" src="https://github.com/user-attachments/assets/4625cc87-ec7f-45aa-b5c7-4c404c7b510e" />
+
+---
+
+## Poll: How could the Strategy Pattern be used to define multiple definitions of distance in Homework 8 (public transportation MST)?
+
+1. Ignore the distances between stations when building the train track system (assume all stations are equidistant)
+2. Take user input to choose between multiple existing implementations of the `distance()` function (which returns the distance between two stations)
+3. Take user input to choose between multiple existing implementations of Kruskal's Algorithm (which builds a Minimum Spanning Tree)
+4. After the train track system is built, allow passengers to choose where they want to travel using the trains.
 
 ---
 
@@ -43,11 +109,11 @@ def apply_functions(num: int) -> list[int]:
 print(apply_functions(5))  # [10, 15]
 ```
 
-A function decorator is a way to mutate a function to modify what it does.
+A function decorator is a way to "mutate" a function to modify what it does.
 
 ---
 
-## Function decorators mutate functions
+## Function decorators "mutate" functions by wrapping them
 
 Example: `@time_calls` modifies a given function to print the time it took to run it:
 
@@ -173,7 +239,7 @@ print(fibonacci(10))
 
 Easiest way to test this: create a duplicate method called `fibonacci2()`, decorate it, call it after the regular `fibonacci()`, and step through it in the debugger.
 
----
+<!-- ---
 
 <div class="grid grid-cols-2 gap-4">
 <div>
@@ -294,7 +360,8 @@ class User:
 
 user = User('Mini')
 ```
-
+ -->
+ 
 ---
 
 # Poll:

@@ -4,7 +4,7 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
-# Union Find
+# Graphs and Union Find
 ## Welcome back to CS 2100!
 ## Prof. Rasika Bhalerao
 

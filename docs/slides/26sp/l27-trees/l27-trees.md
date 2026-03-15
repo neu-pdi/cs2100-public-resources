@@ -81,7 +81,7 @@ Source: [Reddit](https://www.reddit.com/r/ProgrammerHumor/comments/1pdvb8/and_he
 
 Note: In computer science, we draw our trees with the root at the top and the leaves at the bottom.
 
-
+<!-- 
 ---
 
 ## Poll: Is this a tree?
@@ -131,9 +131,9 @@ Source: https://xkcd.com/1924/
 
 1. A
 2. B and B'
-3. C
+3. C -->
 
----
+<!-- ---
 
 <div class="grid grid-cols-2 gap-4">
 <div>
@@ -213,128 +213,17 @@ Split that printed output into multiple lines:
                         (Kitchen  *  *))
            *
 )
-```
+``` -->
 
 ---
 
-## Binary Search Trees
+<style scoped>
+section {
+    padding-top: 20px;
+}
+</style>
 
-**Binary Tree**: A tree in which each node has at most 2 children
-
-The first and second child of a node are called the left and right child, respectively.
-
-<br/>
-
-**Binary Search Tree**: A binary tree in which each node's data is greater than everything in its left subtree and less than everything in its right subtree
-
----
-
-<img width="992" height="668" alt="Binary search tree" src="https://github.com/user-attachments/assets/ab04f612-49de-4feb-8dc3-82560a8b70e1" />
-
----
-
-## Poll: This is a Binary Search Tree. Where should the 12 go?
-
-<img width="548" height="317" alt="Where should the 12 go" src="https://github.com/user-attachments/assets/43e13007-072e-4070-8f21-0e587ea7313c" />
-
-1. A
-2. B
-3. C
-4. D
-
----
-
-## Poll: Which of these are Binary Search Trees?
-
-<img width="818" height="285" alt="Which of these are BSTs" src="https://github.com/user-attachments/assets/a649123e-0bed-4234-8dd0-37588b1eeb87" />
-
-1. A
-2. B
-3. C
-
----
-
-## Poll: Is this a BST?
-
-<img width="268" height="254" alt="Is this a BST" src="https://github.com/user-attachments/assets/7f4294ec-d795-4a7b-8e8c-67b9382339a9" />
-
-1. Yes
-2. No
-
----
-
-## What's a Binary Search Tree good for?
-
-Let's say I want to check for whether the tree contains 12. How do we do that?
-
-<img width="449" height="267" alt="What's a BST good for" src="https://github.com/user-attachments/assets/f92480ac-520d-4cba-aa8a-a63f60c0dc05" />
-
-What about searching for 11 (with the same BST)?
-
----
-
-## What's a Binary Search Tree good for?
-
-Let's say I want to check for whether the tree contains 12. How do we do that?
-
-<img width="449" height="267" alt="What's a BST good for" src="https://github.com/user-attachments/assets/f92480ac-520d-4cba-aa8a-a63f60c0dc05" />
-
-What about searching for 11 (with the same BST)?
-
-Hey, this is more efficient than searching a list!
-It's not as efficient as hashing, but it does make a pretty good set.
-And it's more useful if you care about the order of things.
-
----
-
-`sortedcontainers.SortedSet` stores elements using a Binary Search Tree
-
-(`pip install sortedcontainers`)
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-
-```python
-ss = SortedSet([3, 1, 4, 1, 5])
-print(ss)  # SortedSet([1, 3, 4, 5])
-ss.add(2)
-print(ss)  # SortedSet([1, 2, 3, 4, 5])
-```
-
-</div>
-<div>
-
-Corresponding `SortedDict`:
-```python
-sm = SortedDict({2: [1, 2, 3], 1: [0, 0, 0]})
-print(sm)  # SortedDict({1: [0, 0, 0], 2: [1, 2, 3]})
-```
-
-</div>
-</div>
-
----
-
-| `set` | `sortedcontainers.SortedSet` |
-| - | - |
-| Stored as a hash table (list of lists)​<br />Index of each element is calculated using `__hash__()` | Stored as a Binary Search Tree<br />Elements must implement Comparable protocol |
-| Constant time to look up / add / remove | Logarithmic time to look up / add / remove |
-| Use when care more about speed than order | Use when care more about order than speed |
-
----
-
-## Poll: Which are true?
-
-1. For a `SortedDict`, it is constant time to check whether it contains a key
-2. For a `SortedDict`, it is constant time to check whether it contains a value
-3. `set`s can store things which don't implement the Comparable protocol
-4. `set`s can store things which aren't hashable
-5. When we iterate over a `set`, the elements will be increasing in size
-6. When we iterate over a `SortedSet` the elements will be increasing in size
-
----
-
-Let's use recursion to search for an element in a `Tree`:
+Here is a recursive algorithm to search for an element in a `Tree`:
 
 ```python
 class Tree(Generic[T]):
@@ -368,6 +257,8 @@ tree.root.left.right = Node[str]('Kitchen')
 print('Kitchen' in tree)  # True
 print('Bathroom' in tree)  # False
 ```
+
+Let's modify it to work for trees with nodes that have any number of children, not just two.
 
 ---
 
@@ -463,6 +354,10 @@ DFS(node):
 2. If the node is a leaf, add it to the set of explored nodes
 3. If the node is `None`, do nothing
 4. If the node is `None`, add it to the set of explored nodes
+
+---
+
+# Let's look at Homework 7
 
 ---
 
