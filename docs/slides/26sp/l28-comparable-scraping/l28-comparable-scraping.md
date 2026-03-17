@@ -4,13 +4,13 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
-# Comparison and SortedSet
+# Comparison and Scraping
 ## Welcome back to CS 2100!
 ## Prof. Rasika Bhalerao
 
 ---
 
-# Comparison and SortedSet
+# Comparison and Scraping
 
 ---
 
@@ -165,7 +165,52 @@ class Bouquet:
 
 ---
 
-## Storing stuff in order
+# Scraping
+
+Let's save this webpage to our computer: https://en.wikipedia.org/wiki/Web_scraping
+
+(Webpage, Complete)
+
+And let's look at the downloaded HTML file in VSCode.
+
+It contains links to more pages, which contain links to more pages... it's a tree! (Or a graph because it has cycles)
+
+---
+
+<style scoped>
+section {
+    font-size: 20px;
+}
+</style>
+
+# Scraping webpages with BeautifulSoup
+
+Instead of reading a website yourself, you can write code to download the page and extract the data you care about
+
+```python
+import requests
+from bs4 import BeautifulSoup
+
+# 1. Fetch the webpage
+response = requests.get("https://example.com")
+
+# 2. Parse the HTML
+soup = BeautifulSoup(response.text, "html.parser")
+
+# 3. Find what you want
+title = soup.find("h1")
+links = soup.find_all("a")
+
+# 4. Use the data!
+print(title.text)
+  ▶ "Example Domain"
+print(len(links), "links found")
+  ▶ 3 links found
+```
+
+## Let's look at Homework 7 (Wikipedia Scraping)
+
+<!-- ## Storing stuff in order
 
 (You may need to `pip3.11 install sortedcontainers`)
 
@@ -210,7 +255,7 @@ The first and second child of a node are called the left and right child, respec
 3. C
 4. D
 
----
+--- -->
 
 <!-- 
 ## Poll: Which of these are Binary Search Trees?
@@ -232,7 +277,7 @@ The first and second child of a node are called the left and right child, respec
 
 --- -->
 
-## What's a Binary Search Tree good for?
+<!-- ## What's a Binary Search Tree good for?
 
 Let's say I want to check for whether the tree contains 12. How do we do that?
 
@@ -299,7 +344,7 @@ print(sm)  # SortedDict({1: [0, 0, 0], 2: [1, 2, 3]})
 3. `set`s can store things which don't implement the Comparable protocol
 4. `set`s can store things which aren't hashable
 5. When we iterate over a `set`, the elements will be increasing in size
-6. When we iterate over a `SortedSet` the elements will be increasing in size
+6. When we iterate over a `SortedSet` the elements will be increasing in size -->
 
 ---
 

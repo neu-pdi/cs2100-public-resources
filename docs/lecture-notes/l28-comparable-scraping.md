@@ -1,10 +1,10 @@
 ---
 sidebar_position: 28
 lecture_number: 28
-title: Comparison and SortedSet
+title: Comparison and Scraping
 ---
 
-# Comparison and SortedSet
+# Comparison and Scraping
 
 ### Motivating question:
 
@@ -84,7 +84,7 @@ Poll: What does the comparison protocol do in Python?
 3. It lets us define what it means for an object to be "bigger" or "smaller" than another object
 4. It lets us map each object to an int that is used as an index in a hash table
 
-## Storing stuff in order
+<!-- ## Storing stuff in order
 
 (You may need to `pip3.11 install sortedcontainers`)
 
@@ -118,7 +118,7 @@ Poll: This is a Binary Search Tree. Where should the 12 go?
 1. A
 2. B
 3. C
-4. D
+4. D -->
 
 <!-- Poll: Which of these are Binary Search Trees?
 <img width="818" height="285" alt="Which of these are BSTs" src="https://github.com/user-attachments/assets/a649123e-0bed-4234-8dd0-37588b1eeb87" />
@@ -131,7 +131,7 @@ Poll: Is this a BST?
 1. Yes
 2. No -->
 
-### SortedSet
+<!-- ### SortedSet
 
 What's a Binary Search Tree good for?
 
@@ -156,4 +156,4 @@ Poll: Which are true?
 3. `set`s can store things which don't implement the Comparable protocol
 4. `set`s can store things which aren't hashable
 5. When we iterate over a `set`, the elements will be increasing in size
-6. When we iterate over a `SortedSet` the elements will be increasing in size
+6. When we iterate over a `SortedSet` the elements will be increasing in size -->
