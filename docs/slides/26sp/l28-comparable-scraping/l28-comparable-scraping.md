@@ -209,6 +209,7 @@ print(len(links), "links found")
 ```
 
 ## Let's look at Homework 7 (Wikipedia Scraping)
+## And then start Lab 7 Question 1
 
 <!-- ## Storing stuff in order
 
