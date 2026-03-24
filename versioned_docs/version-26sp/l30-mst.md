@@ -6,7 +6,7 @@ title: Minimum Spanning Trees
 
 # Minimum Spanning Trees
 
-Slides: https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/pages/Minimum%20Spanning%20Trees.pdf
+Slides: https://github.com/neu-pdi/cs2100-public-resources/blob/main/static/pdfs/26sp/minimum-spanning-trees.pdf
 
 ## Review union-find
 (See slides)
