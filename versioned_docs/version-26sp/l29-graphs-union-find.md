@@ -67,8 +67,13 @@ Poll: Is our social media graph above directed or undirected?
 
 ## Union-Find
 
-Union Find slides: https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/pages/Union%20Find.pdf (Polls below)
-<embed src="https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/pages/Union%20Find.pdf" type="application/pdf" width="100%" height="600px" title="Union Find Slides" />
+Union Find slides: https://github.com/neu-pdi/cs2100-public-resources/blob/main/static/pdfs/26sp/union-find.pdf (Polls below)
+<embed
+  src="/pdfs/26sp/union-find.pdf"
+  type="application/pdf"
+  width="100%"
+  height="600px"
+/>
 
 Poll: How might we implement find(node)?
 1. As long as node has no children, re-point the node variable to its parent. When node has children, return it
