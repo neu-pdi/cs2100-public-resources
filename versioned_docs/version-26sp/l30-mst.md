@@ -11,7 +11,7 @@ Slides: https://github.com/neu-pdi/cs2100-public-resources/blob/main/static/pdfs
 ## Review union-find
 (See slides)
 
-## Priority Queues
+<!-- ## Priority Queues
 
 New data structure: Priority Queue
 ```python
@@ -52,7 +52,7 @@ print(heapq.heappop(priority_queue))
 ```
 1. 3
 2. 5
-3. 6
+3. 6 -->
 
 ## Minimum Spanning Trees
 
