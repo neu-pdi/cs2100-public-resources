@@ -10,10 +10,6 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
-# Comparison and Scraping
-
----
-
 ## Motivating question:
 
 Which string is bigger: "abacus" or "cat"
@@ -99,7 +95,7 @@ print(sorted(numbers))
 
 ---
 
-#### Exercise: Let's write a class for a Plant. Plant are bigger if they get more sunlight.
+#### Exercise: Let's write a class for a Plant. Plants are bigger if they get more sunlight.
 ```python
 class Plant:
     def __init__(self) -> None:
@@ -209,7 +205,7 @@ print(len(links), "links found")
 ```
 
 ## Let's look at Homework 7 (Wikipedia Scraping)
-## And then start Lab 7 Question 1
+## And then start Lab 7
 
 <!-- ## Storing stuff in order
 
