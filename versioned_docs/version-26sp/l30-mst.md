@@ -6,9 +6,9 @@ title: Minimum Spanning Trees
 
 # Minimum Spanning Trees
 
-Slides: https://github.com/neu-pdi/cs2100-public-resources/blob/main/static/pdfs/26sp/minimum-spanning-trees.pdf
+Slides: https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/slides/26sp/l30-mst/l30-mst.pdf
 
-## Review union-find
+<!-- ## Review union-find
 (See slides)
 
 <!-- ## Priority Queues
@@ -88,4 +88,4 @@ Poll: Which of the following are true?
 2. To determine whether adding an edge would cause a cycle, we can use union-find to see if they are already in the same tree
 3. We complete Kruskal's Algorithm when each node has at least one edge connected to it in the tree
 4. The weighted graph edges chosen for the MST are different from the directed parent edges used for union-fin
-
+ -->
