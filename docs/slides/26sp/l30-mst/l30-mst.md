@@ -224,7 +224,7 @@ This algorithm is greedy and optimal for finding MSTs.
 
 1. Store the edges in a sorted list, and remove the first item one by one
 2. Store the edges in a regular (non-sorted) list, and search for and remove the smallest item one by one
-3. Store the edges in a set, and remove items one by one
+3. Store the edges in a set, and remove the first item one by one
 4. Store the edges in a hash table, and remove the first item one by one
 
 ---
