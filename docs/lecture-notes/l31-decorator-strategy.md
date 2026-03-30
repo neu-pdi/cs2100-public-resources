@@ -215,7 +215,7 @@ We have already seen some decorators:
 
 In this lecture, we will find out how these decorators were implemented, and how we can create our own decorators.
 
-## Functions are objects that can be mutated
+## Functions are objects that can be stored in mutable variables
 
 As we already know, in Python, [functions are objects](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/l15-design-data1#functions-are-objects).
 We can reference them using variables, store them in lists, and pass them as arguments to other functions:
@@ -238,7 +238,7 @@ print(apply_functions(5))  # [10, 15]
 
 ## Creating a function decorator
 
-A function decorator is a way to mutate a function to modify what it does.
+A function decorator is a way to mutate a function's variable to modify what it does.
 
 For example, let's create a decorator called `@time_calls` that modifies a given function to print the time it took to run it like this:
 ```python
