@@ -25,3 +25,9 @@ It is recommended to review this table:
 - Implementing the Comparable protocol
 - Checking for inconsistencies between implemented Comparable methods
 - Rules for using `<`, `>`, etc.
+
+## Practice Quiz 4
+
+[Practice Quiz 4](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26sp/practice-quiz-4.pdf)
+
+[Practice Quiz 4 Solutions](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26sp/practice-quiz-4-with-solutions.pdf)
