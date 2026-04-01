@@ -186,9 +186,9 @@ section {
    
 ---
 
-## Caching / memoization: a common use of decorators
+## Caching: a common use of decorators
 
-Memoization / caching: temporarily storing values that are recalculated often (so they only need to be calculated once).
+Caching: temporarily storing values that are recalculated often (so they only need to be calculated once).
 
 ```python
 def fibonacci(n: int) -> int:
@@ -201,7 +201,7 @@ In order to calculate the 5th Fibonacci number, we need to calculate the 4th and
 And to calculate the 4th number, we need to calculate the 3rd and 2nd ones.
 And to calculate the 3rd number, we need to calculate the 2nd and 1st ones...
 
-There are a lot of recalculated numbers here. Let's memoize.
+There are a lot of recalculated numbers here. Let's store and re-use solutions.
 
 ---
 
@@ -210,17 +210,17 @@ Let's store each Fibonacci number _the first time it is calculated_, so that eac
 ```python
 R = TypeVar('R')
 
-def memoize(func: Callable[..., R]) -> Callable[..., R]:
-    cache: dict[tuple[Any, ...], R] = {}
+def cache(func: Callable[..., R]) -> Callable[..., R]:
+    storage: dict[tuple[Any, ...], R] = {}
     def wrapper(*args: Any) -> R:
-        if args in cache:
-            return cache[args]
+        if args in storage:
+            return storage[args]
         result = func(*args)
-        cache[args] = result
+        storage[args] = result
         return result
     return wrapper
 
-@memoize
+@cache
 def fibonacci(n: int) -> int:
     if n < 2:
         return n
@@ -231,7 +231,7 @@ print(fibonacci(10))
 
 ---
 
-## Poll: Can we re-use the `@memoize` decorator to perform memoization for other functions in the same file?
+## Poll: Can we re-use the `@cache` decorator to perform caching for other functions in the same file?
 
 1. Yes
 2. Yes, but that other function would share the "cache" of stored values, which are specific to Fibonacci

@@ -294,9 +294,9 @@ print(square_root(9))
 3. Modifies the function to run it twice
 4. Nothing
 
-## A common use of decorators: caching / memoization
+## A common use of decorators: caching
 
-Memoization, or caching, is temporarily storing values that are recalculated often (so they only need to be calculated once).
+Caching is temporarily storing values that are recalculated often (so they only need to be calculated once).
 For example, consider the function where we find the nth Fibonacci number:
 ```python
 def fibonacci(n: int) -> int:
@@ -315,17 +315,17 @@ So, let's write some code that stores each Fibonacci number _the first time it i
 ```python
 R = TypeVar('R')
 
-def memoize(func: Callable[..., R]) -> Callable[..., R]:
-    cache: dict[tuple[Any, ...], R] = {}
+def cache(func: Callable[..., R]) -> Callable[..., R]:
+    storage: dict[tuple[Any, ...], R] = {}
     def wrapper(*args: Any) -> R:
-        if args in cache:
-            return cache[args]
+        if args in storage:
+            return storage[args]
         result = func(*args)
-        cache[args] = result
+        storage[args] = result
         return result
     return wrapper
 
-@memoize
+@cache
 def fibonacci(n: int) -> int:
     if n < 2:
         return n
@@ -334,7 +334,7 @@ def fibonacci(n: int) -> int:
 print(fibonacci(10))
 ```
 
-Poll: Can we re-use the `@memoize` decorator to perform memoization for other functions in the same file?
+Poll: Can we re-use the `@cache` decorator to perform caching for other functions in the same file?
 1. Yes
 2. Yes, but that other function would share the "cache" of stored values, which are specific to Fibonacci
 3. No, it would not run
