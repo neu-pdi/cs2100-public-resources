@@ -239,6 +239,12 @@ print(fibonacci(10))
 
 Easiest way to test this: create a duplicate method called `fibonacci2()`, decorate it, call it after the regular `fibonacci()`, and step through it in the debugger.
 
+---
+
+# [Let's cache an LLM](https://colab.research.google.com/drive/1mFWNiRTlctAUOQPZs_CdvMW_OF2Rgkzh?usp=sharing)
+
+---
+
 <!-- ---
 
 <div class="grid grid-cols-2 gap-4">
