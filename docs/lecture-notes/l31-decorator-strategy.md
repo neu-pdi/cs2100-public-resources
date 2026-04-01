@@ -341,6 +341,14 @@ Poll: Can we re-use the `@cache` decorator to perform caching for other function
 
 Easiest way to test this: create a duplicate method called `fibonacci2()`, decorate it, call it after the regular `fibonacci()`, and step through it in the debugger.
 
+## Example where caching helps a language model (BERT) run faster
+
+This is a Python Notebook in Google Colab. Each cell block needs to be run individually.
+Code is executed in the order that the cell blocks are executed, so it is possible for something
+lower down in the file to be run before something above it in the file.
+
+https://colab.research.google.com/drive/1mFWNiRTlctAUOQPZs_CdvMW_OF2Rgkzh?usp=sharing
+
 <!-- ## Preserving function metadata
 
 Functions have metadata such as their name and docstring:
