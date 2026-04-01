@@ -208,6 +208,14 @@ Hint: the rest will need to be prevented by raising errors in the class that imp
 
 ---
 
+## Poll: Let's look at Homework 8. Which part is the model?
+
+## Poll: Let's look at Homework 8. Which part is the view?
+
+## Poll: Let's look at Homework 8. Which part acts like a controller?
+
+---
+
 # Poll:
 
 # 1. What is your main takeaway from today?

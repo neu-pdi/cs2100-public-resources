@@ -88,7 +88,7 @@ We will find out how these decorators were implemented / how to create our own d
 
 ---
 
-## Functions are objects that can be mutated
+## Functions are objects that can be stored in mutable variables
 
 We already knew functions are objects:
 
@@ -113,7 +113,7 @@ A function decorator is a way to "mutate" a function to modify what it does.
 
 ---
 
-## Function decorators "mutate" functions by wrapping them
+## Function decorators "mutate" functions by wrapping them in other functions
 
 Example: `@time_calls` modifies a given function to print the time it took to run it:
 
