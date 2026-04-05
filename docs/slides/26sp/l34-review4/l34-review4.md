@@ -21,7 +21,7 @@ section {
 
 # Revisited topics
 
-- Inheritance and bstract methods
+- Inheritance and abstract methods
   - `@abstractmethod`
   - Rules for instantiation
 
@@ -73,6 +73,9 @@ section {
 - Comparable protocol
 - Checking for inconsistencies
 - Rules for using `<`, `>`, etc.
+
+</div>
+<div>
 
 ## Decorator, Strategy, Observer, and Data Pull Design Patterns
 
@@ -130,6 +133,15 @@ print(''.join(letter for letter in Sarcasm('hi rasika')))
 
 ---
 
+## Poll: What does the `__iter__()` method return?
+
+1. A collection (like a `list` or `set`)
+2. An `Iterator`
+3. An `Iterable`
+4. Each individual element (the next one, each time it's called)
+
+---
+
 # Comparable
 
 - `__eq__(self, other: object) -> bool`: equals `==`
@@ -144,6 +156,14 @@ print(''.join(letter for letter in Sarcasm('hi rasika')))
 
 `a < b` calls `a.__lt__(b)` or `not a.__ge__(b)` or `not (a.__gt__(b) or a == b)`
 
+---
+
+## Poll: What does the `__gt__()` method return?
+
+1. `True` if `self` is "greater than" `other`
+2. `True` if `self` should come after `other` in a sorted list
+3. `False` if `other` is "equal to" `other`
+4. `NotImplemented` if `other` is not the type of the class we're writing inside
 ---
 
 ## Poll: How can we check for inconsistencies between comparison methods?
