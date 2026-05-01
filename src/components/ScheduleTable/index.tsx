@@ -58,7 +58,7 @@ export default function ScheduleTable({ version }: { version: string }) {
     // Find the alphabetically latest available version folder
     const findLatestVersion = () => {
         // Try to dynamically find available version folders in src/pages
-        const knownVersions = ['25fa', '26sp']; // Add known versions here
+        const knownVersions = ['25fa', '26sp', '26su']; // Add known versions here
         // Sort alphabetically and return the last one
         knownVersions.sort();
         return knownVersions[knownVersions.length - 1];

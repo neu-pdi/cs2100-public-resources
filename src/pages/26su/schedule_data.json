@@ -1,0 +1,106 @@
+{
+"startDate": "2026-05-06",
+"addDrop": "2026-05-12",
+"holidays": [
+    "2026-05-25"
+],
+"homeworkAssignments": [
+    {
+    "date": "2026-05-13",
+    "title": "HW1: Algorithms as Decision Makers",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw1"
+    },
+    {
+    "date": "2026-05-20",
+    "title": "HW2: 311 Service Request Data Loader",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw2"
+    },
+    {
+    "date": "2026-05-27",
+    "title": "HW3: 311 Service Request Sorting and Analysis",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw3"
+    },
+    {
+    "date": "2026-06-01",
+    "title": "HW4: News API",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw4"
+    },
+    {
+    "date": "2026-06-04",
+    "title": "HW5: Fingerprint login",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw5"
+    },
+    {
+    "date": "2026-06-08",
+    "title": "HW6: FeedCurator",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw6-real"
+    },
+    {
+    "date": "2026-06-11",
+    "title": "HW7: Wikipedia Parser",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw7"
+    },
+    {
+    "date": "2026-06-18",
+    "title": "HW8: Public Transportation Map",
+    "link": "https://github.com/neu-cs2100/sp26-handout-hw8"
+    }
+],
+"labs": [
+    {
+        "date": "2026-05-07",
+        "title": "Lab 0: Setup",
+        "link": "https://github.com/neu-cs2100/sp26-handout-lab0"
+    },
+    {
+        "date": "2026-05-12",
+        "title": "Lab 1: HW1 Prep and Ethics",
+        "link": "https://github.com/neu-cs2100/sp26-handout-lab1"
+    },
+    {
+        "date": "2026-05-19",
+        "title": "Lab 2: HW2 Prep and Ethics",
+        "link": "https://github.com/neu-cs2100/sp26-handout-lab2"
+    },
+    {
+        "date": "2026-05-21",
+        "title": "Lab 3: HW3 Prep and Ethics",
+        "link": "https://github.com/neu-cs2100/sp26-handout-lab3"
+    },
+    {
+        "date": "2026-05-26",
+        "title": "Lab 4: HW4 Prep and Ethics",
+        "link": "https://github.com/neu-cs2100/sp26-handout-lab4"
+    },
+    {
+        "date": "2026-05-28",
+        "title": "Lab 5: HW5 Prep and Ethics",
+        "link": "https://github.com/neu-cs2100/sp26-handout-lab5"
+    },
+    {
+        "date": "2026-06-02",
+        "title": "Lab 6: HW6 Prep and Ethics",
+        "link": "https://github.com/neu-cs2100/sp26-handout-lab6-real"
+    },
+    {
+        "date": "2026-06-04",
+        "title": "Lab 7: HW7 Prep and Ethics",
+        "link": "https://github.com/neu-cs2100/sp26-handout-lab7"
+    },
+    {
+        "date": "2026-06-16",
+        "title": "Lab 8: HW8 Prep and Ethics",
+        "link": "https://github.com/neu-cs2100/sp26-handout-lab8"
+    }
+],
+"codewalks": [
+    {
+        "date": "2026-05-14",
+        "title": "Codewalk 1: HW1"
+    },
+    {
+        "date": "2026-06-09",
+        "title": "Codewalk 2: HW4, HW5, HW6, or HW7"
+    }
+]
+}
