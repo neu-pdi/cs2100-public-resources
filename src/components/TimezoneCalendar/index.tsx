@@ -29,7 +29,7 @@ export default function TimezoneCalendar({ calendarSrc, defaultTimezone = 'Ameri
   };
 
   const encodedTimezone = encodeURIComponent(timezone);
-  const calendarUrl = `https://calendar.google.com/calendar/embed?src=${calendarSrc}&ctz=${encodedTimezone}`;
+  const calendarUrl = `https://calendar.google.com/calendar/embed?src=c_ae735e1865c33d82d263141f7f6710d07649557af2b85c7d880964c398911889@group.calendar.google.com&ctz=${encodedTimezone}`;
 
   return (
     <div className={styles.timezoneCalendarContainer}>
