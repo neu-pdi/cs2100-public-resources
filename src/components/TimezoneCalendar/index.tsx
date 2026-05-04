@@ -21,7 +21,7 @@ const timezones = [
   { value: 'Australia/Sydney', label: 'Australian Eastern Time (AET)' },
 ];
 
-export default function TimezoneCalendar({ calendarSrc, defaultTimezone = 'America/Los_Angeles' }: TimezoneCalendarProps) {
+export default function TimezoneCalendar({ calendarSrc, defaultTimezone = 'America/New_York' }: TimezoneCalendarProps) {
   const [timezone, setTimezone] = useState(defaultTimezone);
 
   const handleTimezoneChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
