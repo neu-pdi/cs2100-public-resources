@@ -31,7 +31,7 @@ export default function Hello() {
                         </Alert.Description>
                     </Alert.Content>
                 </Alert.Root>
-                <Heading size='lg'>Schedule</Heading>
+                {/* <Heading size='lg'>Schedule</Heading> */}
                 {/* <ScheduleTable version={pluginData.versions[0].name} /> */}
                 <Heading size='lg'>Lectures</Heading>
                 <LectureSummary version={pluginData.versions[0].name} />
