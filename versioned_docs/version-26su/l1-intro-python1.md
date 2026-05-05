@@ -25,9 +25,9 @@ Poll: What motivates you? (Choose your top 3)
 These in-class exercises will be graded on completion, not correctness. (And there was no "correct answer" for that poll.)
 
 Course structure:
-- 3 lectures and 1 lab per week​
-- ~ weekly homework assignments​
-- Four quizzes and a final exam
+- 4 lectures and 2 labs per week​
+- ~ bi-weekly homework assignments​
+- Five quizzes
 - Office hours
 - Discord
 
