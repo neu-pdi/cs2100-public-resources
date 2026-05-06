@@ -39,8 +39,8 @@ export default function TopicsTable() {
                         <th>Quiz 2</th>
                         <th>Quiz 3</th>
                         <th>Quiz 4</th>
-                        <th>Quiz 5 (30 minutes)</th>
-                        <th>Final Exam</th>
+                        <th>Quiz 5</th>
+                      {/*  <th>Final Exam</th> */}
                     </tr>
                 </thead>
                 <tbody>
@@ -52,7 +52,7 @@ export default function TopicsTable() {
                             <td>{row.quiz3 && <span className="checkmark">✓</span>}</td>
                             <td>{row.quiz4 && <span className="checkmark">✓</span>}</td>
                             <td>{row.quiz5 && <span className="checkmark">✓</span>}</td>
-                            <td>{row.finalExam && <span className="checkmark">✓</span>}</td>
+                          {/*  <td>{row.finalExam && <span className="checkmark">✓</span>}</td> */}
                         </tr>
                     ))}
                 </tbody>
