@@ -43,7 +43,7 @@ Students who have not taken CS 2000 will need a passing knowledge of the followi
 The textbook "Python 3 Object Oriented Programming: Harness the Power of Python 3 Objects" (third edition) by Dusty Phillips covers most of the object-oriented concepts relevant to this course, though we will not follow it exactly.
 
 ## Course Structure
-There will be four in-person **lectures** and two **labs** per week. During the lectures (CS 2100) we will go over new content using lecture, live coding, discussion, and individual exercises. The lab (CS 2101) will include individual exercises and an opportunity to begin homework with guidance and feedback from instructional staff. Lab will be led by TAs.
+There will be four in-person **lectures** and two **labs** per week. During the lectures (CS 2100) we will go over new content using lecture, live coding, discussion, and individual exercises. The lab (CS 2101) will include individual exercises and an opportunity to begin homework with guidance and feedback from instructional staff. Lab will be led by TAs and exercises should be submitted to pawtograder by the end of the lab period.
 
 Students should register for the CS 2101 lab section.
 
@@ -53,7 +53,7 @@ There will also be **eight homework assignments**. The purpose of homework is to
 There will be **three codewalks**: one for HW1, one for HW2 or HW3, and one for any of the remaining homework assignments (except the assignment due in the last week). Students will sign up for one-on-one codewalks where a TA asks questions about the student's solution code for a homework assignment. Students should sign up for a time slot that happens after they have finished the respective homework assignment. Codewalk questions are available to students in advance through Pawtograder.
 -->
 
-There will also be **five exams** over the semester: four quizzes during lectures, and a final exam.
+There will also be **five quizzes** over the semester.
 
 ## Communication
 
@@ -74,7 +74,7 @@ Students can also meet with the instructor outside of office hours by appointmen
 
 Homework assignments will be due at 9PM Eastern time.
 
-There will be a 24-hour grace period on Pawtograder, so submissions will be accepted 24 hours after the due date. No submissions will be accepted after that (without officially approved accommodations).
+Students may use a late token for a 24-hour grace period on Pawtograder, so submissions will be accepted 24 hours after the due date. To use a late token, you must request it **before the due date**. No submissions will be accepted after that (without officially approved accommodations).
 
 Autograder scores will not be changed after the assignment deadline. Students can submit an unlimited number of times before each assignment deadline.
 
@@ -99,7 +99,7 @@ All exam topics (from quizzes or the final exam) will be weighted equally in the
 
 The highest row in which a student satisfies all columns will be their grade (plus a bump for lectures -- see below). If no rows are completely satisfied, the student will not pass the course.
 
-| Grade | Homework | Labs | Codewalks | Exam Topics (Quizzes + Final Exam) |
+| Grade | Homework | Labs | Codewalks | Quiz Topics |
 | - | - | - | - | - |
 | A | 80% or higher | 80% or higher | 80% or higher| 93% or higher |
 | A- | 76% or higher | 76% or higher | 76% or higher | 90% or higher |
@@ -113,7 +113,7 @@ The highest row in which a student satisfies all columns will be their grade (pl
 | D | 50% or higher | 50% or higher | 50% or higher | 63% or higher |
 | D- | 46% or higher | 46% or higher | 46% or higher | 60% or higher |
 
-E.g., to get an A, you must score 80% or higher on homework, labs, and codewalks, AND score 93% or higher on exam topics. If you have the 80% homework / lab / codewalk scores, but your exam topic score is 91%, you will receive an A-.
+E.g., to earn an A, you must score 80% or higher on homework, labs, and codewalks, AND score 93% or higher on exam topics. If you have the 80% homework / lab / codewalk scores, but your exam topic score is 91%, you will earn an A-.
 
 If a student does not meet any rows in the table, they will receive an F.
 
@@ -133,9 +133,9 @@ Specifically:
 - Copying material from another person is not allowed.
 - Additionally, sharing solutions in forums (e.g., posting to public questions, posting code online, etc) constitutes an academic integrity violation, as it may make it harder for other students to do work on their own, harming their own learning.
 - Collaboration is not allowed on exams (quizzes or the final exam). Any sharing or receiving information about the content of exams is an academic integrity violation, and may result in failing the class.
-- Attempting to access any electronics during quizzes is an academic integrity violation and will result in a 0 on the assessment. This includes having a phone in your lap, no matter what is accessed on the phone.
+- Attempting to access any electronics during quizzes is an academic integrity violation and will result in a 0 on the assessment. For instance, having a phone on your lap during a quiz, no matter what is accessed on the phone, is an academic integrity violation.
 
-You _must_ _write_ all code yourself. Even if you discuss solutions, or approaches, with others, do the actual typing on your own! And avoid playing games or trying to find loopholes -- i.e., do not merely type what someone says, or type what you see on anothers screen. While we do not consider collaboration a violation, we still encourage following these recommendations-- relying on others for your solutions may result in you not learning the material, and in this class, not learning the material will result in not being able to pass the exams. Even with perfect homework scores, failing to pass sufficient exam topics will result in a failing grade in the course, so take homework for what it is intended: extensive opportunity to practice the skills we are teaching, paired with high quality feedback about the solution you came up with.
+You _must_ _write_ all code you turn in yourself. Even if you discuss solutions, or approaches, with others, do the actual typing on your own! And avoid playing games or trying to find loopholes -- i.e., do not merely type what someone says, or type what you see on anothers screen. While we do not consider collaboration a violation, you should still write your own code-- relying on others for your solutions may result in you not learning the material, and in this class, not learning the material will result in not being able to pass the exams. Even with perfect homework scores, failing to pass sufficient exam topics will result in a failing grade in the course, so take homework for what it is intended: extensive opportunity to practice the skills we are teaching, paired with high quality feedback about the solution you came up with.
 
 The minimum penalty for an academic integrity violation is a zero on the assignment and a report to the [Office of Student Conduct and Conflict Resolution (OSCCR)](https://osccr.sites.northeastern.edu/). Penalties are increased if there are aggravating factors, such as stealing another student's work, or lying about cheating. Also, see the [Official University Academic Integrity Policy](https://osccr.sites.northeastern.edu/academic-integrity-policy/).
 
