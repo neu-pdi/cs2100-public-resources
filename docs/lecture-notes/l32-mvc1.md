@@ -6,6 +6,8 @@ title: The Model-View-Controller Paradigm
 
 # The Model-View-Controller Paradigm
 
+The contents of this lecture are largely inspired by [Prof. Amit Shesh]([url](https://www.ccs.neu.edu/home/ashesh/)).
+
 ## Separating concerns between the Model, View, and Controller
 
 Some programs are large and complicated. We like to organize our code by separating it into "categories."
