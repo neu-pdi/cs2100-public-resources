@@ -6,7 +6,7 @@ title: The Model-View-Controller Paradigm
 
 # The Model-View-Controller Paradigm
 
-The contents of this lecture are largely inspired by [Prof. Amit Shesh]([url](https://www.ccs.neu.edu/home/ashesh/)).
+The contents of this lecture are largely inspired by [Prof. Amit Shesh](https://www.ccs.neu.edu/home/ashesh/).
 
 ## Separating concerns between the Model, View, and Controller
 
