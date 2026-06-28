@@ -60,13 +60,12 @@ There will also be **five quizzes** over the semester.
 1. [This website](https://neu-pdi.github.io/cs2100-public-resources/) is your primary source for the [schedule](https://neu-pdi.github.io/cs2100-public-resources/schedule), course policies, and lecture notes.
 2. [Pawtograder](https://app.pawtograder.com/) is our course grading platform. This is where you find assignments, and where submitted assignments will appear (after you have pushed them to GitHub) with feedback on them. It will also have all other course-related grades in its gradebook. **Our course-wide discussion board will be on Discord, where course-wide announcements will also be posted.**
 3. [Canvas](https://northeastern.instructure.com/) will contain lecture-section-specific things like lecture participation data and lecture-specific announcements.
-4. [Discord](https://discord.gg/qxQ263Urm) is where online office hours will be held. (In-person office hours will be held at locations announced in [the office hours schedule](https://neu-pdi.github.io/cs2100-public-resources/staff).)
 
 ## People
 
 | Instructor | Campus | Office Hours |
 | -- | -- | -- |
-| [Prof. Leena Razzaq](https://www.khoury.northeastern.edu/people/leena-razzaq/) | Boston | Monday 2-3:30pm in Meserve 329 |
+| Prof. Rose Sloan | Boston | Wednesday 2-4 Meserve 306B |
 
 Students can also meet with the instructor outside of office hours by appointment.
 
@@ -85,7 +84,7 @@ If you have a manually-graded assignment on Pawtograder that you believe was gra
 
 ## Office Hours
 
-We hold extensive office hours -- both online, via [Discord](https://discord.gg/87AjQmDh/) and in person. We encourage students to use office hours for any questions you have about course content, not limited to: questions about lecture material, related online resources, any questions about assignments, etc. The schedule for these are available on the Office Hours page.
+We hold office hours in person, or online by appointment. We encourage students to use office hours for any questions you have about course content, not limited to: questions about lecture material, related online resources, any questions about assignments, etc. The schedule for these are available on the Office Hours page.
 
 ## Grading
 
