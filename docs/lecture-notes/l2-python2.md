@@ -117,26 +117,23 @@ my_decision: bool = True
   - `not my_decision​`
 - Comparisons: `<`, `<=`, `>`, `>=`, `==`, `!=`
   - `4 < 6`
-- And (both must be true to result in true)​
+- Conjunction uses `and`: both conditions must evaluate to true, for the full expression (conjunction) to result in true
   - `my_decision and your_decision`
-- Or (true if either/both are true)​
+- Disjunction uses `or`: if either/both conditions are true, the full expression (disjunction) results in true
   - `my_decision or your_decision`
 
 ### Order of operations
 
 - Math order of operations:
-  2. (Parentheses)
-  3. Exponents
-    - `4**2 * 3`
-      `>> 48`
-  4. Multiplication/Division (left to right)
-  5. Addition/Subtraction (left to right)
+  1. (Parentheses)
+  2. Exponents
+    - `4**2 * 3` evaluates to: `48`
+  3. Multiplication/Division (left to right)
+  4. Addition/Subtraction (left to right)
 - Math happens before comparison operations
-  - `7 < 2 + 8`
-    `>> True`
+  - `7 < 2 + 8` evaluates to: `True`
 - Comparison happens before boolean operations​
-  - `3 < 4 and 5 < 7`
-    `True`
+  - `3 < 4 and 5 < 7` evaluates to: `True`
 
 ## Control structures
 
