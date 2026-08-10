@@ -176,7 +176,7 @@ grades: List[int] = [5, None, 0]
 
 ---
 
-## Use `Optional` to specify that a type might be `None`
+## Use `Optional` to specify that `None` is possible
 
 ```python
 from typing import Optional
@@ -187,6 +187,9 @@ def get_number_or_None(hopefully_a_number: str) -> Optional[int]:
     except ValueError:
         return None
 ```
+
+In the function above, the result is either the `int` value converted from the string input, 
+or `None` because the string input does not represent an integer.
 
 ---
 
