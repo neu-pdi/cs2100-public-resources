@@ -1,0 +1,96 @@
+{
+"startDate": "2026-09-07",
+"addDrop": "2026-09-22",
+"holidays": [
+    "2026-09-07",
+    "2026-10-12",
+    "2026-11-11",
+    "2026-11-25",
+    "2026-11-26"
+],
+"homeworkAssignments": [
+    {
+    "date": "2026-09-16",
+    "title": "Homework 1",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw1"
+    },
+    {
+    "date": "2026-09-23",
+    "title": "Homework 2",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw2"
+    },
+    {
+    "date": "2026-09-30",
+    "title": "Homework 3",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw3"
+    },
+    {
+    "date": "2026-10-07",
+    "title": "Homework 4",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw4"
+    },
+    {
+    "date": "2026-10-14",
+    "title": "Homework 5",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw5"
+    },
+    {
+    "date": "2026-10-21",
+    "title": "Homework 6",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw6"
+    },
+    {
+    "date": "2026-10-28",
+    "title": "Homework 7",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw7"
+    },
+    {
+    "date": "2026-11-04",
+    "title": "Homework 8",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw8"
+    },
+    {
+    "date": "2026-11-12",
+    "title": "Homework 9",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw9"
+    },
+    {
+    "date": "2026-11-18",
+    "title": "Homework 10",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw10"
+    },
+    {
+    "date": "2026-12-02",
+    "title": "Homework 11",
+    "link": "https://github.com/neu-cs2100/fa26-handout-hw11"
+    }
+],
+"labs": [
+],
+"codewalks": [
+    {
+        "date": "2026-09-24",
+        "title": "Project Check-in #1"
+    },
+    {
+        "date": "2026-10-15",
+        "title": "Project Check-in #2"
+    },
+    {
+        "date": "2026-10-29",
+        "title": "Project Check-in #3"
+    },
+    {
+        "date": "2026-11-12",
+        "title": "Project Check-in #4"
+    },
+    {
+        "date": "2026-11-23",
+        "title": "Project Check-in #5"
+    },
+    {
+        "date": "2026-12-10",
+        "title": "Project Check-in #6"
+    }
+]
+}

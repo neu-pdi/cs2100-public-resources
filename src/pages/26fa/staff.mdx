@@ -1,0 +1,20 @@
+---
+sidebar_label: 'Office Hours and Course Staff'
+sidebar_position: 5
+---
+
+import StaffTable from '@site/src/components/StaffTable';
+import TimezoneCalendar from '@site/src/components/TimezoneCalendar';
+
+export const semester = new URL(import.meta.url).pathname.split('/').slice(-2)[0];
+
+# Office Hours
+
+Professors' office hours are listed on the syllabus.
+
+Online TA office hours are held on Zoom according to the schedule below:
+
+<TimezoneCalendar calendarSrc="c_fb77fab2d00f9637c3abb80c3f6d4b8de213dc3bc08ba26f960a4f192c47ad01%40group.calendar.google.com" defaultTimezone="America/Los_Angeles" />
+
+
+<StaffTable staffDataPath={semester} />
