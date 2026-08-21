@@ -613,10 +613,6 @@ export default function ScheduleTable({ version }: { version: string }) {
                             </tr>
                         );
                     })}
-                    <tr>
-                        <td>16</td>
-                        <td colSpan={4}>Final Exam (date/time TBD)</td>
-                    </tr>
                 </tbody>
             </table>
         </Box>

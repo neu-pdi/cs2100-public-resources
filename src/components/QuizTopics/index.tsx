@@ -9,24 +9,21 @@ interface TopicCoverage {
     quiz3?: boolean;
     quiz4?: boolean;
     quiz5?: boolean;
-    finalExam?: boolean;
 }
 
 export default function TopicsTable() {
     const topics: TopicCoverage[] = [
-        { topic: "Functions and documentation", quiz1: true, quiz2: true, finalExam: true },
-        { topic: "Unit testing", quiz1: true, quiz3: true, finalExam: true },
-        { topic: "Git", quiz1: true, quiz2: true, finalExam: true },
-        { topic: "Classes: constructors, methods, and attributes", quiz2: true, quiz3: true, finalExam: true },
-        { topic: "Using objects", quiz2: true, quiz3: true, finalExam: true },
-        { topic: "Stakeholder-value matrices", quiz2: true, quiz4: true, finalExam: true },
-        { topic: "Lists, sets, and dictionaries", quiz2: true, quiz3: true, finalExam: true },
-        { topic: "Correlation", quiz2: true, quiz4: true, finalExam: true },
-        { topic: "Properties", quiz3: true, quiz4: true, finalExam: true },
-        { topic: "Inheritance and abstract methods", quiz3: true, quiz4: true, finalExam: true },
-        { topic: "Coupling / cohesion / encapsulation", quiz3: true, quiz4: true, finalExam: true },
-        { topic: "Iterator and Comparable", quiz4: true, quiz5: true, finalExam: true },
-        { topic: "Decorator / Strategy / Observer / Data Pull", quiz4: true, quiz5: true, finalExam: true },
+        { topic: "Functions and documentation", quiz1: true, quiz2: true },
+        { topic: "Unit testing", quiz1: true, quiz3: true },
+        { topic: "Git", quiz1: true, quiz2: true },
+        { topic: "Classes: constructors, methods, and attributes", quiz2: true, quiz3: true },
+        { topic: "Aliasing and equality", quiz2: true, quiz3: true },
+        { topic: "Stakeholder-value matrices", quiz2: true, quiz4: true },
+        { topic: "Mean and variance", quiz3: true, quiz4: true },
+        { topic: "Lists, sets, and dictionaries", quiz3: true, quiz4: true },
+        { topic: "Properties", quiz4: true, quiz5: true },
+        { topic: "Inheritance and abstract methods", quiz4: true, quiz5: true },
+        { topic: "Iterator and Comparable", quiz4: true, quiz5: true },
     ];
 
     return (

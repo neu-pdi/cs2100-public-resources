@@ -1,10 +1,10 @@
 ---
 sidebar_position: 3
 lecture_number: 3
-title: More Programming in Python
+title: Python Control Structures
 ---
 
-# More Programming in Python
+# Python Control Structures
 
 ## Mutation testing: how we grade your tests
 

@@ -1,10 +1,10 @@
 ---
 sidebar_position: 2
 lecture_number: 2
-title: Programming in Python
+title: Functions, Documentation, Pytest, and Data Types
 ---
 
-# Programming in Python
+# Functions, Documentation, Pytest, and Data Types
 
 Poll: How can I swap the values of `x: int` and `y: int`?
 
