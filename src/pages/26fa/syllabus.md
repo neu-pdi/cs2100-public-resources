@@ -56,7 +56,7 @@ There will also be **five quizzes** over the semester. There will not be a final
 ## Communication
 
 1. [This website](https://neu-pdi.github.io/cs2100-public-resources/) is your primary source for the [schedule](https://neu-pdi.github.io/cs2100-public-resources/schedule), course policies, and lecture notes.
-2. [Pawtograder](https://app.pawtograder.com/) is our course grading platform. This is where you find assignments, and where submitted assignments will appear (after you have pushed them to GitHub) with feedback on them. It will also have all other course-related grades in its gradebook. **Our course-wide discussion board will be there, where course-wide announcements will also be posted.**
+2. [Pawtograder](https://pawtograder.khoury.northeastern.edu/) is our course grading platform. This is where you find assignments, and where submitted assignments will appear (after you have pushed them to GitHub) with feedback on them. It will also have all other course-related grades in its gradebook. **Our course-wide discussion board will be there, where course-wide announcements will also be posted.**
 3. [Canvas](https://northeastern.instructure.com/) will contain lecture-section-specific things like lecture participation data and lecture-specific announcements.
 
 ## People
