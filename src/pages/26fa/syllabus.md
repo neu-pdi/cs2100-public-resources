@@ -95,23 +95,23 @@ All homework assignments will be weighted equally in the Homework grade, and all
 
 All quiz topics will be weighted equally in the Quiz Topics grade. Each topic will appear on two quizzes. For each topic, the score for that topic will be the highest of both attempts at that topic.
 
-The highest row in which a student satisfies all columns will be their grade (plus a bump for lectures -- see below). If no rows are completely satisfied, the student will not pass the course.
+The final grade is determined by four categories: homework, project, project check-ins, and quiz topics. For each grade level, a student must meet a minimum threshold in each category, with a higher threshold needed for quiz topics. These thresholds are displayed in the table below.
 
-| Grade | Homework | Project | Project Check-ins | Quiz Topics |
-| - | - | - | - | - |
-| A | 80% or higher | 80% or higher | 80% or higher| 93% or higher |
-| A- | 76% or higher | 76% or higher | 76% or higher | 90% or higher |
-| B+ | 73% or higher | 73% or higher | 73% or higher | 86% or higher |
-| B | 70% or higher | 70% or higher | 70% or higher | 83% or higher |
-| B- | 66% or higher | 66% or higher | 66% or higher | 80% or higher |
-| C+ | 63% or higher | 63% or higher | 63% or higher | 76% or higher |
-| C | 60% or higher | 60% or higher | 60% or higher | 73% or higher |
-| C- | 56% or higher | 56% or higher | 56% or higher | 70% or higher |
-| D+ | 53% or higher | 53% or higher | 53% or higher | 66% or higher |
-| D | 50% or higher | 50% or higher | 50% or higher | 63% or higher |
-| D- | 46% or higher | 46% or higher | 46% or higher | 60% or higher |
+| Grade | Quiz Topics | Other Categories |
+| - | - | - |
+| A | 93% or higher | 80% or higher |
+| A- | 90% or higher | 76% or higher |
+| B+ | 86% or higher | 73% or higher |
+| B | 83% or higher | 70% or higher |
+| B- | 80% or higher | 66% or higher |
+| C+ | 76% or higher |  63% or higher |
+| C  | 73% or higher | 60% or higher |
+| C- | 70% or higher | 56% or higher |
+| D+ | 66% or higher | 56% or higher |
+| D | 63% or higher | 50% or higher | 
+| D- | 60% or higher | 46% or higher | 
 
-E.g., to get an A, you must score 80% or higher on homework, the project, and project check-ins, AND score 93% or higher on quiz topics. If you have the 80% homework / project / check-in scores, but your quiz topic score is 91%, you will receive an A-.
+E.g., to get an A, you must score 80% or higher on homework, the project, and project check-ins, AND score 93% or higher on quiz topics. Each category is considered separately, all thresholds must be met, and assignments from different categories will never be averaged. For example, if you have an 80% on homework but a 91% on quiz topics or a 78% on the project, you will receive an A-.
 
 If a student does not meet any rows in the table, they will receive an F.
 
