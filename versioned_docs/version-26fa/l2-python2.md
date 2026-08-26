@@ -36,6 +36,70 @@ y = temp
 x = y
 ```
 
+## Functions (including documentation and tests)
+
+In this course, we consider testing to be part of the function design process. We like to write tests to ensure our code works, but also to convince *others* that our code works.
+
+We also require all functions to have appropriate documentation. Make sure to include:
+- All parameters
+- Any returns
+- Any errors or exceptions that might be raised
+
+We assume that if we asked you to write a function to calculate the area of a rectangle (given the width and height), you would know how to implement it.
+
+Here we show you how to format it with documentation and tests:
+
+```python
+"""Module for unit testing"""
+import pytest
+
+
+def get_area_of_rectangle(width: int, height: int) -> int:
+    """Returns the area of a rectangle.
+
+    Parameters
+    ----------
+    width : int
+        The width of the rectangle
+    height : int
+        The height of the rectangle
+
+    Returns
+    -------
+    int
+        The area of the rectangle
+
+    Raises
+    ------
+    ValueError
+        If width or height is negative
+    """
+    if width < 0 or height < 0:
+        raise ValueError("Rectangle dimensions cannot be negative")
+    return width * height
+
+
+def test_3_by_4() -> None:
+    """3 by 4 rectangle"""
+    assert get_area_of_rectangle(3, 4) == 12
+
+
+def test_negative_area() -> None:
+    """Make sure it raises a ValueError for a negative width"""
+    with pytest.raises(ValueError):
+        get_area_of_rectangle(-1, 4)
+
+
+if __name__ == '__main__':
+    pytest.main() # or just run `pytest` from the command line
+```
+
+The unit test function names must start with `test_` in order for Pytest to recognize them.
+
+Formatting the documentation in this way makes it so that it shows up in official places like `str.__doc__` and `help(str)`.
+
+Notice that one of the tests makes sure that the function raises a ValueError if it's given an invalid argument.
+
 ## Data types
 
 ### Strings
@@ -135,306 +199,50 @@ my_decision: bool = True
 - Comparison happens before boolean operations​
   - `3 < 4 and 5 < 7` evaluates to: `True`
 
-## Control structures
 
-We're assuming you've seen conditionals and iteration before, though possibly in a different programming langauge. Here it is in Python:
+## Mutation testing: how we grade your tests
 
-### Conditionals
+A lot of work is autograded in this course, including the tests.
 
-#### If / else
+We grade student tests by checking that they:
+1. Pass on correct code
+2. Fail on incorrect code
 
-```python
-secret_num: int = 8
-guess: int = int(input('My guess: '))
+In our autograder, the first item is required before it moves on to the second item. I.e., tests must first pass on correct code before we check whether they fail on incorrect code.
 
-if secret_num == guess:
-    print('I guessed it!')
-elif (secret_num + 1 == guess) or (secret_num - 1 == guess):
-    print('So close!')
-else:
-    print('Maybe next time!')
-```
+Checking whether tests fail on incorrect code is a standard software engineering technique called "Mutation testing": programmers insert small, common bugs into their code and check whether the tests catch them.
 
-Tip: we can put a conditional expression in one line:
-```python
-print('yes' if my_decision else 'no')
-print(f'{num_cats} cat{'s' if num_cats > 1 else ''}')
-```
+You are not required to perform your own mutation testing in this course, but your assigmnment submissions must pass our mutation tests.
 
-#### Match case statements
+Disclaimer: All bugs that we inserted into the incorrect code are intended to be simple and common. If the autograder says there is a bug that remains undetected by your tests, look for large missing test cases, rather than digging into obscure ways code can run incorrectly.
 
-If there are many cases, a match-case statement might be more practical:
+Poll: Why is this assignment submission not receiving full points?
 
 ```python
-name: str = input('Please enter your name: ')
-match name:
-    case 'SpongeBob':
-        print('You are a sponge')
-    case 'Patrick':
-        print('You are a starfish')
-    case _:
-        print('I don\'t know you')
+def add(a: int, b: int) -> int:
+    """Returns the sum of two integers."""
+    return a + b
+
+
+def test_add_positive_numbers() -> None:
+    """Test adding two positive numbers."""
+    pytest.fail()
+
+def test_add_negative_numbers() -> None:
+    """Test adding two negative numbers."""
+    assert add(-1, -1) == -2
+
+def test_add_mixed_numbers() -> None:
+    """Test adding a positive and a negative number."""
+    assert add(-1, 1) == 0
+
+def test_add_zero() -> None:
+    """Test adding zero to a number."""
+    assert add(0, 5) == 5
+    assert add(5, 0) == 5
 ```
 
-A match-case statement finds the first case that matches​, and only executes that one case (or zero cases if none match).
-
-The `case _` is a catch-all that matches anything that didn't fit any other cases. It is not required, but if it is there, it must be the last case.
-
-### Iteration
-
-#### While loops
-
-```python
-animal: str = input('Please enter an animal: ')
-
-while not is_animal(animal):
-    animal = input('That wasn\'t an animal. Please enter an animal: ')
-```
-
-#### For loops over numbers
-
-We use while loops when we don't know in advance how many iterations we will need. If we do know the number of iterations (given the variables we currently have), then a for loop is more appropriate.
-
-For loops in Python can use a helpful function called `range()`:
-
-```python
-for i in range(4):
-    print(i)
-
->> 0
-   1
-   2
-   3
-```
-
-We can start a range at a number other than 0:
-
-```python
-for i in range(2, 5):
-    print(i)
-
->> 2
-   3
-   4
-```
-
-We can also ask it to count in "steps" larger than 1:
-
-```python
-for i in range(10, 50, 5):
-    print(i)
-
->> 10
-   15
-   20
-   25
-   30
-   35
-   40
-   45
-```
-
-#### For loops over the elements of a collection
-
-It turns out that the `range()` function returns a collection, which the for loop iterates over. We can instead tell Python to iterate over the elements of a different collection:
-
-```python
-for character in 'I love cats!':
-    print(character.upper())
-
->> I
- 
-   L
-   O
-   V
-   E
- 
-   C
-   A
-   T
-   S
-   !
-```
-
-Poll: What's wrong with this function? Why doesn't the docstring match the code?
-
-```python
-"""Function to generate a random float"""
-from random import random
-
-def sarcasm(phrase: str) -> str:
-    """Returns the sarcastic version of the provided phrase, where a 
-    randomly selected half of the characters are uppercase, and the 
-    others are lowercase.
-    
-    Parameters
-    ----------
-    phrase : str
-        The phrase to turn sarcastic
-    
-    Returns
-    -------
-    str
-        The sarcastic version of the phrase
-    """
-    sarcastic_phrase = ''
-    for character in phrase:
-        if random() < 0.5:
-            sarcastic_phrase += character.upper()
-    return sarcastic_phrase
-```
-
-1. It's adding the index of the character, not the character itself
-2. It skips adding about half of the letters
-3. Sometimes, it doesn't return a string at all
-4. It adds extra characters to the string
-
-(If enough time to explain list comprehension) Poll: Which of these is a one-line version of the inside of the (correct) `sarcasm()` function?
-
-1. `return ''.join([character.upper() for character in phrase if random() < 0.5])`
-2. `return ''.join([character.upper() if random() < 0.5 for character in phrase])`
-3. `return ''.join([character.upper() if random() else character.lower() for character in phrase])`
-4. `return ''.join([character.upper() if random() < 0.5 else character.lower() for character in phrase])`
-
-#### For loops over a collection, keeping track of indices
-
-```python
-for index, word in enumerate(['American Shorthair', 'Balinese', 'Cheetah']):
-    print(f'{index}: {word}')
-
->> 0: American Shorthair
-   1: Balinese
-   2: Cheetah
-```
-
-## Refactoring and constants
-
-Refactoring is moving the code around without changing the functionality. Programmers refactor their code to make it more readable, more testable, and easier to modify.
-
-We often refactor...
-- Code used in multiple places into a single function that gets called multiple times
-- Code from a complex function into smaller functions
-- (Magic) numbers or string literals into constants
-
-**Magic numbers** are unnamed numeric literals in code. We don't like magic numbers.
-We name our literals (except for -1, 0, 1, and 2) to make our code self-documenting.
-
-We name our literals by making them into **constants**: variables named in `UPPER_SNAKE_CASE` that aren't meant to be modified while the programming is running.
-
-### Why use named constants?
-
-- Readability
-```python
-SECONDS_PER_MINUTE = 60
-MINUTES_PER_HOUR = 60
-HOURS_PER_DAY = 24
-SECONDS_PER_DAY = SECONDS_PER_MINUTE * MINUTES_PER_HOUR * HOURS_PER_DAY
-```
-
-- Safety
-```python
-timer(SECONDS_PER_DAY)
-timer(86400)
-```
-
-- Maintainability
-```python
-CREDITS_TO_GRADUATE = 128
-NUMBER_OF_CAMPUSES = 10
-```
-
-## Testing functions that print or take user input
-
-We've been using the `input('prompt')` function which returns the user's response to the provided `'prompt'`. We've also been `print()`ing things.
-
-To make testing practical, we can't rely on the user to type in `input()`, and we don't want to rely on them to check the printed output to verify things that were `print()`ed.
-
-So, instead, we "mock" the user. The `unittest` module is great for this -- it can imitate a user typing things, and it can read the output that would have been printed to the console.
-
-<img width="600" height="417" alt="image" src="https://github.com/user-attachments/assets/fb8b3f7a-8e3b-4bd7-8086-1ebf16c8d1df" />
-
-Source: https://en.meming.world/wiki/Mocking_SpongeBob
-
-### Tests that mock user input
-
-To make a test function "mock" a user typing in inputs, we use `@patch('builtins.input', side_effect=user_inputs)`, replacing `user_inputs` with an array of things that the mock user should type.
-
-Here is an example testing a function that takes three inputs from the user and returns them, concatenated with commas:
-
-```python
-import unittest
-from unittest.mock import patch, Mock
-
-def concat_three_inputs() -> str:
-    """Reads three inputs from the user and concatenates them into a single string separated by spaces."""
-    inputs = []
-    for _ in range(3):
-        user_input = input("Enter something: ")
-        inputs.append(user_input)
-    return ', '.join(inputs)
-
-class TestConcatThreeInputs(unittest.TestCase):
-    """Unit tests for the concat_three_inputs function."""
-
-    @patch('builtins.input', side_effect=['first thing typed by user', 'second thing', 'third thing'])
-    def test_concat_three_inputs(self, _: Mock) -> None:
-        """Test that concat_three_inputs correctly concatenates three user inputs."""
-        result = concat_three_inputs()
-        self.assertEqual(result, 'first thing typed by user, second thing, third thing')
-```
-
-Notice the `_: Mock` argument to the test function.
-
-Note: If there are not enough inputs specified in the `side_effect` array, the call to `input()` will wait forever (until it times out).
-
-### Tests that mock console output
-
-We use `@patch('builtins.print')` to mock things being printed to the console, and then we make assertions on that printed output inside the test function.
-
-```python
-import unittest
-from unittest.mock import patch, Mock
-
-def repeat_three_inputs() -> str:
-    """Reads three inputs from the user and prints them."""
-    for _ in range(3):
-        user_input = input("Enter something: ")
-        print(user_input)
-
-class TestRepeatThreeInputs(unittest.TestCase):
-    """Unit tests for the concat_three_inputs function."""
-
-    @patch('builtins.input', side_effect=['first thing typed by user', 'second thing', 'third thing'])
-    @patch('builtins.print')
-    def test_repeat_three_inputs(self, mock_print: Mock, _: Mock) -> None:
-        """Test that repeat_three_inputs correctly reads and prints three inputs."""
-        repeat_three_inputs()
-        expected_calls = [
-            unittest.mock.call("first thing typed by user"),
-            unittest.mock.call("second thing"),
-            unittest.mock.call("third thing"),
-        ]
-        mock_print.assert_has_calls(expected_calls)
-```
-
-Notice the order of the two `Mock` arguments to the test function: `@patch` decorators "stack" such that the first decorator is the last argument, and vice versa.
-Since we don't use the mock input's argument inside the test function, we name it using `_`.
-
-## Import code
-
-We've been importing modules like `import unittest`.
-
-We can also import code from a file that we wrote ourselves: `import my_file`
-
-When a Python file is imported, all of the code inside it is executed. (Try it out -- put `print('hello')` in a new file and import it.) That's why we put our code inside functions -- we don't want the code inside to be executed when it's imported!
-
-In a function named `main()`, we call all the functions that we want to run when the file is run (not imported).
-
-And we add this at the end of the file so that the `main()` function is only called when the file is run, not imported:
-
-```
-if __name__ == '__main__':
-    main()
-```
-
-Try this out using today's lecture code -- what happens if you keep all those `print()` statements outside of functions, and then import the file? Does it get fixed when you move that code into functions which are only called in `main()`? (Don't forget the `if __name__ == '__main__'` conditional at the end!)
+1. The student implemented `add()` incorrectly.
+2. Mutation testing: the student's tests don't cover enough cases.
+3. The student's tests fail on correct code, so mutation tests are not run.
+4. It's something else -- pylint warnings, infinite loop, etc.

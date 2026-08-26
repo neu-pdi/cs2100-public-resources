@@ -1,212 +1,234 @@
 ---
 sidebar_position: 3
 lecture_number: 3
-title: More Programming in Python
+title: Python Control Structures
 ---
 
-# More Programming in Python
+# Python Control Structures
 
-## Mutation testing: how we grade your tests
+## Control structures
 
-A lot of work is autograded in this course, including the tests.
+We're assuming you've seen conditionals and iteration before, though possibly in a different programming langauge. Here it is in Python:
 
-We grade student tests by checking that they:
-1. Pass on correct code
-2. Fail on incorrect code
+### Conditionals
 
-In our autograder, the first item is required before it moves on to the second item. I.e., tests must first pass on correct code before we check whether they fail on incorrect code.
-
-Checking whether tests fail on incorrect code is a standard software engineering technique called "Mutation testing": programmers insert small, common bugs into their code and check whether the tests catch them.
-
-You are not required to perform your own mutation testing in this course, but your assigmnment submissions must pass our mutation tests.
-
-Disclaimer: All bugs that we inserted into the incorrect code are intended to be simple and common. If the autograder says there is a bug that remains undetected by your tests, look for large missing test cases, rather than digging into obscure ways code can run incorrectly.
-
-Poll: Why is this assignment submission not receiving full points?
+#### If / else
 
 ```python
-def add(a: int, b: int) -> int:
-    """Returns the sum of two integers."""
-    return a + b
+secret_num: int = 8
+guess: int = int(input('My guess: '))
 
-class TestAddFunction(unittest.TestCase):
-    """Unit tests for the add function."""
-
-    def test_add_positive_numbers(self) -> None:
-        """Test adding two positive numbers."""
-        self.fail()
-
-    def test_add_negative_numbers(self) -> None:
-        """Test adding two negative numbers."""
-        self.assertEqual(add(-1, -1), -2)
-
-    def test_add_mixed_numbers(self) -> None:
-        """Test adding a positive and a negative number."""
-        self.assertEqual(add(-1, 1), 0)
-
-    def test_add_zero(self) -> None:
-        """Test adding zero to a number."""
-        self.assertEqual(add(0, 5), 5)
-        self.assertEqual(add(5, 0), 5)
+if secret_num == guess:
+    print('I guessed it!')
+elif (secret_num + 1 == guess) or (secret_num - 1 == guess):
+    print('So close!')
+else:
+    print('Maybe next time!')
 ```
 
-1. The student implemented `add()` incorrectly.
-2. Mutation testing: the student's tests don't cover enough cases.
-3. The student's test fails on correct code, so mutation tests are not run.
-4. It's something else -- pylint warnings, infinite loop, etc.
+Tip: we can put a conditional expression in one line:
+```python
+print('yes' if my_decision else 'no')
+print(f'{num_cats} cat{'s' if num_cats > 1 else ''}')
+```
 
-## None
+#### Match case statements
 
-None works like a value that represents the absence of a value.
+If there are many cases, a match-case statement might be more practical:
 
 ```python
-bodyguard_name: str = None # doesn't have a value -- I don't have a bodyguard
+name: str = input('Please enter your name: ')
+match name:
+    case 'SpongeBob':
+        print('You are a sponge')
+    case 'Patrick':
+        print('You are a starfish')
+    case _:
+        print('I don\'t know you')
 ```
 
-It's different from "" or 0 (see [Null Island](https://en.wikipedia.org/wiki/Null_Island))
+A match-case statement finds the first case that matches​, and only executes that one case (or zero cases if none match).
 
-Can store `None` in a list​
-```python
-grades: list[int] = [5, None, 0]
-```
+The `case _` is a catch-all that matches anything that didn't fit any other cases. It is not required, but if it is there, it must be the last case.
 
-Cannot add `None` to a number or string
-- `None + "hi"` does not work
-- `len(None)` does not work​
+### Iteration
 
-## Optional
-
-To specify that a type might be `None`, we use `Optional`. For example:
-```python
-from typing import Optional
-
-def get_number_or_None(hopefully_a_number: str) -> Optional[int]:
-    try:
-        return int(hopefully_a_number)
-    except ValueError:
-        return None
-```
-
-## Data structures (list, set, and dict)
-
-We will have lectures dedicated to lists and sets later on, but here is the basic syntax to create them:
+#### While loops
 
 ```python
-nums: list[int] = [1, 2, 3]
-words: set[str] = {'hi', 'hello', 'howdy'}
+animal: str = input('Please enter an animal: ')
+
+while not is_animal(animal):
+    animal = input('That wasn\'t an animal. Please enter an animal: ')
 ```
 
-We're assuming you have used lists before. Sets may be new to some.
+#### For loops over numbers
 
-A set is very similar to a list: it is a collection of items.
+We use while loops when we don't know in advance how many iterations we will need. If we do know the number of iterations (given the variables we currently have), then a for loop is more appropriate.
 
-Differences between a set and a list:
-- A set is unordered
-- A set can only hold each item (at most) once -- no duplicates​
-
-## Reading and writing text files
-
-Just as we can read user input using `input(prompt)`, we can also read input from a file:
+For loops in Python can use a helpful function called `range()`:
 
 ```python
-with open('story.txt', 'r', encoding="utf-8") as file:
-    for line in file.readlines():
-        print(line)
+for i in range(4):
+    print(i)
+
+>> 0
+   1
+   2
+   3
 ```
 
-The `readlines()` function returns a list of strings: each line in the file is a string in the list.
-
-If, instead of reading from the file, we want to write to the file, then we must use a different option than `'r'`.
-
-- `open('story.txt', 'r')`: read the file
-- `open('story.txt', 'w')`: write the file (overwrite it if it already exists)
-- `open('story.txt', 'a')`: append to the end of the file (and create the file if it doesn't exist)
-
-We can then write to the file using `file.write("Line to write to file")`.
-
-## Error handing
-
-There is a control structure that we have not introduced until now: try / except
+We can start a range at a number other than 0:
 
 ```python
-a: int = 4
-b: int = 0
+for i in range(2, 5):
+    print(i)
 
-try:
-    result = a / b
-    print(result)
-except ZeroDivisionError:
-    print("Cannot divide by zero")
+>> 2
+   3
+   4
 ```
 
-It allows us to try to run risky code, and if an error is raised during that risky code, then it jumps immediately to the corresponding `except` block.
+We can also ask it to count in "steps" larger than 1:
 
-It is acceptable to use try / except blocks while testing *whether a function raises an error*: it is an alternative to using the built-in `self.assertRaises()`.
-
-Otherwise, we try to minimize the use of try / except, and only use it when absolutely necessary. We don't want to simply avoid fixing legitimate bugs by wrapping our code in a try / except.
-
-Places where try / except is commonly used:
-
-- Converting values
 ```python
-def get_user_age() -> int:
-    """Get a numerical age from the user"""
-    user_input: str = input("Enter your age: ")
-    try:
-        age: int = int(user_input)
-        return age
-    except ValueError:
-        print("Please enter a valid number")
-        return -1
+for i in range(10, 50, 5):
+    print(i)
+
+>> 10
+   15
+   20
+   25
+   30
+   35
+   40
+   45
 ```
-- Operations that rely on external things like network requests or database operations
-- Reading from files (though using a `with` block, as we have been doing, is recommended instead)
 
-Keywords in a try / except block:
-- Each error that can be raised should get its own `except` block. It is okay to have multiple `except` blocks for the same `try` block.
-- One `except` block can handle multiple errors, if they require the same process: `except (ValueError, TypeError) as e:`
-- Inside an `except` block, we may choose to `raise` a different error.
-- If there is a `finally` block at the end of a try / except block, then it is run in all cases (whether the `try` was fully executed, or it jumped to the `except`.
-- If there is an `else` block at the end of a try / except block, then it is run only if the `try` was fully executed (and it never jumped to an `except` block
+#### For loops over the elements of a collection
 
-Best practices:
-- Only use try / except for the few legitimate reasons, not for control flow of the program
-- Make the errors handled in `except` blocks as specific as possible. It is okay to list multiple specific errors in the same `except` block.
+It turns out that the `range()` function returns a collection, which the for loop iterates over. We can instead tell Python to iterate over the elements of a different collection:
 
-
-Poll: What is output?
 ```python
-def noodle(hopefully_a_number: str) -> None:
-    try:
-        num: int = int(hopefully_a_number)
-        print('Cats rule')
-    except AssertionError as e:
-        print(f'{hopefully_a_number} is not a number')
+for character in 'I love cats!':
+    print(character.upper())
 
-noodle('hello')
+>> I
+ 
+   L
+   O
+   V
+   E
+ 
+   C
+   A
+   T
+   S
+   !
 ```
 
-1. Cats rule
-2. hello is not a number
-3. Cats rule
-   hello is not a number
-4. No output - it raises the error
+Poll: What's wrong with this function? Why doesn't the docstring match the code?
 
-
-Poll: What is output?
 ```python
-def noodle(hopefully_a_number: str) -> None:
-    try:
-        num: int = int(hopefully_a_number)
-        print('Cats rule')
-    except ValueError as e:
-        print(f'{hopefully_a_number} is not a number')
+"""Function to generate a random float"""
+from random import random
 
-noodle('hello')
+def sarcasm(phrase: str) -> str:
+    """Returns the sarcastic version of the provided phrase, where a 
+    randomly selected half of the characters are uppercase, and the 
+    others are lowercase.
+    
+    Parameters
+    ----------
+    phrase : str
+        The phrase to turn sarcastic
+    
+    Returns
+    -------
+    str
+        The sarcastic version of the phrase
+    """
+    sarcastic_phrase = ''
+    for character in phrase:
+        if random() < 0.5:
+            sarcastic_phrase += character.upper()
+    return sarcastic_phrase
 ```
 
-1. Cats rule
-2. hello is not a number
-3. Cats rule
-   hello is not a number
-4. No output - it raises the error
+1. It's adding the index of the character, not the character itself
+2. It skips adding about half of the letters
+3. Sometimes, it doesn't return a string at all
+4. It adds extra characters to the string
+
+(If enough time to explain list comprehension) Poll: Which of these is a one-line version of the inside of the (correct) `sarcasm()` function?
+
+1. `return ''.join([character.upper() for character in phrase if random() < 0.5])`
+2. `return ''.join([character.upper() if random() < 0.5 for character in phrase])`
+3. `return ''.join([character.upper() if random() else character.lower() for character in phrase])`
+4. `return ''.join([character.upper() if random() < 0.5 else character.lower() for character in phrase])`
+
+#### For loops over a collection, keeping track of indices
+
+```python
+for index, word in enumerate(['American Shorthair', 'Balinese', 'Cheetah']):
+    print(f'{index}: {word}')
+
+>> 0: American Shorthair
+   1: Balinese
+   2: Cheetah
+```
+
+## Refactoring and constants
+
+Refactoring is moving the code around without changing the functionality. Programmers refactor their code to make it more readable, more testable, and easier to modify.
+
+We often refactor...
+- Code used in multiple places into a single function that gets called multiple times
+- Code from a complex function into smaller functions
+- (Magic) numbers or string literals into constants
+
+**Magic numbers** are unnamed numeric literals in code. We don't like magic numbers.
+We name our literals (except for -1, 0, 1, and 2) to make our code self-documenting.
+
+We name our literals by making them into **constants**: variables named in `UPPER_SNAKE_CASE` that aren't meant to be modified while the programming is running.
+
+### Why use named constants?
+
+- Readability
+```python
+SECONDS_PER_MINUTE = 60
+MINUTES_PER_HOUR = 60
+HOURS_PER_DAY = 24
+SECONDS_PER_DAY = SECONDS_PER_MINUTE * MINUTES_PER_HOUR * HOURS_PER_DAY
+```
+
+- Safety
+```python
+timer(SECONDS_PER_DAY)
+timer(86400)
+```
+
+- Maintainability
+```python
+CREDITS_TO_GRADUATE = 128
+NUMBER_OF_CAMPUSES = 10
+```
+
+## Import code
+
+We've been importing modules like `import pytest`.
+
+We can also import code from a file that we wrote ourselves: `import my_file`
+
+When a Python file is imported, all of the code inside it is executed. (Try it out -- put `print('hello')` in a new file and import it.) That's why we put our code inside functions -- we don't want the code inside to be executed when it's imported!
+
+In a function named `main()`, we call all the functions that we want to run when the file is run (not imported).
+
+And we add this at the end of the file so that the `main()` function is only called when the file is run, not imported:
+
+```
+if __name__ == '__main__':
+    main()
+```
+
+Try this out using today's lecture code -- what happens if you keep all those `print()` statements outside of functions, and then import the file? Does it get fixed when you move that code into functions which are only called in `main()`? (Don't forget the `if __name__ == '__main__'` conditional at the end!)
