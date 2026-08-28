@@ -94,6 +94,8 @@ if __name__ == '__main__':
     pytest.main() # or just run `pytest` from the command line
 ```
 
+The Python Docstring presented above follows the [NumPy Python Style](https://numpydoc.readthedocs.io/en/latest/format.html). There are other styles used in practice, [Google Python Style](https://google.github.io/styleguide/pyguide.html) is another popular option. We will **follow the NumPy style** presented above.
+
 The unit test function names must start with `test_` in order for Pytest to recognize them.
 
 Formatting the documentation in this way makes it so that it shows up in official places like `str.__doc__` and `help(str)`.
