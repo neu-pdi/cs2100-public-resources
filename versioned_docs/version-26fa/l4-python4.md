@@ -44,7 +44,7 @@ Cannot add `None` to a number or string
 
 ## Optional
 
-To specify that a type might be `None`, we use `Optional`. For example:
+To specify that a value might be `None`, we use `Optional`. For example, in the function below, the return value will either be an integer or `None`.
 ```python
 from typing import Optional
 
