@@ -164,7 +164,7 @@ Why is this not an ideal commit message? `"Complete Homework 3"`
 5. (1) and (2) only
 :::
 
-## Practices for code-level design (style guidlines)
+## Practices for code-level design (style guidelines)
 
 ### Why enforce a Style Guide?
 
@@ -234,7 +234,7 @@ result: int = get_area_of_rectangle(width, height)
 print(f'Area of a {width} by {height} rectangle: {result}')
 ```
 
-Python does not enforce the types. The above code runs exactly the same as before, even after adding the types.
+However, Python does not enforce the types. The above code runs exactly the same as before, even after adding the types.
 
 So, in this course, we will use MyPy to enforce the type checking.
 
