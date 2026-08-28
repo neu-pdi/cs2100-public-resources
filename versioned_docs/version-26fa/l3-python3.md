@@ -222,9 +222,7 @@ We can also import code from a file that we wrote ourselves: `import my_file`
 
 When a Python file is imported, all of the code inside it is executed. (Try it out -- put `print('hello')` in a new file and import it.) That's why we put our code inside functions -- we don't want the code inside to be executed when it's imported!
 
-In a function named `main()`, we call all the functions that we want to run when the file is run (not imported).
-
-And we add this at the end of the file so that the `main()` function is only called when the file is run, not imported:
+To specify the code we want executed, we define a function named `main()` where we call all the functions that we want to run when the file is run (not imported). We then add the code snippet below at the end of the file so that the `main()` function is only called when the file is run, not imported:
 
 ```
 if __name__ == '__main__':
