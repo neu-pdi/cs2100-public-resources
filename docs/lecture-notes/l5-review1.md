@@ -39,7 +39,7 @@ It is recommended to review these topics:
 
 [Solution to Practice Quiz 1](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-1-with-solutions.pdf)
 
-For more practice, see 2026 Spring's Practice Quiz 1: https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/26sp/l4-review1#practice-quiz-1
+If you use [2026 Spring's Practice Quiz 1](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/26sp/l4-review1#practice-quiz-1), please keep in mind that we used `unittest` instead of `pytest` for testing, so the format may look different for the third question.
 
 ## Homework help: Git / command line / Pawtograder review
 
