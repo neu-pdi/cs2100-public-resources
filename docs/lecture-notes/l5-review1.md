@@ -33,6 +33,14 @@ It is recommended to review these topics:
 - `git push` pushes all local commits to the remote repo
 - `git pull` copies all commits from the remote repo to your local repo which are not already there
 
+## Practice Quiz 1
+
+[Practice Quiz 1](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-1.pdf)
+
+[Solution to Practice Quiz 1](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-1-with-solutions.pdf)
+
+For more practice, see 2026 Spring's Practice Quiz 1: https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/26sp/l4-review1#practice-quiz-1
+
 ## Homework help: Git / command line / Pawtograder review
 
 Recommended: Instructor goes to Pawtograder > HW1 > Test Assignment and "starts" the assignment like a student.
