@@ -8,7 +8,7 @@ title: Python Control Structures
 
 ## Control structures
 
-We're assuming you've seen conditionals and iteration before, though possibly in a different programming langauge. Here it is in Python:
+We're assuming you've seen conditionals and iteration before, though possibly in a different programming language. The subsections below have examples demonstrating how these control structures are done in Python.
 
 ### Conditionals
 
@@ -180,14 +180,14 @@ for index, word in enumerate(['American Shorthair', 'Balinese', 'Cheetah']):
 
 ## Refactoring and constants
 
-Refactoring is moving the code around without changing the functionality. Programmers refactor their code to make it more readable, more testable, and easier to modify.
+Refactoring is moving some code around without changing the functionality. Programmers refactor their code to make it more readable, more testable, and easier to modify.
 
 We often refactor...
-- Code used in multiple places into a single function that gets called multiple times
-- Code from a complex function into smaller functions
-- (Magic) numbers or string literals into constants
+- Code used and thus duplicated in multiple places into a single function that gets called multiple times
+- Code from a long and complex function into a collection of smaller functions
+- (Magic) numbers or string literals into named constants
 
-**Magic numbers** are unnamed numeric literals in code. We don't like magic numbers.
+**Magic numbers** are unnamed numeric literals in code. We don't like magic numbers (can you come up with reasons why we dslike them?!)
 We name our literals (except for -1, 0, 1, and 2) to make our code self-documenting.
 
 We name our literals by making them into **constants**: variables named in `UPPER_SNAKE_CASE` that aren't meant to be modified while the programming is running.
@@ -222,9 +222,7 @@ We can also import code from a file that we wrote ourselves: `import my_file`
 
 When a Python file is imported, all of the code inside it is executed. (Try it out -- put `print('hello')` in a new file and import it.) That's why we put our code inside functions -- we don't want the code inside to be executed when it's imported!
 
-In a function named `main()`, we call all the functions that we want to run when the file is run (not imported).
-
-And we add this at the end of the file so that the `main()` function is only called when the file is run, not imported:
+To specify the code we want executed, we define a function named `main()` where we call all the functions that we want to run when the file is run (not imported). We then add the code snippet below at the end of the file so that the `main()` function is only called when the file is run, not imported:
 
 ```
 if __name__ == '__main__':

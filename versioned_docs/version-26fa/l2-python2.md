@@ -94,6 +94,8 @@ if __name__ == '__main__':
     pytest.main() # or just run `pytest` from the command line
 ```
 
+The Python Docstring presented above follows the [NumPy Python Style](https://numpydoc.readthedocs.io/en/latest/format.html). There are other styles used in practice, [Google Python Style](https://google.github.io/styleguide/pyguide.html) is another popular option. We will **follow the NumPy style** presented above.
+
 The unit test function names must start with `test_` in order for Pytest to recognize them.
 
 Formatting the documentation in this way makes it so that it shows up in official places like `str.__doc__` and `help(str)`.
@@ -137,7 +139,7 @@ Poll: What does this print? `print("I am so excited" + "!" * 3)`
 
 #### F-string​
 
-We can put a variable directly in a string to save time.
+We can put a variable directly in a formatted string literal, Python f-strings, and when the f-string is evaluated, the variable's value will be part of the string.
 
 ```python
 cats: int = 4
@@ -147,7 +149,7 @@ print(f"There are {cats} cats in this room."​)
 >> There are 4 cats in this room.
 ```
 
-It also helps reduce the number of places where a bug can happen in the code.
+Use of f-strings is a best practice among Python developers and their use is strongly recommended. For example, f-strings help reduce the number of places where a bug can happen in the code.
 
 ### Float
 
