@@ -10,7 +10,9 @@ title: Course Overview and Git
 
 Participating in class helps students to connect with each other, learn the material more deeply, and let the instructor know about their understanding. It is also worth a portion of the grade.
 
-Poll: What motivates you? (Choose your top 3)
+:::info
+### Poll
+What motivates you? (Choose your top 3)
 - Grades
 - Learning
 - Preparing for job / co-op interviews
@@ -23,13 +25,13 @@ Poll: What motivates you? (Choose your top 3)
 - Health and well-being
 
 These in-class exercises will be graded on completion, not correctness. (And there was no "correct answer" for that poll.)
+:::
 
-Course structure:
+### Course structure
 - 3 lectures and 1 lab per week​
-- ~ weekly homework assignments​
+- ~ weekly assignments​
 - Five quizzes
 - Office hours
-- Discord
 
 ### The AI Policy
 
@@ -39,20 +41,24 @@ AI large language models like ChatGPT and Claude are not allowed for assignment-
 
 The exception is the AI overview that appears when using a search engine like Google. You may use a search engine to look up documentation, errors, concepts, etc. when doing assignments. You may read that AI overview.
 
+:::info
 Open ended poll: How do you feel about the AI policy?
+:::
 
 ## Resources
 
 - [Pawtograder](https://app.pawtograder.com):
+  - The Discussion Board
   - Assignments
     - Submit through GitHub
   - Checking grades
 - [Lecture notes](https://neu-pdi.github.io/cs2100-public-resources)
-- Textbook: "Python 3 Object Oriented Programming: Harness the Power of Python 3 Objects" by Dusty Phillips covers most of the object-oriented concepts relevant to this course, though we will not follow it exactly.
+- Textbook: [Python Object Oriented Programming by Steven F. Lott and Dusty Phillips](https://learning.oreilly.com/library/view/python-object-oriented-programming/9781836642596/). This book covers most of the object-oriented concepts relevant to this course, though we will not follow it exactly. The book is useful for anyone who wants another perspective.
+  - FYI: NU provides free access to thousands of books via O'Reilly Learning; to get started, use [O'Reilly Learning Library Access](https://www.oreilly.com/library-access/)
 
-## VSCode, Pawtograder, and GitHub
+## Command line, Git, Pawtograder
 
-## The command line
+### The command line
 
 <img width="564" height="500" alt="Meme: using the command line" src="https://github.com/user-attachments/assets/da179ae8-52ac-437f-8057-77d12e784817" />
 
@@ -74,11 +80,14 @@ Changing the directory using `cd`:
 - Using the absolute directory, the complete path from the root to a given directory or file: `cd ~/Desktop/Lectures/2100`
 - Using the relative directory, the path from our current working directory to a given directory or file: `cd Lectures/2100` (from the Desktop)
 
-Poll: The command `cd sp26-rasikabh-hw3/src/data` results in an error. What is NOT likely to be the cause of this error?
-1. The current location is not the directory where I store my homework assignments
+:::info
+### Poll
+The command `cd sp26-rasikabh-hw3/src/data` results in an error. What is NOT likely to be the cause of this error?
+1. The current location is not the directory where I store my assignments
 2. There is no directory called `src` in the directory `sp26-rasikabh-hw3`
 3. `data` is a single file, not a directory
-4. The assignment submission for Homework 3 is closed
+4. The assignment submission for Assignment 3 is closed
+:::
 
 ## git
 
@@ -98,9 +107,7 @@ GitHub is a website owned by Microsoft that hosts git repositories and has a web
 
 <img width="887" height="455" alt="Two users using GitHub" src="https://github.com/user-attachments/assets/fb0db5d1-d596-4fb9-8cc2-bcfb48c155e3" />
 
-When you "accept" an assignment using Pawtograder, it creates a code repository on GitHub containing the "starter code" for that assignment. You will then use `git clone` to copy that code repository to your laptop, and open / edit the code using VSCode on your laptop.
-
-Key concepts:
+### Key Git concepts
 - Repository (repo): a set of code and its history
   - local: on your computer
   - remote: on another computer (like GitHub)
@@ -119,38 +126,49 @@ Locations of versions of code:
 |​ local repository | code that has been committed | `git commit -m "descriptive message"` | Drop off all stamped postcards at the post office |
 | remote repository | code that is on GitHub | `git push` | Postal workers moving postcards to destinations |
 
+### Process of working on assignments
+
+You will "accept" an assignment using Pawtograder which will create a code repository on GitHub containing the "starter code" for that assignment. You will then use `git clone` to copy that code repository to your laptop, and open / edit the code using VSCode on your laptop.
+
+
 Most assignments will go like this:
 - Pawtograder creates your GitHub repo when the assignment is "released"
 - Using your command line, use `git clone <GitHub repo URL (ssh version)>` to copy the files to your computer
   - Most people have a "CS2100" folder or directory where they clone all their assignment repos
-- You open the resulting files on your computer using VSCode and work on the assignment, saving as you go.
+- You open the resulting files on your computer using VSCode and work on the assignment, saving as you go. This organization by course is useful as other courses may use Git/GitHub.
 - After each significant chunk of progress on the assignment:
   - `git add .` to stage changes in all files in this directory
   - `git commit -m "descriptive message"` to commit the changes
+- Recall that all changes up to this point are on your local computer
+- After several commits (typically related to each other)
   - `git push` to push the changes to the online repo in GitHub
     - Pawtograder will automatically take that as your submission (if the submission is still open)
   - `git status` to make sure it worked
+- Check the assignment on Pawtograder to get the results of the submission (this takes a few minutes)
 
-Other commands:
+### Other Git commands
 - `git pull` takes changes any that others pushed to the repo on GitHub, and copies them to your local repo
 - `git status` reports which files have been changed and staged
 - `git diff` shows every changed line
 - `git diff --staged` shows the difference between staged and committed changes
 - `history` shows the history of commands you typed into the command line
 
-Poll: Why is this not an ideal commit message? `"Complete Homework 3"`
+:::info
+### Poll
+
+Why is this not an ideal commit message? `"Complete Assignment 3"`
 1. It doesn't describe the code changes
 2. It implies that all changes to the entire assignment were submitted in a single commit
-3. We can't change Homework 3 again, since we said we completed it
+3. We can't change Assignment 3 again, since we said we completed it
 4. All of the above
 5. (1) and (2) only
+:::
 
-
-## Practices for code-level design (style guidlines)
+## Practices for code-level design (style guidelines)
 
 ### Why enforce a Style Guide?
 
-Any code that we write will be read by at least one other person, and probably more. Many employers require all submitted code to be verified by at least two other people before it is accepted into the code base. And, at the very least, the TA grading your homework will read your code -- and we want them to be in a good mood when they do it, right?
+Any code that we write will be read by at least one other person, and probably more. Many employers require all submitted code to be verified by at least two other people before it is accepted into the code base. And, at the very least, the TA grading your assignment will read your code -- and we want them to be in a good mood when they do it, right?
 
 So, we follow a standard set of rules, called a "Style Guide," to make our code easier to read.
 
@@ -216,7 +234,7 @@ result: int = get_area_of_rectangle(width, height)
 print(f'Area of a {width} by {height} rectangle: {result}')
 ```
 
-Python does not enforce the types. The above code runs exactly the same as before, even after adding the types.
+However, Python does not enforce the types. The above code runs exactly the same as before, even after adding the types.
 
 So, in this course, we will use MyPy to enforce the type checking.
 
@@ -260,13 +278,15 @@ In this course, the assignment autograders will check and assign points to prope
 
 
 ## Using the VSCode debugger to trace code
-
-Poll: My code keeps printing the wrong thing. What should I do?
+:::info
+### Poll
+My code keeps printing the wrong thing. What should I do?
 
 1. Run it again -- maybe it will magically work this time!
 2. Stare at the code for a couple more hours trying random things
 3. Use the debugger
 4. Nothing -- this is unfixable
+:::
 
 In order to use the debugger, we first need to set a breaking point on at least one line. When we start the debugger, it will execute all of the code up to (but not including) that line. To set a breaking point, click next to the line number. A red dot will appear. (Click the same spot again to remove the breaking point.)
 

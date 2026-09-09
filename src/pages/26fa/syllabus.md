@@ -43,11 +43,13 @@ Students who have not taken CS 2000 will need a passing knowledge of the followi
 The textbook "Python 3 Object Oriented Programming: Harness the Power of Python 3 Objects" (third edition) by Dusty Phillips covers most of the object-oriented concepts relevant to this course. We recommend using it for alternative explanations of some of the concepts in the course, though we are not explicitly following the textbook.
 
 ## Course Structure
-There will be three in-person **lectures** (Oakland and Boston) or two in-person lectures (NYC and London) and one **lab** per week. During the lectures (CS 2100) we will go over new content using lecture, live coding, discussion, and individual exercises. The lab (CS 2101) will include one-on-one meetings with TAs and an opportunity to begin homework with guidance and feedback from instructional staff. Lab sessions will be led by Lab Leader TAs.
+There will be three in-person lectures and one lab per week. During the lectures (CS 2100) we will go over new content using lecture, live coding, discussion, and individual exercises.
+
+**The lab (CS 2101)** will include one-on-one meetings with TAs and an opportunity to begin assignments with guidance and feedback from instructional staff. Lab sessions will be led by Lab Leader TAs.
 
 Students can register for any CS 2101 lab section on their campus.
 
-There will be approximately weekly **homework assignments**. The purpose of homework is to give you hands-on experience with the course material you learned in lecture, and to prepare you for the quizzes and projects.
+There will be approximately **weekly assignments**. The purpose of these assignments is to give you hands-on experience with the course material you learned in lecture, and to prepare you for the quizzes and projects.
 
 Each student will complete an open-ended project over the course of the semester. The project will be graded based on completing the learning objectives and discussing them with TAs during lab time scheduled for project check-ins.
 
@@ -73,7 +75,7 @@ Students can also meet with instructors outside of office hours by appointment.
 
 ## Due Dates
 
-Homework assignments will be due on Wednesdays at 6PM Pacific time / 9PM Eastern time.
+Assignments will be due on Wednesdays at 6PM Pacific time / 9PM Eastern time.
 
 There will be a 24-hour grace period on Pawtograder, so submissions will be accepted until the same time on Thursdays. No submissions will be accepted after that (without officially approved accommodations).
 
@@ -89,13 +91,13 @@ We hold online TA office hours (on Zoom) and in-person professor office hours. W
 
 ## Grading
 
-Assessment will be based on homework problems, lecture exercises, the project (including check-in meetings), and quizzes. You may ask for feedback on anything else, but it will not figure into your final grade.
+Assessment will be based on assignments, lecture exercises, the project (including check-in meetings), and quizzes. You may ask for feedback on anything else, but it will not figure into your final grade.
 
-All homework assignments will be weighted equally in the Homework grade, and all project check-ins will be weighted equally in the project check-in grade.
+All assignments will be weighted equally in the Assignments grade, and all project check-ins will be weighted equally in the Project check-in grade.
 
 All quiz topics will be weighted equally in the Quiz Topics grade. Each topic will appear on two quizzes. For each topic, the score for that topic will be the highest of both attempts at that topic.
 
-The final grade is determined by four categories: homework, project, project check-ins, and quiz topics. For each grade level, a student must meet a minimum threshold in each category, with a higher threshold needed for quiz topics. These thresholds are displayed in the table below.
+The final grade is determined by four categories: assignments, project, project check-ins, and quiz topics. For each grade level, a student must meet a minimum threshold in each category, with a higher threshold needed for quiz topics. These thresholds are displayed in the table below.
 
 | Grade | Quiz Topics | Other Categories |
 | - | - | - |
@@ -111,13 +113,13 @@ The final grade is determined by four categories: homework, project, project che
 | D | 63% or higher | 50% or higher | 
 | D- | 60% or higher | 46% or higher | 
 
-E.g., to get an A, you must score 80% or higher on homework, the project, and project check-ins, AND score 93% or higher on quiz topics. Each category is considered separately, all thresholds must be met, and assignments from different categories will never be averaged. For example, if you have an 80% on homework but a 91% on quiz topics or a 78% on the project, you will receive an A-.
+E.g., to get an A, you must score 80% or higher on assignments, the project, and project check-ins, AND score 93% or higher on quiz topics. Each category is considered separately, all thresholds must be met, and assignments from different categories will never be averaged. For example, if you have an 80% on assignments but a 91% on quiz topics or a 78% on the project, you will receive an A-.
 
 If a student does not meet any rows in the table, they will receive an F.
 
 Percentage grades will be rounded to the nearest percent. E.g., a grade of 79.2% will be rounded down to 79%.
 
-**A lecture exercise score of 70% or more will bump your score up one row.** For example, if you had homework, project, and check-in scores of 72%, and a quiz topic score of 85%, a lecture exercise score of 75% will bump your score from B to B+. If a student's grade is not in the table (i.e., they are getting an F), then their score does not get bumped up according to this rule.
+**A lecture exercise score of 70% or more will bump your score up one row.** For example, if you had assignments, project, and check-in scores of 72%, and a quiz topic score of 85%, a lecture exercise score of 75% will bump your score from B to B+. If a student's grade is not in the table (i.e., they are getting an F), then their score does not get bumped up according to this rule.
 
 To progress, students are required to meet the grade point average (GPA) requirements as determined by Khoury College of Computer Sciences. [(See Khoury's website for more information.)](https://catalog.northeastern.edu/undergraduate/computer-information-science/)
 
@@ -132,7 +134,7 @@ Specifically:
 - Additionally, sharing solutions in forums (e.g., posting to public questions, posting code online, etc) constitutes an academic integrity violation, as it may make it harder for other students to do work on their own, harming their own learning.
 - Collaboration is not allowed on quizzes. Any sharing or receiving information about the content of quizzes is an academic integrity violation, and may result in failing the class.
 
-We _strongly recommend_ that you _write_ all code yourself. Even if you discuss solutions, or approaches, with others, do the actual typing on your own! And avoid playing games or trying to find loopholes -- i.e., do not merely type what someone says, or type what you see on anothers screen. While we do not consider collaboration a violation, we still encourage following these recommendations-- relying on others for your solutions may result in you not learning the material, and in this class, not learning the material will result in not being able to pass the quizzes. Even with perfect homework scores, failing to pass sufficient quiz topics will result in a failing grade in the course, so take homework for what it is intended: extensive opportunity to practice the skills we are teaching, paired with high quality feedback about the solution you came up with.
+We _strongly recommend_ that you _write_ all code yourself. Even if you discuss solutions, or approaches, with others, do the actual typing on your own! And avoid playing games or trying to find loopholes -- i.e., do not merely type what someone says, or type what you see on anothers screen. While we do not consider collaboration a violation, we still encourage following these recommendations-- relying on others for your solutions may result in you not learning the material, and in this class, not learning the material will result in not being able to pass the quizzes. Even with perfect assignment scores, failing to pass sufficient quiz topics will result in a failing grade in the course, so take assignments for what they are intended: extensive opportunity to practice the skills we are teaching, paired with high quality feedback about the solution you came up with.
 
 The minimum penalty for an academic integrity violation is a zero on the assignment and a report to the [Office of Student Conduct and Conflict Resolution (OSCCR)](https://osccr.sites.northeastern.edu/). Penalties are increased if there are aggravating factors, such as stealing another student's work, or lying about cheating. Also, see the [Official University Academic Integrity Policy](https://osccr.sites.northeastern.edu/academic-integrity-policy/).
 

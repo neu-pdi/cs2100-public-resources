@@ -29,10 +29,9 @@ These in-class exercises will be graded on completion, not correctness. (And the
 
 ### Course structure
 - 3 lectures and 1 lab per week​
-- ~ weekly homework assignments​
+- ~ weekly assignments​
 - Five quizzes
 - Office hours
-- Discord
 
 ### The AI Policy
 
@@ -49,6 +48,7 @@ Open ended poll: How do you feel about the AI policy?
 ## Resources
 
 - [Pawtograder](https://app.pawtograder.com):
+  - The Discussion Board
   - Assignments
     - Submit through GitHub
   - Checking grades
@@ -83,10 +83,10 @@ Changing the directory using `cd`:
 :::info
 ### Poll
 The command `cd sp26-rasikabh-hw3/src/data` results in an error. What is NOT likely to be the cause of this error?
-1. The current location is not the directory where I store my homework assignments
+1. The current location is not the directory where I store my assignments
 2. There is no directory called `src` in the directory `sp26-rasikabh-hw3`
 3. `data` is a single file, not a directory
-4. The assignment submission for Homework 3 is closed
+4. The assignment submission for Assignment 3 is closed
 :::
 
 ## git
@@ -156,10 +156,10 @@ Most assignments will go like this:
 :::info
 ### Poll
 
-Why is this not an ideal commit message? `"Complete Homework 3"`
+Why is this not an ideal commit message? `"Complete Assignment 3"`
 1. It doesn't describe the code changes
 2. It implies that all changes to the entire assignment were submitted in a single commit
-3. We can't change Homework 3 again, since we said we completed it
+3. We can't change Assignment 3 again, since we said we completed it
 4. All of the above
 5. (1) and (2) only
 :::
@@ -168,7 +168,7 @@ Why is this not an ideal commit message? `"Complete Homework 3"`
 
 ### Why enforce a Style Guide?
 
-Any code that we write will be read by at least one other person, and probably more. Many employers require all submitted code to be verified by at least two other people before it is accepted into the code base. And, at the very least, the TA grading your homework will read your code -- and we want them to be in a good mood when they do it, right?
+Any code that we write will be read by at least one other person, and probably more. Many employers require all submitted code to be verified by at least two other people before it is accepted into the code base. And, at the very least, the TA grading your assignment will read your code -- and we want them to be in a good mood when they do it, right?
 
 So, we follow a standard set of rules, called a "Style Guide," to make our code easier to read.
 
