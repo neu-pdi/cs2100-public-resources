@@ -80,8 +80,7 @@ In-class exercises are graded on completion, not correctness.
 
 - 3 lectures and 1 lab per week​
 - ~ weekly homework assignments​
-- 3 codewalks
-- 4 quizzes and a final exam
+- 5 quizzes
 - Office hours and the discussion board
 
 ---
@@ -92,7 +91,7 @@ In-class exercises are graded on completion, not correctness.
 - No chat models like ChatGPT, Claude, or Gemini
 - Exception: the AI overview that appears when using a search engine like Google. You may use it to look up documentation, errors, concepts, etc.
 - Instructor may ask to meet with the student and have them explain their code
-- There are three "codewalks" this semester
+- There are six project check-ins this semester
 
 ## Open ended poll: How do you feel about the AI policy?
 
