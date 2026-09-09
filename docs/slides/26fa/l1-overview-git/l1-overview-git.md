@@ -99,7 +99,7 @@ In-class exercises are graded on completion, not correctness.
 
 # Resources
 
-- Pawtograder (https://app.pawtograder.com)
+- Pawtograder (https://pawtograder.khoury.northeastern.edu/)
   - Homeworks and labs
   - Discussion board
   - Grades

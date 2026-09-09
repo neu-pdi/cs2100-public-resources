@@ -47,7 +47,7 @@ Open ended poll: How do you feel about the AI policy?
 
 ## Resources
 
-- [Pawtograder](https://app.pawtograder.com):
+- [Pawtograder](https://pawtograder.khoury.northeastern.edu/):
   - The Discussion Board
   - Assignments
     - Submit through GitHub
