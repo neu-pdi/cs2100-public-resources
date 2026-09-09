@@ -21,7 +21,7 @@ const timezones = [
   { value: 'Australia/Sydney', label: 'Australian Eastern Time (AET)' },
 ];
 
-export default function TimezoneCalendar({ calendarSrc, defaultTimezone = 'America/New_York' }: TimezoneCalendarProps) {
+export default function TimezoneCalendar({ calendarSrc, defaultTimezone = 'America/Los_Angeles' }: TimezoneCalendarProps) {
   const [timezone, setTimezone] = useState(defaultTimezone);
 
   const handleTimezoneChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -29,7 +29,8 @@ export default function TimezoneCalendar({ calendarSrc, defaultTimezone = 'Ameri
   };
 
   const encodedTimezone = encodeURIComponent(timezone);
-  const calendarUrl = `https://calendar.google.com/calendar/embed?src=c_ae735e1865c33d82d263141f7f6710d07649557af2b85c7d880964c398911889@group.calendar.google.com&ctz=${encodedTimezone}`;
+  const encodedCalendarSrc = encodeURIComponent(calendarSrc);
+  const calendarUrl = `https://calendar.google.com/calendar/embed?src=${encodedCalendarSrc}&ctz=${encodedTimezone}`;
 
   return (
     <div className={styles.timezoneCalendarContainer}>
