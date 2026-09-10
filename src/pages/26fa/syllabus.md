@@ -51,7 +51,7 @@ Students can register for any CS 2101 lab section on their campus.
 
 There will be approximately **weekly assignments**. The purpose of these assignments is to give you hands-on experience with the course material you learned in lecture, and to prepare you for the quizzes and projects.
 
-Each student will complete an open-ended project over the course of the semester. The project will be graded based on completing the learning objectives and discussing them with TAs during lab time scheduled for project check-ins. [Project guidelines can be found here: https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/pages/26fa/project.pdf](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/pages/26fa/project.pdf)
+Each student will complete an open-ended project over the course of the semester. The project will be graded based on completing the learning objectives and discussing them with TAs during lab time scheduled for project check-ins. [Project guidelines can be found here: https://drive.google.com/file/d/1AJXr8XDEZP_mDH9NwIMhYbHJVMzeVe28/view?usp=sharing](https://drive.google.com/file/d/1AJXr8XDEZP_mDH9NwIMhYbHJVMzeVe28/view?usp=sharing)
 
 There will also be **five quizzes** over the semester. There will not be a final exam during the university's official final exam period, though the final project will be due at the beginning of that week.
 
