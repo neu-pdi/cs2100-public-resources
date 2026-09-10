@@ -305,7 +305,7 @@ If the function has conditionals, make sure to have test cases for each branch.
 
 # The CS 2100 Semester Project
 
-### [Project Guidelines: https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/pages/26fa/project.pdf](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/pages/26fa/project.pdf)
+### [Project Guidelines: https://drive.google.com/file/d/1AJXr8XDEZP_mDH9NwIMhYbHJVMzeVe28/view?usp=sharing](https://drive.google.com/file/d/1AJXr8XDEZP_mDH9NwIMhYbHJVMzeVe28/view?usp=sharing)
 
 There are four types of assessments this semester:
 
@@ -318,7 +318,7 @@ There are four types of assessments this semester:
 
 # The CS 2100 Semester Project
 
-### [Project Guidelines: https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/pages/26fa/project.pdf](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/pages/26fa/project.pdf)
+### [Project Guidelines: https://drive.google.com/file/d/1AJXr8XDEZP_mDH9NwIMhYbHJVMzeVe28/view?usp=sharing](https://drive.google.com/file/d/1AJXr8XDEZP_mDH9NwIMhYbHJVMzeVe28/view?usp=sharing)
 
 | Why  project? It's a shift from: | To: |
 |-|-|
