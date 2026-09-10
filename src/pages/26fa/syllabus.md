@@ -53,6 +53,8 @@ There will be approximately **weekly assignments**. The purpose of these assignm
 
 Each student will complete an open-ended project over the course of the semester. The project will be graded based on completing the learning objectives and discussing them with TAs during lab time scheduled for project check-ins. [Project guidelines can be found here: https://drive.google.com/file/d/1AJXr8XDEZP_mDH9NwIMhYbHJVMzeVe28/view?usp=sharing](https://drive.google.com/file/d/1AJXr8XDEZP_mDH9NwIMhYbHJVMzeVe28/view?usp=sharing)
 
+Each student is assigned a time for each check-in. [Students can find their assigned check-in times here: https://docs.google.com/spreadsheets/d/1GK6iUlRhxaVs4qfJ48iucp5czCkul7cS0JLJePFeIaw/edit?gid=1197749086#gid=1197749086](https://docs.google.com/spreadsheets/d/1GK6iUlRhxaVs4qfJ48iucp5czCkul7cS0JLJePFeIaw/edit?gid=1197749086#gid=1197749086)
+
 There will also be **five quizzes** over the semester. There will not be a final exam during the university's official final exam period, though the final project will be due at the beginning of that week.
 
 ## Communication
