@@ -6,7 +6,7 @@ title: Text Files and User Input
 
 # Text Files and User Input
 
-## Data structures (list, set, and dict)
+## Data structures (list and set)
 
 We will have lectures dedicated to lists and sets later on, but here is the basic syntax to create them:
 

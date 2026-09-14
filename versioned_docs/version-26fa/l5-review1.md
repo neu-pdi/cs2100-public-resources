@@ -40,12 +40,3 @@ It is recommended to review these topics:
 [Solution to Practice Quiz 1](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-1-with-solutions.pdf)
 
 If you use [2026 Spring's Practice Quiz 1](https://neu-pdi.github.io/cs2100-public-resources/lecture-notes/26sp/l4-review1#practice-quiz-1), please keep in mind that we used `unittest` instead of `pytest` for testing, so the format may look different for the third question.
-
-## Homework help: Git / command line / Pawtograder review
-
-Recommended: Instructor goes to Pawtograder > HW1 > Test Assignment and "starts" the assignment like a student.
-
-Helpful reminders:
-- How to test functions that take user input or print things (mock the user)
-- Tests in `tests/test_*.py` should pass on *anyone's* implementation, not just yours. (Don't make the tests specific to your chosen additional questions). Tests specific to your implementation should go in `tests/impl_*.py`.
-- For testing additional questions (especially generic, non-specific tests), use `dict`
