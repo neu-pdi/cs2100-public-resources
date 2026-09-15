@@ -70,27 +70,23 @@
 "codewalks": [
     {
         "date": "2026-10-01",
-        "title": "Project Check-in #1"
+        "title": "Project Checkpoint (Code Submission) #1"
     },
     {
         "date": "2026-10-15",
-        "title": "Project Check-in #2"
+        "title": "Project Checkpoint (Code Submission) #2"
     },
     {
         "date": "2026-10-29",
-        "title": "Project Check-in #3"
+        "title": "Project Checkpoint (Code Submission) #3"
     },
     {
         "date": "2026-11-12",
-        "title": "Project Check-in #4"
+        "title": "Project Checkpoint (Code Submission) #4"
     },
     {
-        "date": "2026-11-23",
-        "title": "Project Check-in #5"
-    },
-    {
-        "date": "2026-12-10",
-        "title": "Project Check-in #6"
+        "date": "2026-12-02",
+        "title": "Project Checkpoint (Code Submission) #5"
     }
 ]
 }
