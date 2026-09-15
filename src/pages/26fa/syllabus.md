@@ -68,7 +68,7 @@ There will also be **five quizzes** over the semester. There will not be a final
 | Instructor | Campus | Office Hours |
 | -- | -- | -- |
 | [Prof. Rasika Bhalerao](https://rasikabh.github.io/) | Oakland | Tuesdays and Thursdays 2-2:30 in Carnegie 201 or by appointment |
-| [Prof. Alvaro Monge](https://www.khoury.northeastern.edu/people/alvaro-monge/) | Oakland |  |
+| [Prof. Alvaro Monge](https://www.khoury.northeastern.edu/people/alvaro-monge/) | Oakland | Tuesdays 10:15-11:15am PT and Wednesdays 3-4pm PT in Carnegie 201, or by appointment (send email request at least 1 day prior) |
 | [Prof. Leena Razzaq](https://www.ccs.neu.edu/home/lrazzaq/) | Boston | 3-4:00 on Mondays in Meserve 329 or by appointment |
 | [Prof. Rose Sloan](https://www.khoury.northeastern.edu/people/rose-sloan/) | Boston | 3-4:30 on Thursdays in Meserve 311 or by appointment |
 | [Prof. Jeongkyu Lee](https://www.khoury.northeastern.edu/people/jeongkyu-lee/) | NYC | Friday 12:30pm-2pm in the Found Faculty Lounge |
