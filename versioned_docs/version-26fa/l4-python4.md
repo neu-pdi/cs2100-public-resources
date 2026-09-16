@@ -126,6 +126,7 @@ We use `@patch('builtins.print')` to mock things being printed to the console, a
 
 ```python
 import pytest
+import unittest
 from unittest.mock import patch, Mock
 
 def repeat_three_inputs() -> str:
