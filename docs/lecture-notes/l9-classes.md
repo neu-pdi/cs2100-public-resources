@@ -189,24 +189,49 @@ def test_negative_area(self) -> None:
 3. The function's name doesn't reflect what it tests
 4. It's using the wrong type of test
 
-## Using setup_method and teardown_method
+## Using pytest fixtures
 
-`pytest` comes with four methods that we can write to help us reduce redundancy and write cleaner tests:
+Most of the time, our tests start with instantiating the object that we are testing.
+This leads to redundancy -- many of our tests have the same setup lines at the beginning.
 
-- `def setup_method(self) -> None:` is a method which, if implemented, runs before each test.
-- `def teardown_method(self) -> None:` similarly runs after each test.
-- `def setup_class(cls) -> None:` runs once at the beginning, before any tests have run. It needs the decorator `@classmethod` right above the method definition, which we will discuss more later on in the semester. Notice also that the argument is `cls`, not `self`.
-- `def teardown_class(cls) -> None:` runs once at the end, after all of the tests have run. It also needs the decorator `@classmethod` right above the method definition. We will discuss class methods later in the semester, and you don't need to understand the decorator to write tests using `setup_class(cls)` and `teardown_class(cls)`.
+To reduce redundancy, `pytest` offers a `fixture` which is instantiated at the beginning of each test.
 
-Poll: Why does this break? Why is it better to use `setup_method()`?
+In this example, a `Rectangle` named `rectangle` will be instantiated before each test.
+
+```python
+import pytest
+
+@pytest.fixture(name="rectangle")
+def rectangle_fixture() -> Rectangle:
+    """Define a Rectangle for testing."""
+    return Rectangle(3, 4)
+
+class TestRectangle:
+    """Tests for the Rectangle class."""
+
+    def test_area(self, rectangle: Rectangle) -> None:
+      """Test the area of a 3 by 4 rectangle."""
+      assert rectangle.get_area() == 12
+      
+    def test_perimeter(self, rectangle: Rectangle) -> None:
+      """Test the perimeter of a 3 by 4 rectangle."""
+      assert rectangle.get_perimeter() == 14
+```
+
+Note: make sure that the fixture's `name` argument is different from the name of the function -- otherwise, Pylint will complain when that same name is re-used as the argument to the test functions.
+
+If we want to make it so the fixture is only defined once at the beginning of the test class, instead of before every test method, we can add `scope="class"` to the fixture's arguments. This means that any changes made to the object in a test may remain in place during other tests.
+
+
+Poll: Why does this break? Why is it better to use a pytest fixture?
 ```python
 class TestShirt:
     def __init__(self) -> None:
-        self.shirt = Shirt(500, 'green')
+      self.shirt = Shirt(500, 'green')
     
     def test_set_size_works_for_positive_values(self) -> None:
-        self.shirt.set_size(600)
-        assert self.shirt.size == 600
+      self.shirt.set_size(600)
+      assert self.shirt.size == 600
     
     def test_cannot_set_size_to_negative_value(self) -> None:
       assert self.shirt.size == 500
