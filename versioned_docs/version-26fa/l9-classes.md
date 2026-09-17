@@ -108,11 +108,10 @@ We saw an example of this in Lecture 1. We can organize our tests -- each class 
 
 To create a test class for a class named `Class`:
 1. Create a class called `TestClass`
-2. Put all the tests for `Class` inside `TestClass`
+2. Put all the tests for `Class` as methods inside `TestClass`
   - pytest uses plain `assert` statements for assertions
-    - `assert result == expected` replaces `self.assertEqual()`
-    - `assert result != expected` replaces `self.assertNotEqual()`
-    - `assert result == pytest.approx(expected)` replaces `self.assertAlmostEqual()` for `float`s.
+    - `assert result == expected`
+    - Use `assert result == pytest.approx(expected)` for `float`s
     - `pytest.raises()` is used as a context manager to check that an error is raised. Example: `with pytest.raises(ValueError): get_area_of_rectangle(-1, 4)`
     - The name of each method that has tests in it should start with `test_`
 3. Run tests from the command line with `pytest` (no call needed inside the file)
