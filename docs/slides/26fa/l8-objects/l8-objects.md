@@ -144,6 +144,30 @@ def modify_shirt(shirt: Shirt) -> Shirt:
 
 ---
 
+## Poll: Why does this test fail?
+
+```python
+class Rectangle:
+
+    def __init__(self, length: int, width: int) -> None:
+        self.length = length
+        self.width = width
+    
+
+class TestRectangle:
+    def test_length_width(self) -> None:
+        rect1 = Rectangle(3, 4)
+        rect2 = Rectangle(4, 3)
+        assert rect1 == rect2
+```
+
+1. Because you can't put tests inside a class like that.
+2. Because the length and width are switched in rect1 and rect2. If they were both (3, 4), then it would pass.
+3. Because `==` calls the `__eq__()` method, and `Rectangle` doesn't have an `__eq__()` method, so no two Rectangles can ever be equal.
+4. Because `==` calls the `__eq__()` method, and `Rectangle` is using the default `__eq__()` which makes rect1 and rect2 equal only if they are aliases of each other.
+
+---
+
 <div class="grid grid-cols-2 gap-4">
 <div>
 

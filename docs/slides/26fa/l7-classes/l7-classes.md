@@ -10,6 +10,83 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
+## Motivating example: let's write a text editor with undo / redo
+
+```python
+def apply_edit(text: str, new_text: str, history: list[str], future: list[str]) -> str:
+    history.append(text)
+    future.clear()
+    return new_text
+
+
+def undo(text: str, history: list[str], future: list[str]) -> str:
+    if not history:
+        return text
+    future.append(text)
+    return history.pop()
+
+
+def redo(text: str, history: list[str], future: list[str]) -> str:
+    if not future:
+        return text
+    history.append(text)
+    return future.pop()
+
+
+text = "Hello"
+history: list[str] = []
+future: list[str] = []
+
+text = apply_edit(text, "Hello, world", history, future)
+text = apply_edit(text, "Hello, world!", history, future)
+text = undo(text, history, future)
+print(text)  # "Hello, world"
+text = redo(text, history, future)
+print(text)  # "Hello, world!"
+```
+
+---
+
+## Solution for ugliness: Classes
+
+```python
+class TextEditor:
+    def __init__(self, initial_text: str = "") -> None:
+        self.text: str = initial_text
+        self.history: list[str] = []
+        self.future: list[str] = []
+
+    def edit(self, new_text: str) -> None:
+        self.history.append(self.text)
+        self.text = new_text
+        self.future.clear()
+
+    def undo(self) -> bool:
+        if not self.history:
+            return False
+        self.future.append(self.text)
+        self.text = self.history.pop()
+        return True
+
+    def redo(self) -> bool:
+        if not self.future:
+            return False
+        self.history.append(self.text)
+        self.text = self.future.pop()
+        return True
+
+
+editor = TextEditor("Hello")
+editor.edit("Hello, world")
+editor.edit("Hello, world!")
+editor.undo()
+print(editor.text)  # "Hello, world"
+editor.redo()
+print(editor.text)  # "Hello, world!"
+```
+
+---
+
 # Classes
 
 - "nouns" (versus functions which are "verbs")
