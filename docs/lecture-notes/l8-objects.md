@@ -1,6 +1,6 @@
 ---
-sidebar_position: 10
-lecture_number: 10
+sidebar_position: 8
+lecture_number: 8
 title: Using Objects
 ---
 
