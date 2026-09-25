@@ -86,28 +86,28 @@ Source: [Tyler Yeats](https://aeromancer.dev/)
 
 Python allows us to have a function with an arbitrary number of arguments:
 ```python
-def print_args(*args: T) -> None:
+def print_args(*args: str) -> None:
     """Print each argument on a separate line"""
     for item in args:
         print(item)
 
-print_args(1, 2, 3)
+print_args('a', 'b', 'c')
 ```
 
-The function `print_args()` above can take any number of arguments, and they are of the generic type `T`. We can access them inside the function -- each argument to `print_args()` becomes an element in the tuple `args`. If there are no arguments, then `args` will be an empty tuple.
+The function `print_args()` above can take any number of arguments, and they are of type `str`. We can access them inside the function -- each argument to `print_args()` becomes an element in the tuple `args`. If there are no arguments, then `args` will be an empty tuple.
 
 And, if we want a variable argument list, but with named arguments:
 ```python
-def print_args(**kwargs: T) -> None:
+def print_args(**kwargs: str) -> None:
     """Print each argument on a separate line"""
     for argument_name, argument_value in kwargs.items():
         print(f'{argument_name}: {argument_value}')
 
-print_args(a = 1, b = 2, c = 3)
+print_args(a = 'a', b = 'b', c = 'c')
 
-a: 1
-b: 2
-c: 3
+a: a
+b: b
+c: c
 ```
 
 `**kwargs` stands for "keyword arguments", but you can name it anything you want. Notice that we use two asterisks for `**kwargs` and only one for `*args`.
