@@ -194,7 +194,7 @@ Exercise: Let's write a function that helps us with [Scrabble](https://playscrab
 ```python
 def scrabble_helper(letter: str) -> dict[int, set[str]]:
     result: dict[int, set[str]] = dict()
-    with open('/path/to/dictionary.txt', 'r', encoding='utf-8') as english_dict:
+    with open('/path/to/words_alpha.txt', 'r', encoding='utf-8') as english_dict:
         for word in english_dict.readlines():
             if letter in word:
                 word = word.strip()
