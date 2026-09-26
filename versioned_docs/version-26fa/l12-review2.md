@@ -16,7 +16,6 @@ It is recommended to review these topics:
 
 It is recommended to review these topics:
 - State and aliasing
-- `None` and `Optional`
 - The `self.__eq__(other: object) -> bool` method
 
 ## Stakeholder-value matrices
