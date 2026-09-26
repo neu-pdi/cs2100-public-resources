@@ -92,12 +92,12 @@ After the loop (which it should only reach if no two people have the same birthd
 num_students: int = 80
 
 def any_same_birthdays() -> bool:
-    birthdays: set[Tuple[int, int]] = set()
+    birthdays: set[tuple[int, int]] = set()
 
     for _ in range(num_students):
         month: int = int(input('Please enter the month as a number between 1 and 12: '))
         day: int = int(input('Please enter the day as a number between 1 and 31: '))
-        date: Tuple[int, int] = (month, day)
+        date: tuple[int, int] = (month, day)
         if date in birthdays:
             return True
         else:
