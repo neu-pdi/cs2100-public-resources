@@ -4,7 +4,7 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
-# Quiz 1 Debrief and Ethics
+# Ethics
 ## Welcome back to CS 2100!
 ## Prof. Rasika Bhalerao
 
@@ -52,6 +52,76 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
   - E.g. a tool that is very useful to one population may be harmful or inaccessible to another population
 - Unfairness is compounded through feedback loops
   - E.g. social media highlights posts which have already received attention
+
+---
+
+# One day in June, when I logged in to Canvas:
+
+![Canvas was hacked](canvas_hack.png)
+
+### What can go wrong if the data is leaked?
+
+---
+
+### Next activity:
+
+# Google yourself.
+
+## Where is your data listed?
+
+## How hard is it to “opt out” of being listed there?
+
+---
+
+### Next activity:
+
+# What does Google know about you?
+
+# account.google.com
+
+---
+
+# Raise your hand if...
+
+# you don’t always read the Terms and Conditions before accepting them
+
+---
+
+# What to look for in the terms and conditions
+
+## General AI privacy policies
+- What data is collected? Stored? Used for training?
+
+## Red flags
+- No clear data retention policy
+- Vague statements about "improving our models"
+- Requires uploading identifiable information
+
+## Is anything ever truly "free?"
+
+---
+
+### Next activity...
+
+# Ask an LLM to read a privacy policy for you.
+
+E.g., ask Claude to read Google Classroom’s AI policy (give it the link)
+
+### Make sure to:
+- Ask what personal data it retains, and for how long
+- Ask who gets access to the data that it retains
+- Ask what it thinks you should be aware of
+- Any privacy concerns specific to the product
+
+Tip: User policies, terms of service / terms of use, privacy statements, etc. are all relevant
+
+Prepare one sentence about what you found.
+
+---
+
+## "buT if YOu hAVe nOtHiNg tO HIde, yOu SHouLdN’t bE wOrrIEd"
+
+# How do you respond?
 
 ---
 

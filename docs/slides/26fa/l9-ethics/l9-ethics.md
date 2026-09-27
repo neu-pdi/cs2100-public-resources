@@ -4,13 +4,9 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
-# Quiz 1 Debrief and Ethics
+# Ethics
 ## Welcome back to CS 2100!
 ## Prof. Rasika Bhalerao
-
----
-
-# First: let's go over Quiz 1
 
 ---
 
@@ -28,6 +24,34 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 # NOT learning outcomes:
 
 - Tell students what to think / which opinions they should hold
+
+---
+
+# [Khoury College Oath for Computing Professionals](https://www.khoury.northeastern.edu/oath-for-computing-professionals/)
+
+<!-- This block only affects this slide -->
+<style scoped>
+section {
+  font-size: 23px;
+}
+</style>
+
+Today, I join the ranks of computer scientists worldwide.
+
+I will remember that I remain a member of society, with special obligations to all my fellow human beings.
+
+
+I will design and build computing systems that enhance the quality of daily life for individuals and for society.
+
+I will protect the dignity of users and others affected by computing systems, respecting the diversity of all cultures and safeguarding against threats to health and safety.
+
+I will respect the privacy and rights of all people and recognize the special role I have in judiciously collecting, storing, and using their information, and creating systems that aim to shape their behavior.
+
+I will work for fair wages, honorably guarding my reputation and my colleagues in our work practices while respecting the intellectual contributions of others.
+
+I will improve the public understanding of computing and its consequences.
+
+May I always act to preserve the finest traditions of my field, and may I long experience the joy of inventing the future through my endeavors.
 
 ---
 
