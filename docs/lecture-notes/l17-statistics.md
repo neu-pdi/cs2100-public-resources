@@ -5,3 +5,7 @@ title: Statistical Variables
 ---
 
 # Statistical Variables
+
+## Mean and median
+
+## Variance

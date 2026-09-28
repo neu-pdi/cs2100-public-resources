@@ -115,7 +115,7 @@ E.g., ask Claude to read Google Classroom’s AI policy (give it the link)
 
 Tip: User policies, terms of service / terms of use, privacy statements, etc. are all relevant
 
-Prepare one sentence about what you found.
+# Poll: Prepare one sentence about what you found.
 
 ---
 
