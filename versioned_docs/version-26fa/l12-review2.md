@@ -25,3 +25,8 @@ It is recommended to review these topics:
 - Selecting stakeholders
 - Selecting values
 
+## Practice Quiz 2
+
+[Practice Quiz 1](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-2.pdf)
+
+[Solution to Practice Quiz 1](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-2-with-solutions.pdf)
