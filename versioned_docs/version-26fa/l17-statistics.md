@@ -5,3 +5,11 @@ title: Statistical Variables
 ---
 
 # Statistical Variables
+
+## Variable types
+
+### Binning
+
+## Mean and median
+
+## Variance
