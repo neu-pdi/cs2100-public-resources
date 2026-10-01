@@ -27,6 +27,6 @@ It is recommended to review these topics:
 
 ## Practice Quiz 2
 
-[Practice Quiz 1](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-2.pdf)
+[Practice Quiz 2](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-2.pdf)
 
-[Solution to Practice Quiz 1](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-2-with-solutions.pdf)
+[Solution to Practice Quiz 2](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-2-with-solutions.pdf)
