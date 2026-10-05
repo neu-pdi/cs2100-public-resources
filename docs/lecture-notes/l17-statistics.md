@@ -41,7 +41,8 @@ A **binary** variable is a special case of categorical variable, where there are
 
 An **ordinal** variable is a special case of categorical variable, where the categories have an inherent order. Ordinal variables will appear on the TRACE evaluations which you should complete at the end of the semester.
 
-![An ordinal variable](ordinal.png)
+<img width="511" height="154" alt="An ordinal variable" src="https://github.com/user-attachments/assets/8417a69b-265f-4bbf-83c1-5039d799d6c7" />
+
 
 Source of that image: https://www.mymarketresearchmethods.com/types-of-data-nominal-ordinal-interval-ratio/
 
