@@ -86,7 +86,11 @@ Autograder scores will not be changed after the assignment deadline. Students ca
 
 ## Regrades and Redoes
 
-If you have a manually-graded assignment on Pawtograder that you believe was graded incorrectly, you can submit a regrade request within Pawtograder, explaining the mistake. All regrade requests must be made within one week of receiving the graded assignment.
+If you have a manually-graded assignment that you believe was graded incorrectly, you can submit a regrade request explaining the mistake. All regrade requests must be made within one week of receiving the graded assignment.
+
+**Project check-in meeting redos:** If a student feels they could have done better on a project check-in meeting, then they can submit the [Project Check-in Redo Form](https://docs.google.com/forms/d/e/1FAIpQLSfqcFvWGuieNYhq5aGzSIywt82ss95zsoQOpPK1PBwM3C1C9A/viewform). Each student can submit this form at most once per semester.
+
+**Missed project check-in meetings:** It is expected that you will be available during your assigned check in time, since your entire lab block should be blocked off on your schedule each Friday. If you do not show up to your assigned check in time or try to attend another time slot, you will receive a 20% on that check in assignment. If you cannot make your time due to an illness or emergency, please email your professor or the course coordinator (a.gately@northeastern.edu) before your check in time. Any disrespect towards TAs enforcing this policy will not be tolerated and will result in a 20% for the assignment with no opportunity for a makeup.
 
 ## Office Hours
 
