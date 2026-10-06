@@ -262,3 +262,86 @@ print(letters)  # {'v', 'g', 'i', 'o', 'n', 'a', 'y', 'p', 'u', 'e', 'r', ' '}
 ```
 
 List comprehension is a powerful tool. It can make `for` loops easier to read, though it is always up to you to decide which version is easiest to read for your code. Sometimes, a basic `for` loop is more readable.
+
+Poll: What does this function do (other than confuse)?
+
+```python
+def something(docs: list[str]) -> int:
+    """Confuses students.
+    
+    Parameters:
+        docs : list[str]
+            A list of confusing strings, each more ridiculous than the last
+
+    Returns:
+        int
+            A confusing number
+    """
+    return sum(len(open(doc, encoding="utf-8").read()) for doc in docs)
+```
+
+## Tuples
+
+A Tuple is an ordered collection like a list, but immutable (i.e., its contents cannot be changed after declaration)
+
+Motivating question: What is the `type` of the collection of arguments `*args`? A `tuple`!
+
+```python
+def print_args(*args: T) -> None:
+    """Print each argument on a separate line"""
+    for item in args:
+        print(item)
+
+print_args(1, 2, 3)
+```
+
+An object is "immutable" if it cannot be modified after creation.
+
+For example, lists are not immutable, because they can be modified after creation. Lists are mutable.
+```python
+my_list: list[int] = [1, 2, 3]
+my_list.append(-400)
+print(my_list) # [1, 2, 3, -400]
+```
+
+By contrast, tuples are immutable.
+```python
+my_tuple: tuple[int, int, int] = (1, 2, 3)
+my_tuple.append(4) # impossible
+```
+
+- Notice how the tuple looks a lot like the list, but it is initialized using parentheses instead of square brackets.
+- Its type also specifies the number of elements in it, which is fine since it can't be modified.
+  - (If you need to create a huge tuple with, say, 60 elements, and you don't want to write `int` 60 times in the type of the variable, you can use this instead: `my_long_tuple: tuple[int, ...] = tuple([i for i in range(60)])`)
+ 
+We can sort a list in-place, but not a tuple.
+```python
+my_list.sort()
+print(my_list) # [-400, 1, 2, 3]
+
+my_tuple.sort() # impossible
+```
+
+However, here's the tricky part. While the tuple is immutable, the variable `my_tuple` (the pointer to the location in the computer's memory) is still a mutable variable. So, while we can't mutate the tuple itself, we can re-assign the variable `my_tuple` to a sorted version of the same tuple.
+
+```python
+my_long_tuple: tuple[int, ...] = tuple([-i for i in range(5)])
+my_long_tuple = tuple(sorted(my_long_tuple))
+print(my_long_tuple)      # (-4, -3, -2, -1, 0)
+```
+
+Poll: Which ONE is not allowed? (Hint: `str`s are immutable)
+```python
+my_str: str = 'mini'
+```
+1. `print(my_str.upper())`
+2. `my_str = my_str.upper()`
+3. `my_str = 'MINI'`
+4. `my_str[0] = 'B'`
+
+Poll: Tuples and lists are very similar, but we can't modify tuples. Which of these collections should be a tuple instead of a list?
+
+1. Students registered for a course
+2. Cats in a shelter
+3. The seven days of the week
+4. Driving directions from school to the airport (turn left, drive 2 miles, ...)
