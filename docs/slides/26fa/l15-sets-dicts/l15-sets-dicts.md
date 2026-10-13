@@ -10,6 +10,107 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
+## List comprehension can be used for things that aren't lists 
+
+Iterate over a string and create a set:
+```python
+phrase: str = 'never gonna give you up'
+
+letters: set[str] = {letter.lower() for letter in phrase}
+
+print(letters)  # {'v', 'g', 'i', 'o', 'n', 'a', 'y', 'p', 'u', 'e', 'r', ' '}
+```
+
+It is always up to you to decide which version is easiest to read for your code. Sometimes, a basic `for` loop is more readable.
+
+---
+
+## Poll: What does this function do (other than confuse)?
+
+```python
+def something(docs: list[str]) -> int:
+    """Confuses students.
+    
+    Parameters:
+        docs : list[str]
+            A list of confusing strings, each more ridiculous than the last
+
+    Returns:
+        int
+            A confusing number
+    """
+    return sum(len(open(doc, encoding="utf-8").read()) for doc in docs)
+```
+
+---
+
+# Tuple: like a list, but immutable (i.e., its contents cannot be changed after declaration)
+
+## What is the `type` of the collection of arguments `*args`? A `tuple`!
+
+```python
+def print_args(*args: T) -> None:
+    """Print each argument on a separate line"""
+    for item in args:
+        print(item)
+
+print_args(1, 2, 3)
+```
+
+```python
+nums: tuple[int, int, int] = (1, 2, 3)
+
+my_long_tuple: tuple[int, ...] = tuple([-i for i in range(50)])
+```
+
+---
+
+# Tuple: like a list, but immutable (i.e., its contents cannot be changed after declaration)
+
+We can sort a list in-place, but not a tuple.
+```python
+my_list.sort()
+print(my_list) # [-400, 1, 2, 3]
+
+my_tuple.sort() # impossible
+```
+
+---
+
+## Poll: Tuples and lists are very similar, but we can't modify tuples. Which of these collections should be a tuple instead of a list?
+
+1. Students registered for a course
+2. Cats in a shelter
+3. The seven days of the week
+4. Driving directions from school to the airport (turn left, drive 2 miles, ...)
+
+---
+
+## The tricky part:
+- The tuple is immutable
+- The variable `my_tuple` (the pointer to the location in the computer's memory) is a mutable variable
+
+We can't mutate the tuple, but we can re-assign the variable `my_tuple` to a sorted version of the same tuple:
+
+```python
+my_long_tuple: tuple[int, ...] = tuple([-i for i in range(5)])
+my_long_tuple = tuple(sorted(my_long_tuple))
+print(my_long_tuple)      # (-4, -3, -2, -1, 0)
+```
+
+---
+
+## Poll: Which ONE is not allowed? (Hint: `str`s are immutable)
+```python
+my_str: str = 'mini'
+```
+1. `print(my_str.upper())`
+2. `my_str = my_str.upper()`
+3. `my_str = 'MINI'`
+4. `my_str[0] = 'B'`
+
+---
+
 # Sets
 
 A set is very similar to a list: it is a collection of items.
@@ -168,23 +269,6 @@ print(ages)  # {'elephant': 12, 'cat': 10}
 
 also_ages: dict[str, int] = dict([('elephant', 12), ('cat', 10)])
 print(also_ages)  # {'elephant': 12, 'cat': 10}  (same as before)
-```
-
----
-
-# Common difficulty in HW1: testing the keys instead of the values
-
-### The tests need to work on _any_ implementation, not just the one with your specific keys
-
-```python
-def test_ask_additional_questions(self) -> None:
-        """Test ask_additional_questions with all 'y' responses."""
-
-        with patch('builtins.input', side_effect=['y', 'y', 'y', 'y', 'y']):
-
-            result = self.question_asker.ask_additional_questions()
-
-            self.assertTrue(True in result.values())
 ```
 
 ---
@@ -379,7 +463,7 @@ Keeping track of each student's favorite color
 
 ---
 
-# The Accumulator Pattern
+<!-- # The Accumulator Pattern
 
 ### A large part of this course will involve _design patterns_: a structure or template that software engineers have agreed solves a common software problem.
 
@@ -427,7 +511,7 @@ Exercise for you as a future reader: how can we use the Accumulator Pattern to a
 4. Initialize the accumulator variable to `0` before a loop over the sequence, and update it inside the loop
 
 
----
+--- -->
 
 # Poll:
 

@@ -92,12 +92,12 @@ After the loop (which it should only reach if no two people have the same birthd
 num_students: int = 80
 
 def any_same_birthdays() -> bool:
-    birthdays: set[tuple[int, int]] = set()
+    birthdays: set[Tuple[int, int]] = set()
 
     for _ in range(num_students):
         month: int = int(input('Please enter the month as a number between 1 and 12: '))
         day: int = int(input('Please enter the day as a number between 1 and 31: '))
-        date: tuple[int, int] = (month, day)
+        date: Tuple[int, int] = (month, day)
         if date in birthdays:
             return True
         else:
@@ -194,7 +194,7 @@ Exercise: Let's write a function that helps us with [Scrabble](https://playscrab
 ```python
 def scrabble_helper(letter: str) -> dict[int, set[str]]:
     result: dict[int, set[str]] = dict()
-    with open('/path/to/words_alpha.txt', 'r', encoding='utf-8') as english_dict:
+    with open('/path/to/dictionary.txt', 'r', encoding='utf-8') as english_dict:
         for word in english_dict.readlines():
             if letter in word:
                 word = word.strip()
@@ -274,18 +274,6 @@ for word in filter(is_long, phrase.split()):
     print(word)
 ```
 Prints each word of the phrase that is at least 4 characters long on its own line.
-
-Poll: What does this function do?
-```python
-def thing(n: int, m: int) -> float:
-    total: int = sum([int(random() * n) for i in range(m)])
-    return total / n
-```
-
-1. It returns a list of `n` random numbers between 0 and `m`
-2. It returns a list of `m` random numbers between 0 and `n`
-3. It returns the average of `n` random numbers between 0 and `m`
-4. It returns the average of `m` random numbers between 0 and `n`
 
 ## (if time) The Accumulator Pattern
 

@@ -275,18 +275,6 @@ for word in filter(is_long, phrase.split()):
 ```
 Prints each word of the phrase that is at least 4 characters long on its own line.
 
-Poll: What does this function do?
-```python
-def thing(n: int, m: int) -> float:
-    total: int = sum([int(random() * n) for i in range(m)])
-    return total / n
-```
-
-1. It returns a list of `n` random numbers between 0 and `m`
-2. It returns a list of `m` random numbers between 0 and `n`
-3. It returns the average of `n` random numbers between 0 and `m`
-4. It returns the average of `m` random numbers between 0 and `n`
-
 ## (if time) The Accumulator Pattern
 
 A large part of this course will involve _design patterns_: a structure or template that software engineers have agreed solves a common software problem.
