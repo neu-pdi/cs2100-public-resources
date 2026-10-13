@@ -18,7 +18,7 @@ Some differences between statistical variables and computer programming variable
 | `age = 25`, `name: Optional[str] = None`, `has_bodyguard = True` | age, birth month, what time the bus arrives, whether or not it rains |
 | variables can have many types (int, string, boolean, list, object, etc.) | variables are generally either quantitative or categorical (next section) |
 
-### Polls: For each, is this describing a variable in the statistical or computer programming sense?
+**Polls: For each, is this describing a variable in the statistical or computer programming sense?**
 
 - score = score + 5
 - In our dataset, age ranges from 18 to 65
@@ -55,7 +55,7 @@ Quantitative variables are either **continuous** or **discrete**.
 | can only take on specific, separate values -- there are gaps between possible values, and you can't meaningfully have a value in between two consecutive ones | can take on any value within a given range — between any two values, there's always another possible value |
 | E.g., number of marbles, number of bugs in a program | E.g., time, temperature, distance |
 
-### Polls: For each, should it be a continuous or discrete variable?
+**Polls: For each, should it be a continuous or discrete variable?**
 
 - Number of emails in an inbox
 - Time it takes the bus to get to the airport
@@ -72,7 +72,7 @@ Binning is the process of taking a quantitative variable and grouping its values
 
 It helps with analysis, since it's easier to summarize "ages 20–29, 30–39, 40–49" than every individual age.
 
-### Polls: Here are the runtimes (in milliseconds) of 12 test cases:
+**Polls: Here are the runtimes (in milliseconds) of 12 test cases:**
 
 12, 15, 18, 23, 26, 29, 31, 38, 42, 44, 45, 49
 
@@ -126,13 +126,13 @@ Same dataset: 4, 5, 6, 7, 50 -> sorted, middle value = 6
 
 Now compare: median (6) vs. mean (14.4) — median is much more representative when there's an extreme value.
 
-### Poll: What are the mean and median of this dataset? Which one better represents a "typical" value?
+**Poll: What are the mean and median of this dataset? Which one better represents a "typical" value?**
 
 Dataset: 10, 12, 13, 14, 90
 
 (Free response)
 
-### Poll: A company reports that thir mean salary is $120,000/year. An employee tells you that most people there actually make around $65,000. Please propose an explanation for this discrepancy.
+**Poll: A company reports that thir mean salary is $120,000 per year. An employee tells you that most people there actually make around $65,000. Please propose an explanation for this discrepancy.**
 
 ## Variance and standard deviation
 
@@ -178,18 +178,18 @@ Squared units can be hard to interpret intuitively. So, we take the square root.
 
 **Standard deviation = square root of variance**
 
-### Poll: Dataset A: 48, 49, 50, 51, 52. Dataset B: 10, 30, 50, 70, 90. Both have a mean of 50. Which has the higher variance?
+**Poll: Dataset A: 48, 49, 50, 51, 52. Dataset B: 10, 30, 50, 70, 90. Both have a mean of 50. Which has the higher variance?**
 
 1. Dataset A
 2. Dataset B
 3. They're equal
 4. Cannot be determined
 
-### Poll: Given the dataset 4, 8, 6, 10, 12, what are the variance and standard deviation?
+**Poll: Given the dataset 4, 8, 6, 10, 12, what are the variance and standard deviation?**
 
 (Free response)
 
-### Poll: Two sorting algorithms both have a mean runtime of 50ms. Algorithm A has a standard deviation of 2ms. Algorithm B has a standard deviation of 40ms. Which algorithm has a more consistent runtime?
+**Poll: Two sorting algorithms both have a mean runtime of 50ms. Algorithm A has a standard deviation of 2ms. Algorithm B has a standard deviation of 40ms. Which algorithm has a more consistent runtime?**
 
 1. Algorithm A
 2. Algorithm B
