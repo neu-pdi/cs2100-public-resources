@@ -1,10 +1,10 @@
 ---
 sidebar_position: 17
 lecture_number: 17
-title: Statistical Variables
+title: Statistical Measures
 ---
 
-# Statistical Variables
+# Statistical Measures
 
 So far, we have been using variables in the computer programming sense. To do data science, we need to understand variables in the statistical sense, too.
 

@@ -172,7 +172,7 @@ Poll: Let's say that this is our dataset of values for the variable `x`: [6, 8, 
 3. [0, 0.5, 0.75, 0.5, 0.25]
 4. [0, 4, 1, 3, 2]
 
-## Argmax
+## Argsort and Argmax
 
 It is useful to know that Numpy has a function called `argsort()` which takes a list of elements and returns a list of its indices, moved to the locations they would be in if the list was sorted.
 ```python
@@ -187,3 +187,13 @@ indices_of_sorted_words = np.argsort(words)
 print(indices_of_sorted_words)  # [2 1 0 4 3]
 ```
 This is saying that, if the list of words was sorted alphabetically, the word at index 2 would be first, then the word at index 1, then the word at index 0, etc. until the last word, which would be the word at index 3.
+
+Similarly, NumPy has a function called `argmax()`, which returns the index of the maximum value in a list, rather than the value itself. While `argsort()` returns the indices of all elements in sorted order, `argmax()` returns only the index of the largest element. For example, we can use `argmax()` to find the index of the longest word in our list.
+
+```python
+idx_of_longest_word = np.argmax([len(w) for w in words])
+print(idx_of_longest_word)   # 0
+print(words[idx_of_longest_word])  # never
+```
+
+This is saying that the longest word is at index 0 (`"never"`), which has 5 characters. Note that `"gonna"` also has 5 characters, but `argmax()` returns the index of the first occurrence when multiple elements share the maximum value.
