@@ -170,7 +170,7 @@ For Dataset B: (1600 + 400 + 0 + 400 + 1600) / 5 = 4000 / 5 = 800
 
 For Dataset A: (4,1,0,1,4)/5 = 10/5 = 2 (much smaller, so more reliably close to the mean)
 
-1. Flag the units problem -> standard deviation
+4. Flag the units problem -> standard deviation
 
 If our data is in milliseconds, what are the units of variance? milliseconds², squared units
 
