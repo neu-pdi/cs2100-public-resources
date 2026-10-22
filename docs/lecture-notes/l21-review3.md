@@ -21,3 +21,8 @@ It is recommended to review these topics:
 - Sorting and filtering
 - Binary operators (`|`, `-`, etc.)
 
+## Practice Quiz 3
+
+[Practice Quiz 3](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-3.pdf)
+
+[Solution to Practice Quiz 3](https://github.com/neu-pdi/cs2100-public-resources/blob/main/docs/quizzes/26fa/practice-quiz-3-with-solutions.pdf)
