@@ -181,15 +181,3 @@ print(pd.merge(df_all_students, df_swimming_class_grades, on='ID', how='left'))
 2. A dataframe with 4 rows
 3. A dataframe with 5 rows
 4. Error -- cannot merge dataframes with different lengths
-
-## MapReduce
-
-MapReduce is a framework for processing data using the `map` and `reduce` concepts, independent of programming language:
-1. **Map phase**: In this phase, the data is broken into pieces, and each piece is "mapped" or transformed.
-2. **Reduce phase**: In this phase, the mapped data is then "reduced" or combined into a result.
-
-For example, let's say we are counting the frequency of each word in a piece of text.
-1. The map phase will involve splitting the text into words, and mapping each word to a key-value pair such as `(word, 1)`, where `word` is the word being mapped.
-2. The reduce phase will involve grouping the key-value pairs by word, and then reducing, or adding up, the numbers in each group.
-
-The MapReduce framework is a popular way to process large datasets because it can be split across multiple computers: the separate chunks don't rely on each other, so each chunk can go to a different computer. The results will be reduced, or combined, together at the end.
