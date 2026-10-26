@@ -270,7 +270,263 @@ result2 = {'Mini', 'Binnie',
 
 ---
 
-# Let's go through Practice Quiz 3!
+## Poll: Two sorting algorithms both have a mean runtime of 50ms. Algorithm A has a standard deviation of 2ms. Algorithm B has a standard deviation of 40ms. Which algorithm has a more consistent runtime?
+
+1. Algorithm A
+2. Algorithm B
+3. They're equally consistent
+4. Cannot be determined from this information
+
+---
+
+## Poll: Lists A and B each have a mean of 40. List A has 5 numbers in it, and List B has 8 numbers. If we add the number 50 to both lists (as a sixth and ninth number, respectively), which will have a higher mean?
+
+1. List A
+2. List B
+3. They will have the same mean after this
+4. Cannot be determined
+
+---
+
+## Poll: Lists A and B each have a standard deviation of 30. List A has 5 numbers in it, and List B has 8 numbers. If we add the number 50 to both lists (as a sixth and ninth number, respectively), which will have a higher standard deviation?
+
+1. List A
+2. List B
+3. They will have the same standard deviation after this
+4. Cannot be determined
+
+---
+
+# Practice Quiz 3 questions... but more
+
+---
+
+<style scoped>
+section {
+  font-size: 20px;
+}
+</style>
+
+```python
+class Triangle:
+    """A triangle class that represents a triangle with three sides."""
+    def __init__(self, a: float = 1, b: float = 1, c: float = 1) -> None:
+        """Initialize the triangle with three sides.
+        Args:
+            a (float): The length of side a.
+            b (float): The length of side b.
+            c (float): The length of side c.
+        """
+        self.a = a
+        self.b = b
+        self.c = c
+```
+
+### Poll: which is incorrect?
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+1.
+```python
+def is_equilateral(self) -> bool:
+    return self.a == self.b == self.c
+```
+
+2.
+```python
+def is_equilateral(self) -> bool:
+    return len({self.a, self.b, self.c}) == 1
+```
+
+</div>
+<div>
+
+3.
+```python
+def is_equilateral(self) -> bool:
+    return len({a, b, c}) == 1
+```
+
+4.
+```python
+def is_equilateral(self) -> bool:
+    a, b, c = self.a, self.b, self.c
+    return a == b == c
+```
+
+</div>
+</div>
+
+---
+
+<style scoped>
+section {
+  font-size: 20px;
+}
+</style>
+
+```python
+class Triangle:
+    """A triangle class that represents a triangle with three sides."""
+    def __init__(self, a: float = 1, b: float = 1, c: float = 1) -> None:
+        """Initialize the triangle with three sides.
+        Args:
+            a (float): The length of side a.
+            b (float): The length of side b.
+            c (float): The length of side c.
+        """
+        self.a = a
+        self.b = b
+        self.c = c
+```
+
+### Poll: which is incorrect?
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+1.
+```python
+def is_isosceles(self) -> bool:
+    return self.a == self.b or self.a == self.c or self.b == self.c
+```
+
+2.
+```python
+def is_isosceles(self) -> bool:
+    a, b, c = self.a, self.b, self.c
+    return a == b or a == c or b == c
+```
+
+</div>
+<div>
+
+3.
+```python
+def is_isosceles(self) -> bool:
+    return len({self.a, self.b, self.c}) != 2 and not is_equilateral()
+```
+
+4.
+```python
+def is_isosceles(self) -> bool:
+    return len({self.a, self.b, self.c}) != 2 and not self.is_equilateral()
+```
+
+</div>
+</div>
+
+---
+
+## Poll: Which unit test cases can we come up with for this constructor?
+
+```python
+class Triangle:
+    """A triangle class that represents a triangle with three sides."""
+
+    def __init__(self, a: float = 1, b: float = 1, c: float = 1) -> None:
+        """Initialize the triangle with three sides.
+        Args:
+            a (float): The length of side a.
+            b (float): The length of side b.
+            c (float): The length of side c.
+
+        Raises:
+            ValueError: If the sides do not form a valid triangle.
+        """
+        if (a + b <= c) or (a + c <= b) or (b + c <= a) or (a <= 0) or (b <= 0) or (c <= 0):
+            raise ValueError(f"Invalid triangle sides: {a}, {b}, {c}")
+        self.a = a
+        self.b = b
+        self.c = c
+```
+
+---
+
+<style scoped>
+section {
+  font-size: 20px;
+}
+</style>
+
+```python
+class Square:
+    """A class representing a square."""
+
+    def __init__(self, side: float) -> None:
+        """Initialize a square with the given side length.
+        Args:
+        side : float
+        The length of the side of the square.
+        """
+        self.side = side
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Square):
+            return False
+        return self.side == other.side
+
+square1 = Square(1.0)
+```
+
+## Poll: Which of these is equal to square1? 
+
+1. `square2 = square1`
+2. `square3 = Square(1.0)`
+3. `square4 = Square(square1.side)`
+4. `square5 = Square(500.0)`
+
+---
+
+## Poll: A list of 11 numbers has a mean of 30 and a variance of 20. If we remove one of the values, which equals 30, what are the new mean and variance?
+
+---
+
+## Poll: How did we calculate the new mean in the previous question?
+
+1. We determined what all of the original numbers are and removed the extra number to calculate the new mean
+2. We used the variance to calculate how much the mean would vary
+3. We determined the sum of the previous numbers, subtracted the extra number, and divided by the new number of numbers
+4. We didn't calculate the new mean
+
+---
+
+Consider the scenario where you are across town, and you need to take the bus or bike to a class that starts in 20 minutes. Suppose that biking there takes on average 18 minutes, and taking the bus takes on average 14 minutes.
+
+A student says, "Taking the bus has a mean 4 minutes shorter, so it must be the better choice for arriving on time." Give a scenario where the bus is the right choice, and one where the bus is the wrong choice.
+
+### Poll: Which of these would not satisfy the requirements for the "wrong choice" part?
+
+1. taking the bus has a large standard deviation (e.g., 10 minutes), and biking has a small standard deviation (e.g., 1 minute)
+2. taking the bus has a small standard deviation (e.g., 1 minute), and biking has a large standard deviation (e.g., 10 minutes)
+3. taking the bus and biking have the same standard deviation (e.g., 1 minute)
+
+---
+
+### Not a poll, but an exercise:
+
+Write a function called invert that takes a dictionary (where the keys and values are both words) and returns a new dictionary where each value of the original becomes a key in the new dictionary, and the value associated with that key is the list of all original keys that mapped to it. Documentation is not graded for this question.
+
+---
+
+```python
+def invert(d: dict[str, str]) -> dict[str, list[str]]:
+    """Invert a dictionary mapping strings to strings, producing a dictionary mapping strings to
+    lists of strings.
+
+    Args:
+        d (dict[str, str]): The dictionary to invert.
+    Returns:
+        dict[str, list[str]]: The inverted dictionary.
+    """
+    inverted: dict[str, list[str]] = {}
+    for key, value in d.items():
+        if value not in inverted:
+            inverted[value] = []
+        inverted[value].append(key)
+    return inverted
+```
 
 ---
 
