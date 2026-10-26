@@ -10,33 +10,37 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
-# Refresher: Scaling and Argmax / Argmin
+# Argsort
 
-Different homework assignments are out of different numbers of points. Let's write a function that takes a dataframe of grades and returns the name of the student with the lowest average homework score.
-Assume the assignments are named `HW1`, `HW2`, ...
+Numpy's `argsort()` takes a list and returns a list of its indices, moved to the locations they would be in if the list was sorted.
+
+```python
+words: list[str] = 'never gonna give you up'.split()
+
+sorted_alphabetically: list[str] = sorted(words)
+
+print(sorted_alphabetically)  # ['give', 'gonna', 'never', 'up', 'you']
+
+indices_of_sorted_words = np.argsort(words)
+
+print(indices_of_sorted_words)  # [2 1 0 4 3]
+```
+It's saying if the list of words was sorted alphabetically, the word at index 2 would be first, then the word at index 1, then the word at index 0, etc. until the word at index 3.
 
 ---
 
-```python
-def get_lowest_avg_hw_students(df: pd.DataFrame) -> str:
-    num_hws = len(df.columns) - 1
-    for i in range(1, num_hws):
-        min_score = min(df[f'HW{i}'])
-        max_score = max(df[f'HW{i}'])
-        score_range = max_score - min_score
-        df[f'HW{i}_scaled'] = (df[f'HW{i}'] - min_score) / score_range
-    df['Average HW'] = sum([df[f'HW{i}_scaled'] for i in range(1, num_hws)]) / num_hws
-    return df['Name'][np.argmin(df['Average HW'])]
+## Poll: What is output?
 
-def main() -> None:
-    scores = pd.DataFrame({
-        'Name': ['Mini', 'Mega', 'Micro', 'Giant'],
-        'HW1': [4, 6, 5, 6],
-        'HW2': [54, 55, 59, 63],
-        'HW3': [20, 20, 19, 14]
-    })
-    print(get_lowest_avg_hw_students(scores, 2))
+```python
+scores = np.array([72, 95, 58, 88])
+order = np.argsort(scores)
+print(order)
 ```
+
+1. [58, 72, 88, 95]
+2. [2, 0, 3, 1]
+3. [3, 2, 0, 1]
+4. [1, 3, 0, 2]
 
 ---
 
@@ -57,7 +61,7 @@ Grades come from two dataframes:
 </div>
 <div>
 
-##### PollEv:
+##### Canvas:
 
 | Student ID | Number of lectures attended |
 |-|-|
@@ -109,13 +113,13 @@ df_hw = pd.DataFrame({
     'HW1 score': [40, 39]
 })
 
-df_polls = pd.DataFrame({
+df_canvas = pd.DataFrame({
     'Student ID': ['001', '002'],
     'N lec att': [10, 11]
 })
 
 df = pd.concat(
-    [df_hw, df_polls], 
+    [df_hw, df_canvas], 
     ignore_index=True)
 print(df)
 ```
@@ -167,7 +171,7 @@ print(pd.merge(df, other_df))
 ## `merge()` works for our grade dataframe
 
 ```python
-df = pd.merge(df_hw, df_polls)
+df = pd.merge(df_hw, df_canvas)
 ```
 
 ```
@@ -195,7 +199,7 @@ Pandas can't assume that we do something silly like this:
 </div>
 <div>
 
-##### PollEv:
+##### Canvas:
 
 | Student ID | Name | Number lectures attended |
 |-|-|-|
@@ -403,6 +407,135 @@ Assume we have two dataframes:
 </div>
 
 How can we find the total cost of all of Mini's purchases?
+
+---
+
+## Groupby motivation: Who is the top scorer in each course?
+
+```python
+scores = pd.DataFrame({
+    "course":  ["2100", "2100", "2100", "3100", "3100"],
+    "student": ["Ana",  "Ben",  "Cy",   "Dee",  "Eli"],
+    "score":   [88,     95,     79,     91,     84],
+})
+
+for c in scores["course"].unique():
+    sub = scores[scores["course"] == c]
+    print(c, sub.loc[sub["score"].idxmax(), "student"])
+```
+
+---
+
+## Groupby motivation: Who is the top scorer in each course?
+
+```python
+scores = pd.DataFrame({
+    "course":  ["2100", "2100", "2100", "3100", "3100"],
+    "student": ["Ana",  "Ben",  "Cy",   "Dee",  "Eli"],
+    "score":   [88,     95,     79,     91,     84],
+})
+
+scores.loc[scores.groupby("course")["score"].idxmax()]
+```
+
+| course | student | score |
+|--------|---------|-------|
+| 2100   | Ben     | 95    |
+| 3100   | Dee     | 91    |
+
+`df["score"].max()` can't do this: it sees the whole column at once and
+returns 95, with no notion of "per course."
+
+---
+
+# pandas `groupby`: Split → Apply → Combine
+
+<style scoped>
+section {
+  font-size: 20px;
+}
+</style>
+
+1. **Split**: divide rows into groups by the values in a key column
+2. **Apply**: run a function on each group independently
+3. **Combine**: stitch the per-group results into one object
+
+`df.groupby("dept")["enroll"].sum()`
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+| dept | course | enroll |
+|------|--------|--------|
+| CS   | 2100   | 120    |
+| CS   | 3100   | 90     | 
+| Math | 1341   | 60     |
+| Math | 2331   | 45     |
+| Math | 2310   | 30     |
+
+</div>
+<div>
+
+| dept | enroll |
+|------|--------|
+| CS   | 210    |
+| Math | 135    |
+
+</div>
+</div>
+
+`df.groupby("dept")` alone computes nothing. It just describes the groups.
+The work happens when you call an aggregation like `.sum()`.
+
+---
+
+# Three Ways to "Apply"
+
+**Aggregate**: one row per group
+    `df.groupby("dept")["enroll"].agg(["mean", "max"])`
+
+**Transform**: same shape as the original, aligned to the original rows
+    `df["share"] = df["enroll"] / df.groupby("dept")["enroll"].transform("sum")`
+
+**Filter**: keep or drop whole groups
+    `df.groupby("dept").filter(lambda g: g["enroll"].sum() > 150)`
+
+Watch out for:
+- `count` skips NaN, `size` counts all rows
+- Rows with a NaN key are dropped unless `dropna=False`
+- Multiple keys give a MultiIndex; use `.reset_index()` to flatten
+
+---
+
+| dept | course | enroll |
+|------|--------|--------|
+| CS   | 2100   | 120    |
+| CS   | 3100   | 90     |
+| Math | 1341   | 60     |
+| Math | 2331   | 45     |
+| Math | 2310   | 30     |
+
+### Poll: What does `df.groupby("dept")["enroll"].mean()` return?
+
+1. A Series: CS → 105, Math → 45
+2. A single number: 69
+3. A DataFrame with 5 rows, one per course
+4. Nothing is computed; it returns a lazy object
+
+---
+
+| dept | course | enroll |
+|------|--------|--------|
+| CS   | 2100   | 120    |
+| CS   | 3100   | 90     |
+| Math | 1341   | 60     |
+
+### Poll: We want a new column showing each course's enrollment as a fraction of its department's total enrollment. Which expression gives a result we can assign directly as a new column of `df`?
+
+1. df.groupby("dept")["enroll"].sum()
+2. df.groupby("dept")["enroll"].transform("sum")
+3. df.groupby("dept").filter(lambda g: g["enroll"].sum() > 0)
+4. df.groupby("dept")["enroll"].size()
 
 ---
 
