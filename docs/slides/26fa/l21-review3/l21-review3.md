@@ -10,6 +10,12 @@ style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 
 ---
 
+<style scoped>
+section {
+  font-size: 20px;
+}
+</style>
+
 <div class="grid grid-cols-2 gap-4">
 <div>
 
