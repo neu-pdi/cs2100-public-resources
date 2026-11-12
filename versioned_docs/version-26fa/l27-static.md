@@ -180,7 +180,7 @@ class Square(Shape):
         self.size = size
         self.color = color
 
-rect = Square.create_with_default_color(10)
+square = Square.create_with_default_color(10)
 area = Shape.area_of_region(5, 8)
 ```
 What will be the values of `square.color` and `area`, using the two variables declared at the end?
