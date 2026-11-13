@@ -318,7 +318,7 @@ It is impossible to block an attribute from being accessed externally.
 - `self.size` (attribute with no underscores): anyone can access
 - `self._contents` (single underscore): nicely ask others to avoid using it
   - Externally accessible (`dataframe._contents`)
-- `self.__password` (two underscores): even stronger suggestion to keep away
+- `self.__password` (two underscores): adds name of class / stronger suggestion to keep away
   - External name is mangled (`my_diary._Diary__password`)
 
 ---
@@ -521,6 +521,10 @@ print(''.join(letter for letter in Sarcasm('hi rasika')))
 2. If `__eq__()` says A is equal to B, and `__gt__()` says A is greater than B, then they are inconsistent.
 3. If `__le__()` says A is less than or equal to B, and `__ge__()` says A is greater than or equal to B, then they are inconsistent.
 4. If all six comparison methods are implemented, then they must be inconsistent.
+
+---
+
+# Go over Practice Quiz 4
 
 ---
 
