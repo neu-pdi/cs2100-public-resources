@@ -119,7 +119,7 @@ def size(inp: str) -> int:
     else:
         return ???
 ```
-1. `1 + size(inp)`
+1. `1 + size(inp[1:])`
 2. `size(inp)`
 3. `0 + size(inp)`
 4. `0`
