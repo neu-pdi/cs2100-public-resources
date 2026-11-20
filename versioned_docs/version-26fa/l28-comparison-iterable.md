@@ -23,7 +23,7 @@ Any object that follows the Iterable protocol can be iterated over. The Iterable
 
 There is a corresponding `Iterable` ("ble") interface in the `ABC` module which helps make it clear to the reader that an object is iterable ("ble"):
 ```python
-from collections.abc import Iterable
+from collections.abc import Iterable, Iterator
 
 class Calendar(Iterable[str]):
     def __init__(self, days: list[str]):
